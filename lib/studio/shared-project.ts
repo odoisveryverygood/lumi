@@ -27,6 +27,8 @@ export function readHistory(storage:Pick<Storage,'getItem'>=localStorage):Shared
 export function writeHistory(history:SharedHistory,storage:Pick<Storage,'setItem'>=localStorage){
  try{storage.setItem(HISTORY_KEY,JSON.stringify({version:1,past:history.past.slice(-HISTORY_LIMIT),future:history.future.slice(0,HISTORY_LIMIT)}));}catch{/* Storage full: the in-memory history still works for this tab. */}
 }
+/** Entry counts without keeping the documents around. */
+export function historyCounts(storage:Pick<Storage,'getItem'>=localStorage){const h=readHistory(storage);return {past:h.past.length,future:h.future.length};}
 export function parseHistoryEntry(entry:string):DeviceDocument|null{try{return validateDeviceDocument(JSON.parse(entry));}catch{return null;}}
 /** Record a change: the previous document goes onto the shared past and redo is cleared. */
 export function recordChange(previous:DeviceDocument,storage:Storage=localStorage){
