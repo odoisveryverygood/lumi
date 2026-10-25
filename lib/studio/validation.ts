@@ -3,6 +3,7 @@ import type { DeviceDocument } from './types';
 import {canonicalCatalogGeometry,inflateCatalogDocument} from './catalog';
 import {attachmentIssues} from './attachments';
 import {qualityReportSchema} from './quality-types';
+import {motionContractSchema} from './motion-types';
 
 const text=z.string().trim().min(1);
 const id=text.max(100).regex(/^[a-zA-Z0-9][a-zA-Z0-9_.-]*$/);
@@ -32,6 +33,7 @@ export const deviceStepSchema=z.object({title:text.max(200),description:text.max
 export const deviceAssemblySchema=z.object({id,name:text.max(160),parentId:id.optional(),partIds});
 export const deviceRelationshipSchema=z.object({id,from:id,to:id,type:z.enum(['mechanical','electrical','data','contains']),description:text.max(2000)});
 export const deviceMechanismSchema=z.object({
+  verification:motionContractSchema.optional(),
   id,name:text.max(160),description:text.max(4000),duration:number.min(.2).max(60),motion:z.enum(['press-release','linear']).optional(),
   tracks:z.array(z.object({partId:id,translation:vec.optional(),rotation:vec.optional(),scale:scale.optional()}).strict().refine(track=>
     track.translation?.some(value=>value!==0)||track.rotation?.some(value=>value!==0)||track.scale?.some(value=>value!==1),
@@ -87,6 +89,7 @@ function referenceChecks(document:z.infer<typeof documentShape>,context:z.Refine
   if(mechanismIds.size!==mechanisms.length)issue('Mechanism IDs must be unique',['mechanisms']);
   if(mechanisms.reduce((total,item)=>total+item.tracks.length,0)>4000)issue('Use at most 4000 mechanism tracks per document',['mechanisms']);
   mechanisms.forEach((mechanism,index)=>{
+    if(mechanism.verification){const c=mechanism.verification;for(const ref of [c.movingRootId,c.pivotPartId,...c.allowedEdits.map(e=>e.partId),...c.contacts.flatMap(e=>e.partIds)])if(!ids.has(ref))issue('Motion contract references a missing component',['mechanisms',index,'verification']);if(c.movingRootId===c.pivotPartId)issue('A moving joint root needs a distinct fixed pivot',['mechanisms',index,'verification']);}
     const tracked=mechanism.tracks.map(track=>track.partId);checkParts(tracked,['mechanisms',index,'tracks']);
     if(new Set(tracked).size!==tracked.length)issue('A mechanism may track each component only once',['mechanisms',index,'tracks']);
     for(const track of mechanism.tracks){const part=document.parts.find(item=>item.id===track.partId);if(part&&track.translation?.some((delta,axis)=>Math.abs(part.position[axis]+delta)>5000))issue('Mechanism motion exceeds the supported coordinate bounds',['mechanisms',index,'tracks']);}

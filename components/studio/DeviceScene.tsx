@@ -1,4 +1,5 @@
 'use client';
+import {poseMotion,partMatrix,motionAngles} from '@/lib/studio/motion-pose';
 
 import { Component, useEffect, useLayoutEffect, useMemo, useRef, useState, type ComponentRef, type MutableRefObject, type ReactNode } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
@@ -24,7 +25,7 @@ type Controls = ComponentRef<typeof OrbitControls>;
 type Objects = MutableRefObject<Record<string, THREE.Group>>;
 type Showcase = MutableRefObject<{active:boolean;started:number;explode:number;scale:number;reduced:boolean}>;
 type DragState = MutableRefObject<{ id: string | null; until: number; offset: THREE.Vector3; rotationOffset: THREE.Vector3 }>;
-type MotionState = { mechanism: DeviceMechanism | null; progress: number; envelope: number; stage: number; stageIds: Set<string> };
+type MotionState = { poses?:Map<string,DevicePart>; mechanism: DeviceMechanism | null; progress: number; envelope: number; stage: number; stageIds: Set<string> };
 type Motion = MutableRefObject<MotionState>;
 
 const radians = (values: Vec3): Vec3 => values.map(THREE.MathUtils.degToRad) as Vec3;
@@ -59,6 +60,7 @@ function MechanismClock({ props, motion, drag }: { props: DeviceSceneProps; moti
     const state=motion.current;if(!state.mechanism)return;
     if(input.current.playing&&!drag.current.id&&!completed.current)state.progress=Math.min(1,state.progress+Math.min(delta,.1)/Math.max(.2,state.mechanism.duration));
     state.envelope=motionWeight(state.mechanism,state.progress);
+    const joint=state.mechanism.verification;state.poses=joint?new Map(poseMotion(props.document,state.mechanism,joint.minDeg+(joint.maxDeg-joint.minDeg)*state.progress).parts.map(p=>[p.id,p])):undefined;
     let stage=-1;for(let i=0;i<state.mechanism.stages.length;i++)if(state.mechanism.stages[i].at<=state.progress)stage=i;
     if(stage!==state.stage){state.stage=stage;state.stageIds=new Set(stage>=0?state.mechanism.stages[stage].partIds:state.mechanism.tracks.map(track=>track.partId));}
     if(input.current.playing&&(clock.elapsedTime>=notifyAt.current||state.progress>=1)&&!completed.current){published.current=state.progress;callbacks.current.progress?.(state.progress);notifyAt.current=clock.elapsedTime+.1;}
@@ -156,6 +158,7 @@ function DevicePartModel({ part, index, target, opacity, selected, hovered, acti
     }
     model.edges.color.set(selected||hovered||active||glow?'#ff713e':'#273e4a');model.edges.opacity=ghost?.045:selected?.8:hovered?.65:glow?.65:active?.55:.14;
     if (drag.current.id === part.id || selected && performance.now() < drag.current.until) return;
+    const verifiedPose=motion.current.poses?.get(part.id);if(verifiedPose){root.current.position.set(...verifiedPose.position);root.current.rotation.set(...radians(verifiedPose.rotation));root.current.scale.set(1,1,1);previousDelta.current.set(0,0,0);return;}
     const destination=showcase.current.active?openingTarget.current.set(...part.position).addScaledVector(openingOffset,showcase.current.explode):target;
     root.current.position.sub(previousDelta.current);
     if (lastTarget.current.distanceToSquared(destination) > .001) {
@@ -372,9 +375,9 @@ function CameraMotion({ props, parts, amounts, controls, manualRevision, autoOrb
     const relevant=focused.length?focused:parts,box=new THREE.Box3(),samples:THREE.Vector3[]=[];
     // Fit both rest and full press so the close-up stays steady throughout playback.
     for(const part of relevant){
-      const local=localPartBounds(part),levels=mechanism?.tracks.some(track=>track.partId===part.id)?[0,1]:[0];
+      const local=localPartBounds(part),levels=mechanism?.verification?motionAngles(mechanism.verification):mechanism?.tracks.some(track=>track.partId===part.id)?[0,1]:[0];
       for(const level of levels){
-        const matrix=mechanismMatrix(part,amounts.get(part.id)||0,mechanism,level);
+        const matrix=mechanism?.verification?partMatrix(poseMotion(props.document,mechanism,level).parts.find(p=>p.id===part.id)!):mechanismMatrix(part,amounts.get(part.id)||0,mechanism,level);
         for(const x of[local.min.x,local.max.x])for(const y of[local.min.y,local.max.y])for(const z of[local.min.z,local.max.z]){
           const point=new THREE.Vector3(x,y,z).applyMatrix4(matrix);samples.push(point);box.expandByPoint(point);
         }
@@ -485,7 +488,7 @@ function DeviceWorld(props:DeviceSceneProps){
     {parts.map((part,index)=>{
       const active=current.has(part.id),ghost=props.buildStep!==null&&!completed.has(part.id)&&!active;
       const reviewGhost=props.reviewMode&&!part.id.startsWith('wireless-')&&!props.highlightedIds?.includes(part.id);
-      const cutaway=!!mechanism&&(tracks.has(part.id)&&!!part.specs.Legend?.trim()||mechanismContext.has(part.id)&&!tracks.has(part.id)&&/housing|enclosure/i.test(part.category+' '+part.name));
+      const cutaway=!!mechanism&&!mechanism.verification&&(tracks.has(part.id)&&!!part.specs.Legend?.trim()||mechanismContext.has(part.id)&&!tracks.has(part.id)&&/housing|enclosure/i.test(part.category+' '+part.name));
       return <DevicePartModel key={`${props.document.id}:${part.id}`} showcase={opening} part={part} index={index} target={pose(part,amounts.get(part.id)||0)} opacity={reviewGhost?(part.id==='keyboard-case-base'?.24:part.id==='keyboard-pcb'?.06:.04):ghost?.09:cutaway?.18:1} selected={props.selectedId===part.id} hovered={props.hoveredId===part.id} active={active} highlighted={highlighted.has(part.id)} ghost={ghost} pickThrough={cutaway||!!reviewGhost} bank={bank} objects={objects} drag={drag} motion={motion} track={tracks.get(part.id)} importedScene={props.importedScene} />;
     })}
     {props.explode === 0 && props.collisionRegions?.map((region,index)=><mesh key={`conflict-${index}`} position={region.position} renderOrder={9} raycast={()=>{}}><boxGeometry args={region.size.map(n=>Math.max(.12,n)) as Vec3}/><meshBasicMaterial color="#ff3c59" transparent opacity={.75} depthTest={false} depthWrite={false}/></mesh>)}
@@ -511,6 +514,6 @@ export default function DeviceScene(props:DeviceSceneProps){
   const [software,setSoftware]=useState<boolean|null>(null);
   useEffect(()=>{const canvas=document.createElement('canvas');const gl=canvas.getContext('webgl2');if(!gl)setSoftware(true);else{gl.getExtension('WEBGL_lose_context')?.loseContext();setSoftware(false);}},[]);
   return <div className="device-scene" role="group" aria-label={`Interactive three-dimensional ${props.document.name}. Select a component, orbit the device, and use the Move or Rotate tools to edit it.`} style={{width:'100%',height:'100%',position:'relative',isolation:'isolate'}}>
-    {software===null?<div className="ds-loading">Preparing the geometry…</div>:software?<SoftwareViewport {...props}/>:<ViewBoundary><Canvas orthographic camera={{position:[380,300,430],zoom:1.5,near:.1,far:6000}} shadows dpr={[1,1.6]} gl={{antialias:true,alpha:true,preserveDrawingBuffer:true,powerPreference:'high-performance'}} fallback={<div className="ds-loading">The GPU viewport could not start. Reload to use the geometry preview.</div>}><DeviceWorld {...props} /></Canvas></ViewBoundary>}
+    {software===null?<div className="ds-loading">Preparing the geometry…</div>:software?<SoftwareViewport {...props}/>:<ViewBoundary><Canvas orthographic camera={{position:[380,300,430],zoom:1.5,near:.1,far:6000}} shadows dpr={[1,1.6]} gl={{antialias:true,alpha:true,preserveDrawingBuffer:true,powerPreference:'high-performance'}} fallback={<SoftwareViewport {...props}/>}><DeviceWorld {...props} /></Canvas></ViewBoundary>}
   </div>;
 }

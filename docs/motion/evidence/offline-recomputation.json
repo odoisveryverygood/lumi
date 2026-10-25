@@ -1,0 +1,157 @@
+{
+  "checkedAt": "2026-10-25T18:34:03.589Z",
+  "checks": [
+    {
+      "name": "final-document-hash",
+      "passed": true
+    },
+    {
+      "name": "original-source-and-contract-preservation",
+      "passed": true
+    },
+    {
+      "name": "round-0-recomputed-result",
+      "passed": true,
+      "detail": {
+        "status": "fail",
+        "minimumClearanceMm": 0,
+        "poses": [
+          -45,
+          -40,
+          -35,
+          -30,
+          -25,
+          -20,
+          -15,
+          -10,
+          -5,
+          0,
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45
+        ],
+        "comparisons": 765995
+      }
+    },
+    {
+      "name": "round-0-image-0-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-0-image-1-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-0-image-2-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-0-image-3-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-0-pose--45-hash",
+      "passed": true
+    },
+    {
+      "name": "round-0-image-4-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-0-pose-45-hash",
+      "passed": true
+    },
+    {
+      "name": "round-0-image-5-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-0-pose-0-hash",
+      "passed": true
+    },
+    {
+      "name": "round-1-recomputed-result",
+      "passed": true,
+      "detail": {
+        "status": "pass",
+        "minimumClearanceMm": 0.8153189588437844,
+        "poses": [
+          -45,
+          -40,
+          -35,
+          -30,
+          -25,
+          -20,
+          -15,
+          -10,
+          -5,
+          0,
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45
+        ],
+        "comparisons": 0
+      }
+    },
+    {
+      "name": "round-1-image-0-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-1-image-1-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-1-image-2-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-1-image-3-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-1-pose--45-hash",
+      "passed": true
+    },
+    {
+      "name": "round-1-image-4-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-1-pose-45-hash",
+      "passed": true
+    },
+    {
+      "name": "round-1-image-5-sha256",
+      "passed": true
+    },
+    {
+      "name": "round-1-pose-0-hash",
+      "passed": true
+    },
+    {
+      "name": "undo-matches-original-parts",
+      "passed": true
+    },
+    {
+      "name": "redo-matches-applied-document",
+      "passed": true
+    },
+    {
+      "name": "cancel-keeps-original-document",
+      "passed": true
+    }
+  ]
+}
