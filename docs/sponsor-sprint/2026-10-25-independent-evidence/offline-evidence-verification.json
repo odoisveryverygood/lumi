@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-25T18:04:59.175Z",
+  "revision": "226f79287fa8a5c34e9f15778ceb36e61b70c86e",
+  "providerCallsMadeByTheseChecks": false,
+  "inputs": {
+    "full-evaluation.json": "4bb71f344a0f84567763b55570c0c11b05db43c8e138d46565fa157128e05fe3",
+    "followup-evaluation.json": "ab5978185ba26daa947ebb77de22a82f57bd201333da5c0bbce269d3d6a768d4",
+    "corne-reviewed.part.json": "3d723ea878de43d677d19f73d9c8e70aed853a86d4a0f9dfad8036555fc16c42",
+    "ui-saved-study.part.json": "e6b9fac986bb8a07f26847519499f72aa9432cbdde2b3425c60f8847b0228084",
+    "corne-first-flagged-draft.part.json": "3ef9a52328e1be23873bbb28a44f096f475cfec883dbc95ed2b1898a56927761"
+  },
+  "results": [
+    {
+      "file": "full-evaluation-oracle.txt",
+      "sha256": "61a0cbcc3b571c795aac20ef3cf41afea92b075d0a6d3d815c82a747d24252e9",
+      "passed": true
+    },
+    {
+      "file": "followup-evaluation-oracle.txt",
+      "sha256": "76409c4dfe0d9f77c754e4c78d1498a13275cc9c689702338b61c8f9fef1ed3e",
+      "passed": true
+    },
+    {
+      "file": "corne-reviewed-project.txt",
+      "sha256": "c9385729d64bb8cee423008bc45054fc0e1e8ee1e6a93daf4d459b2a97d52d6e",
+      "passed": true
+    },
+    {
+      "file": "ui-saved-study-project.txt",
+      "sha256": "e7a3c73db9688f77cedfa5e4488c4b39b7c98abf3a20875dcc2307364a04eb65",
+      "passed": true
+    },
+    {
+      "file": "corne-first-flagged-draft-project.txt",
+      "sha256": "a769059b531ddb549949a3d071d538edbfe7e4376b968b4a107a8da90e2aa32e",
+      "passed": true
+    }
+  ],
+  "summaries": [
+    "full-evaluation-summary.json",
+    "followup-evaluation-summary.json"
+  ],
+  "pairedComparison": [
+    "full-paired-comparison.json",
+    "followup-paired-comparison.json"
+  ],
+  "scope": "Independent recomputation on revision 226f792 of the fixed-task oracle (version 2), document and contract fingerprints, exact image hashes and locked camera framing for the October 24 exports. The evaluator did not run them and did not read the model findings as its oracle. Editable JSON is not authenticated proof of a provider response."
+}

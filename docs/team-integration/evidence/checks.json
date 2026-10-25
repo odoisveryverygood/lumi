@@ -1,0 +1,13 @@
+{
+  "liveDurationMs": 66853,
+  "rounds": 2,
+  "models": [
+    "gemini-4-argon",
+    "gemini-4-argon"
+  ],
+  "status": "reviewed",
+  "finalClearanceMm": 0.8153189588437844,
+  "sampleCount": 19,
+  "undoExactlyRestoresBaseline": true,
+  "redoExactlyRestoresAcceptedExport": true
+}

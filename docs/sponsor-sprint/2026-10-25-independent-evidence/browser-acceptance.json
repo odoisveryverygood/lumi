@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-25T18:05:00Z",
+  "revision": "226f79287fa8a5c34e9f15778ceb36e61b70c86e",
+  "origin": "http://127.0.0.1:3001 (next dev, Node 24.18.1)",
+  "providerKey": "GEMINI_API_KEY unset; /api/status returned {available:false, configured:false}",
+  "browser": "Claude desktop built-in browser pane (Chromium), WebGL viewport rendering observed",
+  "documentComparisonMethod": "The app's own saved-document store (localStorage key partexplode-studio-v1, written by the same serializer as the project export) was read before and after each action and compared field by field: part IDs, positions, rotations, review status and review finalHash. A toast was never used as proof.",
+  "observed": [
+    {"workflow": "Save/reload", "result": "passed", "detail": "The accepted controlled study ui-saved-study.part.json (7 parts, reviewed, 2 rounds, finalHash 22648d3e…) was placed in the app's saved-project store and the page was reloaded. The document, its 4 measured design checks (clearance 3.8 mm vs 1 mm; three preservation checks) and both recorded rounds were restored."},
+    {"workflow": "Review panel evidence", "result": "passed", "detail": "Review showed 'Rendered views reviewed', the original brief, First checked and Retained candidate images, Measured design checks 4/4 with Original −41.6 mm → First attempt −41.6 mm → Retained 3.8 mm. The focus button framed the ESP32-C3 module and Lumi showed its contextual note. Compare at full size opened both recorded JPEGs; Escape closed it."},
+    {"workflow": "Review/repair without provider", "result": "passed (expected failure path)", "detail": "Review current object produced alert 'Gemini is not configured on this server.', heading 'Review incomplete', a separate draft in lumi-review-draft-v1 (11,513 bytes) and the toast 'Review draft retained. Your saved object is unchanged.' The saved document was byte-identical before and after. Return to saved object removed the draft; the saved document was still identical."},
+    {"workflow": "Undo/redo by document data", "result": "passed", "detail": "Bracket Position X changed 22 → 30 in the inspector. Saved document after edit showed bracket at 30,12,32; after Undo it equalled the original exactly; after Redo it equalled the edited document exactly. The Review panel read 'Review needs refreshing' while the manual edit was present and 'Rendered views reviewed' again after undo."},
+    {"workflow": "Fresh creation (robot dog) without provider", "result": "passed (expected failure path)", "detail": "Describe a new device → 'A small four-legged robot dog with a camera head, a battery in the body and four servo legs.' → Create device. The gallery showed 'Gemini is not configured on this server.' and the saved study was unchanged."}
+  ],
+  "notRun": [
+    {"workflow": "Fresh creation with a live provider, including the malformed-JSON recovery regression for the robot-dog case", "reason": "No key. Teammate 1 owns the fix; the real browser regression case still needs a live run on their commit."},
+    {"workflow": "Supported edit accepted live and independently checked", "reason": "No key."},
+    {"workflow": "Review/repair showing an actual conflict corrected live", "reason": "No key. The historical corrected study was inspected instead; see offline-evidence-verification.json."},
+    {"workflow": "Import through the file picker and project export download", "reason": "The automation cannot drive the OS file chooser or read a downloaded file. The same serializer path was exercised through the app's saved-project store; the October 24 packet (ui-save-verification.json) records a manual file-picker import and export."},
+    {"workflow": "Movement verification", "reason": "Not implemented on this revision; teammate 2's branch does not exist yet. Nothing to test."},
+    {"workflow": "Provider timeout and recovery", "reason": "Requires a live provider. Only the unconfigured-provider error path was observed."},
+    {"workflow": "Full /evaluate run and held-out run", "reason": "Billable live requests; no key."}
+  ],
+  "screenshots": "Captured in the session transcript; not committed to keep the packet small. Reproduce with the steps above.",
+  "newProviderCalls": false
+}

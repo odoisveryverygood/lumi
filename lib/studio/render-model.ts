@@ -36,6 +36,12 @@ function shapeFor(solid: Solid, bank: GeometryBank) {
   return { geometry, edges, unit: solid.kind === 'box' || solid.kind === 'sphere' };
 }
 
+/** Owned geometry with precisely the viewport's primitive dimensions and tessellation. */
+export function solidGeometry(solid:Solid,bank:GeometryBank){
+ const shape=shapeFor(solid,bank);
+ return shape.geometry.clone().applyMatrix4(new THREE.Matrix4().compose(new THREE.Vector3(...solid.position),new THREE.Quaternion().setFromEuler(new THREE.Euler(...radians(solid.rotation||[0,0,0]))),shape.unit?new THREE.Vector3(...solid.size):new THREE.Vector3(1,1,1)));
+}
+
 function ownMaterial(source: THREE.Material, primaryColor: string) {
   const material = source.clone();
   material.userData.baseOpacity = material.opacity;

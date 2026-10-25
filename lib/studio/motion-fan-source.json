@@ -1,0 +1,2630 @@
+{
+  "version": 1,
+  "id": "desktop-fan-608",
+  "name": "Adjustable Desktop Fan with 608 Axle Bearing",
+  "description": "Compact personal desktop fan featuring an exposed three-blade rotor, open-front circular safety cage, tilted yoke stand, rotary speed knob, and a sourced 608 ball bearing supporting the 8 mm main drive axle.",
+  "provenance": "AI generated conceptual assembly. Geometry, dimensions and specifications are illustrative; no CAD fit, wiring or hardware operation has been verified.",
+  "parts": [
+    {
+      "id": "base-stand",
+      "name": "Weighted Base Stand",
+      "category": "structure",
+      "description": "Heavy cast-metal and polymer desktop base housing the speed control PCB and anti-slip feet.",
+      "role": "Heavy cast-metal and polymer desktop base housing the speed control PCB and anti-slip feet.",
+      "position": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        136,
+        25,
+        151
+      ],
+      "explode": [
+        0,
+        -45,
+        0
+      ],
+      "color": "#2a3038",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -2,
+            0
+          ],
+          "size": [
+            130,
+            14,
+            136
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#2a3038",
+          "metalness": 0.4,
+          "roughness": 0.6
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            6,
+            0
+          ],
+          "size": [
+            116,
+            6,
+            130
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.35,
+          "roughness": 0.55
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            11,
+            0
+          ],
+          "size": [
+            66,
+            6,
+            78
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#232830",
+          "metalness": 0.4,
+          "roughness": 0.5
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            5,
+            44
+          ],
+          "size": [
+            36,
+            10,
+            28
+          ],
+          "rotation": [
+            12,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.35,
+          "roughness": 0.55
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -22,
+            -9,
+            -34
+          ],
+          "size": [
+            20,
+            4,
+            20
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#141619",
+          "metalness": 0.1,
+          "roughness": 0.9
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            22,
+            -9,
+            -34
+          ],
+          "size": [
+            20,
+            4,
+            20
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#141619",
+          "metalness": 0.1,
+          "roughness": 0.9
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -22,
+            -9,
+            34
+          ],
+          "size": [
+            20,
+            4,
+            20
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#141619",
+          "metalness": 0.1,
+          "roughness": 0.9
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            22,
+            -9,
+            34
+          ],
+          "size": [
+            20,
+            4,
+            20
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#141619",
+          "metalness": 0.1,
+          "roughness": 0.9
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -2,
+            -63
+          ],
+          "size": [
+            10,
+            8,
+            10
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#181a1f",
+          "metalness": 0.2,
+          "roughness": 0.8
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -2,
+            -74
+          ],
+          "size": [
+            5,
+            18,
+            5
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#181a1f",
+          "metalness": 0.2,
+          "roughness": 0.8
+        }
+      ],
+      "specs": {
+        "Dimensions": "130 \u00d7 24 \u00d7 130 mm",
+        "Material": "Die-cast zinc + ABS top shell"
+      },
+      "connections": []
+    },
+    {
+      "id": "control-pcb",
+      "name": "PWM Speed Controller PCB",
+      "category": "electronics",
+      "description": "Internal low-voltage DC motor controller board with rotary potentiometer, inductor, and USB-C power input.",
+      "role": "Internal low-voltage DC motor controller board with rotary potentiometer, inductor, and USB-C power input.",
+      "position": [
+        0,
+        14,
+        16
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        48,
+        21,
+        63
+      ],
+      "explode": [
+        0,
+        -24,
+        35
+      ],
+      "color": "#1b5e3a",
+      "solids": [
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            48,
+            2,
+            56
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#1b5e3a",
+          "metalness": 0.2,
+          "roughness": 0.6
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            6,
+            28
+          ],
+          "size": [
+            14,
+            10,
+            14
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#8c9298",
+          "metalness": 0.8,
+          "roughness": 0.3
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            15,
+            28
+          ],
+          "size": [
+            6,
+            10,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d4af37",
+          "metalness": 0.85,
+          "roughness": 0.25
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            3,
+            -22
+          ],
+          "size": [
+            9,
+            3.5,
+            11
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#b8bfc6",
+          "metalness": 0.85,
+          "roughness": 0.25
+        },
+        {
+          "kind": "box",
+          "position": [
+            -12,
+            3,
+            -4
+          ],
+          "size": [
+            10,
+            4,
+            10
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#181a1f",
+          "metalness": 0.2,
+          "roughness": 0.7
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            12,
+            5,
+            -6
+          ],
+          "size": [
+            10,
+            8,
+            10
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#22262c",
+          "metalness": 0.6,
+          "roughness": 0.4
+        },
+        {
+          "kind": "box",
+          "position": [
+            -9,
+            2,
+            8
+          ],
+          "size": [
+            3,
+            1.5,
+            5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d2b48c",
+          "metalness": 0.3,
+          "roughness": 0.5
+        },
+        {
+          "kind": "box",
+          "position": [
+            -3,
+            2,
+            8
+          ],
+          "size": [
+            3,
+            1.5,
+            5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d2b48c",
+          "metalness": 0.3,
+          "roughness": 0.5
+        },
+        {
+          "kind": "box",
+          "position": [
+            3,
+            2,
+            8
+          ],
+          "size": [
+            3,
+            1.5,
+            5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d2b48c",
+          "metalness": 0.3,
+          "roughness": 0.5
+        },
+        {
+          "kind": "box",
+          "position": [
+            9,
+            2,
+            8
+          ],
+          "size": [
+            3,
+            1.5,
+            5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d2b48c",
+          "metalness": 0.3,
+          "roughness": 0.5
+        }
+      ],
+      "specs": {
+        "Input": "5V\u201312V DC USB-C",
+        "Control": "25 kHz PWM stepless dimmer"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "base-stand",
+        "anchor": [
+          0.5,
+          0.52,
+          0.6556291390728477
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "speed-knob",
+      "name": "Knurled Speed Knob",
+      "category": "control",
+      "description": "Machined aluminum rotary dial on the front of the base for stepless fan speed control.",
+      "role": "Machined aluminum rotary dial on the front of the base for stepless fan speed control.",
+      "position": [
+        0,
+        28,
+        44
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        30,
+        16.35,
+        30
+      ],
+      "explode": [
+        0,
+        22,
+        55
+      ],
+      "color": "#d6dce2",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            28,
+            14,
+            30
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.85,
+          "roughness": 0.25
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            7.5,
+            0
+          ],
+          "size": [
+            24,
+            2,
+            26
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#22262c",
+          "metalness": 0.3,
+          "roughness": 0.6
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            8.6,
+            7
+          ],
+          "size": [
+            2.4,
+            1.5,
+            8
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.2,
+          "roughness": 0.4
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            14.2
+          ],
+          "size": [
+            1.6,
+            12,
+            1.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#aeb6bf",
+          "metalness": 0.8,
+          "roughness": 0.35
+        }
+      ],
+      "specs": {
+        "Diameter": "28 mm",
+        "Finish": "Brushed anodized aluminum"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "base-stand",
+        "anchor": [
+          0.5,
+          1.08,
+          0.8410596026490066
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "tilt-yoke",
+      "name": "U-Shaped Tilt Yoke",
+      "category": "structure",
+      "description": "Rigid curved support arm bolted to the base that cradles the fan head between dual pivot trunnions.",
+      "role": "Rigid curved support arm bolted to the base that cradles the fan head between dual pivot trunnions.",
+      "position": [
+        0,
+        88,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        174,
+        134,
+        52
+      ],
+      "explode": [
+        0,
+        -15,
+        -40
+      ],
+      "color": "#343c46",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -64,
+            0
+          ],
+          "size": [
+            46,
+            8,
+            52
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -42,
+            0
+          ],
+          "size": [
+            24,
+            38,
+            28
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            -23,
+            0
+          ],
+          "size": [
+            174,
+            10,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        },
+        {
+          "kind": "box",
+          "position": [
+            -83,
+            16,
+            0
+          ],
+          "size": [
+            8,
+            78,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        },
+        {
+          "kind": "box",
+          "position": [
+            83,
+            16,
+            0
+          ],
+          "size": [
+            8,
+            78,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -83,
+            55,
+            0
+          ],
+          "size": [
+            22,
+            8,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            83,
+            55,
+            0
+          ],
+          "size": [
+            22,
+            8,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#343c46",
+          "metalness": 0.5,
+          "roughness": 0.45
+        }
+      ],
+      "specs": {
+        "Span": "166 mm inner clearance",
+        "Material": "Powder-coated steel"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "base-stand",
+        "anchor": [
+          0.5,
+          3.48,
+          0.5496688741721855
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "tilt-knobs",
+      "name": "Tilt Locking Thumb Knobs",
+      "category": "hardware",
+      "description": "Left and right threaded clamping knobs that lock the fan head at the desired upward tilt angle.",
+      "role": "Left and right threaded clamping knobs that lock the fan head at the desired upward tilt angle.",
+      "position": [
+        0,
+        143,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        194,
+        26,
+        26
+      ],
+      "explode": [
+        0,
+        18,
+        0
+      ],
+      "color": "#1e2229",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            -92,
+            0,
+            0
+          ],
+          "size": [
+            26,
+            10,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#1e2229",
+          "metalness": 0.3,
+          "roughness": 0.6
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -78,
+            0,
+            0
+          ],
+          "size": [
+            6,
+            22,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#c4cbd2",
+          "metalness": 0.85,
+          "roughness": 0.25
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -74,
+            0,
+            0
+          ],
+          "size": [
+            20,
+            3,
+            20
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#141619",
+          "metalness": 0.1,
+          "roughness": 0.9
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            92,
+            0,
+            0
+          ],
+          "size": [
+            26,
+            10,
+            22
+          ],
+          "rotation": [
+            0,
+            0,
+            -90
+          ],
+          "color": "#1e2229",
+          "metalness": 0.3,
+          "roughness": 0.6
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            78,
+            0,
+            0
+          ],
+          "size": [
+            6,
+            22,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#c4cbd2",
+          "metalness": 0.85,
+          "roughness": 0.25
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            74,
+            0,
+            0
+          ],
+          "size": [
+            20,
+            3,
+            20
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#141619",
+          "metalness": 0.1,
+          "roughness": 0.9
+        }
+      ],
+      "specs": {
+        "Thread": "M6 \u00d7 16 mm",
+        "Function": "Friction tilt lock"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "tilt-yoke",
+        "anchor": [
+          0.5,
+          0.917910447761194,
+          0.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "motor-housing",
+      "name": "Tilted Motor Pod & Bearing Boss",
+      "category": "housing",
+      "description": "Vented rear nacelle tilted upward by 12 degrees, featuring a precision 22 mm front pocket for the 608 axle bearing.",
+      "role": "Vented rear nacelle tilted upward by 12 degrees, featuring a precision 22 mm front pocket for the 608 axle bearing.",
+      "position": [
+        0,
+        141.7,
+        -5.88
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "size": [
+        118,
+        64,
+        68
+      ],
+      "explode": [
+        0,
+        25,
+        -85
+      ],
+      "color": "#2a3038",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            58,
+            46,
+            54
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#2a3038",
+          "metalness": 0.4,
+          "roughness": 0.55
+        },
+        {
+          "kind": "sphere",
+          "position": [
+            0,
+            0,
+            -23
+          ],
+          "size": [
+            54,
+            54,
+            28
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#2a3038",
+          "metalness": 0.4,
+          "roughness": 0.55
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            24
+          ],
+          "size": [
+            34,
+            12,
+            42
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.45,
+          "roughness": 0.5
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            29
+          ],
+          "size": [
+            26,
+            4,
+            26
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.75,
+          "roughness": 0.3
+        },
+        {
+          "kind": "box",
+          "position": [
+            -12,
+            0,
+            -34
+          ],
+          "size": [
+            2.5,
+            28,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#15181c",
+          "metalness": 0.2,
+          "roughness": 0.8
+        },
+        {
+          "kind": "box",
+          "position": [
+            -6,
+            0,
+            -34
+          ],
+          "size": [
+            2.5,
+            28,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#15181c",
+          "metalness": 0.2,
+          "roughness": 0.8
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            -34
+          ],
+          "size": [
+            2.5,
+            28,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#15181c",
+          "metalness": 0.2,
+          "roughness": 0.8
+        },
+        {
+          "kind": "box",
+          "position": [
+            6,
+            0,
+            -34
+          ],
+          "size": [
+            2.5,
+            28,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#15181c",
+          "metalness": 0.2,
+          "roughness": 0.8
+        },
+        {
+          "kind": "box",
+          "position": [
+            12,
+            0,
+            -34
+          ],
+          "size": [
+            2.5,
+            28,
+            6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#15181c",
+          "metalness": 0.2,
+          "roughness": 0.8
+        },
+        {
+          "kind": "box",
+          "position": [
+            -42,
+            0,
+            6
+          ],
+          "size": [
+            34,
+            14,
+            14
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.45,
+          "roughness": 0.5
+        },
+        {
+          "kind": "box",
+          "position": [
+            42,
+            0,
+            6
+          ],
+          "size": [
+            34,
+            14,
+            14
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.45,
+          "roughness": 0.5
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -28,
+            -8
+          ],
+          "size": [
+            10,
+            14,
+            10
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#181a1f",
+          "metalness": 0.2,
+          "roughness": 0.8
+        }
+      ],
+      "specs": {
+        "Tilt Angle": "12\u00b0 upward",
+        "Bearing Seat": "22 mm OD \u00d7 7 mm deep bore"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "tilt-yoke",
+        "anchor": [
+          0.5,
+          0.9082089552238806,
+          0.3869230769230769
+        ],
+        "rotation": [
+          -11.999999999999998,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "dc-motor",
+      "name": "Brushless DC Drive Motor",
+      "category": "electronics",
+      "description": "High-efficiency internal brushless DC motor core with copper stator windings and rear flux ring.",
+      "role": "High-efficiency internal brushless DC motor core with copper stator windings and rear flux ring.",
+      "position": [
+        0,
+        141.18,
+        -8.32
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "size": [
+        44,
+        44,
+        41
+      ],
+      "explode": [
+        0,
+        35,
+        -55
+      ],
+      "color": "#b8bfc6",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            44,
+            32,
+            44
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#b8bfc6",
+          "metalness": 0.85,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            2
+          ],
+          "size": [
+            36,
+            36,
+            36
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#b87333",
+          "metalness": 0.75,
+          "roughness": 0.35
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            -18
+          ],
+          "size": [
+            22,
+            6,
+            22
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#22262c",
+          "metalness": 0.5,
+          "roughness": 0.5
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            -16,
+            -16
+          ],
+          "size": [
+            14,
+            6,
+            8
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#1b5e3a",
+          "metalness": 0.2,
+          "roughness": 0.6
+        }
+      ],
+      "specs": {
+        "Nominal Voltage": "12V DC",
+        "Speed Range": "800\u20132600 RPM"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "motor-housing",
+        "anchor": [
+          0.5,
+          0.5468541839564653,
+          0.5074294966909453
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "fan-axle",
+      "name": "8 mm Stainless Drive Axle",
+      "category": "mechanical",
+      "description": "Precision ground 8 mm stainless steel shaft coupling the motor rotor through the 608 bearing to the three-blade hub.",
+      "role": "Precision ground 8 mm stainless steel shaft coupling the motor rotor through the 608 bearing to the three-blade hub.",
+      "position": [
+        0,
+        145.65,
+        12.73
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "size": [
+        12,
+        12,
+        56
+      ],
+      "explode": [
+        0,
+        12,
+        20
+      ],
+      "color": "#e2e6ea",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            8,
+            54,
+            8
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#e2e6ea",
+          "metalness": 0.92,
+          "roughness": 0.15
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            7
+          ],
+          "size": [
+            12,
+            3,
+            12
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#c4cbd2",
+          "metalness": 0.85,
+          "roughness": 0.25
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            27.5
+          ],
+          "size": [
+            5,
+            3,
+            5
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#b87333",
+          "metalness": 0.8,
+          "roughness": 0.3
+        }
+      ],
+      "specs": {
+        "Diameter": "8.0 mm (fits 608 bore)",
+        "Length": "54 mm",
+        "Material": "303 Stainless Steel"
+      },
+      "connections": []
+    },
+    {
+      "id": "axle-bearing",
+      "name": "608 Axle Ball Bearing",
+      "category": "Motion",
+      "description": "Sourced 608 deep-groove ball bearing (8 mm bore, 22 mm OD, 7 mm width) seated in the front motor boss to support axial and radial rotor loads.",
+      "role": "608 bearing: 8 mm bore, 22 mm outer diameter, 7 mm width.",
+      "position": [
+        0,
+        146.9,
+        18.6
+      ],
+      "rotation": [
+        78,
+        0,
+        0
+      ],
+      "explode": [
+        0,
+        18,
+        48
+      ],
+      "color": "#c8d0d8",
+      "specs": {
+        "Catalog source": "NopSCADlib",
+        "Source revision": "00ec2898c0a2cdebd446f0175671b633d5ae7d5f",
+        "License": "GPL-3.0-or-later",
+        "CAD envelope": "22 \u00d7 7 \u00d7 22 mm",
+        "Source SHA-256": "642617b64c9ce3cea4b88c68131c19abff167634f759a7d0ce61228a877582b7"
+      },
+      "connections": [],
+      "notes": "Sourced NopSCADlib geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: GPL-3.0-or-later.",
+      "catalogRef": {
+        "id": "bearing-608"
+      },
+      "attachment": {
+        "parentId": "motor-housing",
+        "anchor": [
+          0.5,
+          0.5468232708218292,
+          0.9121499126208221
+        ],
+        "rotation": [
+          89.99999999999999,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "circular-grille",
+      "name": "Circular Rear & Perimeter Safety Grille",
+      "category": "structure",
+      "description": "Open-front wire and ring safety cage with radial struts and concentric rings framing the exposed rotor.",
+      "role": "Open-front wire and ring safety cage with radial struts and concentric rings framing the exposed rotor.",
+      "position": [
+        0,
+        146.48,
+        16.65
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "size": [
+        166,
+        165,
+        41
+      ],
+      "explode": [
+        0,
+        30,
+        -25
+      ],
+      "color": "#d6dce2",
+      "solids": [
+        {
+          "kind": "torus",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            78,
+            3,
+            78
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.45,
+          "roughness": 0.45
+        },
+        {
+          "kind": "torus",
+          "position": [
+            0,
+            0,
+            4
+          ],
+          "size": [
+            80,
+            2.5,
+            80
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "torus",
+          "position": [
+            0,
+            0,
+            20
+          ],
+          "size": [
+            78,
+            3,
+            78
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.45,
+          "roughness": 0.45
+        },
+        {
+          "kind": "torus",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            56,
+            1.6,
+            56
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "torus",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            34,
+            1.6,
+            34
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            62,
+            4,
+            62
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#343c46",
+          "metalness": 0.45,
+          "roughness": 0.5
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            78,
+            4
+          ],
+          "size": [
+            3.5,
+            34,
+            3.5
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            -78,
+            4
+          ],
+          "size": [
+            3.5,
+            34,
+            3.5
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -78,
+            0,
+            4
+          ],
+          "size": [
+            3.5,
+            34,
+            3.5
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            78,
+            0,
+            4
+          ],
+          "size": [
+            3.5,
+            34,
+            3.5
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -55.2,
+            55.2,
+            4
+          ],
+          "size": [
+            3,
+            34,
+            3
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            55.2,
+            55.2,
+            4
+          ],
+          "size": [
+            3,
+            34,
+            3
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -55.2,
+            -55.2,
+            4
+          ],
+          "size": [
+            3,
+            34,
+            3
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            55.2,
+            -55.2,
+            4
+          ],
+          "size": [
+            3,
+            34,
+            3
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            4,
+            156,
+            3
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            4,
+            156,
+            3
+          ],
+          "rotation": [
+            0,
+            0,
+            60
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "box",
+          "position": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            4,
+            156,
+            3
+          ],
+          "rotation": [
+            0,
+            0,
+            -60
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.8,
+          "roughness": 0.28
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -79,
+            0,
+            -12
+          ],
+          "size": [
+            12,
+            8,
+            12
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#2a3038",
+          "metalness": 0.4,
+          "roughness": 0.5
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            79,
+            0,
+            -12
+          ],
+          "size": [
+            12,
+            8,
+            12
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ],
+          "color": "#2a3038",
+          "metalness": 0.4,
+          "roughness": 0.5
+        }
+      ],
+      "specs": {
+        "Outer Diameter": "160 mm",
+        "Depth": "34 mm",
+        "Configuration": "Open-front perimeter + rear finger guard"
+      },
+      "connections": [],
+      "attachment": {
+        "parentId": "motor-housing",
+        "anchor": [
+          0.5,
+          0.5467389865216168,
+          0.88281593127414
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "three-blade-rotor",
+      "name": "Exposed Three-Blade Rotor",
+      "category": "mechanical",
+      "description": "High-visibility orange three-blade aerodynamic impeller with a machined aluminum nose cone mounted directly ahead of the 608 bearing.",
+      "role": "High-visibility orange three-blade aerodynamic impeller with a machined aluminum nose cone mounted directly ahead of the 608 bearing.",
+      "position": [
+        0,
+        149.4,
+        30.34
+      ],
+      "rotation": [
+        -12,
+        0,
+        0
+      ],
+      "size": [
+        129.607,
+        112.978,
+        25
+      ],
+      "explode": [
+        0,
+        25,
+        95
+      ],
+      "color": "#ff5a1f",
+      "solids": [
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            30,
+            16,
+            34
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        },
+        {
+          "kind": "sphere",
+          "position": [
+            0,
+            0,
+            8
+          ],
+          "size": [
+            30,
+            30,
+            16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#d6dce2",
+          "metalness": 0.85,
+          "roughness": 0.2
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            0,
+            -5
+          ],
+          "size": [
+            20,
+            8,
+            20
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "color": "#2a3038",
+          "metalness": 0.5,
+          "roughness": 0.4
+        },
+        {
+          "kind": "sphere",
+          "position": [
+            0,
+            39,
+            0
+          ],
+          "size": [
+            28,
+            56,
+            4.5
+          ],
+          "rotation": [
+            0,
+            24,
+            0
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        },
+        {
+          "kind": "sphere",
+          "position": [
+            -33.77,
+            -19.5,
+            0
+          ],
+          "size": [
+            28,
+            56,
+            4.5
+          ],
+          "rotation": [
+            -20.78,
+            -12,
+            -60
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        },
+        {
+          "kind": "sphere",
+          "position": [
+            33.77,
+            -19.5,
+            0
+          ],
+          "size": [
+            28,
+            56,
+            4.5
+          ],
+          "rotation": [
+            20.78,
+            -12,
+            60
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            0,
+            16,
+            0
+          ],
+          "size": [
+            7,
+            10,
+            9
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            -13.86,
+            -8,
+            0
+          ],
+          "size": [
+            7,
+            10,
+            9
+          ],
+          "rotation": [
+            0,
+            0,
+            -60
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        },
+        {
+          "kind": "cylinder",
+          "position": [
+            13.86,
+            -8,
+            0
+          ],
+          "size": [
+            7,
+            10,
+            9
+          ],
+          "rotation": [
+            0,
+            0,
+            60
+          ],
+          "color": "#ff5a1f",
+          "metalness": 0.25,
+          "roughness": 0.35
+        }
+      ],
+      "specs": {
+        "Rotor Diameter": "136 mm",
+        "Blade Count": "3 pitched airfoils (120\u00b0 spacing)",
+        "Hub Bore": "8 mm press-fit + set screw"
+      },
+      "connections": []
+    }
+  ],
+  "steps": [
+    {
+      "title": "Base & PWM Speed Control",
+      "description": "Place the PWM speed controller PCB inside the weighted desktop base and press the knurled aluminum speed knob onto the vertical potentiometer shaft.",
+      "partIds": [
+        "base-stand",
+        "control-pcb",
+        "speed-knob"
+      ]
+    },
+    {
+      "title": "Tilt Yoke & Motor Pod",
+      "description": "Mount the U-shaped tilt yoke to the base pedestal, position the vented motor housing at its 12-degree upward tilt, and secure both side trunnions with the locking thumb knobs.",
+      "partIds": [
+        "tilt-yoke",
+        "tilt-knobs",
+        "motor-housing"
+      ]
+    },
+    {
+      "title": "Motor, Axle & Sourced 608 Bearing",
+      "description": "Install the brushless DC motor inside the housing, slide the 8 mm stainless drive axle through the motor, and press the sourced 608 ball bearing (8 mm bore, 22 mm OD) into the front nose boss.",
+      "partIds": [
+        "dc-motor",
+        "fan-axle",
+        "axle-bearing"
+      ]
+    },
+    {
+      "title": "Circular Grille & Exposed Three-Blade Rotor",
+      "description": "Fasten the open-front circular safety grille around the motor pod and press the high-visibility three-blade rotor hub onto the protruding 8 mm axle in front of the 608 bearing.",
+      "partIds": [
+        "circular-grille",
+        "three-blade-rotor"
+      ]
+    }
+  ],
+  "source": "gemini",
+  "model": "gemini-4-argon",
+  "assemblies": [
+    {
+      "id": "stand-control-asm",
+      "name": "Base & Speed Control Assembly",
+      "partIds": [
+        "base-stand",
+        "control-pcb",
+        "speed-knob",
+        "tilt-yoke",
+        "tilt-knobs"
+      ]
+    },
+    {
+      "id": "fan-head-asm",
+      "name": "Tilted Fan Head & Rotor Assembly",
+      "partIds": [
+        "motor-housing",
+        "dc-motor",
+        "fan-axle",
+        "axle-bearing",
+        "circular-grille",
+        "three-blade-rotor"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel-base-pcb",
+      "from": "base-stand",
+      "to": "control-pcb",
+      "type": "contains",
+      "description": "Weighted base encloses the PWM motor speed controller PCB."
+    },
+    {
+      "id": "rel-knob-pcb",
+      "from": "speed-knob",
+      "to": "control-pcb",
+      "type": "mechanical",
+      "description": "Knurled aluminum speed knob couples to the potentiometer shaft on the control PCB."
+    },
+    {
+      "id": "rel-pcb-motor",
+      "from": "control-pcb",
+      "to": "dc-motor",
+      "type": "electrical",
+      "description": "PWM controller delivers variable-duty DC power through the yoke cable to the brushless motor."
+    },
+    {
+      "id": "rel-base-yoke",
+      "from": "base-stand",
+      "to": "tilt-yoke",
+      "type": "mechanical",
+      "description": "U-shaped tilt yoke bolts rigidly to the top pedestal of the weighted base."
+    },
+    {
+      "id": "rel-yoke-housing",
+      "from": "tilt-yoke",
+      "to": "motor-housing",
+      "type": "mechanical",
+      "description": "Tilt yoke cradles the motor housing side trunnions at a 12-degree upward angle."
+    },
+    {
+      "id": "rel-knobs-yoke",
+      "from": "tilt-knobs",
+      "to": "motor-housing",
+      "type": "mechanical",
+      "description": "Threaded thumb knobs clamp the yoke arms against the motor housing trunnions to lock the tilt angle."
+    },
+    {
+      "id": "rel-housing-motor",
+      "from": "motor-housing",
+      "to": "dc-motor",
+      "type": "contains",
+      "description": "Vented rear motor pod houses the brushless DC stator and rotor."
+    },
+    {
+      "id": "rel-housing-bearing",
+      "from": "motor-housing",
+      "to": "axle-bearing",
+      "type": "contains",
+      "description": "Front 22 mm nose pocket of the motor housing seats the outer race of the sourced 608 ball bearing."
+    },
+    {
+      "id": "rel-motor-axle",
+      "from": "dc-motor",
+      "to": "fan-axle",
+      "type": "mechanical",
+      "description": "Brushless DC motor drives the 8 mm stainless steel fan axle."
+    },
+    {
+      "id": "rel-bearing-axle",
+      "from": "axle-bearing",
+      "to": "fan-axle",
+      "type": "mechanical",
+      "description": "Sourced 608 bearing supports the 8 mm fan axle with low-friction rolling contact."
+    },
+    {
+      "id": "rel-axle-rotor",
+      "from": "fan-axle",
+      "to": "three-blade-rotor",
+      "type": "mechanical",
+      "description": "Front end of the 8 mm axle press-fits into the exposed three-blade rotor hub."
+    },
+    {
+      "id": "rel-housing-grille",
+      "from": "motor-housing",
+      "to": "circular-grille",
+      "type": "mechanical",
+      "description": "Circular safety grille mounts to the motor housing perimeter and pivot bosses."
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "rotor-spin",
+      "name": "Fan Speed & Rotor Spin",
+      "description": "Rotates the front speed knob and drives the 8 mm fan axle and exposed three-blade rotor on the 608 bearing.",
+      "duration": 2.5,
+      "motion": "linear",
+      "tracks": [
+        {
+          "partId": "speed-knob",
+          "rotation": [
+            0,
+            120,
+            0
+          ]
+        },
+        {
+          "partId": "fan-axle",
+          "rotation": [
+            0,
+            0,
+            1080
+          ]
+        },
+        {
+          "partId": "three-blade-rotor",
+          "rotation": [
+            0,
+            0,
+            1080
+          ]
+        }
+      ],
+      "stages": [
+        {
+          "at": 0,
+          "title": "Minimum Speed",
+          "description": "The knurled speed knob is at its low-speed stop while the rotor begins turning.",
+          "partIds": [
+            "speed-knob",
+            "control-pcb"
+          ]
+        },
+        {
+          "at": 0.4,
+          "title": "PWM Ramp-Up",
+          "description": "Turning the speed knob increases PWM duty cycle to the brushless DC motor, accelerating the 8 mm axle through the 608 bearing.",
+          "partIds": [
+            "speed-knob",
+            "dc-motor",
+            "fan-axle",
+            "axle-bearing"
+          ]
+        },
+        {
+          "at": 1,
+          "title": "Full Airflow",
+          "description": "The exposed three-blade rotor spins smoothly inside the circular perimeter grille at full speed.",
+          "partIds": [
+            "three-blade-rotor",
+            "fan-axle",
+            "circular-grille"
+          ]
+        }
+      ]
+    }
+  ],
+  "designBrief": "A small desktop fan with an exposed three-blade rotor, a circular grille, an adjustable tilted stand and a visible speed knob. Include a sourced 608 bearing on the fan axle."
+}

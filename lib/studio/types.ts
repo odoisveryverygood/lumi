@@ -37,6 +37,7 @@ export interface DeviceStep { title: string; description: string; partIds: strin
 export interface DeviceAssembly { id:string; name:string; parentId?:string; partIds:string[]; }
 export interface DeviceRelationship { id:string; from:string; to:string; type:'mechanical'|'electrical'|'data'|'contains'; description:string; }
 export interface DeviceMechanism {
+  verification?:import('./motion-types').MotionContract;
   id:string;
   name:string;
   description:string;

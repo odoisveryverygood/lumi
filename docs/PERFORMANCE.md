@@ -71,3 +71,17 @@ The same-prompt live baseline (`Build a smart sofa with an iron base and an ESP3
 The successful updated API check completed in 78.214 seconds (first complete part9.178 seconds,14 parts/247 solids/18 relationships/5 steps,6702 output tokens). A subsequent fresh creation through the actual production browser form completed in87.072 seconds with15 parts/254 solids/19 relationships/6 steps and7069 output tokens. Both were served by Priority Argon. The browser result was independently selected, toggled between assembled/exploded, exported through the UI and revalidated from the downloaded bytes. The final browser run was about42% faster than the150-second baseline. These are small-sample observations, not a guarantee; generated details differ between runs.
 
 An earlier updated browser attempt received output in82.212 seconds but failed decoding and retained the saved object; it is recorded in `browser-attempt-1.json`. The generation instructions were corrected to show valid literal JSON and forbid arithmetic/comments; the exact raw response from that failed run was unavailable, so its precise parse defect is unknown. The final flow was then retested successfully. The shared relationship graph is also used for the selected-part connection count, so omitting repeated per-part links does not make a connected ESP32 appear disconnected.
+
+## October 25: generation reliability
+
+JSON MIME mode no longer silently inserts `{type:"object"}` as a schema. A real robot-dog diagnostic returned only `{}` with that schema. Callers with a real response schema retain it. The model, tier and thinking configuration are unchanged.
+
+New-object generation now removes trailing commas outside strings locally. Other malformed JSON can receive unique literal syntax edits; complete valid parts must survive unchanged. Parseable candidates use the existing targeted structural repair. Both kinds share the same maximum of three model calls and a 250-second generation deadline. Unfinished geometry is not invented, templates are not substituted, and cancellation, provider failures and exhausted corrections preserve the saved object. Deeply incomplete responses can still fail.
+
+Final performance totals include all successful model calls in the generation/repair operation. Missing usage stays unknown rather than becoming zero. Transport cancellation also interrupts a stalled streaming body after headers arrive.
+
+A fresh `a robot dog` request through the actual streaming route passed schema validation with 18 parts and 234 solids in 106.583 seconds. The failed initial run is retained alongside that result. This is one successful generation, not a broad reliability rate or a latency improvement claim. Browser review evidence and exact checks are recorded in [the teammate 1 handoff](team/README_TEAMMATE_1.md).
+
+### Incremental progress decoding
+
+The streaming component reader retains its scan position and validates each complete component once. It no longer repeats all previous decoding on every progress tick. A replay of the same 18-part, 234-solid document across 96 snapshots reduced median local parser time from 73.958 ms to 3.022 ms, with identical geometry (one warm-up, five measured runs). This removes local CPU work without changing Argon, its prompt or generated detail. It does not establish an end-to-end generation speedup. The last snapshot is always processed, and progress now identifies when component geometry has finished while relationships/mechanisms/guide text is still arriving.

@@ -13,13 +13,20 @@ function sse(events:unknown[],headers:Record<string,string>={}){const bytes=new 
 const events=(tier='priority')=>[{event_type:'step.start',index:0,step:{type:'thought'}},{event_type:'step.delta',index:0,delta:{type:'text',text:'PRIVATE THOUGHT'}},{event_type:'step.start',index:1,step:{type:'model_output'}},{event_type:'step.delta',index:1,delta:{type:'text',text:'{"name":"Café'}},{event_type:'step.delta',index:1,delta:{type:'text',text:'"}'}},{event_type:'interaction.completed',interaction:{status:'completed',service_tier:tier,usage}}];
 
 describe('real Interactions protocol boundaries',()=>{
+ it('interrupts a stalled Interactions body when the caller cancels',async()=>{
+  const signal=new AbortController(),cancel=vi.fn();
+  const body=new ReadableStream<Uint8Array>({start(controller){controller.enqueue(new TextEncoder().encode('data: {"event_type":"step.start","index":0,"step":{"type":"model_output"}}\n\n'));},cancel});
+  const pending=readInteraction(new Response(body,{headers:{'content-type':'text/event-stream'}}),undefined,signal.signal);
+  signal.abort(new DOMException('Cancelled','AbortError'));
+  await expect(pending).rejects.toMatchObject({name:'AbortError'});expect(cancel).toHaveBeenCalledTimes(1);
+ });
  it('uses the documented Priority endpoint, stateless inputs and preserved PDF/image evidence',async()=>{
   const fetcher=vi.fn().mockResolvedValueOnce(models()).mockResolvedValueOnce(Response.json(complete()));vi.stubGlobal('fetch',fetcher);
   const report=vi.fn();const result=await generateText('Keep the checks.','Create an object.',{serviceTier:'priority',json:true,onPerformance:report,attachments:[{mimeType:'application/pdf',data:'JVBERi0='},{mimeType:'image/jpeg',data:'/9j/'}]});
   expect(fetcher.mock.calls[1][0]).toBe('https://generativelanguage.googleapis.com/v1beta/interactions');const body=JSON.parse(fetcher.mock.calls[1][1].body);
   expect(body).toMatchObject({model:'gemini-4-argon',store:false,service_tier:'priority',system_instruction:'Keep the checks.',response_format:{type:'text',mime_type:'application/json'}});
   expect(body.input).toEqual([{type:'text',text:'Create an object.'},{type:'document',mime_type:'application/pdf',data:'JVBERi0='},{type:'image',mime_type:'image/jpeg',data:'/9j/'}]);
-  expect(body.generation_config).toMatchObject({thinking_level:'medium',max_output_tokens:32768});expect(body.generation_config).not.toHaveProperty('temperature');expect(body.response_format.schema).toEqual({type:'object'});
+  expect(body.generation_config).toMatchObject({thinking_level:'medium',max_output_tokens:32768});expect(body.generation_config).not.toHaveProperty('temperature');expect(body.response_format).not.toHaveProperty('schema');
   expect(result.text).toBe('{"ready":true}');expect(result.performance).toMatchObject({requestedTier:'priority',servedTier:'priority',inputTokens:20000,outputTokens:9000,thinkingTokens:1000});expect(result.performance?.estimatedCostUsd).toBeCloseTo(.252);expect(report).toHaveBeenCalledOnce();expect(JSON.stringify(result)).not.toContain('priority-test');
  });
  it('decodes split UTF-8, excludes thoughts, and observes Google downgrading Priority to Standard',async()=>{
@@ -28,8 +35,11 @@ describe('real Interactions protocol boundaries',()=>{
  });
  it('sends explicit low thinking through the SDK for extraction without lowering the Argon output allowance',async()=>{
   const fetcher=vi.fn().mockResolvedValueOnce(models()).mockResolvedValueOnce(Response.json(complete()));vi.stubGlobal('fetch',fetcher);
-  await generateText('Extract a fact','A = 1',{transport:'interactions',thinkingLevel:'low',maxTokens:4000,json:true});
-  expect(JSON.parse(fetcher.mock.calls[1][1].body).generation_config).toEqual({thinking_level:'low',max_output_tokens:32768});
+  const schema={type:'object',properties:{value:{type:'number'}},required:['value']};
+  await generateText('Extract a fact','A = 1',{transport:'interactions',thinkingLevel:'low',maxTokens:4000,json:true,responseSchema:schema});
+  const body=JSON.parse(fetcher.mock.calls[1][1].body);
+  expect(body.generation_config).toEqual({thinking_level:'low',max_output_tokens:32768});
+  expect(body.response_format.schema).toEqual(schema);
  });
  it('supports explicitly requested stored background jobs and retrieves completed output',async()=>{
   const fetcher=vi.fn().mockResolvedValueOnce(models()).mockResolvedValueOnce(Response.json({...complete(),id:'test-background'}));vi.stubGlobal('fetch',fetcher);

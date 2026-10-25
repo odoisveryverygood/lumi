@@ -1,0 +1,11 @@
+
+ RUN  v3.2.7 /Users/kavish/Library/Application Support/Claude/scratch-workspaces/8b69714f-f057-4bf6-8753-41b7d4634367/f649888a-b113-4fb2-9571-cb483bcd60b5/scratch-2026-10-25-159ae5/lumi
+
+ ✓ tests/holdout-tasks.test.ts (9 tests) 1018ms
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  11:04:57
+   Duration  1.40s (transform 92ms, setup 0ms, collect 194ms, tests 1.02s, environment 0ms, prepare 41ms)
+
+holdout exit 0

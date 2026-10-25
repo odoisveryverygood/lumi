@@ -31,11 +31,11 @@ function abortSignal(signal: AbortSignal | undefined, timeout: number) {
 }
 function throwIfAborted(signal?: AbortSignal) { if (signal?.aborted) throw new AIError('aborted', 'The request was cancelled.'); }
 
-async function providerFetch(path: string, init: RequestInit, timeout: number, signal?: AbortSignal) {
+async function providerFetch(path: string, init: RequestInit, timeout: number | undefined, signal?: AbortSignal) {
   const key = apiKey();
   if (!key) throw new AIError('missing_key', 'Gemini is not configured on this server.');
   try {
-    const response = await fetch(`${GEMINI_API}/${path}`, { ...init, headers: { 'content-type': 'application/json', 'x-goog-api-key': key, ...init.headers }, signal: abortSignal(signal, timeout), cache: 'no-store' });
+    const response = await fetch(`${GEMINI_API}/${path}`, { ...init, headers: { 'content-type': 'application/json', 'x-goog-api-key': key, ...init.headers }, signal: timeout===undefined?signal:abortSignal(signal, timeout), cache: 'no-store' });
     if (!response.ok) {
       // Never return Google's raw error, URL, or headers to a client.
       if (response.status === 429) throw new AIError('quota', 'Gemini has reached its current quota. Try again later or check the API account quota.');
@@ -89,6 +89,9 @@ function responseText(payload: GeminiResponse) {
 async function readGeminiStream(response: Response, onPartial: (text: string) => void, signal?: AbortSignal, onUsage?: (usage: Record<string,unknown>) => void) {
   if (!response.body) throw new AIError('invalid_output', 'Gemini returned an empty response stream.');
   const reader = response.body.getReader();
+  const cancel=()=>{void reader.cancel().catch(()=>{});};
+  signal?.addEventListener('abort',cancel,{once:true});
+  if(signal?.aborted)cancel();
   const decoder = new TextDecoder();
   let buffer = '', text = '', receivedBytes = 0;
   const consume = (frame: string) => {
@@ -119,9 +122,11 @@ async function readGeminiStream(response: Response, onPartial: (text: string) =>
       }
     }
     buffer += decoder.decode();
+    throwIfAborted(signal);
     if (buffer.trim()) consume(buffer);
     return text.trim();
   } finally {
+    signal?.removeEventListener('abort',cancel);
     await reader.cancel().catch(() => {});
     reader.releaseLock();
   }
@@ -153,9 +158,10 @@ export async function generateText(system: string, user: string, options: Genera
         text=result.text.trim(); usage=result.usage; servedTier=result.tier;
       } else {
         const method=options.onPartial?'streamGenerateContent?alt=sse':'generateContent';
-        const response=await providerFetch(`models/${encodeURIComponent(model)}:${method}`,{method:'POST',body:JSON.stringify({systemInstruction:{parts:[{text:system}]},contents:[{role:'user',parts:[{text:user},...(options.attachments||[]).map(inlineData=>({inlineData}))]}],generationConfig:{temperature:.2,maxOutputTokens:options.maxTokens??24_000,...(options.json?{responseMimeType:'application/json'}:{})}})},timeoutMs,options.signal);
+        operationSignal=abortSignal(options.signal,timeoutMs);
+        const response=await providerFetch(`models/${encodeURIComponent(model)}:${method}`,{method:'POST',body:JSON.stringify({systemInstruction:{parts:[{text:system}]},contents:[{role:'user',parts:[{text:user},...(options.attachments||[]).map(inlineData=>({inlineData}))]}],generationConfig:{temperature:.2,maxOutputTokens:options.maxTokens??24_000,...(options.json?{responseMimeType:'application/json'}:{})}})},undefined,operationSignal);
         servedTier=inferenceTier(response.headers.get('x-gemini-service-tier'));
-        if(options.onPartial) text=await readGeminiStream(response,partial,options.signal,value=>{usage=value;});
+        if(options.onPartial) text=await readGeminiStream(response,partial,operationSignal,value=>{usage=value;});
         else { const payload=await response.json() as GeminiResponse & {usageMetadata?:Record<string,unknown>};usage=payload.usageMetadata;text=responseText(payload).trim(); }
       }
       if(!text)throw new AIError('invalid_output','Gemini returned no usable answer. Please try again.');

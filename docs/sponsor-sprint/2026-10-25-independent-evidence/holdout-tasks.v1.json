@@ -1,0 +1,237 @@
+{
+ "version": 1,
+ "interior": {
+  "minX": -33,
+  "maxX": 33,
+  "minY": 0,
+  "maxY": 24,
+  "minZ": -23,
+  "maxZ": 23
+ },
+ "tasks": [
+  {
+   "id": "h1-rotated-module-outside",
+   "name": "Rotated sourced module outside the housing",
+   "group": "seeded-repair",
+   "expected": "satisfy",
+   "movable": [
+    "radio"
+   ],
+   "requirement": {
+    "kind": "inside",
+    "partId": "radio",
+    "clearance": 1.5
+   },
+   "seed": {
+    "radio": {
+     "position": [
+      70,
+      7,
+      0
+     ],
+     "rotation": [
+      0,
+      90,
+      0
+     ]
+    }
+   },
+   "request": "Place the ESP32-C3 module inside the housing with 1.5 mm clearance. Keep its rotation, the housing, the carrier board and the button unchanged.",
+   "note": "Unseen: a 90° rotated module and a 1.5 mm clearance value. A correct move keeps the rotation."
+  },
+  {
+   "id": "h2-module-through-wall",
+   "name": "Larger module intersects a side wall",
+   "group": "seeded-repair",
+   "expected": "satisfy",
+   "movable": [
+    "radio"
+   ],
+   "requirement": {
+    "kind": "inside",
+    "partId": "radio",
+    "clearance": 2
+   },
+   "seed": {
+    "radio": {
+     "sourceId": "esp32-wroom-32e",
+     "position": [
+      0,
+      7,
+      22
+     ]
+    }
+   },
+   "request": "Move the ESP32-WROOM module inside the housing with 2 mm clearance. Keep the housing, carrier board and button unchanged.",
+   "note": "Unseen: the defect is a +Z wall intersection rather than a floor or outside placement."
+  },
+  {
+   "id": "h3-battery-overlap-z",
+   "name": "Battery overlaps the sourced module along Z",
+   "group": "seeded-repair",
+   "expected": "satisfy",
+   "movable": [
+    "battery"
+   ],
+   "requirement": {
+    "kind": "separation",
+    "pairs": [
+     {
+      "a": "battery",
+      "b": "radio",
+      "minimum": 2.5
+     }
+    ]
+   },
+   "seed": {
+    "battery": [
+     0,
+     7,
+     10
+    ]
+   },
+   "request": "Move the battery to leave 2.5 mm separation from the ESP32-C3 module. Keep the housing, carrier board, ESP32-C3 module and button unchanged.",
+   "note": "Unseen: overlap along the Z axis and a 2.5 mm separation value."
+  },
+  {
+   "id": "h4-bracket-adjacent-port",
+   "name": "Bracket directly in front of the charging port",
+   "group": "seeded-repair",
+   "expected": "satisfy",
+   "movable": [
+    "bracket"
+   ],
+   "requirement": {
+    "kind": "corridor",
+    "portId": "charging-port",
+    "length": 10
+   },
+   "seed": {
+    "bracket": [
+     0,
+     12,
+     30
+    ]
+   },
+   "request": "Move the bracket so the charging port has 10 mm of clear space in front along its local +Z direction. Keep the charging port, housing and ESP32-C3 module unchanged.",
+   "note": "Unseen: the bracket sits 1 mm from the port face and the corridor length is 10 mm."
+  },
+  {
+   "id": "h5-battery-height-5",
+   "name": "Fresh edit to a 5 mm battery envelope",
+   "group": "fresh-edit",
+   "expected": "satisfy",
+   "movable": [
+    "battery"
+   ],
+   "requirement": {
+    "kind": "max-height",
+    "partId": "battery",
+    "maximum": 5
+   },
+   "seed": {},
+   "request": "Reduce the illustrative battery height to a maximum of 5 mm by changing its actual geometry. Keep the housing and ESP32-C3 module unchanged.",
+   "note": "Unseen value. The one-pass candidate is a real model output on an unbroken fixture."
+  },
+  {
+   "id": "h6-battery-height-2p5",
+   "name": "Fresh edit to a 2.5 mm battery envelope",
+   "group": "fresh-edit",
+   "expected": "satisfy",
+   "movable": [
+    "battery"
+   ],
+   "requirement": {
+    "kind": "max-height",
+    "partId": "battery",
+    "maximum": 2.5
+   },
+   "seed": {},
+   "request": "Reduce the illustrative battery height to a maximum of 2.5 mm by changing its actual geometry. Keep the housing and ESP32-C3 module unchanged.",
+   "note": "Unseen, tighter value than any implementation case."
+  },
+  {
+   "id": "h7-compound-separation",
+   "name": "Fresh compound separation request",
+   "group": "fresh-edit",
+   "expected": "satisfy",
+   "movable": [
+    "battery"
+   ],
+   "requirement": {
+    "kind": "separation",
+    "pairs": [
+     {
+      "a": "battery",
+      "b": "radio",
+      "minimum": 4
+     },
+     {
+      "a": "battery",
+      "b": "carrier",
+      "minimum": 2
+     }
+    ]
+   },
+   "seed": {},
+   "request": "Move the battery so it keeps at least 4 mm separation from the ESP32-C3 module and at least 2 mm separation from the carrier board. Keep every other component unchanged.",
+   "note": "Unseen: two separation clauses in one request. The standard layout fails the first clause (3.4 mm) without any seeded damage."
+  },
+  {
+   "id": "h8-impossible-clearance",
+   "name": "Clearance larger than the interior",
+   "group": "expected-refusal",
+   "expected": "blocked",
+   "movable": [],
+   "requirement": {
+    "kind": "impossible-clearance",
+    "partId": "radio",
+    "clearance": 12
+   },
+   "seed": {},
+   "request": "Place the ESP32-C3 module inside the housing with 12 mm clearance on every side. Keep the housing unchanged.",
+   "note": "The interior is 24 mm tall; 12 mm above and below leaves no room for any module. Correct behavior is a blocked or unverified draft with the original geometry intact."
+  },
+  {
+   "id": "h9-contradictory-request",
+   "name": "Contradictory preservation request",
+   "group": "expected-refusal",
+   "expected": "blocked",
+   "movable": [],
+   "requirement": {
+    "kind": "contradiction"
+   },
+   "seed": {
+    "battery": [
+     0,
+     7,
+     10
+    ]
+   },
+   "request": "Keep every component exactly where it is and do not change any shape, but make the battery stop overlapping the ESP32-C3 module.",
+   "note": "No change can satisfy both clauses. Correct behavior is no accepted change and the seeded overlap still visible as a failed check."
+  },
+  {
+   "id": "h10-missing-floor",
+   "name": "Housing without a floor",
+   "group": "expected-refusal",
+   "expected": "blocked",
+   "movable": [],
+   "requirement": {
+    "kind": "unsupported-interior"
+   },
+   "seed": {
+    "radio": {
+     "position": [
+      68,
+      7,
+      0
+     ]
+    },
+    "housing": "no-floor"
+   },
+   "request": "Place the ESP32-C3 module inside the housing with 1 mm clearance. Keep the incomplete housing unchanged.",
+   "note": "Unseen: the floor, not a wall, is missing. A bounding-box pass is unacceptable."
+  }
+ ]
+}
