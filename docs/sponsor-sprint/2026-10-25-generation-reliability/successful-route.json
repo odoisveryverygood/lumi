@@ -1,0 +1,137 @@
+{
+  "completed": true,
+  "prompt": "a robot dog",
+  "model": "gemini-4-argon",
+  "durationMs": 106583,
+  "performance": {
+    "transport": "interactions",
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "durationMs": 106575,
+    "firstTokenMs": 2557,
+    "inputTokens": 1300,
+    "outputTokens": 10323,
+    "thinkingTokens": 0,
+    "cachedTokens": 0,
+    "estimatedCostUsd": 0.190494
+  },
+  "parts": 18,
+  "solids": 234,
+  "progress": [
+    {
+      "atMs": 27,
+      "message": "Request received. Connecting to Gemini…"
+    },
+    {
+      "atMs": 27,
+      "message": "Designing the components and assembly…"
+    },
+    {
+      "atMs": 178,
+      "message": "Gemini is designing your object…"
+    },
+    {
+      "atMs": 2561,
+      "message": "Receiving component geometry and the assembly guide…"
+    },
+    {
+      "atMs": 12073,
+      "message": "1 custom component received. Building the rest…",
+      "parts": 1
+    },
+    {
+      "atMs": 19105,
+      "message": "2 custom components received. Building the rest…",
+      "parts": 2
+    },
+    {
+      "atMs": 24017,
+      "message": "3 custom components received. Building the rest…",
+      "parts": 3
+    },
+    {
+      "atMs": 30159,
+      "message": "4 custom components received. Building the rest…",
+      "parts": 4
+    },
+    {
+      "atMs": 37242,
+      "message": "5 custom components received. Building the rest…",
+      "parts": 5
+    },
+    {
+      "atMs": 41483,
+      "message": "6 custom components received. Building the rest…",
+      "parts": 6
+    },
+    {
+      "atMs": 46697,
+      "message": "7 custom components received. Building the rest…",
+      "parts": 7
+    },
+    {
+      "atMs": 51429,
+      "message": "8 custom components received. Building the rest…",
+      "parts": 8
+    },
+    {
+      "atMs": 56085,
+      "message": "9 custom components received. Building the rest…",
+      "parts": 9
+    },
+    {
+      "atMs": 59477,
+      "message": "10 custom components received. Building the rest…",
+      "parts": 10
+    },
+    {
+      "atMs": 62409,
+      "message": "11 custom components received. Building the rest…",
+      "parts": 11
+    },
+    {
+      "atMs": 65665,
+      "message": "12 custom components received. Building the rest…",
+      "parts": 12
+    },
+    {
+      "atMs": 68891,
+      "message": "13 custom components received. Building the rest…",
+      "parts": 13
+    },
+    {
+      "atMs": 72066,
+      "message": "14 custom components received. Building the rest…",
+      "parts": 14
+    },
+    {
+      "atMs": 75303,
+      "message": "15 custom components received. Building the rest…",
+      "parts": 15
+    },
+    {
+      "atMs": 78121,
+      "message": "16 custom components received. Building the rest…",
+      "parts": 16
+    },
+    {
+      "atMs": 81061,
+      "message": "17 custom components received. Building the rest…",
+      "parts": 17
+    },
+    {
+      "atMs": 84376,
+      "message": "18 custom components received. Building the rest…",
+      "parts": 18
+    },
+    {
+      "atMs": 106570,
+      "message": "Geometry received. Checking the assembly…"
+    },
+    {
+      "atMs": 106579,
+      "message": "Checking component references, geometry and assembly relationships…"
+    }
+  ],
+  "limits": "Schema validation and live streaming route only; no visual/physical verification. Syntax recovery is only exercised here if the provider naturally emits malformed data."
+}

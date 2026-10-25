@@ -58,6 +58,9 @@ export async function readInteraction(response: Response, onPartial?: (text: str
   }
   if (!response.body) throw new InteractionProtocolError('Gemini returned an empty stream.');
   const reader = response.body.getReader(), decoder = new TextDecoder(), steps = new Map<number, string>();
+  const cancel=()=>{void reader.cancel().catch(()=>{});};
+  signal?.addEventListener('abort',cancel,{once:true});
+  if(signal?.aborted)cancel();
   let buffer = '', text = '', bytes = 0, complete = false, usage: Usage | undefined;
   const consume = (frame: string) => {
     const data = frame.split(/\r?\n/).filter(line => line.startsWith('data:')).map(line => line.slice(5).trimStart()).join('\n').trim();
@@ -96,8 +99,9 @@ export async function readInteraction(response: Response, onPartial?: (text: str
       if (complete) break;
     }
     buffer += decoder.decode();
+    signal?.throwIfAborted();
     if (buffer.trim()) consume(buffer);
     if (!complete) throw new InteractionProtocolError('The connection ended before Gemini completed the response.');
     return {text, usage, tier};
-  } finally { await reader.cancel().catch(() => {}); reader.releaseLock(); }
+  } finally { signal?.removeEventListener('abort',cancel);await reader.cancel().catch(() => {}); reader.releaseLock(); }
 }

@@ -7,7 +7,7 @@ export async function sdkInteraction(input:{key:string;model:string;system:strin
   const request=new Request(url,init);return fetch(request.url,{method:request.method,headers:Object.fromEntries(request.headers),body:request.method==='GET'?undefined:await request.text(),signal:input.signal,cache:'no-store'});
  }}});
  const options={retries:{strategy:'none' as const},signal:input.signal};
- const params={model:input.model,input:[{type:'text' as const,text:input.user},...(input.attachments??[]).map(file=>({type:file.mimeType==='application/pdf'?'document' as const:'image' as const,mime_type:file.mimeType,data:file.data}))],system_instruction:input.system,service_tier:input.tier,store:!!input.background,generation_config:{thinking_level:input.thinkingLevel,max_output_tokens:input.maxTokens},...(input.json?{response_format:{type:'text' as const,mime_type:'application/json',schema:input.schema??{type:'object'}}}:{})};
+ const params={model:input.model,input:[{type:'text' as const,text:input.user},...(input.attachments??[]).map(file=>({type:file.mimeType==='application/pdf'?'document' as const:'image' as const,mime_type:file.mimeType,data:file.data}))],system_instruction:input.system,service_tier:input.tier,store:!!input.background,generation_config:{thinking_level:input.thinkingLevel,max_output_tokens:input.maxTokens},...(input.json?{response_format:{type:'text' as const,mime_type:'application/json',...(input.schema?{schema:input.schema}:{})}}:{})};
  if(input.background){
   let result=await client.interactions.create({...params,background:true,stream:false},options);
   const jobId=result.id;

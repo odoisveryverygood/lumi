@@ -1,0 +1,5 @@
+{
+  "lib/studio/device-generation.ts": "4bbbd94eb65f6af182cd61aec5180789b1295b60ed7227745c88e1b748fab14f",
+  "lib/studio/generation-progress.ts": "7bc4715f102840e93d04cca3e1d4790773ae360e707ccc8cbf7a9e6f4628dba6",
+  "tests/generation-progress.test.ts": "e352abfa26b4f12e17613d3aa1f4c213e5dd4f0780f64cc12da0d2fbc8e638f3"
+}
