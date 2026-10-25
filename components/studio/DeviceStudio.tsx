@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode, type CSSProperties } from 'react';
 import dynamic from 'next/dynamic';
 import { ArrowDownToLine, ArrowLeft, ArrowRight, ArrowUpRight, Box, Check, CheckCircle2, ChevronDown, ChevronRight, CircleHelp, Cpu, Crosshair, Expand, Eye, EyeOff, FilePlus2, Focus, Grip, Layers3, LoaderCircle, Maximize2, MessageCircle, MousePointer2, Move3d, PanelLeft, Pause, Play, Plus, Redo2, RotateCcw, RotateCw, Search, Send, Settings2, Share2, Sparkles, Undo2, Upload, X, ZoomIn, ZoomOut } from 'lucide-react';
 import type { DeviceDocument, DevicePart, Vec3, SceneAction, MechanismPlayback } from '@/lib/studio/types';
@@ -25,6 +25,7 @@ import DesignReviewPanel, { type DesignPreview } from './DesignReviewPanel';
 import { supportsRedesign, type DesignCheck } from '@/lib/studio/redesign';
 import {connectedPartIds} from '@/lib/studio/relationships';
 import MorfGuide, {type MorfGuideHandle} from './MorfGuide';
+import {morfShape} from '@/lib/studio/morf-shape';
 import MorfFace from './MorfFace';
 import type {GuideAnchor} from '@/lib/studio/morf-motion';
 import {resolveAttachments,mountParts} from '@/lib/studio/attachments';
@@ -112,6 +113,8 @@ export default function DeviceStudio() {
   const [motionInspection,setMotionInspection]=useState<DeviceDocument|null>(null);
   useEffect(()=>setMotionInspection(null),[doc,qualityDraft,generationPreview]);
   const displayed=motionInspection||qualityDraft||generationPreview||designPreview?.document||doc;
+  const generating=busy&&!!generationPreview&&generationParts.length>0;
+  const companionShape=useMemo(()=>morfShape(newOpen&&!generationPreview?null:displayed,{buildStep,generatingPartNames:generating?generationParts:null,busy}),[displayed,newOpen,generationPreview,buildStep,generating,generationParts,busy]);
   const visibleDocument=useRef(doc);visibleDocument.current=displayed;
   const previewIdentity=useRef<DeviceDocument|null>(null);
   const previewDesign = useCallback((value:DesignPreview|null)=>{setDesignPreview(value);if(value&&previewIdentity.current!==value.document){previewIdentity.current=value.document;setSelectedId(null);setTool('select');setExplode(0);setHiddenIds([]);setIsolatedId(null);setLabels(false);setHighlightedIds(value.emphasize?['wireless-battery','wireless-controller']:[]);setFocusCommand(old=>({partIds:value.emphasize?['wireless-battery','wireless-controller','keyboard-case-base']:[],nonce:old.nonce+1}));if(!value.emphasize)setCameraCommand(old=>({type:'fit',nonce:old.nonce+1}));}},[]);
@@ -422,7 +425,7 @@ export default function DeviceStudio() {
       {newOpen&&<button className="morf-gallery-motion" aria-label={showcaseMotion?'Pause object motion':'Play object motion'} onClick={toggleShowcase}>{showcaseMotion?<Pause size={12}/>:<Play size={12}/>}<span>{showcaseMotion?'Pause motion':'Play opening'}</span></button>}
       {newOpen && <ObjectGallery partNames={generationParts} document={displayed} prompt={newPrompt} model={model} available={aiAvailable} busy={busy} progress={aiProgress} elapsed={elapsed} error={aiError} onPrompt={setNewPrompt} onGenerate={() => void runAI('generate', newPrompt)} onCancel={() => request.current?.abort()} onContinue={() => setNewOpen(false)} onKeyboard={explain => void openKeyboard(explain)} onDesktop={openDesktop} onImport={() => fileInput.current?.click()} onBoard={() => void openRealBoard()} onLibrary={()=>setLibraryOpen(true)}/>}
     </div>
-    <MorfGuide forceMotion={motionOverride} ref={morf} partId={guidePart?.id} partName={guidePart?.name} partRole={guidePart?.role} answer={morfAnswer} answerKey={morfAnswerKey} busy={busy} progress={aiProgress} error={aiError} rightInset={qualityOpen?390:rightOpen||evidenceOpen?330:0} leftInset={leftOpen?300:0} gallery={newOpen} hidden={!ready||exportOpen||helpOpen} onAsk={text=>{setShowcaseMotion(false);if(dialogueActive&&supportsRedesign(doc))designAgent.current?.ask(text);else void runAI('converse',text,true);}} onCancel={()=>busyAction==='redesign'?designAgent.current?.cancel():request.current?.abort()} onConversation={()=>{setNewOpen(false);if(!dialogueActive){setPanel('chat');setRightOpen(true);}}} tell={tell}/>
+    <MorfGuide forceMotion={motionOverride} shape={companionShape} ref={morf} partId={guidePart?.id} partName={guidePart?.name} partRole={guidePart?.role} answer={morfAnswer} answerKey={morfAnswerKey} busy={busy} progress={aiProgress} error={aiError} rightInset={qualityOpen?390:rightOpen||evidenceOpen?330:0} leftInset={leftOpen?300:0} gallery={newOpen} hidden={!ready||exportOpen||helpOpen} onAsk={text=>{setShowcaseMotion(false);if(dialogueActive&&supportsRedesign(doc))designAgent.current?.ask(text);else void runAI('converse',text,true);}} onCancel={()=>busyAction==='redesign'?designAgent.current?.cancel():request.current?.abort()} onConversation={()=>{setNewOpen(false);if(!dialogueActive){setPanel('chat');setRightOpen(true);}}} tell={tell}/>
     {qualityOpen&&<QualityPanel motionSupported={!!doc.mechanisms?.some(m=>m.verification)} onMeasure={()=>void measureCurrentMotion()} onOpenFan={()=>void openMotionFan()} onMotionPose={inspectMotionPose} onExportMotion={exportMotionEvidence} report={busyAction==='review'?undefined:qualityReport??doc.review} progress={qualityProgress} busy={busy&&busyAction==='review'} brief={qualityBrief} onBrief={setQualityBrief} onRun={()=>void runCurrentReview()} onCancel={()=>request.current?.abort()} onClose={()=>{setQualityOpen(false);setMotionInspection(null);}} draft={!!qualityDraft||busyAction==='review'} onApply={useQualityDraft} onDiscard={discardQualityDraft} onFocus={ids=>{setHighlightedIds(ids);setFocusCommand(old=>({partIds:ids,nonce:old.nonce+1}));}} stale={!qualityDraft&&!!(qualityReport??doc.review)&&!!savedReviewHash&&((qualityReport??doc.review)!.finalHash!==savedReviewHash||(qualityReport??doc.review)!.request!==qualityBrief)}/>}
     {libraryOpen&&<PartsLibrary assemblyName={doc.name} onClose={()=>setLibraryOpen(false)} onAdd={addLibraryPart} onOpen={openLibraryDocument} onOpenModel={openLibraryModel}/>}
     {!ready && <div className="ds-restore-overlay" role="status"><LoaderCircle size={22} className="ds-spin"/><span>Opening your workspace…</span></div>}
