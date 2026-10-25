@@ -1,0 +1,13 @@
+{
+  "status": "not run",
+  "revision": "226f79287fa8a5c34e9f15778ceb36e61b70c86e",
+  "reason": "No GEMINI_API_KEY was available to the independent evaluator. The three-minute script in docs/THREE_MINUTE_DEMO.md was rewritten to match the implemented Review workflow but has not been timed against live Argon calls on this revision.",
+  "historicalTimingsQuoted": {
+    "corneAcceptedAfterRetrySeconds": 66.9,
+    "seededRepairMedianSeconds": 35.0,
+    "seededRepairMaximumSeconds": 88.9,
+    "source": "docs/sponsor-sprint/2026-10-24-design-checks/verification-report.md (earlier revision, separate run)"
+  },
+  "rehearsals": [],
+  "howToRecord": "Run the script once with the key. For each segment record startedAt, endedAt, the exact request typed, provider elapsed seconds reported by the panel, whether the result was accepted, needed Review again, timed out or fell back to the labeled recording. Keep every attempt, including the failed ones."
+}

@@ -1,0 +1,47 @@
+{
+  "evidenceFile": "docs/sponsor-sprint/2026-10-24-design-checks/followup-evaluation.json",
+  "startedAt": "2026-10-25T05:42:41.646Z",
+  "configuredTrials": 8,
+  "recordedReviews": 10,
+  "verifiedImageHashes": 30,
+  "lockedCameraReviews": 10,
+  "seededRepairs": {
+    "planned": 2,
+    "completed": 2,
+    "passed": 2,
+    "failed": 0,
+    "cancelled": 0,
+    "unrun": 0,
+    "firstAttemptOraclePasses": 0,
+    "retainedOraclePasses": 2,
+    "medianElapsedSeconds": 31.8,
+    "maximumElapsedSeconds": 40.2
+  },
+  "freshLiveEdits": {
+    "planned": 4,
+    "completed": 4,
+    "passed": 4,
+    "failed": 0,
+    "cancelled": 0,
+    "unrun": 0,
+    "firstAttemptOraclePasses": 4,
+    "retainedOraclePasses": 4,
+    "medianElapsedSeconds": 39,
+    "maximumElapsedSeconds": 45.3
+  },
+  "negativeControls": {
+    "planned": 2,
+    "completed": 2,
+    "passed": 2,
+    "failed": 0,
+    "cancelled": 0,
+    "unrun": 0,
+    "firstAttemptOraclePasses": 0,
+    "retainedOraclePasses": 0,
+    "medianElapsedSeconds": 44.5,
+    "maximumElapsedSeconds": 53.2
+  },
+  "failures": [],
+  "humanReviewed": 0,
+  "scope": "Software evidence on controlled authored assemblies with sourced radio geometry. Seeded faults are not fresh-generation errors. The fixed-task oracle must be recomputed with tests/evaluation-evidence.test.ts. No physical validation, human usefulness result or provider authentication is claimed."
+}
