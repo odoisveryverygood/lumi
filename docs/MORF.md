@@ -32,3 +32,11 @@ Dragging, keyboard positioning, click-to-talk, automatic part guidance, chat, ca
 The model/API and geometry contracts are preserved. Existing validated evidence is still readable. No credentials are embedded in the character or client bundle.
 
 Screenshots: [companion](morf/evidence/companion.png), [home](morf/evidence/home.png).
+
+## Navigation cleanup
+
+The main navigation is now Explore, Studio and Circuits. Studio contains Inspect, Ask Morf, Sources and Review. Review and assembly export/share controls stay out of the Explore header. The home library card reads “Start with real parts” and distinguishes sourced CAD from 3D reference models.
+
+The existing constraint-aware design conversation and source notebook remain accessible inside Studio for supported studies. Other objects keep their ordinary assistant and can inspect their assembly provenance and component references. Circuits remains a separate electronics workbench, with navigation back to the saved 3D assembly; no automatic circuit/assembly synchronization is claimed.
+
+Verified locally: Explore/Studio state and URLs, Circuits round trip, general object assistant and source details, and the Corne design conversation with all six notebook references. 382 regression tests and the production build pass. No provider operation was needed for these navigation checks.

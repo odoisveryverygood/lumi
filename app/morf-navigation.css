@@ -1,0 +1,32 @@
+/* One product map; object tools belong to the Studio workspace. */
+nav.morf-workspace-nav{position:static;transform:none;display:flex;align-items:center;gap:22px;height:100%;margin:0 auto;flex-shrink:0}
+.morf-workspace-nav :is(button,a){position:relative;display:flex;align-items:center;height:100%;padding:0 2px;border:0;background:none;text-decoration:none;white-space:nowrap;font-size:11px;font-weight:500;color:#967b60}
+.morf-workspace-nav :is(button,a):hover{color:#64452d}
+.morf-workspace-nav [aria-current=page]{color:#5b3e1f}
+.morf-workspace-nav [aria-current=page]:after{content:'';position:absolute;height:3px;bottom:0;left:0;right:0;border-radius:4px 4px 0 0;background:#dd9c52}
+.morf-workspace-nav :is(button,a):focus-visible{outline:2px solid #bc8347;outline-offset:3px;border-radius:3px}
+.morf-studio-tools{height:44px;flex-shrink:0;display:flex;align-items:center;gap:5px;padding:0 30px;background:#fff9ef;border-bottom:1px solid #d7b48a44;z-index:31}
+.morf-studio-tools>span{font-size:7px;letter-spacing:1.3px;color:#aa9071;margin-right:17px}
+.morf-studio-tools>button{display:flex;align-items:center;gap:7px;padding:7px 12px;border:1px solid transparent;border-radius:7px;font-size:10px;color:#96795c}
+.morf-studio-tools>button:hover{background:#f8eddc;color:#715133}
+.morf-studio-tools>button[aria-pressed=true]{background:#f8e7cc;border-color:#e2c69f;color:#715133}
+.morf-experience[data-gallery=false] .morf-quality-panel{top:126px}
+.morf-assembly-sources{width:min(660px,94vw);max-height:86dvh;padding:0;border:1px solid #dfcbb0;border-radius:20px;background:#fffbf3;color:#72583d;box-shadow:0 25px 100px #49322544}
+.morf-assembly-sources::backdrop{background:#3d302963;backdrop-filter:blur(8px)}
+.morf-assembly-sources>header{display:flex;justify-content:space-between;gap:16px;padding:25px 28px 20px;border-bottom:1px solid #eadcc7}
+.morf-assembly-sources header span{display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:1.4px;color:#a58864}
+.morf-assembly-sources h2{font-size:25px;font-weight:500;letter-spacing:-.8px;margin:14px 0 9px}
+.morf-assembly-sources header p{font-size:11px;color:#a38a6d;margin:0}
+.morf-assembly-sources header>button{align-self:flex-start;padding:4px;color:#a48c70}
+.morf-source-content{padding:6px 28px 25px}
+.morf-source-content section{margin:23px 0}
+.morf-source-content h3{font-size:12px;font-weight:500;display:flex;align-items:center;gap:10px}
+.morf-source-content h3 small{font-size:9px;color:#ac977c}
+.morf-source-content p{font-size:11px;line-height:1.85;color:#998064}
+.morf-source-content a{display:flex;align-items:center;gap:12px;margin:8px 0;padding:15px;border:1px solid #eadbc4;border-radius:10px;text-decoration:none;color:#96764f}
+.morf-source-content a>span{flex:1;min-width:0}.morf-source-content strong{display:block;font-size:11px;font-weight:500;line-height:1.6}.morf-source-content a small{display:block;font-size:9px;color:#af987b;margin-top:4px}
+.morf-source-content .morf-source-limit{font-size:9px;padding-top:16px;border-top:1px solid #eadcc7}
+@media(max-width:1150px){nav.morf-workspace-nav{gap:17px}.morf-experience .ds-project-name{max-width:150px}.editor-app .project-breadcrumb{max-width:140px}.editor-app .project-breadcrumb>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.editor-app .save-status{display:none}}
+@media(max-width:900px){.morf-studio-tools{padding:0 20px}.morf-studio-tools>span{display:none}.morf-workspace-nav :is(button,a){font-size:10px}.editor-app .project-breadcrumb{display:none}.editor-app .app-header{gap:12px}}
+@media(max-width:650px){nav.morf-workspace-nav{gap:11px;margin-inline:auto}.morf-workspace-nav :is(button,a){font-size:9px;padding-inline:1px}.morf-experience .ds-project-name{display:none}.morf-studio-tools{height:42px;padding:0 12px;gap:3px}.morf-studio-tools>button{padding:7px 10px;font-size:9px;gap:5px}.morf-experience[data-gallery=false] .morf-quality-panel{top:114px}.morf-assembly-sources>header{padding:21px}.morf-source-content{padding:4px 21px 20px}.morf-assembly-sources h2{font-size:21px}}
+@media print{.morf-studio-tools,.morf-workspace-nav{display:none!important}}

@@ -8,7 +8,7 @@ import { etchPinPosition } from '@/lib/etch-models';
 import type { AssemblyMode, Connection, LibraryPart, PartInstance, Project, Vec3, ViewMode } from '@/lib/types';
 import PartModel, { type DisplayMode } from './PartModel';
 const SCALE = .035;
-const WIRE_COLORS: Record<Connection['wireColor'], string> = { red: '#e36b68', black: '#57616e', yellow: '#e2bf56', blue: '#65a0e8', green: '#77b98f', white: '#d2d8e1', orange: '#dba267' };
+const WIRE_COLORS: Record<Connection['wireColor'], string> = { red: '#c95c51', black: '#43443d', yellow: '#a57919', blue: '#3279b7', green: '#40855a', white: '#8a8071', orange: '#bc753a' };
 type Positions = MutableRefObject<Record<string, THREE.Vector3>>;
 type Rotations = MutableRefObject<Record<string, THREE.Euler>>;
 type Objects = MutableRefObject<Record<string, THREE.Group>>;
@@ -55,7 +55,7 @@ class SceneBoundary extends Component<{
     static getDerivedStateFromError() { return { failed: true }; }
     render() {
         if (this.state.failed)
-            return <div style={{ display: 'grid', placeContent: 'center', height: '100%', minHeight: 250, background: '#17191e', textAlign: 'center', padding: 24, color: '#b3bac7', gap: 12 }}><strong>The 3D view needs a fresh start.</strong><span style={{ fontSize: 12, maxWidth: 290 }}>Your project is saved. Restart the view to reconnect to your graphics hardware.</span><button onClick={() => this.setState(state => ({ failed: false, attempt: state.attempt + 1 }))} style={{ border: '1px solid #3b404b', color: '#e6e9ef', background: '#262a32', borderRadius: 6, padding: '9px 15px', cursor: 'pointer', font: 'inherit', fontSize: 12 }}>Restart 3D view</button></div>;
+            return <div style={{ display: 'grid', placeContent: 'center', height: '100%', minHeight: 250, background: '#fff9ed', textAlign: 'center', padding: 24, color: '#7d6547', gap: 12 }}><strong>The 3D view needs a fresh start.</strong><span style={{ fontSize: 12, maxWidth: 290 }}>Your project is saved. Restart the view to reconnect to your graphics hardware.</span><button onClick={() => this.setState(state => ({ failed: false, attempt: state.attempt + 1 }))} style={{ border: '1px solid #d9b98c', color: '#75512a', background: '#f9e2be', borderRadius: 6, padding: '9px 15px', cursor: 'pointer', font: 'inherit', fontSize: 12 }}>Restart 3D view</button></div>;
         return <div key={this.state.attempt} style={{ width: '100%', height: '100%' }}>{this.props.children}</div>;
     }
 }
@@ -75,17 +75,17 @@ function PartLabel({ text, position }: {
 }) {
     const label = useMemo(() => {
         const canvas = document.createElement('canvas'), context = canvas.getContext('2d')!;
-        context.font = '500 24px ui-monospace, SFMono-Regular, monospace';
+        context.font = '500 24px '+getComputedStyle(document.body).fontFamily;
         canvas.width = Math.min(900, Math.ceil(context.measureText(text).width) + 28);
         canvas.height = 48;
-        context.fillStyle = '#20242c';
-        context.strokeStyle = '#4c5a6e';
+        context.fillStyle = '#fffaf0';
+        context.strokeStyle = '#d7bb93';
         context.beginPath();
         context.roundRect(1, 1, canvas.width - 2, 46, 5);
         context.fill();
         context.stroke();
-        context.font = '500 24px ui-monospace, SFMono-Regular, monospace';
-        context.fillStyle = '#e5eaf2';
+        context.font = '500 24px '+getComputedStyle(document.body).fontFamily;
+        context.fillStyle = '#715434';
         context.textBaseline = 'middle';
         context.fillText(text, 14, 25, canvas.width - 28);
         const texture = new THREE.CanvasTexture(canvas);
@@ -105,8 +105,8 @@ function HardOutline({ target, selected, hovered, active }: {
     active: boolean;
 }) {
     const lines = useRef<THREE.LineSegments[]>([]), meshes = useRef<THREE.Mesh[]>([]);
-    const front = useMemo(() => new THREE.LineBasicMaterial({ color: '#76adff', transparent: true, opacity: .85, depthTest: true, depthWrite: false }), []);
-    const back = useMemo(() => new THREE.LineBasicMaterial({ color: '#76adff', transparent: true, opacity: .12, depthTest: false, depthWrite: false }), []);
+    const front = useMemo(() => new THREE.LineBasicMaterial({ color: '#c28b47', transparent: true, opacity: .85, depthTest: true, depthWrite: false }), []);
+    const back = useMemo(() => new THREE.LineBasicMaterial({ color: '#c28b47', transparent: true, opacity: .12, depthTest: false, depthWrite: false }), []);
     const enabled = selected || hovered || active;
     const clear = () => { lines.current.forEach(line => { line.removeFromParent(); line.geometry.dispose(); }); lines.current = []; meshes.current = []; };
     useFrame(() => {
@@ -133,7 +133,7 @@ function HardOutline({ target, selected, hovered, active }: {
                 lines.current.push(a, b);
             }
         }
-        front.color.set(active ? '#a4cfb4' : '#76adff');
+        front.color.set(active ? '#738950' : '#c28b47');
         front.opacity = selected ? .85 : .5;
         for (const line of lines.current)
             line.visible = true;
@@ -253,7 +253,7 @@ function SelectionDimensions({ object, enabled }: {
         overlay.setAttribute('aria-hidden', 'true');
         for (let i = 0; i < 12; i++) {
             const line = document.createElementNS(namespace, 'line');
-            line.setAttribute('stroke', '#83b3f3');
+            line.setAttribute('stroke', '#bf925c');
             line.setAttribute('stroke-opacity', '.45');
             line.setAttribute('stroke-width', '1');
             line.setAttribute('stroke-dasharray', '3 3');
@@ -263,11 +263,11 @@ function SelectionDimensions({ object, enabled }: {
         for (let i = 0; i < 3; i++) {
             const label = document.createElementNS(namespace, 'text');
             label.setAttribute('text-anchor', i ? 'start' : 'middle');
-            label.setAttribute('fill', '#b9cce8');
+            label.setAttribute('fill', '#795a35');
             label.setAttribute('font-size', '10');
-            label.setAttribute('font-family', 'ui-monospace, monospace');
+            label.setAttribute('font-family', getComputedStyle(document.body).fontFamily);
             label.setAttribute('paint-order', 'stroke');
-            label.setAttribute('stroke', '#17191e');
+            label.setAttribute('stroke', '#fffaf0');
             label.setAttribute('stroke-width', '4');
             label.setAttribute('stroke-linejoin', 'round');
             overlay.append(label);
@@ -474,10 +474,10 @@ function World(props: SceneProps) {
     useLayoutEffect(() => { setSelectedObject(selectedId && visible.some(p => p.id === selectedId) ? objects.current[selectedId] || null : null); }, [selectedId, project.id, hiddenIds, isolatedId, showEnclosure]);
     return <>
     {props.view !== '3d' && <OrthographicCamera makeDefault position={[0, 20, .001]} zoom={50} near={.01} far={200}/>}
-    <color attach="background" args={['#f8f5f0']}/><ambientLight intensity={1.15}/><hemisphereLight args={['#fff6ed', '#b4a5bd', 1.4]}/>
+    <color attach="background" args={['#fffaf0']}/><ambientLight intensity={1.15}/><hemisphereLight args={['#fff6ed', '#cbbca5', 1.4]}/>
     <directionalLight position={[8, 14, 7]} intensity={3.1} castShadow shadow-mapSize={[1024, 1024]} shadow-camera-left={-10} shadow-camera-right={10} shadow-camera-top={12} shadow-camera-bottom={-10} shadow-bias={-.001} shadow-normalBias={.025}/>
-    <directionalLight position={[-7, 6, -4]} intensity={1.9} color="#ddc8f7"/><directionalLight position={[0, 4, -8]} intensity={1} color="#ffe1ca"/>
-    <Grid position={[0, baseY, 0]} args={[100, 100]} cellSize={.35} cellThickness={.45} cellColor="#2b2e36" sectionSize={1.75} sectionThickness={.75} sectionColor="#393e48" fadeDistance={26} fadeStrength={1.8} infiniteGrid raycast={() => { }}/>
+    <directionalLight position={[-7, 6, -4]} intensity={1.9} color="#e7e9de"/><directionalLight position={[0, 4, -8]} intensity={1} color="#ffe1ca"/>
+    <Grid position={[0, baseY, 0]} args={[100, 100]} cellSize={.35} cellThickness={.45} cellColor="#cbbda8" sectionSize={1.75} sectionThickness={.75} sectionColor="#bca98b" fadeDistance={26} fadeStrength={1.8} infiniteGrid raycast={() => { }}/>
     <group scale={SCALE}>
       {visible.map(instance => <ExplodeLeader key={`leader:${project.id}:${instance.id}`} instance={instance} positions={positions} enabled={!ambient && mode === 'exploded' && props.explodeAmount > .1} />)}
       {visible.map(instance => { const base = getLibrary(instance.libraryId) || fallbackPart(instance), library = instance.size || instance.colour ? { ...base, size: instance.size ?? base.size, colour: instance.colour ?? base.colour } : base, done = mode === 'build' && doneParts.has(instance.id), active = mode === 'build' && !!activeStep?.partIds.includes(instance.id) && !done, ghost = mode === 'build' && !done && !active; return <Part key={`${project.id}:${instance.id}`} instance={instance} library={library} targetPosition={explodedPosition(instance, partAmount(props, done, active))} positions={positions} rotations={rotations} objects={objects} drag={drag} selected={selectedId === instance.id} hovered={hoveredId === instance.id} active={active} opacity={ghost ? .14 : activeFocus && !partners.has(instance.id) ? .4 : 1} live={mode === 'build' && completedSteps >= project.buildSteps.length} displayMode={displayMode} colour={colorOverrides?.[instance.id]} showLabel={!ambient && showLabels && (hoveredId === instance.id || selectedId === instance.id || active)}/>; })}
@@ -498,9 +498,9 @@ function World(props: SceneProps) {
                 setDragging(false);
             }}/>}
     {!ambient && <SelectionDimensions object={selectedObject} enabled={tool === 'select'}/>}
-    {!ambient && <GizmoHelper alignment="bottom-right" margin={[56, 62]}><GizmoViewcube color="#303540" hoverColor="#4e6d98" textColor="#d2d9e6" strokeColor="#586273" opacity={.94}/></GizmoHelper>}
+    {!ambient && <GizmoHelper alignment="bottom-right" margin={[56, 62]}><GizmoViewcube color="#fff6e5" hoverColor="#f6d19c" textColor="#80603c" strokeColor="#dbc6a8" opacity={.94}/></GizmoHelper>}
   </>;
 }
 export default function Scene(props: SceneProps) {
-    return <div className="assembly-scene" style={{ width: '100%', height: '100%', position: 'relative' }} role="img" aria-label={`Interactive three-dimensional ${props.project.name}. Click a component to inspect it. Drag empty space to orbit. Use Move and Rotate to edit selected parts.`}><SceneBoundary><Canvas camera={{ position: [8, 10, 12], fov: 34, near: .05, far: 200 }} shadows dpr={[1, 1.6]} gl={{ antialias: true, alpha: false, preserveDrawingBuffer: true, powerPreference: 'high-performance' }} fallback={<div style={{ padding: 28, fontSize: 13, color: '#aeb8ca' }}>This browser cannot start WebGL. Your project, code and build instructions remain available. Try a browser with hardware acceleration enabled.</div>}><Suspense fallback={null}><World {...props}/></Suspense></Canvas></SceneBoundary></div>;
+    return <div className="assembly-scene" style={{ width: '100%', height: '100%', position: 'relative' }} role="img" aria-label={`Interactive three-dimensional ${props.project.name}. Click a component to inspect it. Drag empty space to orbit. Use Move and Rotate to edit selected parts.`}><SceneBoundary><Canvas camera={{ position: [8, 10, 12], fov: 34, near: .05, far: 200 }} shadows dpr={[1, 1.6]} gl={{ antialias: true, alpha: false, preserveDrawingBuffer: true, powerPreference: 'high-performance' }} fallback={<div style={{ padding: 28, fontSize: 13, color: '#80694e' }}>This browser cannot start WebGL. Your project, code and build instructions remain available. Try a browser with hardware acceleration enabled.</div>}><Suspense fallback={null}><World {...props}/></Suspense></Canvas></SceneBoundary></div>;
 }

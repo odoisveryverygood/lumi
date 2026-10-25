@@ -14,10 +14,13 @@ import { download } from '@/lib/studio/storage';
 export interface DesignPreview { document:DeviceDocument; checks:DesignCheck[]; emphasize:boolean; pending?:boolean; measurement?:DesignCheck['measurement']; }
 type Entry={role:'user'|'assistant';text:string;citations?:SourceCitation[];model?:string};
 type LiveAttempt={document:DeviceDocument;attempt:DesignAttempt;constraints:DesignConstraints};
-type Props={onAgent?:(agent:{ask:(text:string)=>void;cancel:()=>void}|null)=>void;onReply?:(text:string)=>void;onProgress?:(text:string)=>void;document:DeviceDocument;visible:boolean;available:boolean|null;selectedPartId?:string|null;onPreview:(value:DesignPreview|null)=>void;onApply:(document:DeviceDocument)=>void;onInspect:(check:DesignCheck)=>void;onActions:(actions:SceneAction[])=>void;onBusy:(busy:boolean)=>void;onComposerHeight:(height:number)=>void;onKeyboard:()=>void;onClose:()=>void;onEvidence:(open:boolean)=>void;onUndo:()=>void;canUndo:boolean};
+type Props={notebookRequest?:number;onNotebookChange?:(open:boolean)=>void;onAgent?:(agent:{ask:(text:string)=>void;cancel:()=>void}|null)=>void;onReply?:(text:string)=>void;onProgress?:(text:string)=>void;document:DeviceDocument;visible:boolean;available:boolean|null;selectedPartId?:string|null;onPreview:(value:DesignPreview|null)=>void;onApply:(document:DeviceDocument)=>void;onInspect:(check:DesignCheck)=>void;onActions:(actions:SceneAction[])=>void;onBusy:(busy:boolean)=>void;onComposerHeight:(height:number)=>void;onKeyboard:()=>void;onClose:()=>void;onEvidence:(open:boolean)=>void;onUndo:()=>void;canUndo:boolean};
 
-export default function DesignReviewPanel({onAgent,onReply,onProgress,document,visible,available,selectedPartId,onPreview,onApply,onInspect,onActions,onBusy,onComposerHeight,onKeyboard,onClose,onEvidence,onUndo,canUndo}:Props){
+export default function DesignReviewPanel({notebookRequest=0,onNotebookChange,onAgent,onReply,onProgress,document,visible,available,selectedPartId,onPreview,onApply,onInspect,onActions,onBusy,onComposerHeight,onKeyboard,onClose,onEvidence,onUndo,canUndo}:Props){
+  const lastNotebookRequest=useRef(0);
   const [sources,setSources]=useState<DesignSource[]>(builtinSources),[notebook,setNotebook]=useState(false),[sourceCitation,setSourceCitation]=useState<SourceCitation|undefined>();
+  useEffect(()=>{if(notebookRequest!==lastNotebookRequest.current){lastNotebookRequest.current=notebookRequest;setNotebook(true);}},[notebookRequest]);
+  useEffect(()=>{onNotebookChange?.(visible&&notebook);},[visible,notebook,onNotebookChange]);
   const [answerCitations,setAnswerCitations]=useState<SourceCitation[]>([]),[visualNotes,setVisualNotes]=useState<string[]>([]),[reviewedView,setReviewedView]=useState('');
   const [visualReviews,setVisualReviews]=useState<{model:string;imageSha256:string;receivedAt:string;observations:string[];image:string;documentFingerprint:string}[]>([]);
   const [hydrationKey,setHydrationKey]=useState<string|null>(null);
