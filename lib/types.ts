@@ -10,6 +10,10 @@ export interface LibraryPart {
 }
 export interface PartInstance {
  id:string;libraryId:string;label:string;role:string;quantity:number;assembledPosition:Vec3;rotation:Vec3;explodeDirection:Vec3;explodeDistance:number;layer:number;watchOut?:string;
+ /** Per-instance envelope in mm for parts carried over from a Studio object; the library size applies otherwise. */
+ size?:Vec3;
+ /** Finish carried over from a Studio object. */
+ colour?:string;
 }
 export interface Connection {
  id:string;from:{partId:string;pin:string};to:{partId:string;pin:string};kind:'power'|'ground'|'signal'|'data';wireColor:'red'|'black'|'yellow'|'blue'|'green'|'white'|'orange';purpose:string;signalDirection:'from-to'|'to-from'|'both';

@@ -27,6 +27,7 @@ export interface AnatomyViewProps extends Omit<SceneProps, 'cameraAction'> {
 }
 const WIDTH = 1000, HEIGHT = 720;
 const WIRE_COLOURS = { red: '#ac7d72', black: '#4e5a55', yellow: '#b49e66', blue: '#729698', green: '#7d9680', white: '#b5bcb0', orange: '#b08d69' };
+const libFor = (part: PartInstance): LibraryPart => { const base = PART_MAP[part.libraryId] ?? fallback(part); return part.size || part.colour ? { ...base, size: part.size ?? base.size, colour: part.colour ?? base.colour } : base; };
 const fallback = (part: PartInstance): LibraryPart => ({ id: part.libraryId, name: part.label, category: 'passive', whatItIs: part.role, model: { fallback: 'pcb' }, size: [20, 5, 20], colour: '#829587', pins: [], voltage: { min: 0, max: 5 }, currentMa: 0, priceUsd: 0, buyUrl: '', alternatives: [] });
 const plus = (a: Vec3, b: Vec3): Vec3 => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
 const distance = (a: Vec3, b: Vec3) => Math.hypot(...a.map((v, i) => v - b[i]));
@@ -58,7 +59,7 @@ export default function AnatomyView({ project, mode, explodeAmount, view, select
   })), [visibleParts, mode, explodeAmount, placedParts, completedParts]);
   const projection = useMemo(() => {
     const corners = visibleParts.flatMap(part => {
-      const lib = PART_MAP[part.libraryId] ?? fallback(part);
+      const lib = libFor(part);
       const pos = targets[part.id];
       return [-1, 1].flatMap(x => [-1, 1].flatMap(y => [-1, 1].map(z => toAnatomy(plus(pos, rotateXYZ([x * lib.size[0] / 2, y * lib.size[1] / 2, z * lib.size[2] / 2], part.rotation))))));
     });
@@ -67,7 +68,7 @@ export default function AnatomyView({ project, mode, explodeAmount, view, select
     // Preserve room for a cable loop above the highest header.
     return { ...fit, scale: Math.min(4.2, Math.max(.35, fit.scale)) };
   }, [visibleParts, targets, view, mode]);
-  const art = useMemo(() => Object.fromEntries(visibleParts.map(part => [part.id, makeHardwareArt(PART_MAP[part.libraryId] ?? fallback(part), { ...projection, scale: 1 }, rotationPreview?.id === part.id ? rotationPreview.rotation : part.rotation, colorOverrides?.[part.id])])), [visibleParts, projection, rotationPreview, colorOverrides]);
+  const art = useMemo(() => Object.fromEntries(visibleParts.map(part => [part.id, makeHardwareArt(libFor(part), { ...projection, scale: 1 }, rotationPreview?.id === part.id ? rotationPreview.rotation : part.rotation, colorOverrides?.[part.id])])), [visibleParts, projection, rotationPreview, colorOverrides]);
   const wires = useMemo(() => project.connections.filter(connection => visibleParts.some(p => p.id === connection.from.partId) && visibleParts.some(p => p.id === connection.to.partId)), [project.connections, visibleParts]);
   const sortedParts = useMemo(() => assemblyPaintOrder(visibleParts, targets, projection), [visibleParts, targets, projection]);
   const partMap = useMemo(() => Object.fromEntries(project.parts.map(p => [p.id, p])), [project.parts]);
@@ -221,7 +222,7 @@ export default function AnatomyView({ project, mode, explodeAmount, view, select
       <g transform={`translate(${WIDTH / 2 + pan[0]} ${HEIGHT / 2 + pan[1]}) scale(${zoom}) translate(${-WIDTH / 2} ${-HEIGHT / 2})`}>
         <ellipse cx={WIDTH / 2} cy={HEIGHT * .69} rx="205" ry="34" fill="#9ca997" opacity=".12" filter={`url(#shadow-${patternId})`} pointerEvents="none" />
         {sortedParts.map(part => {
-          const library = PART_MAP[part.libraryId] ?? fallback(part);
+          const library = libFor(part);
           const target = positions.current[part.id] ?? targets[part.id];
           const [x, y] = k.iso(toAnatomy(target), projection);
           const active = selectedId === part.id || hoveredId === part.id || activePartIds.includes(part.id);

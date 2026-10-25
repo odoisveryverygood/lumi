@@ -46,6 +46,8 @@ const documentShape=z.object({
   version:z.literal(1),id,name:text.max(200),description:text.max(8000),provenance:text.max(4000),parts:z.array(devicePartSchema).min(1).max(2000),steps:z.array(deviceStepSchema).max(60),source:z.enum(['curated','gemini','import']),model:text.max(150).optional(),
   assemblies:z.array(deviceAssemblySchema).max(200).optional(),relationships:z.array(deviceRelationshipSchema).max(4000).optional(),mechanisms:z.array(deviceMechanismSchema).max(40).optional(),capabilities:deviceCapabilitiesSchema.optional(),
   designBrief:text.max(4000).optional(),review:qualityReportSchema.optional(),
+  /** Circuits tab edits (wires, added wiring parts, firmware) saved on the shared object. */
+  circuit:z.object({version:z.literal(1),connections:z.array(z.any()).max(180).optional(),addedParts:z.array(z.any()).max(60).optional(),code:z.object({filename:text.max(120),source:z.string().max(120000),libraries:z.array(text.max(200)).max(30)}).optional()}).passthrough().optional(),
 });
 function directedCycle(edges:Map<string,string[]>):boolean {
   const state=new Map<string,number>();

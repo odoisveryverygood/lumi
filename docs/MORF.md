@@ -4,15 +4,17 @@ October 25, 2026. Local branch `codex/morf-companion`, based on merged revision 
 
 Morf replaces the Lumi name throughout the live interface, metadata, assistant labels, circuit editor, PDF/export labels and current model identity prompts. The wordmark, favicon and gallery copy now match the product's understand → modify → verify direction. Historical evidence and upstream source attribution retain their original names.
 
-The companion is a code-rendered mechanical cube: six ivory ceramic plates, a graphite chassis, vents, fasteners and an amber optic. CSS transforms articulate the panels without adding a model download, canvas or render loop. Its forms follow application activity:
+The companion is a shape-shifter rendered in SVG and CSS, with no model download, canvas or render loop. With no object open it is a soft amber blob. When an object is on screen it morphs into a miniature silhouette of that object: one cell per part, projected from the real part positions and envelopes (`lib/studio/morf-shape.ts`). The silhouette assembles as the object does: parts stream in during generation, steps accumulate in the build guide, and an opened object is complete. The eyes sit on the top-most formed part. Its forms follow application activity:
 
-- Idle: subtle hovering and occasional top-panel movement.
-- Thinking: separated panels, shifting orientation and rotating optic detail.
-- Scanning: an unfolding magnifier and scan line while rendering, measuring or reviewing.
-- Pointing: a deployed probe and a leader line toward the selected component.
-- Explaining: the top panel opens and small supports deploy.
-- Response received: a brief assembly gesture. This is a conversational acknowledgement, not an engineering pass claim.
-- Error: a warm warning optic and tilted pose.
+- Idle: hovering and a slow wobble; blinking.
+- Thinking: rocking while Gemini works.
+- Scanning: a scan line while rendering, measuring or reviewing.
+- Pointing: a probe toward the selected component.
+- Explaining: an open mouth while an answer is shown.
+- Response received: a brief bounce. This is a conversational acknowledgement, not an engineering pass claim.
+- Error: a warm tint and a frown.
+
+Once formed, the whisper says which object Morf has become and offers "What are you made of?", which asks Gemini to list the parts and how they fit. Nothing in the companion reads or changes model or check results.
 
 Dragging, keyboard positioning, click-to-talk, automatic part guidance, chat, cancel and voice controls remain available. The old persisted position key and review-draft key remain stable; no project migration is required. The evaluation export's `lumi-design-evaluation` format identifier also stays unchanged for existing analysis scripts. Reduced-motion styling disables the decorative animation, and automatic travel respects the preference.
 
