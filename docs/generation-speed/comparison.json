@@ -1,0 +1,126 @@
+{
+  "prompt": "Create a complete conceptual robot dog with an iron chassis, an ESP32 controller, a battery, four matching hip motors, four matching upper leg links, and four matching lower leg links with rounded feet. Each motor and link must remain a separately selectable part with its own placement. Use at least 15 meaningful parts, clear multi-solid mechanical details, proper local material finishes, at least eight relationships, four to six assembly steps and one illustrative leg movement mechanism. Use realistic millimetre scale. Preserve the complete design, not a bare chassis. No claim of physical verification.",
+  "limits": "One independent sample per mode; geometry preservation is tested separately against identical retained input. These renders do not establish engineering or physical validity.",
+  "reports": [
+    {
+      "mode": "literal",
+      "completed": true,
+      "durationMs": 81371,
+      "firstPreviewMs": 10734,
+      "performance": {
+        "transport": "interactions",
+        "requestedTier": "priority",
+        "servedTier": "priority",
+        "durationMs": 81027,
+        "firstTokenMs": 3337,
+        "inputTokens": 2018,
+        "outputTokens": 8288,
+        "thinkingTokens": 0,
+        "cachedTokens": 0,
+        "estimatedCostUsd": 0.156449
+      },
+      "generation": {
+        "totalMs": 81027,
+        "firstPartMs": 10734,
+        "modelCalls": 1,
+        "repairMs": 0,
+        "validationMs": 168,
+        "wireCharacters": 20048,
+        "geometryReferences": 0,
+        "expandedSolids": 165
+      },
+      "quality": {
+        "parts": 18,
+        "solids": 165,
+        "relationships": 17,
+        "mechanisms": 1,
+        "steps": 6
+      },
+      "views": [
+        {
+          "view": "assembled",
+          "visibleParts": 17,
+          "triangles": 99820
+        },
+        {
+          "view": "top",
+          "visibleParts": 17,
+          "triangles": 99820
+        },
+        {
+          "view": "exploded",
+          "visibleParts": 18,
+          "triangles": 99820
+        }
+      ]
+    },
+    {
+      "mode": "shared",
+      "completed": true,
+      "durationMs": 70581,
+      "firstPreviewMs": 11966,
+      "performance": {
+        "transport": "interactions",
+        "requestedTier": "priority",
+        "servedTier": "priority",
+        "durationMs": 70292,
+        "firstTokenMs": 3128,
+        "inputTokens": 2259,
+        "outputTokens": 6797,
+        "thinkingTokens": 0,
+        "cachedTokens": 0,
+        "estimatedCostUsd": 0.130478
+      },
+      "generation": {
+        "totalMs": 70292,
+        "firstPartMs": 11966,
+        "modelCalls": 1,
+        "repairMs": 0,
+        "validationMs": 163,
+        "wireCharacters": 18740,
+        "geometryReferences": 9,
+        "expandedSolids": 193
+      },
+      "quality": {
+        "parts": 18,
+        "solids": 193,
+        "relationships": 23,
+        "mechanisms": 1,
+        "steps": 5
+      },
+      "views": [
+        {
+          "view": "assembled",
+          "visibleParts": 17,
+          "triangles": 102244
+        },
+        {
+          "view": "top",
+          "visibleParts": 15,
+          "triangles": 102244
+        },
+        {
+          "view": "exploded",
+          "visibleParts": 18,
+          "triangles": 102244
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "regressionTestsPassed": 413,
+    "optInTestsSkippedInDefaultSuite": 8,
+    "livePairedTestPassed": true,
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "retainedRobotDog": {
+      "parts": 18,
+      "solids": 234,
+      "pixelIdenticalViews": [
+        "assembled",
+        "top",
+        "exploded"
+      ]
+    }
+  }
+}

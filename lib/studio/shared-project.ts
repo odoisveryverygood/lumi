@@ -19,7 +19,11 @@ export function readStudioRecord(storage:Pick<Storage,'getItem'>=localStorage):S
 }
 export function writeStudioDocument(document:DeviceDocument,storage:Pick<Storage,'getItem'|'setItem'>=localStorage){
  const previous=readStudioRecord(storage);
- storage.setItem(STUDIO_KEY,JSON.stringify({document,conversation:previous?.conversation??[]},catalogJsonReplacer));
+ let saved:Record<string,unknown>={};
+ if(previous?.document.id===document.id)try{const raw=JSON.parse(storage.getItem(STUDIO_KEY)||'{}');if(raw&&typeof raw==='object'&&!Array.isArray(raw)&&raw.document)saved=raw;}catch{}
+ // Preserve imported asset metadata and future Studio fields on same-object
+ // edits. A new object must not inherit the old object's conversation/asset.
+ storage.setItem(STUDIO_KEY,JSON.stringify({...saved,document,conversation:previous?.document.id===document.id?previous.conversation??[]:[]},catalogJsonReplacer));
 }
 export function readHistory(storage:Pick<Storage,'getItem'>=localStorage):SharedHistory{
  try{const raw=storage.getItem(HISTORY_KEY);if(!raw)return {version:1,past:[],future:[]};const value=JSON.parse(raw);if(value?.version!==1||!Array.isArray(value.past)||!Array.isArray(value.future))return {version:1,past:[],future:[]};return {version:1,past:value.past.filter((x:unknown)=>typeof x==='string').slice(-HISTORY_LIMIT),future:value.future.filter((x:unknown)=>typeof x==='string').slice(0,HISTORY_LIMIT)};}catch{return {version:1,past:[],future:[]};}

@@ -49,7 +49,11 @@ describe('targeted validation correction',()=>{
   const progress=vi.fn(),result=await generateCustomDevice('Smart sofa with iron base and ESP32',new AbortController().signal,progress);
   expect(result.document?.parts[0].solids).toHaveLength(4);expect(result.document?.parts[1].solids).toHaveLength(31);expect(result.document?.relationships?.[0].to).toBe('iron-base');expect(generate).toHaveBeenCalledTimes(2);
   expect(generate.mock.calls[1][2]?.maxTokens).toBe(6000);expect(generate.mock.calls[1][2]?.timeoutMs).toBe(35000);
-  expect(JSON.parse(generate.mock.calls[1][1]).original).toEqual(invalid);expect(progress.mock.calls.filter(([p])=>p.resetGeneration)).toHaveLength(1);
+  const context=JSON.parse(generate.mock.calls[1][1]).original;
+  expect(context.document.relationships).toEqual(invalid.document.relationships);
+  expect(context.document.parts.map((p:{id:string})=>p.id)).toEqual(invalid.document.parts.map(p=>p.id));
+  expect(context.document.parts.every((p:{solids?:unknown;geometryOmitted?:boolean})=>p.solids===undefined&&p.geometryOmitted)).toBe(true);
+  expect(result.generation?.modelCalls).toBe(2);expect(progress.mock.calls.filter(([p])=>p.resetGeneration)).toHaveLength(1);
  });
  it('fails closed on malformed complete JSON and exhausted correction without a template',async()=>{
   generate.mockResolvedValueOnce({text:'{"document":',model:'gemini-4-argon'});await expect(generateCustomDevice('sofa',new AbortController().signal,undefined,{maxAttempts:1})).rejects.toThrow();expect(generate).toHaveBeenCalledTimes(1);

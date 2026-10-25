@@ -1,20 +1,10 @@
 # Morf — local identity and mechanical companion
 
-October 25, 2026. Local branch `codex/morf-companion`, based on merged revision `3f26257`. Prepared and verified locally, then published to GitHub at the owner’s request. No deployment was performed for this change.
+The mechanical cube companion is restored locally. No deployment or push was performed for this integration repair.
 
 Morf replaces the Lumi name throughout the live interface, metadata, assistant labels, circuit editor, PDF/export labels and current model identity prompts. The wordmark, favicon and gallery copy now match the product's understand → modify → verify direction. Historical evidence and upstream source attribution retain their original names.
 
-The companion is a shape-shifter rendered in SVG and CSS, with no model download, canvas or render loop. With no object open it is a soft amber blob. When an object is on screen it morphs into a miniature silhouette of that object: one cell per part, projected from the real part positions and envelopes (`lib/studio/morf-shape.ts`). The silhouette assembles as the object does: parts stream in during generation, steps accumulate in the build guide, and an opened object is complete. The eyes sit on the top-most formed part. Its forms follow application activity:
-
-- Idle: hovering and a slow wobble; blinking.
-- Thinking: rocking while Gemini works.
-- Scanning: a scan line while rendering, measuring or reviewing.
-- Pointing: a probe toward the selected component.
-- Explaining: an open mouth while an answer is shown.
-- Response received: a brief bounce. This is a conversational acknowledgement, not an engineering pass claim.
-- Error: a warm tint and a frown.
-
-Once formed, the whisper says which object Morf has become and offers "What are you made of?", which asks Gemini to list the parts and how they fit. Nothing in the companion reads or changes model or check results.
+The companion is an articulated mechanical cube with ivory panels, a graphite chassis and an amber optic. Its panels unfold for thinking, scanning, pointing and explanation. It stays draggable, supports keyboard positioning, and guides the selected part or active wire. The same companion and interaction style are used in Studio and Circuits.
 
 Dragging, keyboard positioning, click-to-talk, automatic part guidance, chat, cancel and voice controls remain available. The old persisted position key and review-draft key remain stable; no project migration is required. The evaluation export's `lumi-design-evaluation` format identifier also stays unchanged for existing analysis scripts. Reduced-motion styling disables the decorative animation, and automatic travel respects the preference.
 
@@ -24,7 +14,7 @@ Dragging, keyboard positioning, click-to-talk, automatic part guidance, chat, ca
 - Rebuilt browser title, header, home, conversation, parts library and review use Morf. The old yellow character markup is absent; the replacement has six panel elements.
 - Actual pointer drag moved the companion from x≈1012/y≈549 to x≈862/y≈376 without opening chat. A keyboard nudge moved it another 12 px; reload restored x≈874/y≈376.
 - Selecting the drive motor automatically guided the character to it and deployed the pointer form.
-- A real Argon conversation completed through the companion with the requested part explanation and highlights. The post-conversation exported document exactly matched the previously accepted fan and its review. See [preservation check](morf/evidence/geometry-preservation.txt).
+- A real Argon conversation completed through the companion with the requested part explanation and highlights. The post-conversation exported document exactly matched the previously accepted fan and its review. See preservation check (development transcript omitted).
 - A real local motion measurement entered the scanning form. It remained explicitly labeled local measurement, with draft acceptance disabled. Discard restored the saved provider-reviewed report. No new provider repair was claimed for this UI change.
 - Added an Espressif module from the library, observed 12 components and its source attribution, then undid the addition to restore 11 components. The explaining form was observed after the acknowledgement.
 - Desktop visual inspection completed. Voice synthesis, microphone permissions and phone-sized interaction were not exercised in this run.

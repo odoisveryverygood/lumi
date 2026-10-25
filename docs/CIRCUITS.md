@@ -1,14 +1,14 @@
 # Circuits follows the Studio object
 
-October 25, 2026, local branch `circuits-studio-sync`. Not deployed.
+Local integration; not deployed.
 
 The Circuits tab (`/circuits`) no longer opens its own example. It reads the object that is open in Studio, derives that object's electronics, wiring and build guide, and writes any Circuits-side edits back onto the same saved object. Pocket Forecast and the other examples are still available from **New design**, which switches Circuits into a standalone project until you choose **Back to the Studio object**.
 
 ## One project, one history
 
 - Both tabs use the Studio saved record (`partexplode-studio-v1`). Studio keeps saving as before; Circuits reads it on load and whenever another tab changes it.
-- Undo and redo share one persisted history (`morf-history-v1`, twelve entries). Studio records every committed change into it and mirrors its own undo/redo; Circuits undoes and redoes straight from it. Imported GLB scenes are excluded because their binary asset lives in IndexedDB.
-- Circuits edits are mapped back onto the object: moving a part updates its Studio position (mounted children follow), renaming a part renames it in Studio, removing a part removes it and its references, and a part added by Gemini in Circuits becomes a boxed Studio part tagged with its Circuits library entry. Wire edits and firmware edits are stored on the document as `circuit`, so the derived wiring stays stable across tabs. The module is `lib/studio/shared-project.ts`; the mapping is `applyProjectToDocument` in `components/useLinkedEditor.ts`.
+- Undo and redo share one persisted history (`morf-history-v1`, twelve entries). Studio uses that history for non-imported objects and retains local snapshots for imported assets; Circuits undoes and redoes straight from it. Imported GLB scenes are excluded because their binary asset lives in IndexedDB.
+- Circuits edits are mapped back onto the object: moving a part updates its Studio position (mounted children follow), renaming a part renames it in Studio, explicitly removing a mapped part removes it and its references; unknown/unmapped Studio parts remain untouched, and a part added by Gemini in Circuits becomes a boxed Studio part tagged with its Circuits library entry. Wire edits and firmware edits are stored on the document as `circuit`, so the derived wiring stays stable across tabs. The module is `lib/studio/shared-project.ts`; the mapping is `applyProjectToDocument` in `components/useLinkedEditor.ts`.
 
 ## How the circuit is derived
 
@@ -19,7 +19,7 @@ The Circuits tab (`/circuits`) no longer opens its own example. It reads the obj
 3. **Wire** by rule: a power source (added as USB-C when the object has none) feeds the controller and driver; the controller's 3V3/5V rails feed peripherals by their voltage range; I²C parts share SDA/SCL; PWM outputs drive the motor driver and servos; knobs, buttons and analog sensors take allocated input pins; LEDs get an added 220 Ω resistor; DHT sensors get an added 10 kΩ pull-up; a bare 3.3 V module gets an added regulator. Pins are allocated once each from the catalog pin list, skipping input-only pins for outputs. Added parts are labelled "added".
 4. **Guide**: mechanical steps from the Studio object first (grouped to fit the twelve-step schema), then placing the controller and power input, the remaining electrical parts, ground, power rails, data bus, drive signals, input signals, a wiring check with nothing plugged in, connecting power last, then upload and test. Every step has a "check before moving on" line; wiring steps list each wire as part + pin → part + pin, colour and what it carries.
 5. **Firmware** is generated for the actual controller and the allocated pins (ESP32 `ledc` PWM at 25 kHz, `analogRead` for knobs, `INPUT_PULLUP` buttons, I²C scan, DHT readings). An object with no programmable controller gets a sketch that says so.
-6. **Unknown electronics** (a motherboard, a camera, a PCB with no catalog match) are listed under "Needs pin info" and left out of the wiring and the checks. Nothing is guessed.
+6. **Unknown electronics** (a motherboard, a camera, a PCB with no catalog match) are listed under "Needs pin info" and left out of the wiring and the checks. Those unresolved parts remain in Studio. Catalog classification is a proposed mapping, not proof of a manufacturer pinout.
 
 Gemini keeps its existing role: **Make a change** and the library's **Add** run the same `/api/project` edit on the derived project, and the result is mapped back onto the object. Questions go to `/api/ask` when the derived project passes the circuit validator, otherwise to the Studio object conversation with the derived wiring as context.
 
@@ -38,5 +38,5 @@ A Circuits part offers **Show in Studio** (`/?part=<id>`), which opens Studio wi
 ## Verified and not verified
 
 - Tests: `tests/circuit-derive.test.ts` (classification, pin-valid wiring, guide order, validator pass with a controller, firmware pins, honest checks, overlay merging, empty object) and `tests/shared-project.test.ts` (shared record, write-back, cross-tab undo/redo, history bound, overlay).
-- Browser: Studio → Circuits with the adjustable fan, light theme side by side, build mode, Morf. See the session notes.
+- Browser: matching fan identity in both tabs; Circuits rename visible in Studio; Studio undo/redo visible in Circuits; original mechanical cube, current Studio toolbar and header navigation verified. Regression tests cover unknown-part preservation, placement and firmware write-back, metadata preservation and the cube activity states in `tests/linked-integration.test.ts`.
 - Not run: live Gemini edits from Circuits (no key here), the compile service, a physical build. The derived wiring is a software plan from catalog pins, not a tested circuit.

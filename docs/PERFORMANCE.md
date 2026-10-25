@@ -1,6 +1,35 @@
 # Local inference and generation improvements
 
-As of October 23, 2026. These changes are local and have not been deployed.
+These changes are local and have not been deployed.
+
+## Repeated components and small repairs
+
+Fresh generation can now reference an earlier procedural part with `geometryFrom` rather than emitting the same solid arrays again. Each instance still has a unique ID, position, rotation, finish and description. The server expands it into independent ordinary geometry before validation, rendering, editing or export. Catalog parts continue to use their source-backed catalog references. Missing/forward references, mixed geometry definitions and expansion beyond the existing solid budget are rejected.
+
+This is a wire-format optimization, not a preset object or lower-detail mode. A regression comparison losslessly re-encodes the retained 18-part, 234-solid robot dog, then checks identical full documents and identical pixels in assembled, top and exploded renders. Later edits to one instance cannot change its siblings.
+
+Validation repair sends the broken component or graph with original part indexes, omitting unrelated geometry from the request. The complete original stays local. A repair cannot simplify, move, recolor or replace already valid geometry while correcting a reference elsewhere. Syntax recovery still preserves complete received components.
+
+Completed responses expose sanitized `generation` measurements: total time, time to the first validated component, model-call count, repair time, validation time, received character count, geometry-reference count and expanded solid count. Model, reasoning and output budgets are unchanged. Smaller wire output is not itself a measured latency guarantee.
+
+For a billable diagnostic pair, load a private environment externally and run `MORF_SPEED_LIVE=1 npx vitest run tests/assembly-speed-live.test.ts`. It uses the same robot-dog brief for literal and shared geometry modes and writes timings, actual usage, quality counts, exported assemblies and three rendered views to the ignored `work/assembly-speed-comparison/` folder. Two independent generated designs are not proof of equivalent quality or a reliable speedup; the retained-input regression provides the separate geometry-preservation check.
+
+## Live diagnostic pair for shared geometry
+
+Using the same complete robot-dog brief and Gemini 4 Argon on actual Priority processing:
+
+| Metric | Literal components | Shared geometry |
+|---|---:|---:|
+| End-to-end generation and three diagnostic renders | 81.371 s | 70.581 s |
+| First validated component preview | 10.734 s | 11.966 s |
+| Output tokens | 8,288 | 6,797 |
+| Selectable components | 18 | 18 |
+| Expanded procedural solids | 165 | 193 |
+| Relationships | 17 | 23 |
+| Mechanisms | 1 | 1 |
+| Model calls / repairs | 1 / 0 | 1 / 0 |
+
+The shared run completed about 13% sooner and emitted about 18% fewer output tokens. Its first component arrived slightly later. These are independent generated designs and one sample per mode, so the result does not prove consistent latency improvement or equal visual/engineering quality. Both passed document validation, met the benchmark's component/graph/mechanism coverage checks, and rendered successfully in three views. The separate retained-object regression verifies exact geometry and pixel preservation under lossless shared encoding. No physical validity is established. [Sanitized diagnostic report](generation-speed/comparison.json).
 
 ## What changed
 
@@ -58,7 +87,7 @@ Cost estimates use published Argon token prices, actual tier when available, and
 
 Full generation remains variable and can take over a minute. Streaming improves how soon real work is visible; it does not remove the time required to generate and check the entire object. Illustrative geometry remains distinct from manufacturer CAD and physically verified hardware.
 
-## October 23: exact-request sofa latency fix
+## Exact-request sofa latency fix
 
 The generator now uses a bounded declarative repeat operator for regular geometry (rails, buttons, vents and connector pins), expanded to the same ordinary solid representation before validation or rendering. Every request still gets new custom geometry from Argon. Existing imports, saved projects and individual part editing retain their full expanded format. The decoder derives redundant zero rotations, geometry envelopes, role text and empty metadata when omitted, rather than asking the model to emit them repeatedly.
 
@@ -72,7 +101,7 @@ The successful updated API check completed in 78.214 seconds (first complete par
 
 An earlier updated browser attempt received output in82.212 seconds but failed decoding and retained the saved object; it is recorded in `browser-attempt-1.json`. The generation instructions were corrected to show valid literal JSON and forbid arithmetic/comments; the exact raw response from that failed run was unavailable, so its precise parse defect is unknown. The final flow was then retested successfully. The shared relationship graph is also used for the selected-part connection count, so omitting repeated per-part links does not make a connected ESP32 appear disconnected.
 
-## October 25: generation reliability
+## : generation reliability
 
 JSON MIME mode no longer silently inserts `{type:"object"}` as a schema. A real robot-dog diagnostic returned only `{}` with that schema. Callers with a real response schema retain it. The model, tier and thinking configuration are unchanged.
 

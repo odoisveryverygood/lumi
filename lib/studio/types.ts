@@ -56,6 +56,7 @@ export interface MechanismPlayback {mechanismId:string;playing:boolean;progress:
 export interface ConversationCheck {level:'info'|'warning'|'pass';message:string;}
 export interface DeviceConversationResponse {
   performance?: import('../inference').InferenceMetrics;
+  generation?: {totalMs:number;firstPartMs:number|null;modelCalls:number;repairMs:number;validationMs:number;wireCharacters:number;geometryReferences:number;expandedSolids:number};
   answer:string;
   actions:SceneAction[];
   suggestions?:string[];

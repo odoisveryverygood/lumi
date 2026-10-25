@@ -27,7 +27,10 @@ function devicePartFromInstance(instance:PartInstance):DevicePart{
 export function applyProjectToDocument(document:DeviceDocument,derived:{project:Project;plan:CircuitPlan},next:Project):DeviceDocument{
  const before=derived.project,studioIds=new Set(document.parts.map(p=>p.id)),nextIds=new Set(next.parts.map(p=>p.id));
  let doc:DeviceDocument=document;
- const removed=new Set(document.parts.filter(p=>!nextIds.has(p.id)).map(p=>p.id));
+ // Unmapped Studio components are intentionally absent from the circuit plan.
+ // Their absence is not a delete command from the user.
+ const editableIds=new Set(before.parts.map(p=>p.id));
+ const removed=new Set(document.parts.filter(p=>editableIds.has(p.id)&&!nextIds.has(p.id)).map(p=>p.id));
  if(removed.size)doc=pruneReferences(doc,removed);
  const moved:string[]=[];
  doc={...doc,parts:doc.parts.map(p=>{const inst=next.parts.find(x=>x.id===p.id),prev=before.parts.find(x=>x.id===p.id);if(!inst||!prev)return p;let out=p;if(!same(inst.assembledPosition,prev.assembledPosition)||!same(inst.rotation,prev.rotation)){out={...out,position:inst.assembledPosition,rotation:inst.rotation};moved.push(p.id);}if(inst.label!==prev.label&&inst.label.trim())out={...out,name:inst.label.trim()};return out;})};
@@ -54,7 +57,7 @@ export function useLinkedEditor():EditorApi&LinkedExtras{
  useEffect(()=>{
   fetch('/api/status').then(r=>r.json()).then(setStatus).catch(()=>{});
   const record=readStudioRecord();setDocument(record?.document??null);setReady(true);
-  const onStorage=(event:StorageEvent)=>{if(event.key===STUDIO_KEY){const r=readStudioRecord();if(r&&!same(r.document,current.current)){current.current=r.document;setDocument(r.document);}}if(event.key===HISTORY_KEY)setHistoryTick(t=>t+1);};
+  const onStorage=(event:StorageEvent)=>{if(event.key===STUDIO_KEY||event.key===null){const next=readStudioRecord()?.document??null;if(!same(next,current.current)){current.current=next;setDocument(next);setColors({});}}if(event.key===HISTORY_KEY||event.key===null)setHistoryTick(t=>t+1);};
   window.addEventListener('storage',onStorage);return()=>{window.removeEventListener('storage',onStorage);abort.current?.abort();};
  },[]);
  useEffect(()=>{if(!toast)return;const id=setTimeout(()=>setToast(''),6000);return()=>clearTimeout(id);},[toast]);
@@ -65,10 +68,10 @@ export function useLinkedEditor():EditorApi&LinkedExtras{
  const projectValid=useMemo(()=>!!derived&&validateProject(derived.project).valid,[derived]);
  const history=useMemo(()=>{void historyTick;void document;return typeof localStorage==='undefined'?{version:1 as const,past:[],future:[]}:readHistory();},[historyTick,document]);
  const save=useCallback((next:DeviceDocument,record=true)=>{const prev=current.current;try{next=validateDeviceDocument(next);}catch(error){tell(error instanceof Error?error.message:'The change is invalid.');return false;}if(record&&prev)recordChange(prev);writeStudioDocument(next);current.current=next;setDocument(next);setHistoryTick(t=>t+1);return true;},[tell]);
- const mutate=useCallback((edit:(p:Project)=>Project)=>{const doc=current.current;if(!doc||!derived||busy)return;let next:Project;try{next=edit(derived.project);}catch(error){tell(error instanceof Error?error.message:'The edit could not be applied.');return;}if(!same(next.connections,derived.project.connections))setNotice('Wiring changed. Update wiring and code with the Assistant before building.');save(applyProjectToDocument(doc,derived,next));},[derived,busy,save,tell]);
- const commit=useCallback((_project:Project,nextColors?:Record<string,string>)=>{if(nextColors)setColors(nextColors);},[]);
- const undo=useCallback(()=>{const doc=current.current;if(!doc||busy)return;const prev=undoShared(doc);if(!prev)return;writeStudioDocument(prev);current.current=prev;setDocument(prev);setHistoryTick(t=>t+1);},[busy]);
- const redo=useCallback(()=>{const doc=current.current;if(!doc||busy)return;const next=redoShared(doc);if(!next)return;writeStudioDocument(next);current.current=next;setDocument(next);setHistoryTick(t=>t+1);},[busy]);
+ const mutate=useCallback((edit:(p:Project)=>Project)=>{const doc=current.current;if(!doc||!derived||busy)return;try{const next=edit(derived.project);if(!same(next.connections,derived.project.connections))setNotice('Wiring changed. Update wiring and code with the Assistant before building.');save(applyProjectToDocument(doc,derived,next));}catch(error){tell(error instanceof Error?error.message:'The edit could not be applied.');}},[derived,busy,save,tell]);
+ const commit=useCallback((project:Project,nextColors?:Record<string,string>)=>{const doc=current.current;if(!doc||!derived||busy)return;try{const next=applyProjectToDocument(doc,derived,project);if(nextColors)next.parts=next.parts.map(part=>{const color=nextColors[part.id];return color&&color!==part.color?{...part,color,solids:part.solids.map(solid=>solid.color?.toLowerCase()===part.color.toLowerCase()?{...solid,color}:solid)}:part;});if(save(next)&&nextColors)setColors(nextColors);}catch(error){tell(error instanceof Error?error.message:'The edit could not be applied.');}},[derived,busy,save,tell]);
+ const undo=useCallback(()=>{const doc=current.current;if(!doc||busy)return;const prev=undoShared(doc);if(!prev)return;writeStudioDocument(prev);current.current=prev;setDocument(prev);setColors({});setHistoryTick(t=>t+1);},[busy]);
+ const redo=useCallback(()=>{const doc=current.current;if(!doc||busy)return;const next=redoShared(doc);if(!next)return;writeStudioDocument(next);current.current=next;setDocument(next);setColors({});setHistoryTick(t=>t+1);},[busy]);
  async function generate(text:string,editing:boolean){
   const doc=current.current;if(!text.trim()||running.current||!doc||!derived)return false;
   if(!editing){tell('New designs start a separate project. Use New design, or change the Studio object instead.');return false;}
@@ -79,7 +82,7 @@ export function useLinkedEditor():EditorApi&LinkedExtras{
    if(!res.ok){const data=await res.json();throw Error(data.message||data.error||'Gemini could not complete the request.');}
    if(!res.body)throw Error('No response received.');
    const reader=res.body.getReader(),decoder=new TextDecoder();let pending='';
-   const handle=(line:string)=>{if(!line.trim())return;const event=JSON.parse(line);if(event.type==='stage')setStage(s=>({index:event.stage,message:event.message,parts:event.parts||s.parts}));if(event.type==='error')throw Error(event.message);if(event.type==='complete'){const checked=validateProject(event.project);if(!checked.valid)throw Error('The edited circuit did not pass validation. '+checked.errors.slice(0,2).join(' '));const next=checked.project||event.project;if(save(applyProjectToDocument(doc,derived,next))){setMessages(m=>[...m,{role:'assistant',text:event.message||'Updated the wiring, firmware and parts on the shared object.',source:event.model||'Gemini'}]);result=true;}}};
+   const handle=(line:string)=>{if(!line.trim())return;const event=JSON.parse(line);if(event.type==='stage')setStage(s=>({index:event.stage,message:event.message,parts:event.parts||s.parts}));if(event.type==='error')throw Error(event.message);if(event.type==='complete'){if(abort.current?.signal.aborted)throw new DOMException('Cancelled','AbortError');if(!same(doc,current.current))throw Error('Studio changed while the circuit was being updated. Your latest object is unchanged; retry the edit.');const checked=validateProject(event.project);if(!checked.valid)throw Error('The edited circuit did not pass validation. '+checked.errors.slice(0,2).join(' '));const next=checked.project||event.project;if(save(applyProjectToDocument(doc,derived,next))){setMessages(m=>[...m,{role:'assistant',text:event.message||'Updated the wiring, firmware and parts on the shared object.',source:event.model||'Gemini'}]);result=true;}}};
    while(true){const {done,value}=await reader.read();if(done)break;pending+=decoder.decode(value,{stream:true});const lines=pending.split('\n');pending=lines.pop()||'';lines.forEach(handle);}
    pending+=decoder.decode();if(pending.trim())handle(pending);if(!result)throw Error('Generation ended before a complete design was received.');
    tell('Circuit updated on the shared object.');
@@ -98,5 +101,5 @@ export function useLinkedEditor():EditorApi&LinkedExtras{
    }
   }catch(error){setMessages(m=>[...m,{role:'assistant',text:(error as Error).message}]);}finally{setAsking(false);}
  }
- return {linked:true as const,document,plan:derived?.plan??null,checks,empty:!!document&&!derived,projectValid,project,colors,source:document?'Studio object':'No object',legacyProject:null,ready,readOnly:false,busy,asking,stage,messages,messageEnd,toast,notice,status,tell,setNotice,commit,mutate,undo,redo,canUndo:history.past.length>0,canRedo:history.future.length>0,open:()=>{},importFile:async()=>{},generate,ask,cancel:()=>abort.current?.abort(),makeCopy:()=>{}};
+ return {linked:true as const,document,plan:derived?.plan??null,checks,empty:!derived,projectValid,project,colors,source:document?'Studio object':'No object',legacyProject:null,ready,readOnly:false,busy,asking,stage,messages,messageEnd,toast,notice,status,tell,setNotice,commit,mutate,undo,redo,canUndo:history.past.length>0,canRedo:history.future.length>0,open:()=>{},importFile:async()=>{},generate,ask,cancel:()=>abort.current?.abort(),makeCopy:()=>{}};
 }

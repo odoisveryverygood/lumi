@@ -7,8 +7,8 @@ import {canonicalCatalogGeometry} from './catalog';
  * A replaced/shortened response resets the cursor; partial strings never become parts. */
 export function createGenerationProgress(){
   let previous='',offset=0,started=false,done=false,quoted=false,escaped=false,depth=0,start=-1;
-  let parts:DevicePart[]=[],ids=new Set<string>();
-  const reset=()=>{offset=0;started=false;done=false;quoted=false;escaped=false;depth=0;start=-1;parts=[];ids=new Set();};
+  let parts:DevicePart[]=[],sources=new Map<string,DevicePart>(),solidCount=0;
+  const reset=()=>{offset=0;started=false;done=false;quoted=false;escaped=false;depth=0;start=-1;parts=[];sources=new Map();solidCount=0;};
   return {read(text:string):{parts:DevicePart[];partsComplete:boolean}{
     if(!text.startsWith(previous))reset();previous=text;
     if(!started){
@@ -26,8 +26,8 @@ export function createGenerationProgress(){
         depth--;
         if(!depth&&start>=0){
           if(parts.length<60)try{
-            const raw=JSON.parse(text.slice(start,offset+1)),part=devicePartSchema.safeParse(expandGeneratedPart(raw));
-            if(part.success&&(canonicalCatalogGeometry(part.data)||part.data.solids.length&&!part.data.mesh)&&!part.data.assetNode&&!ids.has(part.data.id)){ids.add(part.data.id);parts.push(part.data);}
+            const raw=JSON.parse(text.slice(start,offset+1)),part=devicePartSchema.safeParse(expandGeneratedPart(raw,sources));
+            if(part.success&&(canonicalCatalogGeometry(part.data)||part.data.solids.length&&!part.data.mesh)&&!part.data.assetNode&&!sources.has(part.data.id)&&solidCount+part.data.solids.length<=2000){sources.set(part.data.id,part.data);solidCount+=part.data.solids.length;parts.push(part.data);}
           }catch{/* Invalid/incomplete geometry is never progress. */}
           start=-1;
         }

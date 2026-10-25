@@ -1,38 +1,100 @@
-/* Morf: a shape-shifting companion. A blob at rest; a miniature of the object on screen once it has formed. */
-.morf-character{--morf-size:74px;--optic:#efa345;display:inline-block;width:var(--morf-size);height:var(--morf-size);position:relative;vertical-align:middle;flex:none;isolation:isolate;pointer-events:none}
-.morf-character--small{--morf-size:32px}
-.morf-character-shadow{position:absolute;left:18%;right:18%;bottom:2%;height:9%;border-radius:50%;background:radial-gradient(#5a4a2a55,#5a4a2a00 70%);animation:morf-shadow 5s ease-in-out infinite}
-.morf-body{position:absolute;inset:0;width:100%;height:100%;overflow:visible;animation:morf-hover 5s ease-in-out infinite}
-.morf-blob{transition:transform .9s cubic-bezier(.2,.8,.2,1)}
-.morf-blob-skin{animation:morf-wobble 4.5s ease-in-out infinite;transform-origin:center}
-.morf-cell{opacity:0;transform:translate(0,22px) scale(.2);transition:opacity .55s ease,transform .75s cubic-bezier(.2,.9,.2,1),fill .4s;stroke:#2b2a2833;stroke-width:.6;paint-order:stroke}
-.morf-cell[data-on=true]{opacity:1;transform:none}
-.morf-eyes{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-.morf-eye{animation:morf-blink 6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
-.morf-mouth{transition:d .3s}
-.morf-scan,.morf-probe{opacity:0;transition:opacity .3s}
-/* Activity forms */
-.morf-character[data-mode=thinking] .morf-body{animation:morf-consider 2.2s ease-in-out infinite}
-.morf-character[data-mode=thinking] .morf-blob-skin{animation-duration:1.6s}
-.morf-character[data-mode=scanning] .morf-scan{opacity:.85;animation:morf-scan 1.5s ease-in-out infinite}
-.morf-character[data-mode=scanning] .morf-cell[data-on=true]{filter:saturate(1.3)}
-.morf-character[data-mode=pointing] .morf-probe{opacity:1}
-.morf-character[data-mode=pointing] .morf-body{transform:rotate(-6deg)}
-.morf-character[data-mode=explaining] .morf-mouth{d:path("M-3.5,4.5 Q0,9.5 3.5,4.5");animation:morf-speak 1s ease-in-out infinite alternate}
-.morf-character[data-mode=success] .morf-body{animation:morf-bounce 1.2s cubic-bezier(.2,.8,.2,1) both}
-.morf-character[data-mode=alert] .morf-blob-skin,.morf-character[data-mode=alert] .morf-cell[data-on=true]{filter:sepia(.3) hue-rotate(-18deg)}
-.morf-character[data-mode=alert] .morf-mouth{d:path("M-3,7 Q0,4.5 3,7")}
-.morf-character[data-mode=alert] .morf-body{transform:rotate(7deg)}
-/* Phase */
-.morf-character[data-phase=forming] .morf-blob-skin{animation-duration:1.1s}
-.morf-character[data-phase=formed] .morf-blob-skin{animation:none}
-.morf-character--small .morf-cell{transition-duration:.3s;transition-delay:0ms!important}
-@keyframes morf-hover{0%,100%{translate:0 0}50%{translate:0 -3px}}
-@keyframes morf-shadow{0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(.86);opacity:.6}}
-@keyframes morf-wobble{0%,100%{transform:scale(1,1)}33%{transform:scale(1.05,.95)}66%{transform:scale(.96,1.05)}}
-@keyframes morf-blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
-@keyframes morf-consider{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-@keyframes morf-scan{0%{transform:translateY(8px)}100%{transform:translateY(90px)}}
-@keyframes morf-speak{from{transform:scaleY(.7)}to{transform:scaleY(1.2)}}
-@keyframes morf-bounce{0%{transform:translateY(0) scale(1)}35%{transform:translateY(-9px) scale(1.06,.94)}70%{transform:translateY(0) scale(.96,1.05)}100%{transform:none}}
-@media(prefers-reduced-motion:reduce){.morf-character,.morf-character *{animation:none!important;transition:none!important}.morf-character[data-mode=scanning] .morf-scan{opacity:.6;transform:translateY(50px)}}
+/* Morf: an articulated ceramic shell, a graphite chassis, one amber optic. */
+.morf-character{--morf-size:74px;--edge:calc(var(--morf-size)*.62);--half:calc(var(--edge)/2);--gap:1.4px;--optic:#efa345;display:inline-block;width:var(--morf-size);height:var(--morf-size);position:relative;vertical-align:middle;flex:none;perspective:400px;isolation:isolate;pointer-events:none}
+.morf-character--small{--morf-size:32px;--gap:.7px}
+.morf-character *{box-sizing:border-box}
+.morf-character-float{position:absolute;inset:0;transform-style:preserve-3d;animation:morf-hover 5s ease-in-out infinite}
+.morf-cube{position:absolute;left:19%;top:15%;width:var(--edge);height:var(--edge);transform-style:preserve-3d;transform:rotateX(-19deg) rotateY(-29deg) rotateZ(-4deg);transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+.morf-chassis{position:absolute;inset:4%;border-radius:8%;background:#343738;transform:translateZ(calc(var(--half) - 2px));box-shadow:0 0 0 1px #21282b}
+.morf-plate{position:absolute;inset:0;border-radius:9%;border:1px solid #a49f9470;background:linear-gradient(135deg,#fffdf4,#ebe3d5);box-shadow:inset 0 0 0 1px #fff8,0 1px 2px #2c27251a;backface-visibility:hidden;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.9,.2,1),filter .4s}
+.morf-plate--front{transform:translateZ(calc(var(--half) + var(--gap)));background:linear-gradient(135deg,#fffdf5 10%,#eee6d8 70%,#d6cdbd)}
+.morf-plate--back{transform:rotateY(180deg) translateZ(calc(var(--half) + var(--gap)));background:#c4bdae}
+.morf-plate--right{transform:rotateY(90deg) translateZ(calc(var(--half) + var(--gap)));background:linear-gradient(130deg,#e2ddcf,#a8a99f)}
+.morf-plate--left{transform:rotateY(-90deg) translateZ(calc(var(--half) + var(--gap)));background:#e3ddce}
+.morf-plate--top{transform:rotateX(90deg) translateZ(calc(var(--half) + var(--gap)));background:linear-gradient(135deg,#fffef9,#f0e8d9)}
+.morf-plate--bottom{transform:rotateX(-90deg) translateZ(calc(var(--half) + var(--gap)));background:#a8a99f}
+.morf-panel-mark{position:absolute;left:20%;top:8%;font:650 calc(var(--edge)*.44)/1 var(--ui);color:#7d7d70;transform:rotate(180deg);letter-spacing:-.08em}
+.morf-panel-groove{position:absolute;width:19%;height:3%;right:13%;bottom:18%;background:#a6a59a;border-radius:1px}
+.morf-panel-vents{position:absolute;left:25%;top:25%;right:25%;height:36%;display:flex;flex-direction:column;gap:13%}
+.morf-panel-vents i{display:block;height:13%;background:#636c69;border-radius:2px;box-shadow:0 1px 0 #fdfbef8a}
+.morf-panel-light{position:absolute;left:39%;bottom:18%;width:23%;height:5%;border-radius:2px;background:#eba048;box-shadow:0 0 5px #ffaf3850}
+.morf-screw{position:absolute;top:9%;width:5%;height:5%;border-radius:50%;background:#7b8078;box-shadow:0 0 0 .5px #f8f6ee}
+.morf-screw--tl{left:9%}.morf-screw--tr{right:9%}
+.morf-optic{position:absolute;left:21%;top:18%;width:60%;height:60%;border-radius:50%;background:linear-gradient(135deg,#686c68,#292f30 55%,#7b7c70);box-shadow:0 1px 2px #202a3445,inset 0 0 0 1px #242a2b;transform:translateZ(1px)}
+.morf-optic-track{position:absolute;inset:9%;border:1px dashed #c3aa6d70;border-radius:50%;transition:transform 1s}
+.morf-optic-glass{position:absolute;inset:17%;border-radius:50%;background:radial-gradient(circle at 35% 28%,#505553,#151f24 70%);overflow:hidden;border:1px solid #0c151a;box-shadow:inset 0 0 3px #0008}
+.morf-optic-iris{position:absolute;inset:16%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#ffebaf,var(--optic) 45%,#bd681e 75%);border:1px solid #ffda8155;box-shadow:0 0 5px #f5ab4550;transform:translate(calc(var(--look-x,0px)*.6),calc(var(--look-y,0px)*.6));transition:scale .3s}
+.morf-optic-iris:after{content:'';position:absolute;inset:26%;background:#1e292c;border-radius:50%;border:1px solid #996a36}
+.morf-optic-iris i{position:absolute;left:18%;top:11%;width:22%;height:15%;border-radius:50%;background:#fff9dc;z-index:1}
+.morf-scan-line{position:absolute;top:0;left:0;right:0;height:1px;background:#ffe0a1;box-shadow:0 0 5px #ffb841;opacity:0}
+.morf-face-indicator{display:flex;gap:2px;position:absolute;bottom:10%;left:14%;width:24%;height:3%}
+.morf-face-indicator i{height:100%;width:20%;background:#909789;border-radius:1px}
+.morf-face-indicator i:first-child{background:var(--optic)}
+.morf-plate--front small{position:absolute;right:10%;bottom:7%;font:500 calc(var(--edge)*.11)/1 var(--mono);color:#8a8e81;letter-spacing:-.07em}
+.morf-character-shadow{position:absolute;left:14%;right:8%;bottom:3%;height:12%;border-radius:50%;background:#514d4530;filter:blur(4px);animation:morf-shadow 5s ease-in-out infinite}
+.morf-probe{position:absolute;left:85%;top:71%;width:62%;height:12%;transform-origin:left center;transform:translateZ(calc(var(--half) + 2px)) rotateZ(23deg) scaleX(.05);opacity:0;transition:transform .65s cubic-bezier(.2,1.1,.3,1),opacity .25s;transform-style:preserve-3d}
+.morf-probe>span{position:absolute;inset:22% 10% 22% 0;background:#596362;border:1px solid #313e3f;border-radius:3px}
+.morf-probe>i{position:absolute;right:-5%;top:-55%;width:38%;height:200%;clip-path:polygon(0 0,100% 50%,0 100%,15% 50%);background:#e6a350;filter:drop-shadow(0 1px 1px #84532b44)}
+.morf-lens-arm{position:absolute;left:56%;top:50%;width:70%;height:70%;transform-style:preserve-3d;transform-origin:20% 20%;transform:translateZ(calc(var(--half) + 6px)) rotateZ(-30deg) scale(.4);opacity:0;transition:transform .65s cubic-bezier(.2,.9,.2,1),opacity .4s}
+.morf-lens{position:absolute;inset:0;border:calc(var(--edge)*.07) solid #6a726b;border-radius:50%;box-shadow:0 0 0 1px #d7dacb,inset 0 0 0 1px #dce1d055;background:#ffe0a118}
+.morf-lens:after{content:'';position:absolute;right:-30%;bottom:-37%;width:15%;height:53%;background:linear-gradient(90deg,#5c6966,#b5b8a4);border-radius:2px;transform:rotate(-40deg);transform-origin:top}
+.morf-lens i{position:absolute;inset:12%;border-radius:50%;border-top:1px solid #fff9d3;transform:rotate(-35deg)}
+.morf-foot{position:absolute;top:100%;width:17%;height:23%;background:#626b65;border:1px solid #3e4a48;border-radius:0 0 4px 4px;transform:translateZ(calc(var(--half) - 5px)) scaleY(.1);transform-origin:top;opacity:0;transition:transform .55s,opacity .3s}
+.morf-foot--left{left:17%}.morf-foot--right{right:17%}
+.morf-character[data-mode=idle]:not(.morf-character--small) .morf-plate--top{animation:morf-panel-breathe 7s ease-in-out infinite}
+.morf-character[data-mode=thinking]{--gap:4px}
+.morf-character[data-mode=thinking] .morf-cube{animation:morf-consider 3.6s ease-in-out infinite}
+.morf-character:is([data-mode=thinking],[data-mode=scanning]) .morf-optic-track{animation:morf-ring 2s linear infinite}
+.morf-character:is([data-mode=thinking],[data-mode=scanning]) .morf-face-indicator i{animation:morf-status 1s ease-in-out infinite alternate}
+.morf-character .morf-face-indicator i:nth-child(2){animation-delay:.2s}.morf-character .morf-face-indicator i:nth-child(3){animation-delay:.4s}
+.morf-character[data-mode=scanning] .morf-plate--top{transform:rotateX(108deg) translateZ(calc(var(--half) + 8px))}
+.morf-character[data-mode=scanning] .morf-plate--right{transform:rotateY(104deg) translateZ(calc(var(--half) + 4px))}
+.morf-character[data-mode=scanning] .morf-lens-arm{opacity:1;transform:translateZ(calc(var(--half) + 9px)) rotateZ(-8deg) scale(1)}
+.morf-character[data-mode=scanning] .morf-scan-line{opacity:.8;animation:morf-scan 1.6s ease-in-out infinite}
+.morf-character[data-mode=pointing] .morf-probe{opacity:1;transform:translateZ(calc(var(--half) + 2px)) rotateZ(23deg) scaleX(1)}
+.morf-character[data-mode=pointing] .morf-plate--right{transform:rotateY(112deg) translateZ(calc(var(--half) + 4px))}
+.morf-character[data-mode=explaining] .morf-plate--top{transform:rotateX(115deg) translateZ(calc(var(--half) + 5px))}
+.morf-character[data-mode=explaining] .morf-foot{opacity:1;transform:translateZ(calc(var(--half) - 5px)) scaleY(1)}
+.morf-character[data-mode=explaining] .morf-optic-iris{animation:morf-speak 1.3s ease-in-out infinite}
+.morf-character[data-mode=success] .morf-cube{animation:morf-assemble 1.5s cubic-bezier(.2,.8,.2,1) both}
+.morf-character[data-mode=success] .morf-panel-light{box-shadow:0 0 9px #e7b865}
+.morf-character[data-mode=alert]{--optic:#e37953}
+.morf-character[data-mode=alert] .morf-cube{transform:rotateX(-15deg) rotateY(-23deg) rotateZ(8deg)}
+.morf-character[data-mode=alert] .morf-optic-iris{scale:.75}
+.morf-character--small .morf-character-float,.morf-character--small .morf-character-shadow{animation:none}
+.morf-character--small .morf-character-shadow{opacity:.4;filter:blur(2px)}
+.morf-character--small .morf-plate{border-width:.5px}
+.morf-character--small :is(.morf-plate--front small,.morf-screw,.morf-probe,.morf-lens-arm,.morf-foot){display:none}
+.morf-character--small .morf-optic{width:67%;height:67%;left:17%;top:14%}
+.morf-pet{width:76px;height:94px}
+.morf-pet:focus-visible{border-radius:13px;outline:2px solid #b38048;outline-offset:5px}
+.morf-pet-label{font-size:8px;text-transform:uppercase;letter-spacing:1.1px;color:#8c785b;gap:5px;margin-top:2px}
+.morf-actor{width:76px;height:94px}
+.morf-actor[data-dragging=true] .morf-character-float{animation:none;transform:rotate(var(--pet-tilt)) translateY(-6px)}
+.morf-actor[data-dragging=true] .morf-character-shadow{opacity:.25}
+.morf-actor[data-emotion=wave] .morf-cube{transform:rotateX(-19deg) rotateY(-18deg) rotateZ(7deg)}
+.morf-actor[data-emotion=look] .morf-cube{transform:rotateX(-11deg) rotateY(-40deg) rotateZ(-5deg)}
+.morf-whisper{border-color:#ddd3be;border-radius:13px 13px 4px 13px;bottom:94px;box-shadow:0 10px 35px #4e44391a}
+.morf-whisper>span{letter-spacing:1.1px;font-size:6px;color:#97896e}
+.morf-pointer path{stroke:#ac8860;stroke-dasharray:2 5;opacity:.65}.morf-pointer circle{fill:#d9a458}
+.morf-chat>header{background:linear-gradient(110deg,#eee9dc,#fff5e2)}
+.morf-chat header strong{letter-spacing:-1px;color:#464940}
+.morf-chat footer{color:#8c8f7b}.morf-chat form>button[type=submit]{background:#e4c28c;color:#4b4d3d}
+.morf-chat .morf-character{margin-right:2px}
+.morf-experience .ds-chat-intro .morf-character{--morf-size:46px}
+.morf-experience .ds-message>span .morf-character{--morf-size:22px}
+.morf-experience .ds-brand-word{letter-spacing:-1.7px!important}
+.morf-experience .ds-brand .ds-brand-edition{max-width:125px;font-size:6px;letter-spacing:1.15px}
+.morf-experience .fx-gallery-copy h1{font-size:clamp(34px,4.05vw,62px)}
+.morf-experience .fx-gallery-copy{width:min(480px,39%)}
+.morf-experience .fx-gallery-copy>p{max-width:390px}
+@keyframes morf-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes morf-shadow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
+@keyframes morf-panel-breathe{0%,62%,100%{transform:rotateX(90deg) translateZ(calc(var(--half) + var(--gap)))}76%,85%{transform:rotateX(98deg) translateZ(calc(var(--half) + 4px))}}
+@keyframes morf-consider{0%,100%{transform:rotateX(-19deg) rotateY(-29deg) rotateZ(-4deg)}50%{transform:rotateX(-28deg) rotateY(-9deg) rotateZ(2deg)}}
+@keyframes morf-ring{to{transform:rotate(360deg)}}
+@keyframes morf-status{to{opacity:.25;background:#e5ba69}}
+@keyframes morf-scan{0%,100%{transform:translateY(2px)}50%{transform:translateY(calc(var(--edge)*.36))}}
+@keyframes morf-speak{0%,100%{scale:1}45%{scale:.72 1.08}70%{scale:1.05 .85}}
+@keyframes morf-assemble{0%{transform:rotateX(-30deg) rotateY(-40deg) translateY(-5px);--gap:7px}45%{transform:rotateX(-19deg) rotateY(-20deg) translateY(-10px)}100%{transform:rotateX(-19deg) rotateY(-29deg) rotateZ(-4deg)}}
+@media(max-width:650px){.morf-experience .fx-gallery-copy{width:calc(100% - 42px)}.morf-experience .fx-gallery-copy h1{font-size:37px}.morf-character{--morf-size:66px}.morf-character--small{--morf-size:29px}.morf-pet,.morf-actor{width:72px}.morf-actor[data-high=true] .morf-whisper{top:99px}.morf-pet-label{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.morf-character,.morf-character *{animation:none!important;transition:none!important}.morf-character[data-mode=thinking] .morf-cube{transform:rotateX(-24deg) rotateY(-15deg)}.morf-character[data-mode=scanning] .morf-scan-line{opacity:.6;transform:translateY(calc(var(--edge)*.18))}}
