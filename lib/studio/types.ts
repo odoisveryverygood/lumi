@@ -79,6 +79,8 @@ export interface DeviceDocument {
   capabilities?:string[];
   designBrief?:string;
   review?:import('./quality-types').QualityReport;
+  /** Circuits tab edits saved with the object; see lib/studio/circuit-derive.ts. */
+  circuit?:import('./circuit-derive').CircuitOverlay;
 }
 export interface DeviceSceneProps {
   showcase?:boolean;

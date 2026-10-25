@@ -3,6 +3,7 @@ import './globals.css';
 import './flare.css';
 import './experience.css';
 import './morf.css';
+import './morf-circuits.css';
 import './morf-character.css';
 import localFont from 'next/font/local';
 const morfFont=localFont({src:'../public/fonts/Oxanium-Variable.ttf',variable:'--font-morf',display:'swap',weight:'200 800'});

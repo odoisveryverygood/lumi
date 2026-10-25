@@ -42,6 +42,8 @@ export interface SceneProps {
     showLabels?: boolean;
     showEnclosure?: boolean;
     colorOverrides?: Record<string, string>;
+    /** Screen position of the active wire's midpoint, for the companion to point at. */
+    onActiveWireAnchor?: (anchor: { x: number; y: number; visible: boolean } | null) => void;
 }
 class SceneBoundary extends Component<{
     children: ReactNode;
@@ -339,7 +341,7 @@ function ExplodeLeader({ instance, positions, enabled }: { instance: PartInstanc
     return <primitive object={guide} />;
 }
 
-function Wire({ connection, from, to, positions, rotations, active, focused, opacity, index, animateIn }: {
+function Wire({ connection, from, to, positions, rotations, active, focused, opacity, index, animateIn, report }: {
     connection: Connection;
     from: PartInstance;
     to: PartInstance;
@@ -350,7 +352,9 @@ function Wire({ connection, from, to, positions, rotations, active, focused, opa
     opacity: number;
     index: number;
     animateIn: boolean;
+    report?: (anchor: { x: number; y: number; visible: boolean }) => void;
 }) {
+    const { camera, gl } = useThree(), frames = useRef(0);
     const mesh = useRef<THREE.Mesh>(null), endpoints = useRef<(THREE.Mesh | null)[]>([null, null]), signal = useRef<THREE.Mesh>(null);
     const curve = useRef(new THREE.CubicBezierCurve3(new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(0, 1, 0)));
     const last = useRef(new THREE.Vector3(Infinity, Infinity, Infinity)), lastEnd = useRef(new THREE.Vector3(Infinity, Infinity, Infinity)), progress = useRef(animateIn ? .01 : 1);
@@ -377,6 +381,7 @@ function Wire({ connection, from, to, positions, rotations, active, focused, opa
             endpoints.current[0]?.position.copy(start);
             endpoints.current[1]?.position.copy(end);
         }
+        if (report && frames.current++ % 6 === 0) { const mid = curve.current.getPoint(.5).multiplyScalar(SCALE).project(camera); const rect = gl.domElement.getBoundingClientRect(); report({ x: rect.left + (mid.x + 1) / 2 * rect.width, y: rect.top + (1 - mid.y) / 2 * rect.height, visible: mid.z < 1 && Math.abs(mid.x) < 1.2 && Math.abs(mid.y) < 1.2 }); }
         material.opacity = THREE.MathUtils.damp(material.opacity, opacity, 7, delta);
         material.emissive.set(active || focused ? WIRE_COLORS[connection.wireColor] : '#000000');
         material.emissiveIntensity = focused ? .38 : active ? .22 : 0;
@@ -475,9 +480,9 @@ function World(props: SceneProps) {
     <Grid position={[0, baseY, 0]} args={[100, 100]} cellSize={.35} cellThickness={.45} cellColor="#2b2e36" sectionSize={1.75} sectionThickness={.75} sectionColor="#393e48" fadeDistance={26} fadeStrength={1.8} infiniteGrid raycast={() => { }}/>
     <group scale={SCALE}>
       {visible.map(instance => <ExplodeLeader key={`leader:${project.id}:${instance.id}`} instance={instance} positions={positions} enabled={!ambient && mode === 'exploded' && props.explodeAmount > .1} />)}
-      {visible.map(instance => { const library = getLibrary(instance.libraryId) || fallbackPart(instance), done = mode === 'build' && doneParts.has(instance.id), active = mode === 'build' && !!activeStep?.partIds.includes(instance.id) && !done, ghost = mode === 'build' && !done && !active; return <Part key={`${project.id}:${instance.id}`} instance={instance} library={library} targetPosition={explodedPosition(instance, partAmount(props, done, active))} positions={positions} rotations={rotations} objects={objects} drag={drag} selected={selectedId === instance.id} hovered={hoveredId === instance.id} active={active} opacity={ghost ? .14 : activeFocus && !partners.has(instance.id) ? .4 : 1} live={mode === 'build' && completedSteps >= project.buildSteps.length} displayMode={displayMode} colour={colorOverrides?.[instance.id]} showLabel={!ambient && showLabels && (hoveredId === instance.id || selectedId === instance.id || active)}/>; })}
+      {visible.map(instance => { const base = getLibrary(instance.libraryId) || fallbackPart(instance), library = instance.size || instance.colour ? { ...base, size: instance.size ?? base.size, colour: instance.colour ?? base.colour } : base, done = mode === 'build' && doneParts.has(instance.id), active = mode === 'build' && !!activeStep?.partIds.includes(instance.id) && !done, ghost = mode === 'build' && !done && !active; return <Part key={`${project.id}:${instance.id}`} instance={instance} library={library} targetPosition={explodedPosition(instance, partAmount(props, done, active))} positions={positions} rotations={rotations} objects={objects} drag={drag} selected={selectedId === instance.id} hovered={hoveredId === instance.id} active={active} opacity={ghost ? .14 : activeFocus && !partners.has(instance.id) ? .4 : 1} live={mode === 'build' && completedSteps >= project.buildSteps.length} displayMode={displayMode} colour={colorOverrides?.[instance.id]} showLabel={!ambient && showLabels && (hoveredId === instance.id || selectedId === instance.id || active)}/>; })}
       {showWires && project.connections.map((connection, index) => { const from = visible.find(p => p.id === connection.from.partId), to = visible.find(p => p.id === connection.to.partId); if (!from || !to || mode === 'build' && !doneWires.has(connection.id) && !activeStep?.connectionIds.includes(connection.id))
-        return null; const active = highlightedWire === connection.id || mode === 'build' && !!activeStep?.connectionIds.includes(connection.id), related = activeFocus === from.id || activeFocus === to.id; return <Wire key={`${project.id}:${connection.id}`} connection={connection} from={from} to={to} positions={positions} rotations={rotations} active={active} focused={related} opacity={active ? 1 : activeFocus && !related ? .15 : related ? 1 : .7} index={index} animateIn={mode === 'build' && !!activeStep?.connectionIds.includes(connection.id)}/>; })}
+        return null; const active = highlightedWire === connection.id || mode === 'build' && !!activeStep?.connectionIds.includes(connection.id), related = activeFocus === from.id || activeFocus === to.id; return <Wire key={`${project.id}:${connection.id}`} connection={connection} from={from} to={to} positions={positions} rotations={rotations} active={active} focused={related} opacity={active ? 1 : activeFocus && !related ? .15 : related ? 1 : .7} index={index} animateIn={mode === 'build' && !!activeStep?.connectionIds.includes(connection.id)} report={active && props.onActiveWireAnchor && (highlightedWire === connection.id || activeStep?.connectionIds[0] === connection.id) ? props.onActiveWireAnchor : undefined}/>; })}
     </group>
     <OrbitControls ref={controls} makeDefault enableDamping dampingFactor={.09} minDistance={1.3} maxDistance={75} maxPolarAngle={Math.PI * .88} enableRotate={props.view === '3d'} enabled={!ambient && !dragging} enablePan={!ambient} onStart={() => setUserCameraRevision(v => v + 1)}/>
     <CameraRig {...props} controls={controls} userCameraRevision={userCameraRevision} visible={visible}/><ComponentPicker objects={objects} drag={drag} onSelect={onSelect} onHover={onHover} disabled={!!ambient}/>

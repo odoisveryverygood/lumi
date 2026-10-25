@@ -1,0 +1,163 @@
+/* Circuits in the Morf look: the same cream canvas, peach header, warm panels and orange accents as Studio. Overrides flare.css for .editor-app only. */
+@media screen{
+.editor-app.editor-app{--bg:#fff8ed;--ink:#463b2c;--ink2:#5d452e;--ink3:#96795f;--line:#cda77c44;--line2:#d9b48a66;--accent:#b9752f;--blue:#b9752f;--accent-ink:#765025;--accent-bg:#f9d6a845;--ds-paper:#fff7e9;color:#463b2c;background:#fff8ed;font-family:var(--ui);}
+.editor-app ::selection{background:#f5d39b66;}
+.editor-app ::-webkit-scrollbar-thumb{background:#d8bb93;}
+.editor-app :is(button,a):focus-visible{outline:2px solid #c29230;outline-offset:3px;}
+.editor-app :is(input,textarea,select):focus{border-color:#c68a40!important;box-shadow:0 0 0 3px #edc57c25;}
+/* Header: identical gradient bar, wordmark and nav to Studio */
+.editor-app .app-header{background:linear-gradient(105deg,#ffdfb8 0%,#ffe9ce 48%,#fff0da 100%);border-bottom:1px solid #d7b48a66;box-shadow:0 3px 25px #b67f3010;color:#4f3b25;}
+.editor-app .app-header::after{display:none;}
+.editor-app .brand{color:#4a3522;}
+.editor-app .brand-word{font-family:var(--ui);font-size:31px;letter-spacing:-1.5px;font-weight:650;color:#4a3522;}
+.editor-app .brand b{color:#a07b52;font-size:6px;letter-spacing:1.4px;border:0;padding:0;margin-left:10px;}
+.editor-app .brand-icon{width:33px;height:34px;margin-right:8px;background:transparent;border:0;box-shadow:none;}
+.editor-app .header-rule{background:#d7b48a66;}
+.editor-app .fx-navigation{display:flex;gap:22px;position:absolute;left:50%;transform:translateX(-50%);height:100%;align-items:center;}
+.editor-app .fx-navigation :is(a,button){position:relative;font-size:11px;font-weight:500;color:#9b7d5d;padding:24px 1px;text-decoration:none;background:none;border:0;cursor:pointer;font-family:inherit;}
+.editor-app .fx-navigation :is(a,button)[aria-current]{color:#5b3e1f;}
+.editor-app .fx-navigation :is(a,button)[aria-current]::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:#dd9c52;border-radius:4px 4px 0 0;}
+.editor-app .project-breadcrumb{color:#86684a!important;font-size:12px!important;}
+.editor-app .project-breadcrumb svg{color:#a68a6a;}
+.editor-app .save-status{color:#a07b52;}
+.editor-app .save-status i{background:#dd9c52;}
+.editor-app .app-header .icon-btn{color:#8f734d;}
+.editor-app .app-header .icon-btn:hover{background:#ffe5b5;color:#5b3e1f;}
+.editor-app .text-action{color:#5d452e;}
+.editor-app .text-action:hover{background:#ffe5b5;}
+.editor-app .primary,.editor-app .send-btn{background:var(--flare-gradient);border:1px solid #d6ac72;color:#76502b!important;box-shadow:0 4px 15px #aa773119;}
+.editor-app .primary:hover{box-shadow:0 6px 20px #aa773128;transform:translateY(-1px);}
+.editor-app .secondary,.editor-app :is(.assistant-intro > button,.step-actions button){background:#fffdf7;border:1px solid #dcb27f;color:#6c5436;}
+/* Side panels: the Studio parts list and inspector treatment */
+.editor-app :is(.left-panel,.right-panel){background:linear-gradient(160deg,#ffe9ccf8,#fff1dcfa 70%,#fff5e6fa);border-color:#d9b78688;box-shadow:0 14px 65px #98652d12;color:#765a37;}
+.editor-app .left-panel :is(span,strong,small,button,input,p){color:#765a37;}
+.editor-app :is(.panel-topline,.left-tabs,.right-tabs,.right-footer,.workspace-status,.canvas-toolbar,.explorer-footer){background:transparent;border-color:#dec29a55;color:#a07b52;}
+.editor-app :is(.left-tabs > button,.right-tabs > button,.view-tabs > button,.text-action){color:#9b7d5d;}
+.editor-app :is(.left-tabs > button.active,.right-tabs > button.active){color:#855520;background:#ffe1ad;border-radius:8px 8px 0 0;}
+.editor-app :is(.left-tabs > button.active,.right-tabs > button.active)::after{background:#dd9c52;height:3px;border-radius:4px 4px 0 0;}
+.editor-app :is(.left-tabs small,.part-type-icon){background:#fff9ed;border-color:#d5b48166;color:#8f734d;}
+.editor-app .search-field{background:#fff9edb3;border:1px solid #d5b48166;border-radius:9px;color:#765a37;}
+.editor-app .search-field input{color:#735631;}
+.editor-app .search-field input::placeholder{color:#b29974;}
+.editor-app .assembly-row{background:#fffdf7;border:1px solid #e6d5be;border-radius:12px;color:#58442c;box-shadow:0 2px 8px #a2763910;}
+.editor-app .assembly-row.selected{background:#ffe5b5;border-color:#cda66c;}
+.editor-app .assembly-row strong{color:#58442c;}
+.editor-app .assembly-row span{color:#a07b52;}
+.editor-app :is(.part-list-row,.wire-list-row,.library-row){background:#fffdf7cc;border:1px solid #e6d5be;border-radius:11px;box-shadow:0 1px 4px #a2763908;}
+.editor-app :is(.part-list-row:hover,.wire-list-row:hover,.library-row:hover){background:#fff8eaa3;}
+.editor-app :is(.part-list-row.selected,.wire-list-row.selected){background:#ffe5b5;border-color:#cda66c;}
+.editor-app :is(.part-select strong,.library-row strong,.wire-list-row b,.selected-title h2,.overview-heading,.build-panel > h2,.step-list strong){color:#58442c;}
+.editor-app :is(.part-select small,.part-description,.list-caption,.micro-copy,.field > span,.field-heading,.catalog-note,.body-copy,.build-panel .body-copy,.step-details > p,.wire-list-row strong,.wire-list-row small){color:#8a6a49;}
+.editor-app :is(.parts-group .group-heading,.section-label,.panel-kicker){color:#a7835d;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;}
+.editor-app .right-panel :is(h2,h3,p,span,dt,dd,label,small,button,input,textarea){color:#7a6041;}
+.editor-app .right-panel :is(h2,h3,strong){color:#58442c;}
+.editor-app :is(.field > input,.field > textarea,.field > select,.full-select,.vector-inputs > label,.assistant-composer > textarea){background:#fffaf1;border:1px solid #d6b68e55;color:#735631;border-radius:9px;}
+.editor-app .vector-inputs input{color:#735631;background:transparent;}
+.editor-app :is(.detail-section,.assistant-composer,.pin-table,.spec-grid > div,.project-metrics,.project-metrics > div,.select-hint){border-color:#dec29a55;}
+.editor-app .project-metrics{background:#fffdf7;border:1px solid #e6d5be;border-radius:14px;}
+.editor-app .project-metrics b{color:#58442c;}
+.editor-app .project-metrics span{color:#a07b52;}
+.editor-app :is(.spec-grid dd,.pin-table strong,.pin-table button,.color-row > span){color:#6c5436;}
+.editor-app .detail-note{color:#8a6a49;background:#fff3dc;border-color:#ecd3a8;}
+.editor-app .select-hint strong{color:#58442c;}
+.editor-app .select-hint p{color:#8a6a49;}
+.editor-app .step-list button{background:#fffdf7;border:1px solid #e6d5be;border-radius:10px;color:#6c5436;}
+.editor-app .step-list button.active{background:#ffe5b5;border-color:#cda66c;}
+.editor-app .step-list button.done{color:#849257;}
+.editor-app .step-progress{background:#f3e5d2;}
+.editor-app .step-progress > div{background:#dd9c52;}
+.editor-app .step-check{background:#e8eddb;color:#5f6d3a;border-radius:10px;}
+.editor-app .step-tags button{background:#fff3dc;border:1px solid #ecd3a8;color:#855520;border-radius:7px;}
+/* Centre viewport: Studio's cream stage, floating rail and pills */
+.editor-app .canvas-stage{background:radial-gradient(ellipse at 65% 35%,#fffefa 0,#fffaf0 48%,#f9f0df 100%);}
+.editor-app .canvas-stage::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(#b28b5420 .7px,transparent .7px);background-size:26px 26px;mask-image:linear-gradient(180deg,transparent 10%,#0007);}
+.editor-app .canvas-stage.light-stage{background:#fffaf0;}
+.editor-app .canvas-toolbar{background:transparent;}
+.editor-app .view-tabs{background:#fff9f580;border:1px solid #70625519;border-radius:7px;padding:2px;}
+.editor-app .view-tabs > button{font-size:9px;color:#9b7d5d;border-radius:5px;}
+.editor-app .view-tabs > button.active{background:#f5d39b;color:#725025;box-shadow:0 2px 7px #a8844620;}
+.editor-app .canvas-options > button:not(.icon-btn){color:#9b7d5d;}
+.editor-app .canvas-options > button.on{color:#725025;background:#ffe5b5;border-radius:7px;}
+.editor-app .canvas-options > .icon-btn{color:#8f734d;}
+.editor-app .canvas-caption h1{color:#4b3d2e;font-family:var(--ui);font-weight:500;letter-spacing:-.06em;}
+.editor-app .canvas-caption h1 span{color:#b2a69a;font-size:11px;letter-spacing:-.4px;}
+.editor-app :is(.canvas-caption > p,.canvas-kicker,.canvas-footnote){color:#a18a6d;}
+.editor-app .canvas-kicker{font-size:7px;letter-spacing:1.7px;}
+.editor-app :is(.mode-switch,.explode-control,.transform-toolbar,.build-controls){background:#fffaf0e8;border:1px solid #e8d3b0;color:#8f734d;box-shadow:0 4px 20px #3a2b1d08;border-radius:11px;}
+.editor-app .mode-switch > button{color:#8f734d;font-size:10px;border-radius:7px;}
+.editor-app .mode-switch > button.active{background:#f5d39b;color:#725025;box-shadow:0 2px 7px #a8844620;}
+.editor-app .transform-toolbar .icon-btn{color:#8f734d;}
+.editor-app .transform-toolbar .icon-btn.active{background:#ffe5b5;color:#725025;}
+.editor-app .explode-control{color:#8f734d;}
+.editor-app .explode-control input{accent-color:#dd9c52;}
+.editor-app .build-controls :is(small,strong,button){color:#6c5436;}
+.editor-app .build-controls .primary{color:#76502b!important;}
+.editor-app .canvas-composer{background:#fff9ed;border:1px solid #ddbb8d;box-shadow:0 10px 45px #ac7b3c13;color:#a27945;border-radius:13px;min-height:57px;}
+.editor-app .canvas-composer > input{color:#735631;font-size:12px;}
+.editor-app .canvas-composer > input::placeholder{color:#af9775;}
+.editor-app :is(.canvas-composer .intent-switch,.canvas-composer > svg,.voice-button){color:#a27945;}
+.editor-app .canvas-composer .send-btn{background:#f6c77e;color:#755025!important;border:0;border-radius:9px;}
+.editor-app .hover-readout{background:#fffdf7f0;border:1px solid #e6d5be;color:#58442c;box-shadow:0 8px 30px #a2763915;}
+.editor-app .hover-readout p{color:#8a6a49;}
+.editor-app .show-all{background:#fffdf7;border:1px solid #dcb27f;color:#6c5436;}
+.editor-app .notice-strip{background:#fff3dc;border:1px solid #ecd3a8;color:#855520;}
+.editor-app .workspace-status{font-size:7px;letter-spacing:.3px;color:#aa906d;padding:12px 26px;}
+.editor-app .workspace-status button{color:#8f734d;}
+.editor-app .workspace-status .checks-ok{color:#6f8042;}
+.editor-app .workspace-status .checks-error{color:#b25a3c;}
+.editor-app .workspace-status .checks-partial{color:#b58a3a;}
+/* Assistant */
+.editor-app .assistant-intro h2{color:#58442c;}
+.editor-app .assistant-intro > p{color:#8a6a49;}
+.editor-app .assistant-intro .ai-orb{background:#f3e5d2;color:#b08b5c;border-color:#e6d5be;}
+.editor-app :is(.message-copy,.message > p){color:#6c5436;}
+.editor-app .message-copy strong{color:#58442c;}
+.editor-app .message-copy code{background:#fff3dc;border-color:#ecd3a8;color:#855520;}
+.editor-app .message.user{background:#ffe5b566;border-color:#e6d5be;}
+.editor-app .message.user .message-copy{color:#58442c;}
+.editor-app :is(.composer-tabs > button.active,.composer-footer,.thinking){color:#855520;}
+.editor-app .composer-tabs > button.active{background:#ffe1ad;border-radius:7px;}
+.editor-app .right-footer .status-dot{background:#d8bb93;}
+.editor-app .right-footer .status-dot.online{background:#849257;}
+/* Modals: Export, Parts library and Firmware share the Studio modal look */
+.editor-app .modal-backdrop{background:#5a3f1f66;backdrop-filter:blur(12px);}
+.editor-app .modal{background:linear-gradient(150deg,#fff7e9,#ffe5c2);border:1px solid #dec094;color:#795e3e;border-radius:20px;box-shadow:0 16px 60px #78563120;}
+.editor-app .modal :is(h2,p,button,small,span,label){color:#7b5b36;}
+.editor-app .modal > h2,.editor-app .code-modal-head h2{color:#58442c;font-weight:500;letter-spacing:-1px;}
+.editor-app .modal h2 em{color:#c8843d;font-style:normal;}
+.editor-app :is(.modal > textarea,.modal input,.modal select){background:#fffaf1;color:#735631;border:1px solid #d6b68e55;}
+.editor-app :is(.example-grid > button,.export-grid > button,.code-libraries > b){background:#fffdf7;color:#6c5436;border:1px solid #e6d5be;}
+.editor-app :is(.example-grid strong,.export-grid strong){color:#58442c;}
+.editor-app :is(.code-footer,.code-libraries,.new-model,.new-import > button){color:#8a6a49;}
+.editor-app .bom-table{background:#fffdf7;border:1px solid #e6d5be;border-radius:12px;}
+.editor-app .bom-table a{color:#855520;}
+.editor-app .checks-list > div{background:#fffdf7;border:1px solid #e6d5be;border-radius:10px;}
+.editor-app .checks-list .check-good{background:#e8eddb;color:#5f6d3a;}
+.editor-app .checks-list .warning{background:#fff3dc;color:#8a5a1f;}
+.editor-app .checks-list .check-fail{background:#fde9e0;color:#9f483a;}
+.editor-app .checks-list .check-unchecked{background:#f3ebdf;color:#8a7a66;}
+.editor-app .code-modal textarea.firmware-source{background:#fffaf1;color:#4b3a29;border:1px solid #dcb27f;border-radius:12px;font-family:var(--mono);font-size:12px;line-height:1.6;}
+.editor-app .compiler-output{background:#fffaf1;border:1px solid #e6d5be;color:#58442c;}
+.editor-app .compiler-output.success strong{color:#5f6d3a;}
+.editor-app .compiler-output.failure strong{color:#9f483a;}
+.editor-app .toast{background:#fff3dc;color:#5b3e1f;border:1px solid #dec094;}
+.editor-app .generation-indicator{background:#fff9edf2;border:1px solid #dec094;color:#5b3e1f;box-shadow:0 10px 45px #ac7b3c20;}
+.editor-app .generation-indicator b.done{color:#849257;}
+/* Studio-linked additions */
+.editor-app .circuit-origin{display:inline-block;font-size:7px;letter-spacing:1px;padding:2px 6px;border-radius:5px;background:#fff3dc;color:#a7835d;margin-left:6px;vertical-align:middle;}
+.editor-app .circuit-origin.added{background:#e8eddb;color:#5f6d3a;}
+.editor-app .circuit-origin.unresolved{background:#fde9e0;color:#9f483a;}
+.editor-app .needs-pins{opacity:.85;}
+.editor-app .circuit-empty{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:14px;padding:30px;z-index:5;color:#6c5436;}
+.editor-app .circuit-empty h2{font-size:26px;font-weight:500;letter-spacing:-.8px;color:#4b3d2e;margin:0;}
+.editor-app .circuit-empty p{max-width:420px;font-size:12px;line-height:1.8;color:#8a6a49;margin:0 auto;}
+.editor-app .circuit-empty .primary{margin:8px auto 0;display:inline-flex;align-items:center;gap:8px;}
+.editor-app .wire-step{display:grid;gap:4px;padding:10px 12px;background:#fffdf7;border:1px solid #e6d5be;border-radius:10px;margin:6px 0;font-size:11px;color:#58442c;}
+.editor-app .wire-step i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;}
+.editor-app .wire-step small{color:#8a6a49;}
+.editor-app .checks-summary{display:flex;gap:10px;font-size:9px;color:#8a6a49;margin:8px 0 14px;}
+.editor-app .checks-summary b{font-weight:600;color:#58442c;}
+.editor-app .checks-disclaimer{font-size:9px;color:#8a6a49;line-height:1.7;border-top:1px solid #dec29a55;padding-top:10px;margin-top:12px;}
+.editor-app .show-in-studio{display:inline-flex;align-items:center;gap:6px;color:#855520;font-size:10px;text-decoration:none;background:#fff3dc;border:1px solid #ecd3a8;border-radius:8px;padding:7px 10px;}
+.editor-app .morf-guide-layer{z-index:60;}
+}
