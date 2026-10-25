@@ -1,0 +1,30 @@
+{
+  "baselineRevision": "0bfb4bfe59916ed4df5e7ea1044a70ccd15502d0",
+  "files": {
+    "app/api/review/route.ts": "d774c5e4fb04583ce6ac538eda01b0529e26aed5dced0290ea0adafabb572629",
+    "components/studio/DeviceScene.tsx": "5c4f9be99065d8ce75c9d2482b0db895ff22ebbfd8ba0f75b10fe1d1f94b5584",
+    "components/studio/DeviceStudio.tsx": "599da2d282a3ff29213654908f04e125b237152e8765487e000e6dbb5ff034f8",
+    "components/studio/MotionReviewEvidence.tsx": "4819039c83ec05c55a7b89235d36d4a392078392617d9e87edb71c7f9a32e853",
+    "components/studio/QualityPanel.tsx": "ff858b6cf1eb787faef75b63ff1f41b21ca553d7d72fd1ef9aa6458dfe410399",
+    "components/studio/SoftwareViewport.tsx": "82cb7530e8c50281b6154da1075ae1e67fddf3b9d7593fe51b41fba25457af7e",
+    "components/studio/studio.css": "bbae149d770b1d5f048bd31731faf7e448a91ec8ae2e5e52b8e632f4b6315d74",
+    "lib/studio/motion-capture.ts": "cd37164fa4063af70986fbd625e793d3de84aa1d1cad73a2aaa4f1da9c494993",
+    "lib/studio/motion-client.ts": "4c8b2ab8f43c1f4688824306a85f2590dcf4a20d55419a1fcda55915c92c3ba6",
+    "lib/studio/motion-fan-source.json": "91d841def676ae079260b466993a22cd1a2cb26288e4b2dde864ff18b86aec47",
+    "lib/studio/motion-fan.ts": "8b5616350b912b76c1b70891c412073e6caaccf9510cd7c80d135754d9d1e42a",
+    "lib/studio/motion-geometry.ts": "0005247b85ecf154a08c42646f32172753b42e217b69bb833a4488c29650505d",
+    "lib/studio/motion-pose.ts": "c63b1b6d99602cfb924799f7c59eb9dd3cb13f728f55dbd4f2cc4fad95ebde51",
+    "lib/studio/motion-review.ts": "7ae1b1ed370838f0fb81b51f752eb7167dc5e82f24e0f085a82e10a575b6f211",
+    "lib/studio/motion-types.ts": "c44c9e03290cca36aae8021544b92cb24a9b46de123a32a80f8e20322cebfb36",
+    "lib/studio/motion-verification.ts": "e9601d509093b01254bb47254632eb82e1f820459623c62aa0ca7927dd4204f7",
+    "lib/studio/quality-client.ts": "07c2373ff8f53c502dfba5d2e229d9037865ce1af500fa3c2551357bfa95ce54",
+    "lib/studio/quality-engine.ts": "1a99170ad2644aeff1503632c9fec8e9f31afba84ea3b1fcd0bc88c246a9bd90",
+    "lib/studio/quality-fingerprint.ts": "f14bd02d563871304a7f9b6f8ac1eaff6d0d897603f0274f321694946e852715",
+    "lib/studio/quality-types.ts": "19b8ac5d88c9a6022a4d8abaeb8eea9b5be7d199391a5379683ec6a55fd870f7",
+    "lib/studio/render-model.ts": "5bacf023cd98c9d5d3185edca59bdc86a2731c00d2ae32843613a9fee8743504",
+    "lib/studio/review-renderer.ts": "8319258dd075becac2c645792b6f4e82c38d405d12121ef6fc3b8402e3740cf2",
+    "lib/studio/types.ts": "cf01853eaa6fcc232952ae10397d000862f43fac5291165d1905300682aefc0b",
+    "lib/studio/validation.ts": "d9feb55fdcf2585a18e4727256a1fdc205fe7d4d30e01e138b4e5d851436fd8d",
+    "tests/motion.test.ts": "25faa29e73b6c6dabf741b10a86dfea6d2a226bf3ddd8db42537610538d5540c"
+  }
+}

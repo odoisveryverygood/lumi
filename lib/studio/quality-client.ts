@@ -7,7 +7,7 @@ import {designContractSchema,constraintFailure,type DesignContract} from './cons
 import type {QualityInput,QualityResponse} from './quality-engine';
 export type QualityProgress={stage:'planning'|'rendering'|'reviewing'|'repairing'|'complete';message:string;document:DeviceDocument;rounds:QualityRound[];frames?:ReviewFrame[];contract?:DesignContract;baselineChecks?:MeasuredCheck[]};
 type Prepared={contract:DesignContract;baselineChecks:MeasuredCheck[]};
-type Dependencies={capture?:(document:DeviceDocument,signal:AbortSignal,scene?:unknown,referenceFrames?:ReviewFrame[])=>Promise<ReviewFrame[]>;review?:(input:QualityInput,signal:AbortSignal)=>Promise<QualityResponse>;prepare?:(request:string,baseline:DeviceDocument,candidate:DeviceDocument,signal:AbortSignal)=>Promise<Prepared>};
+type Dependencies={captureMotion?:typeof import('./motion-capture').captureMotionViews;capture?:(document:DeviceDocument,signal:AbortSignal,scene?:unknown,referenceFrames?:ReviewFrame[])=>Promise<ReviewFrame[]>;review?:(input:QualityInput,signal:AbortSignal)=>Promise<QualityResponse>;prepare?:(request:string,baseline:DeviceDocument,candidate:DeviceDocument,signal:AbortSignal)=>Promise<Prepared>};
 async function prepare(request:string,baseline:DeviceDocument,candidate:DeviceDocument,signal:AbortSignal):Promise<Prepared>{
  const response=await fetch('/api/constraints',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({request,baseline,candidate},catalogJsonReplacer),signal});const value=await response.json();if(!response.ok)throw new Error(value.error||'The design goals could not be prepared.');return {contract:designContractSchema.parse(value.contract),baselineChecks:value.baselineChecks.map((c:unknown)=>measuredCheckSchema.parse(c))};
 }
@@ -19,6 +19,7 @@ const issueIds=(round:QualityRound)=>new Set([...round.observations.filter(o=>o.
 /** Review every applied candidate. An unreviewed patch can never be the returned best result. */
 export async function improveWithVisualReview(initial:DeviceDocument,request:string,signal:AbortSignal,onProgress?:(progress:QualityProgress)=>void,scene?:unknown,dependencies:Dependencies={},baselineDocument:DeviceDocument=initial):Promise<{document:DeviceDocument;report:QualityReport}>{
  request=request.trim();
+ if(initial.mechanisms?.some(m=>m.verification)){const {improveMotionReview}=await import('./motion-client');return improveMotionReview(initial,request,signal,onProgress,{capture:dependencies.capture??(await import('./review-renderer')).captureReviewViews,captureMotion:dependencies.captureMotion,review:dependencies.review??requestReview},baselineDocument);}
  const started=Date.now(),{review:_baselineReview,...baseline}=validateDeviceDocument(baselineDocument);
  const validated=validateDeviceDocument(initial),{review:_previous,...clean}=validated,requirements=requirementsFromRequest(request),initialHash=await qualityFingerprint(clean),rounds:QualityRound[]=[];
  const operation=AbortSignal.any([signal,AbortSignal.timeout(180000)]),capture=dependencies.capture??(await import('./review-renderer')).captureReviewViews,review=dependencies.review??requestReview;
