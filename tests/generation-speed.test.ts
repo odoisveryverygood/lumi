@@ -52,7 +52,7 @@ describe('targeted validation correction',()=>{
   expect(JSON.parse(generate.mock.calls[1][1]).original).toEqual(invalid);expect(progress.mock.calls.filter(([p])=>p.resetGeneration)).toHaveLength(1);
  });
  it('fails closed on malformed complete JSON and exhausted correction without a template',async()=>{
-  generate.mockResolvedValueOnce({text:'{"document":',model:'gemini-4-argon'});await expect(generateCustomDevice('sofa',new AbortController().signal)).rejects.toThrow();expect(generate).toHaveBeenCalledTimes(1);
+  generate.mockResolvedValueOnce({text:'{"document":',model:'gemini-4-argon'});await expect(generateCustomDevice('sofa',new AbortController().signal,undefined,{maxAttempts:1})).rejects.toThrow();expect(generate).toHaveBeenCalledTimes(1);
   generate.mockReset();const invalid=wire();invalid.document.relationships[0].to='missing';generate.mockResolvedValue({text:JSON.stringify(invalid),model:'gemini-4-argon'});
   await expect(generateCustomDevice('sofa',new AbortController().signal)).rejects.toThrow('unresolved validation');expect(generate).toHaveBeenCalledTimes(3);
  });

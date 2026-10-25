@@ -1,0 +1,48 @@
+{
+  "completed": false,
+  "prompt": "a robot dog",
+  "durationMs": 8646,
+  "progress": [
+    {
+      "atMs": 16,
+      "message": "Request received. Connecting to Gemini…"
+    },
+    {
+      "atMs": 17,
+      "message": "Designing the components and assembly…"
+    },
+    {
+      "atMs": 219,
+      "message": "Gemini is designing your object…"
+    },
+    {
+      "atMs": 3842,
+      "message": "Receiving component geometry and the assembly guide…"
+    },
+    {
+      "atMs": 3850,
+      "message": "Geometry received. Checking the assembly…"
+    },
+    {
+      "atMs": 3852,
+      "message": "Checking component references, geometry and assembly relationships…"
+    },
+    {
+      "atMs": 3852,
+      "message": "Fixing a validation issue while preserving the received geometry…"
+    },
+    {
+      "atMs": 6306,
+      "message": "Checking the targeted correction…"
+    },
+    {
+      "atMs": 6307,
+      "message": "Fixing a validation issue while preserving the received geometry…"
+    },
+    {
+      "atMs": 8646,
+      "message": "Checking the targeted correction…"
+    }
+  ],
+  "error": "Gemini returned an assembly with an unresolved validation issue. Your existing object is unchanged; retry the same request."
+}

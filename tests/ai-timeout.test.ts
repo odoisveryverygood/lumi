@@ -26,4 +26,15 @@ describe('bounded Gemini generation timeout', () => {
     await generateText('System', 'User', { timeoutMs: override });
     expect(timeout.mock.calls.map(call => call[0])).toEqual([15_000, expected]);
   });
+  it('keeps the deadline on a stalled body after response headers and cancels the stream',async()=>{
+    const deadline=new AbortController(),realTimeout=AbortSignal.timeout.bind(AbortSignal),cancel=vi.fn();
+    vi.spyOn(AbortSignal,'timeout').mockImplementation(ms=>ms===10_000?deadline.signal:realTimeout(ms));
+    const fetcher=vi.fn().mockResolvedValueOnce(Response.json({models:[{name:'models/gemini-4-argon',supportedGenerationMethods:['generateContent']}]}))
+      .mockResolvedValueOnce(new Response(new ReadableStream({start(controller){controller.enqueue(new TextEncoder().encode('data: {"candidates":[{"content":{"parts":[{"text":"partial"}]}}]}\n\n'));},cancel})));
+    vi.stubGlobal('fetch',fetcher);const partial=vi.fn();
+    const pending=generateText('System','User',{timeoutMs:10000,onPartial:partial});
+    await vi.waitFor(()=>expect(partial).toHaveBeenCalledWith('partial'));
+    deadline.abort(new DOMException('Deadline','TimeoutError'));
+    await expect(pending).rejects.toMatchObject({code:'timeout'});expect(cancel).toHaveBeenCalledTimes(1);
+  });
 });

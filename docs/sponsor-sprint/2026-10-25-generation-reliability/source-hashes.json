@@ -1,0 +1,10 @@
+{
+  "baseCommit": "0bfb4bfe59916ed4df5e7ea1044a70ccd15502d0",
+  "files": {
+    "lib/ai.ts": "d02390c45156b7309a6b1fbf7d0688afdc1650649a26f36a085004ecd0d70290",
+    "lib/gemini-sdk.ts": "77717059c6379f2d691802a9a91b560b7ae0b16cb24d3cc75739ed56a5cb220a",
+    "lib/inference.ts": "bfccda6ea62890ce013dd6d63851ab3e72a74e370ff3007628bcc1838d3e2efb",
+    "lib/studio/device-generation.ts": "5162f3ff7ce2e985b18e7438f028733c5e60543750a3680c155dc0f09be370e7",
+    "lib/studio/generation-json.ts": "f7805da0f45495e3155f9f5a29d0630fb34bfc986a6a045e21ad3867434ce1d2"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "prompt": "a robot dog",
+  "scope": "Fresh generation through the actual browser form and automatic rendered review; separate from the API-test object.",
+  "localUrl": "http://127.0.0.1:3002/",
+  "observations": {
+    "generatedObject": "Agile Quadruped Robot Dog",
+    "selectableParts": 18,
+    "reviewStatus": "Rendered views reviewed",
+    "reviewedViews": [
+      "assembled",
+      "top",
+      "exploded"
+    ],
+    "modelSupportedFindings": 1,
+    "modelReportedIssues": 0,
+    "modelUnverifiedFindings": 0,
+    "numericalDesignConstraints": 0,
+    "batterySelectedThroughCallout": true,
+    "undoRestoredPreviousCorneParts": 75,
+    "redoRestoredRobotDogParts": 18,
+    "reloadRetainedObjectAndReview": true,
+    "cancelPreservedDesktopParts": 31,
+    "cancelPreservedPrompt": true
+  },
+  "limits": [
+    "No quantitative design requirement was supplied; 0/0 numerical checks is not a measured fit pass.",
+    "The existing GPU viewport startup failure remains; software geometry previews and review images were visible.",
+    "No physical operation, electrical wiring, motion clearance or broad reliability rate was verified.",
+    "Exact browser end-to-end duration was not recorded."
+  ]
+}
