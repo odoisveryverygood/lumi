@@ -4,9 +4,9 @@ import type {QualityReport,QualityRound} from '@/lib/studio/quality-types';
 import type {MotionFinding} from '@/lib/studio/motion-types';
 
 export default function MotionReviewEvidence({rounds,report,onPose}:{rounds:QualityRound[];report?:QualityReport;onPose?:(finding:MotionFinding,round:number)=>void}){
- const [attempt,setAttempt]=useState(0),available=rounds.filter(r=>r.motion),round=available.find(r=>r.number===attempt)??available.at(-1);
+ const [attempt,setAttempt]=useState<number|null>(null),available=rounds.filter(r=>r.motion),retained=available.findLast(r=>r.documentHash===report?.finalHash),round=(attempt===null?retained:available.find(r=>r.number===attempt))??available.at(-1);
  if(!round?.motion?.result.contract)return report?.unverifiedMotion?<section className="lumi-motion-evidence" aria-label="Sampled motion evidence"><h3>Sampled motion · unverified</h3><p>No rendered clearance claim was made.</p>{report.unverifiedMotion.findings.map((f,i)=><p key={i}>{f.detail}</p>)}{report.unverifiedMotion.limitations.map(t=><p key={t}>{t}</p>)}</section>:null;
- const {result,frames}=round.motion,first=available[0],retained=available.findLast(r=>r.documentHash===report?.finalHash),findings=result.findings.filter(f=>f.status!=='pass'),shown=findings.length?findings:result.findings.slice(0,1);
+ const {result,frames}=round.motion,first=available[0],findings=result.findings.filter(f=>f.status!=='pass'),shown=findings.length?findings:result.findings.slice(0,1);
  return <section className="lumi-motion-evidence" aria-label="Sampled motion evidence">
   <h3>Sampled motion · {result.status}</h3>
   <p>{result.contract!.minDeg}° to {result.contract!.maxDeg}° relative to rest · required clearance {result.contract!.clearanceMm} mm</p>

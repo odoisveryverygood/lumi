@@ -30,6 +30,7 @@ import type {GuideAnchor} from '@/lib/studio/lumi-motion';
 import {resolveAttachments,mountParts} from '@/lib/studio/attachments';
 import {improveWithVisualReview,requiresVisualReview,type QualityProgress} from '@/lib/studio/quality-client';
 import {qualityFingerprint} from '@/lib/studio/quality-fingerprint';
+import {canApplyReviewDraft} from '@/lib/studio/review-acceptance';
 import type {QualityReport} from '@/lib/studio/quality-types';
 import QualityPanel from './QualityPanel';
 import {poseMotion} from '@/lib/studio/motion-pose';
@@ -264,7 +265,7 @@ export default function DeviceStudio() {
     setSaveStatus('Review candidate · saved object preserved');setBusyAction('review');setQualityOpen(true);setQualityBrief(brief.trim());setQualityReport(undefined);setQualityProgress(null);setNewOpen(false);setRightOpen(false);setLeftOpen(false);setSelectedId(null);setHighlightedIds([]);setHiddenIds([]);setIsolatedId(null);setExplode(0);setView('perspective');setLabels(false);setBuildStep(null);setGenerationPreview(document);camera('fit');
     const reviewed=await improveWithVisualReview(document,brief,signal,progress=>{setQualityProgress(progress);setAIProgress(progress.message);setGenerationPreview(progress.document);},importedScene,{},baseline);setQualityReport(reviewed.report);return reviewed;
   }
-  function useQualityDraft(){if(busyRef.current||!qualityDraft||qualityDraft.review?.motionMechanismId&&qualityDraft.review.status!=='reviewed')return;const previous=latest.current;if(commit({document:qualityDraft,...(qualityDraft.parts.some(p=>p.assetNode)?{scene:previous.scene,asset:previous.asset}:{})})){setQualityDraft(null);setGenerationPreview(null);setQualityReport(qualityDraft.review);setSelectedId(null);setMessages(old=>[...old,{role:'assistant',text:'Used the inspected draft. Its review findings and unverified limits are saved with the object.'}]);tell('Draft applied as one change. Undo restores the previous object.');}}
+  function useQualityDraft(){if(busyRef.current||!qualityDraft||!canApplyReviewDraft(qualityDraft.review,!!qualityDraft.mechanisms?.some(m=>m.verification)))return;const previous=latest.current;if(commit({document:qualityDraft,...(qualityDraft.parts.some(p=>p.assetNode)?{scene:previous.scene,asset:previous.asset}:{})})){setQualityDraft(null);setGenerationPreview(null);setQualityReport(qualityDraft.review);setSelectedId(null);setMessages(old=>[...old,{role:'assistant',text:'Used the inspected draft. Its review findings and unverified limits are saved with the object.'}]);tell('Draft applied as one change. Undo restores the previous object.');}}
   function discardQualityDraft(){if(busyRef.current)return;setMotionInspection(null);setQualityDraft(null);setGenerationPreview(null);setQualityReport(doc.review);setQualityProgress(null);setQualityOpen(false);setSelectedId(null);setHiddenIds([]);setIsolatedId(null);camera('fit');tell('Returned to the saved object.');}
   async function runCurrentReview(){
     if(busyRef.current||qualityBrief.trim().length<3)return;if(designPreview){tell('Apply or discard the Design Lab proposal before starting a general review.');return;}

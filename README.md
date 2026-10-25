@@ -1,6 +1,8 @@
 # Lumi — grounded design studio
 
-Team handoffs: [Teammate 2 — movement verification](docs/team/README_TEAMMATE_2.md) · [Teammate 3 — independent evidence and demo](docs/team/README_TEAMMATE_3.md). Create your own branch and PR; do not push to `main` or merge your own PR. The handoffs explain the temporary integration-branch base.
+Team handoffs: [Teammate 1 — generation reliability](docs/team/README_TEAMMATE_1.md) · [Teammate 2 — movement verification](docs/team/README_TEAMMATE_2.md) · [Teammate 3 — independent evidence and demo](docs/team/README_TEAMMATE_3.md). Create a feature branch from `main` and open a PR for changes.
+
+> **October 25 team integration:** generation recovery and streaming improvements, explicit sampled-motion verification, and independent evaluation/evidence are combined. See [integration checks and remaining limits](docs/TEAM_INTEGRATION.md). Open `/?example=motion-fan` for the labeled fan study. Earlier dated notes below describe their original snapshots; they are not current deployment or universal reliability claims.
 
 > **Lumi measured edits (October 24, local only):** 320 regression tests, TypeScript and the production build pass. Fixed request-derived checks cover supported enclosure fit, separation, access, actual dimensions and preserved parts. Visual approval cannot override a failed or unknown required measurement. Review shows original, first-attempt and retained values with locked comparison cameras; exported projects retain the baseline and evidence. [Usage and limits](docs/MEASURED_EDITS.md) · [Repeated live evaluation](docs/sponsor-sprint/2026-10-24-design-checks/verification-report.md) · [Prepared maker study, not yet run](docs/MAKER_STUDY.md).
 

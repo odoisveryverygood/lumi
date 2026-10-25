@@ -1,6 +1,6 @@
 # Teammate 1: reliable generation and provider transport
 
-This work is local on `teammate-1/generation-reliability`, based on merged `main`. It has not been pushed, deployed or submitted as a PR. Preserve that boundary until the owner requests publication.
+The generation reliability changes were published in PR #2 and are included in the combined team integration. The two-candidate experiment was retired; its only remaining compatibility handling lets saved projects reopen. Current integration verification is in [TEAM_INTEGRATION.md](../TEAM_INTEGRATION.md).
 
 ## Problem and resulting behavior
 

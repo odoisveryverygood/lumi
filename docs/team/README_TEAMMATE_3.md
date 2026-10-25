@@ -1,5 +1,7 @@
 # Teammate 3: independent evidence, maker usefulness and the three-minute demo
 
+**Integration update:** the owner authorized combining all three completed branches. Use `main` as the base for further changes. The task description below is retained as the original assignment; current evidence and limits are summarized in [TEAM_INTEGRATION.md](../TEAM_INTEGRATION.md).
+
 ## Your assignment
 
 Establish whether Lumi's rendered feedback loop produces useful, better results, preserve unsuccessful attempts, and turn the verified result into a clear three-minute demonstration. You are the independent reviewer of teammate 1's reliability work and teammate 2's movement checks. You may block integration when the real browser flow fails even if unit tests pass.
@@ -10,13 +12,13 @@ This assignment is not to produce promotional scores or invent customer validati
 
 **Do not push to `main`. Do not merge your own PR. Do not force-push shared branches. Create your own branch, push it to GitHub, and open a PR for review.**
 
-The initial repository PR contains the current source on `codex/lumi-team-handoffs`. Until that integration PR merges, branch from it and target it in your PR. The owner must approve switching the base to `main` afterward. Do not mix an unmerged motion branch into the shared branch merely to run an experiment; test its exact commit in a separate checkout.
+The initial foundation PR is merged. Base new work on current `origin/main`; the owner coordinates shared integration.
 
 ```bash
 git clone https://github.com/odoisveryverygood/lumi.git
 cd lumi
 git fetch origin
-git switch -c teammate-3/evidence-and-demo origin/codex/lumi-team-handoffs
+git switch -c teammate-3/evidence-and-demo origin/main
 npm ci
 cp .env.example .env.local
 mkdir -p work
@@ -30,7 +32,7 @@ Use Node 24.x; the local app runs at http://127.0.0.1:3001. Read `AGENTS.md`, re
 git add <your-specific-files>
 git commit -m "Add independent Lumi evaluation and verified demo evidence"
 git push -u origin teammate-3/evidence-and-demo
-gh pr create --base codex/lumi-team-handoffs --head teammate-3/evidence-and-demo \
+gh pr create --base main --head teammate-3/evidence-and-demo \
   --title "Measure Lumi feedback-loop results and demo readiness" --body-file work/pr-body.md
 ```
 

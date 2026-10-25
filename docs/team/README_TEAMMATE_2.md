@@ -1,22 +1,24 @@
 # Teammate 2: verify movement and repair geometric conflicts
 
+**Integration update:** the owner authorized combining all three completed branches. Use `main` as the base for further changes. The task description below is retained as the original assignment; current evidence and limits are summarized in [TEAM_INTEGRATION.md](../TEAM_INTEGRATION.md).
+
 ## Your assignment
 
 Extend Lumi's existing measured Review workflow to inspect one supported moving assembly throughout a declared range of movement. Start with an adjustable fan or another agreed, reproducible reference mechanism. Detect geometric conflicts, show the first problematic pose, ask Argon for a scoped correction, and verify the corrected movement again.
 
-This capability is **not implemented yet**. Existing keypress/rotor animations are playback, not collision verification. Current reviews capture assembled, top and exploded static views. Do not present an animation as proof of movement clearance.
+This capability is now implemented for the explicitly declared adjustable-fan reference study; see [motion verification](../motion/README.md). Existing keypress/rotor animations are playback, not collision verification. Current reviews capture assembled, top and exploded static views. Do not present an animation as proof of movement clearance.
 
 ## Git rules — mandatory
 
 **Do not push to `main`. Do not merge your own PR. Do not force-push shared branches. Create your own branch, push that branch to GitHub, and open a PR for review.**
 
-The initial public-repository PR contains the current Lumi source on `codex/lumi-team-handoffs`. Until that integration PR is merged, branch from it and target it in your PR. After it is merged, coordinate with the owner before rebasing or changing your PR base to `main`.
+The initial foundation PR is merged. Base new work on current `origin/main`; the owner coordinates shared integration.
 
 ```bash
 git clone https://github.com/odoisveryverygood/lumi.git
 cd lumi
 git fetch origin
-git switch -c teammate-2/motion-verification origin/codex/lumi-team-handoffs
+git switch -c teammate-2/motion-verification origin/main
 npm ci
 cp .env.example .env.local
 mkdir -p work
@@ -32,7 +34,7 @@ When ready:
 git add <your-specific-files>
 git commit -m "Verify sampled mechanism movement and scoped repairs"
 git push -u origin teammate-2/motion-verification
-gh pr create --base codex/lumi-team-handoffs --head teammate-2/motion-verification \
+gh pr create --base main --head teammate-2/motion-verification \
   --title "Verify mechanism movement with geometric evidence" --body-file work/pr-body.md
 ```
 

@@ -2,10 +2,12 @@
 
 Status (October 25, 2026, revision 226f792): this script matches what Lumi actually implements today. It has **not** been timed against live Argon calls on this revision; the server key was not available to the independent evaluator. Historical live timings are quoted below with their source. Rehearse once with the key before presenting, record the real elapsed times in [the rehearsal record](sponsor-sprint/2026-10-25-independent-evidence/demo-rehearsal.json), and cut the task if it does not fit. Do not edit waiting time out of a recording and call it live.
 
+Integration note: the original independent script below was written against revision 226f792. Later generation recovery and sampled-motion work are now integrated. The full live demo still needs a timed rehearsal; keep the original evidence limits.
+
 Scope rules for the pitch:
 
 - Show supported assembly editing and measured verification. Arbitrary object generation (the robot-dog case) is known to be unreliable in this snapshot; do not demo it live.
-- Movement verification is teammate 2's unfinished task. Do not show keypress or rotor playback as clearance evidence. Only add motion evidence if that branch passes independent verification first.
+- Sampled movement verification is available for the declared adjustable-fan study. Its real API/browser evidence is in [motion verification](motion/verification.md), with integration checks in [TEAM_INTEGRATION.md](TEAM_INTEGRATION.md). Playback alone is not clearance evidence, and finite samples do not prove continuous clearance.
 - Say "software geometry check", never "certified", "tested hardware" or "makers told us".
 
 ## Script
