@@ -1,0 +1,51 @@
+
+> flare-grounded@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /Users/kavish/Library/Application Support/Claude/scratch-workspaces/8b69714f-f057-4bf6-8753-41b7d4634367/f649888a-b113-4fb2-9571-cb483bcd60b5/scratch-2026-10-25-159ae5/lumi
+
+ ✓ tests/editor.test.ts (18 tests) 31ms
+ ✓ tests/domain.test.ts (29 tests) 48ms
+ ✓ tests/api.test.ts (38 tests) 325ms
+ ✓ tests/grounded-design.test.ts (13 tests) 468ms
+   ✓ document-grounded hardware reasoning > freezes the requested minimum and gives the real source failure to the repair loop  408ms
+ ✓ tests/inference.test.ts (18 tests) 162ms
+ ✓ tests/interaction.test.ts (8 tests) 41ms
+ ✓ tests/conversation-api.test.ts (8 tests) 245ms
+ ✓ tests/studio.test.ts (17 tests) 630ms
+   ✓ real Stack Chan KiCad assembly > decodes the bundled meshopt board locally, preserves component grouping and enriches source metadata  470ms
+ ✓ tests/compile.test.ts (10 tests) 96ms
+ ✓ tests/catalog.test.ts (11 tests) 1033ms
+   ✓ pinned sourced geometry > saves and streams IDs instead of megabytes and restores the exact canonical mesh  664ms
+ ✓ tests/generation-speed.test.ts (13 tests) 93ms
+ ✓ tests/keyboard.test.ts (8 tests) 175ms
+ ✓ tests/redesign.test.ts (13 tests) 1284ms
+ ✓ tests/device-stream.test.ts (7 tests) 159ms
+ ↓ tests/live-api.test.ts (1 test | 1 skipped)
+ ✓ tests/quality.test.ts (21 tests) 1413ms
+   ✓ actual geometry renderer > opens and renders the real saved regression object docs/sponsor-sprint/2026-10-23-catalog/generated-sensor.part.json  432ms
+   ✓ actual geometry renderer > opens and renders the real saved regression object docs/sponsor-sprint/2026-10-23-catalog/sofa-catalog-export.part.json  703ms
+ ↓ tests/inference-live.test.ts (1 test | 1 skipped)
+ ✓ tests/geometry-codec.test.ts (11 tests) 214ms
+ ↓ tests/evaluation-evidence.test.ts (1 test | 1 skipped)
+ ✓ tests/lumi-pet.test.ts (4 tests) 5ms
+ ✓ tests/exports.test.ts (4 tests) 99ms
+ ↓ tests/catalog-live.test.ts (1 test | 1 skipped)
+ ↓ tests/project-design-evidence.test.ts (1 test | 1 skipped)
+ ✓ tests/framing.test.ts (4 tests) 3ms
+ ✓ tests/lumi-motion.test.ts (4 tests) 3ms
+ ✓ tests/ai-timeout.test.ts (8 tests) 6ms
+ ✓ tests/desktop-motion.test.ts (1 test) 16ms
+ ↓ tests/sofa-live.test.ts (1 test | 1 skipped)
+ ✓ tests/reference-envelopes.test.ts (1 test) 33ms
+ ✓ tests/corne.test.ts (10 tests) 1137ms
+ ✓ tests/design-constraints.test.ts (43 tests) 3623ms
+   ✓ fixed, measured design requirements > measures a sourced module against actual Corne case triangles, PCB and insert geometry  346ms
+
+ Test Files  25 passed | 6 skipped (31)
+      Tests  322 passed | 6 skipped (328)
+   Start at  10:54:28
+   Duration  4.73s (transform 1.61s, setup 0ms, collect 10.71s, tests 11.34s, environment 4ms, prepare 2.10s)
+
+tests exit 0

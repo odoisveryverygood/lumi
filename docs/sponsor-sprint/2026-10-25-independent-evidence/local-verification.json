@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-25T18:04:59.175Z",
+  "revision": "226f79287fa8a5c34e9f15778ceb36e61b70c86e",
+  "branch": "teammate-3/evidence-and-demo (local, not pushed)",
+  "node": "v24.18.1",
+  "commands": [
+    "npm ci",
+    "npm test",
+    "npm run typecheck",
+    "npm run build"
+  ],
+  "ordinaryTests": {
+    "passed": 322,
+    "skipped": 6,
+    "note": "Six opt-in suites skip by default: four billable live provider suites and two saved-evidence suites that were exercised separately below."
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "providerKey": "not available to the evaluator; GEMINI_API_KEY unset",
+  "deployment": "not attempted",
+  "logs": {
+    "tests.txt": "7e5705301d3d5dc60d55b07d2330afe344dcac19c3458429cfd9720c236d1e63",
+    "typecheck.txt": "1df2f22bae87d3c90c7ef466c34155d9a50d7aaaa90cf7af08d9a2bc4be26ec3",
+    "build.txt": "e0c1adaa3396bdfa93bb28a7fbef711268f919a39dbecf6ace3857987fee8ade",
+    "holdout-tests.txt": "a2fd995993940bdff159703a66200245774ee4ae6eaa569d12d16909b0c56759"
+  },
+  "finalSuiteWithHeldOutTests": {
+    "passed": 331,
+    "skipped": 6,
+    "log": "tests-final.txt",
+    "sha256": "8fe50c9b51638960dc87c871e3f0c558475096fc50961f2f11024fed113b2d03"
+  }
+}
