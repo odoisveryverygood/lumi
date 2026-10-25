@@ -1,0 +1,141 @@
+{
+  "purpose": "Evaluation briefs, not training data or generation templates. The app never reads this file. Unrun cases must not be described as successful AI results.",
+  "cases": [
+    {
+      "id": "sensor-placement",
+      "brief": "A compact desk sensor with an orange bracket. The ESP32 radio module must sit on the carrier board inside the housing, not floating separately.",
+      "features": [
+        "desk sensor",
+        "orange bracket",
+        "ESP32",
+        "carrier board"
+      ],
+      "evidence": "docs/sponsor-sprint/2026-10-24-quality/reviewed-sensor.part.json",
+      "mode": "live_visual_repair"
+    },
+    {
+      "id": "desktop-fan",
+      "brief": "A small desktop fan with an exposed three-blade rotor, a circular grille, an adjustable tilted stand and a visible speed knob. Include a sourced 608 bearing on the fan axle.",
+      "features": [
+        "three-blade rotor",
+        "circular grille",
+        "tilted stand",
+        "speed knob",
+        "608 bearing"
+      ],
+      "mode": "live_generation_and_visual_review",
+      "evidence": "docs/sponsor-sprint/2026-10-24-quality/reviewed-fan.part.json"
+    },
+    {
+      "id": "smart-sofa",
+      "brief": "A smart sofa with an iron base and an ESP32 controller.",
+      "features": [
+        "smart sofa",
+        "iron base",
+        "ESP32"
+      ],
+      "evidence": "docs/sponsor-sprint/2026-10-23-catalog/sofa-catalog-export.part.json",
+      "mode": "saved_real_generation_render_regression"
+    },
+    {
+      "id": "inspection-lamp",
+      "brief": "An articulated inspection lamp with two hinged arms, a round steel base and a visible power button.",
+      "features": [
+        "inspection lamp",
+        "hinged arms",
+        "steel base",
+        "power button"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "coffee-grinder",
+      "brief": "A manual coffee grinder with a transparent bean hopper, side crank and removable grounds cup.",
+      "features": [
+        "coffee grinder",
+        "bean hopper",
+        "side crank",
+        "grounds cup"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "controller",
+      "brief": "A game controller with two thumbsticks, a directional pad, four face buttons and a separate battery compartment.",
+      "features": [
+        "game controller",
+        "thumbsticks",
+        "directional pad",
+        "face buttons",
+        "battery compartment"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "phone-stand",
+      "brief": "A folding phone stand with two hinges and a charging cable opening.",
+      "features": [
+        "phone stand",
+        "hinges",
+        "charging cable"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "camera",
+      "brief": "A mirrorless camera with a detachable lens, a side memory card door and a visible shutter button.",
+      "features": [
+        "mirrorless camera",
+        "detachable lens",
+        "memory card door",
+        "shutter button"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "vacuum",
+      "brief": "A handheld vacuum with a translucent dust bin, an accessible filter and a trigger on its handle.",
+      "features": [
+        "handheld vacuum",
+        "dust bin",
+        "filter",
+        "trigger"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "sensor-hub",
+      "brief": "A wall-mounted sensor hub with an ESP32, a vented enclosure and four mounting holes.",
+      "features": [
+        "sensor hub",
+        "ESP32",
+        "vented enclosure",
+        "mounting holes"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "keyboard",
+      "brief": "A mechanical keyboard with individually selectable keycaps, separate switch and plate layers and a USB port at the back.",
+      "features": [
+        "mechanical keyboard",
+        "keycaps",
+        "switch",
+        "plate layers",
+        "USB port"
+      ],
+      "mode": "not_run"
+    },
+    {
+      "id": "mount-preservation",
+      "brief": "A steel frame with an attached electronics tray and a radio module mounted on the tray. Widen the frame while preserving the other component geometry.",
+      "features": [
+        "steel frame",
+        "electronics tray",
+        "radio module",
+        "preserving"
+      ],
+      "mode": "deterministic_mount_regression"
+    }
+  ]
+}

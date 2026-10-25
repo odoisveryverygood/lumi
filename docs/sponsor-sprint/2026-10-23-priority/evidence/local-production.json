@@ -1,0 +1,13 @@
+{
+  "mode": "local",
+  "server": "next start",
+  "origin": "http://127.0.0.1:3001/",
+  "pageStatus": 200,
+  "ai": {
+    "configured": true,
+    "available": true,
+    "provider": "gemini",
+    "model": "gemini-4-argon"
+  },
+  "notes": "Optimized production build served on loopback; existing generated lamp restored and visibly rendered. This is not a hosted deployment or another paid model generation."
+}

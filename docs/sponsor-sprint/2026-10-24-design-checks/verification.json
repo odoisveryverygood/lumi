@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-25T06:01:59.398632+00:00",
+  "packet_validation": "passed: structure and evidence hashes only",
+  "validator_output_file": "packet-validation.log",
+  "required_scoped_checks_passed": true,
+  "historical_failed_diagnostics": [
+    "C003"
+  ],
+  "unrun_checks": [
+    "C008",
+    "C009"
+  ],
+  "runtime_unchanged_since_followup": true,
+  "changed_runtime_files": [],
+  "corrected_reference_hash_matches": true,
+  "deployment_attempted": false,
+  "limits": [
+    "A targeted eight-trial retest passed; the full 24-trial matrix was not rerun after the two runtime fixes.",
+    "The current source-CAD workspace result required a retry after a provider timeout. Historical failures remain recorded.",
+    "Physical hardware and human usefulness testing were not performed."
+  ]
+}

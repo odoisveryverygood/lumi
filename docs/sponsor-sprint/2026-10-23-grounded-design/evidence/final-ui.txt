@@ -1,0 +1,83 @@
+Browser tab: 4, Title: "Flare — See what makes it work.", URL: "http://127.0.0.1:3001/".
+1 AXWebArea Flare — See what makes it work., URL: 127.0.0.1:3001/
+	2 button Import device file
+	3 container
+		4 button Flare home
+			5 text Flare
+			6 text A CLOSER LOOK
+		7 button Corne / Left
+		8 container Workspace
+			9 button Explore
+			10 button Studio
+			11 button Design Lab
+				12 text Design
+				13 text  Lab
+		14 button New device
+		15 button Share assembly
+		16 button Export
+	17 container Interactive device assembly
+		18 text FLARE / OBJECT STUDY
+		19 text A DIFFERENT PERSPECTIVE CHANGES EVERYTHING
+		20 container
+			21 button (disabled) Undo edit
+			22 button (disabled) Redo edit
+			23 checkbox 3D, Value: 1
+			24 checkbox Top, Value: 0
+			25 checkbox Front, Value: 0
+			26 checkbox Description: Toggle component labels, Value: 0
+			27 checkbox Description: Device information, Value: 0
+		62 container Interactive three-dimensional Corne / Left. Select a component, orbit the device, and use the Move or Rotate tools to edit it.
+			63 container
+				64 image
+					65 text WebGL is unavailable. Component properties and build instructions remain available.
+				66 container Component callouts
+		29 container
+			30 text OBJECT  / INTERACTIVE STUDY 76  PARTS
+			31 heading Corne / Left/ 01, Value: 1
+				32 text Corne / Left
+				33 text / 01
+			34 text A little closer. A lot clearer.
+		35 container
+			36 checkbox Description: Browse components, Value: 0
+				37 text Parts
+				38 text 76
+			39 button Reset camera
+			40 button Fit assembly
+			41 button Zoom in
+			42 button Zoom out
+		48 container
+			49 checkbox Assembled, Value: 1
+			50 checkbox Exploded, Value: 0
+			51 button See it work
+			52 slider (settable, integer) Description: Explode assembly, Value: 0
+			53 container
+				54 text 0 %
+		59 container
+			60 text Source CAD + labeled illustrations · millimetres Drag to orbit · scroll to zoom
+			61 button About this workspace
+		67 container Object conversation result
+			68 button CORNE · SOURCE CAD
+			69 button Close object conversation
+			70 text YOUR CURRENT ASSEMBLY
+			71 heading Look inside the current layout., Value: 2
+				72 text Look inside the current layout.
+			73 text For makers adapting existing hardware. Keep your case, change the design, and find the conflict before you build.
+			74 button Show this space
+			75 button (collapsed) Design notebook 8 sources · 77k characters, Secondary Actions: Expand
+				76 text Design notebook
+				77 container
+					78 text 8  sources ·  77 k characters
+			79 button Inspect this view with Gemini
+			80 button (collapsed) Show evidence, Secondary Actions: Expand
+		81 container Conversation with the object
+			82 container Active design constraints
+				83 text Same case + PCB USB charging ≥  100  mA Battery ≤  4  mm
+			84 container
+				85 text entry area (settable) Ask or change this object
+				86 button (disabled) Send to object
+			87 button Make it wireless, keep the case and USB charging
+			88 button Could this cell use 500 mA charging?
+			89 button Show how a key works
+			90 button (collapsed) Description: Conversation history, Secondary Actions: Expand
+
+The focused UI element is 11 button Design Lab

@@ -1,0 +1,601 @@
+{
+  "path": "public/assemblies/corne/document.json",
+  "write": false,
+  "corrections": [
+    {
+      "partId": "key-sw1",
+      "name": "Space keycap",
+      "declared": [
+        27,
+        7.2,
+        18
+      ],
+      "actual": [
+        27,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw1",
+      "name": "MX switch · SW1",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw2",
+      "name": "T keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw2",
+      "name": "MX switch · SW2",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw3",
+      "name": "G keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw3",
+      "name": "MX switch · SW3",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw4",
+      "name": "B keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw4",
+      "name": "MX switch · SW4",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw5",
+      "name": "Y keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw5",
+      "name": "MX switch · SW5",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw6",
+      "name": "H keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw6",
+      "name": "MX switch · SW6",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw7",
+      "name": "N keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw7",
+      "name": "MX switch · SW7",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw8",
+      "name": "Enter keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw8",
+      "name": "MX switch · SW8",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw9",
+      "name": "Fn keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw9",
+      "name": "MX switch · SW9",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw10",
+      "name": "F keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw10",
+      "name": "MX switch · SW10",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw11",
+      "name": "R keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw11",
+      "name": "MX switch · SW11",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-esc",
+      "name": "E keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "key-sw13",
+      "name": "W keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw13",
+      "name": "MX switch · SW13",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw14",
+      "name": "S keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw14",
+      "name": "MX switch · SW14",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw15",
+      "name": "X keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw15",
+      "name": "MX switch · SW15",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw16",
+      "name": "C keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw16",
+      "name": "MX switch · SW16",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw17",
+      "name": "D keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw17",
+      "name": "MX switch · SW17",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw18",
+      "name": "A keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw18",
+      "name": "MX switch · SW18",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw19",
+      "name": "Tab keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw19",
+      "name": "MX switch · SW19",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw20",
+      "name": "Shift keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw20",
+      "name": "MX switch · SW20",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "key-sw21",
+      "name": "Ctrl keycap",
+      "declared": [
+        18,
+        7.2,
+        18
+      ],
+      "actual": [
+        18,
+        6.3,
+        18
+      ]
+    },
+    {
+      "partId": "switch-sw21",
+      "name": "MX switch · SW21",
+      "declared": [
+        15.6,
+        14,
+        16
+      ],
+      "actual": [
+        15.6,
+        13.3,
+        16
+      ]
+    },
+    {
+      "partId": "keyboard-wired-cable",
+      "name": "USB cable · illustrative route",
+      "declared": [
+        6,
+        4,
+        35
+      ],
+      "actual": [
+        5,
+        3,
+        35
+      ]
+    }
+  ],
+  "beforeFileHash": "6dc1a8070432487f6bc2ae5b1c32656b1cb5d87551e94f7ffd00d334f0898b6d",
+  "afterFileHash": "6dc1a8070432487f6bc2ae5b1c32656b1cb5d87551e94f7ffd00d334f0898b6d",
+  "beforeGeometryHash": "5fe910bd55c198ef7bb4e952b93f68eb77dce182fd723cbfe22db35fb4590985",
+  "afterGeometryHash": "5fe910bd55c198ef7bb4e952b93f68eb77dce182fd723cbfe22db35fb4590985",
+  "actualGeometryUnchanged": true,
+  "sourceDimensionsUnchanged": true,
+  "scope": "Metadata of authored procedural reference parts only. Original nominal dimensions retained in specs; meshes, poses, source dimensions and rendered shapes are unchanged."
+}

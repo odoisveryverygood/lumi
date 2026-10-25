@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-23T07:51:42.418Z",
+  "importStatus": 200,
+  "imageSha256": "f53cd8cda751461ded28a2c6c070eaa5241840f9ebc09bf1cf12b6aa8fd743a9",
+  "importedPages": [],
+  "importedFacts": [],
+  "warnings": [
+    "This file is visual evidence with no verified text layer. It is sent as an image/PDF, but cannot supply exact text citations or numerical checks."
+  ],
+  "requestStatus": 200,
+  "answer": {
+    "kind": "explanation",
+    "grounding": {
+      "citations": [],
+      "files": 7,
+      "pages": 6,
+      "characters": 66808,
+      "visualFiles": 1
+    },
+    "visualNotes": [],
+    "visualInput": false,
+    "answer": "Based on visual interpretation of the uploaded datasheet image for the 150 mAh LiPo battery, the listed nominal voltage is 3.7 V. Because this uploaded image lacks a verified native text layer or reviewed numeric facts, reading it is a visual interpretation that cannot supply quotable text citations or automated numeric model checks, nor does it verify physical hardware or electrical compatibility.",
+    "actions": [
+      {
+        "type": "focus",
+        "partIds": [
+          "wireless-battery"
+        ]
+      }
+    ],
+    "suggestions": [
+      "Compare the 150 mAh LiPo charge limit with the nice!nano charger settings",
+      "Check how much vertical clearance the 150 mAh LiPo has under the sockets",
+      "Explain what electrical connections remain unverified in this concept"
+    ],
+    "model": "gemini-4-argon"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "frozenAt": "2026-10-25T05:42:32.198062+00:00",
+  "purpose": "Scoped follow-up after the complete 24-trial run. Source remains fixed during this follow-up. Task geometry, prompts and oracle are unchanged.",
+  "datasetVersion": 1,
+  "oracleVersion": 2,
+  "comparedWith": "final-run-source-manifest.json",
+  "changedRuntimeFiles": [
+    "lib/studio/constraint-planner.ts",
+    "app/api/device/route.ts"
+  ],
+  "changes": [
+    "Whole-object conversation context now includes actual procedural solids for editable nonsource parts. Selected-part context and canonical source geometry restrictions are retained.",
+    "Constraint planning may retry one timeout, within the existing two-attempt and 75-second operation bounds. Quota and cancellation are not retried."
+  ],
+  "plannedTasks": [
+    "battery-height-4",
+    "battery-height-3",
+    "battery-gap-3",
+    "unmeasurable-interior"
+  ],
+  "repeats": 2,
+  "files": {
+    "lib/studio/constraint-types.ts": "8db0f179fc956cc240354bdc406e360d086465ca37b1526e17a3195c27a14b07",
+    "lib/studio/design-constraints.ts": "3e82e9d3038dac427a43877a34449bd91b4021d615b93225f9ee79fff9d364c5",
+    "lib/studio/constraint-planner.ts": "f84b4e9bba5447bde5257be1c6840b5fe717edefb751a84be181396e4cd136ce",
+    "lib/studio/quality-engine.ts": "b7238cd30d3bf9ac2c6bc880a296f819dbe44aab926a96184c1f4d9776859664",
+    "lib/studio/quality-client.ts": "087052013c3fe9f758ddc2e954595d73425ada5ab9cd37af63378b24df916bd4",
+    "lib/studio/quality-types.ts": "ef01a62bd2aa27f274e3f9355a96d2310bd9569c96ff724984d0a605ec5175bf",
+    "lib/studio/review-renderer.ts": "5b6c28d585fd4c9c7338b759b03bff1a7f2b1c0274a0008336e02b69924afcc8",
+    "lib/studio/render-model.ts": "d2f1a1fdc353db93367ba85a520490eb84143dc24357b7a40fed9ceb64214822",
+    "lib/studio/redesign.ts": "f034a5d0222b3591117e113e30d21bffda8179d1a08fad6fdd24ff5350c1efd7",
+    "lib/studio/catalog.ts": "5ce78157a9ff147cf9a9a4850669185b5b91069efecf5ebbc6d3660437da56d2",
+    "lib/studio/evaluation-tasks.ts": "70cdb230cda7b9dbff6489ab352ef4e28579c0762b67f626e10793162d950353",
+    "components/studio/DesignEvaluation.tsx": "ca5e8849340ee1662925f9eddf7548e2e02b977d50fab85f4da87cac43883568",
+    "app/api/device/route.ts": "bbb14ef50e294ee6e26d7af68a90f4b47ceac83f7c21dfa002a10d53b810edcb",
+    "app/api/constraints/route.ts": "cce94fac9a865e99f4777b1e8b0edeca74a3bcb12e7d8792a1b32b05eb3fedf3",
+    "components/studio/MeasuredDesignChecks.tsx": "906e73f31a98c4a8b0366770158b9ffbd73d7e6c997db3437778a762941d7746",
+    "components/studio/DeviceStudio.tsx": "768e6833ee9c4919a38a77ff8885d41ce7d86c89047f339af5d71692b4694ec2",
+    "components/studio/QualityPanel.tsx": "101b1310a25e8bd3de6e3d9f6cbbb3033335c1dc2a3892a23557b83033b26bbc"
+  }
+}

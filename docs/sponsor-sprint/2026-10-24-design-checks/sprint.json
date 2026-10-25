@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "project": "Lumi",
+  "as_of": "2026-10-24",
+  "scope": "Local supported geometric edit checks, real Argon render/review/correction evidence, preserved source geometry, targeted retry fixes and accurate reference metadata. No deployment.",
+  "integrations": [
+    {
+      "integration_id": "I001",
+      "sponsor": "Gemini 4 Argon",
+      "purpose": "Interpret original edit requirements, inspect actual rendered geometry, propose scoped corrections and check another render, with application-measured checks and saved evidence.",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/image-understanding",
+      "docs_checked_at": "2026-10-24",
+      "implementation_ref": "lib/studio/quality-client.ts, quality-engine.ts, design-constraints.ts, constraint-planner.ts; app/api/device/route.ts; followup-source-manifest.json and reference-release-source-check.json document the verified source.",
+      "env_vars": [
+        "GEMINI_API_KEY",
+        "GEMINI_MODEL"
+      ],
+      "checks": [
+        {
+          "check_id": "C001",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Final regression suite, TypeScript and production build pass.",
+          "observed": "320 tests passed; 6 opt-in suites skipped by default and saved-evidence suites run separately. TypeScript and production build passed.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "release-local-verification.json",
+          "evidence_sha256": "eb17a9878ece5bda5b80e06e4d9417d3ac771fd9c0006e2892f7eedfe7ef99b2"
+        },
+        {
+          "check_id": "C002",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Run the complete fixed 24-trial protocol without substitutions and retain every result.",
+          "observed": "24/24 completed; 15/16 seeded repairs, 2/4 fresh edits and 3/4 negative controls passed. Four failures remain recorded; 35 actual reviews and 105 verified image hashes. This check concerns protocol integrity, not perfect reliability.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "full-summary.json",
+          "evidence_sha256": "744c6717216df744ef99115e3b7ef403d8cb76305f33156f06786ec9c73d6311"
+        },
+        {
+          "check_id": "C003",
+          "required": false,
+          "mode": "live",
+          "status": "failed",
+          "expected": "Historical full matrix: all 20 positive trials and all 4 negative controls succeed.",
+          "observed": "17/20 positive trials and 3/4 negative controls passed before the scoped follow-up fixes. Failures: fresh-edit timeout, invalid edit output, planning timeout, provider error. The final full matrix was not rerun.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "full-evaluation.json",
+          "evidence_sha256": "4bb71f344a0f84567763b55570c0c11b05db43c8e138d46565fa157128e05fe3"
+        },
+        {
+          "check_id": "C004",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "The targeted post-fix retest completes both repeats of all four affected tasks with correct outcomes.",
+          "observed": "8/8 passed: 4/4 fresh edits, 2/2 seeded separation repairs, 2/2 negative controls. 10 actual reviews and 30 images. This small targeted result is separate from the older full matrix.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "followup-summary.json",
+          "evidence_sha256": "c4a72e5eb14def41cc832a4d9028e217e72d95c14ccd42b7e733a883375a82fe"
+        },
+        {
+          "check_id": "C005",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Offline recomputation reproduces recorded geometry, task outcomes, contracts, document fingerprints and image associations.",
+          "observed": "All five saved-artifact checks passed without provider calls, including the normal workspace export and accepted source study.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "offline-evidence-verification.json",
+          "evidence_sha256": "5bae3ea6f7f5f66589e22a703644cc9fe763a6e94cf528bdc8a76db3ad94f888"
+        },
+        {
+          "check_id": "C006",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Normal workspace accepts a measured source-CAD correction while preserving unrelated parts, with exact undo, redo and save restoration.",
+          "observed": "After a recorded provider-timeout retry, the 70-part Corne study was automatically accepted in 66.9 seconds. 6/6 requested checks passed; 69 original parts and source radio geometry unchanged. Enclosure margin 2.0 mm, PCB gap 2.1 mm, insert gap 0.4 mm; required 0.2 mm. Undo/redo and reload verified.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "corne-ui-verification.json",
+          "evidence_sha256": "58860277bf151bfbce55f1e949545f6cbaf5304b3aea85518a1e323d7b188315"
+        },
+        {
+          "check_id": "C007",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Fix the reference metadata inconsistency without weakening measurement or changing actual geometry or source dimensions.",
+          "observed": "42 authored procedural parts have corrected envelope size metadata. Meshes, poses, rendered shapes and source dimensions are unchanged; original nominal values retained in specs.",
+          "checked_at": "2026-10-25T06:01:05.934718+00:00",
+          "evidence_path": "corne-bounds-repair.json",
+          "evidence_sha256": "967ff598397f4fe71f31e7b9342856971dafbff3a31bf91a49f2a5e53dfa43e2"
+        },
+        {
+          "check_id": "C008",
+          "required": false,
+          "mode": "local",
+          "status": "not_run",
+          "expected": "Real maker study measures usefulness and understanding against a normal workflow.",
+          "observed": "Prepared protocol only. No participants, human ratings, time savings, outreach or results invented."
+        },
+        {
+          "check_id": "C009",
+          "required": false,
+          "mode": "live",
+          "status": "not_run",
+          "expected": "Physical hardware validates fastening, tolerances, electronics, firmware and operation.",
+          "observed": "No physical hardware validation was performed; geometric and image results do not establish those claims."
+        }
+      ]
+    }
+  ]
+}

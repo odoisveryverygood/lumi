@@ -1,0 +1,986 @@
+{
+  "document": {
+    "version": 1,
+    "id": "design-evaluation-radio-outside-1",
+    "name": "Desk controller \u00b7 controlled design study",
+    "description": "A sourced radio module and authored enclosure, battery, board and interface envelopes for repeatable software evaluation.",
+    "provenance": "Controlled evaluation fixture. Only the radio is manufacturer-sourced CAD. Other components are authored geometric studies. This fixture is never served as a generation fallback.",
+    "parts": [
+      {
+        "id": "housing",
+        "name": "Housing",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          70,
+          26,
+          50
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#e6c49c",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -1,
+              0
+            ],
+            "size": [
+              70,
+              2,
+              50
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              -34,
+              12,
+              0
+            ],
+            "size": [
+              2,
+              24,
+              50
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              34,
+              12,
+              0
+            ],
+            "size": [
+              2,
+              24,
+              50
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              12,
+              -24
+            ],
+            "size": [
+              66,
+              24,
+              2
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              12,
+              24
+            ],
+            "size": [
+              66,
+              24,
+              2
+            ]
+          }
+        ],
+        "specs": {
+          "Geometry basis": "Explicit five-surface evaluation enclosure",
+          "Source status": "Authored fixture, not manufacturer CAD"
+        },
+        "connections": []
+      },
+      {
+        "id": "carrier",
+        "name": "Carrier board",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          0,
+          3,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          54,
+          1.6,
+          32
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#4f756b",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              54,
+              1.6,
+              32
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "radio",
+        "name": "ESP32-C3 module",
+        "category": "Electronics",
+        "description": "Official Espressif radio module CAD. Module only; not a complete development board.",
+        "role": "Official Espressif radio module CAD. Module only; not a complete development board.",
+        "position": [
+          -12,
+          5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "explode": [
+          0,
+          24,
+          0
+        ],
+        "color": "#ffffff",
+        "specs": {
+          "Catalog source": "Espressif",
+          "Source revision": "dd76561812ab300351234ba6e0ec1295641796f0",
+          "License": "CC-BY-SA-4.0 + KiCad exception",
+          "CAD envelope": "13.2 \u00d7 2.4 \u00d7 16.6 mm",
+          "Source SHA-256": "3ca5ac24b6943edf816eb1e75c525a42f13118cd5546b70812c1d21149bcdcab"
+        },
+        "connections": [],
+        "notes": "Sourced Espressif geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: CC-BY-SA-4.0 + KiCad exception.",
+        "catalogRef": {
+          "id": "esp32-c3-mini-1"
+        }
+      },
+      {
+        "id": "battery",
+        "name": "Illustrative battery",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          19,
+          12,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          18,
+          8,
+          26
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#9eb3ad",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              18,
+              8,
+              26
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "button",
+        "name": "Button",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          22,
+          12,
+          24
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          8,
+          8,
+          6
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#dc9d64",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              8,
+              8,
+              6
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "charging-port",
+        "name": "Charging port",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          0,
+          12,
+          24
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          12,
+          7,
+          6
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#7d878c",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              12,
+              7,
+              6
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "bracket",
+        "name": "Bracket",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          22,
+          12,
+          32
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          14,
+          10,
+          4
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#9ca4a4",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              14,
+              10,
+              4
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      }
+    ],
+    "steps": [
+      {
+        "title": "Inspect the design study",
+        "description": "These controlled fixtures test software constraints. They are not physical-build instructions.",
+        "partIds": [
+          "housing",
+          "carrier",
+          "radio",
+          "battery",
+          "button",
+          "charging-port",
+          "bracket"
+        ]
+      }
+    ],
+    "source": "curated",
+    "designBrief": "Place the ESP32-C3 module inside the housing with 1 mm clearance. Keep the housing and the button unchanged.",
+    "review": {
+      "version": 1,
+      "request": "Place the ESP32-C3 module inside the housing with 1 mm clearance. Keep the housing and the button unchanged.",
+      "requirements": [
+        {
+          "id": "requirement-1",
+          "text": "Place the ESP32-C3 module inside the housing"
+        },
+        {
+          "id": "requirement-2",
+          "text": "1 mm clearance"
+        },
+        {
+          "id": "requirement-3",
+          "text": "Keep the housing"
+        },
+        {
+          "id": "requirement-4",
+          "text": "the button unchanged"
+        }
+      ],
+      "status": "reviewed",
+      "initialHash": "b7dfaa516f7d36f1892c159a921117b4eb8c33b305e7bffa4953a0aa6a54db20",
+      "finalHash": "22648d3e429437348f13bd2b07adbc3aa01cb379e5f98a6266b7a2d99d7d05d7",
+      "rounds": [
+        {
+          "number": 0,
+          "documentHash": "b7dfaa516f7d36f1892c159a921117b4eb8c33b305e7bffa4953a0aa6a54db20",
+          "model": "gemini-4-argon",
+          "summary": "The ESP32-C3 module is currently positioned outside the housing to the right, failing the interior placement and 1 mm enclosure clearance requirements. The housing and button remain unchanged. A repair moves the ESP32-C3 module inside the housing above the left side of the carrier board with more than 1 mm clearance from the enclosure interior.",
+          "observations": [
+            {
+              "requirementId": "requirement-1",
+              "status": "issue",
+              "partIds": [
+                "radio",
+                "housing"
+              ],
+              "view": "assembled",
+              "detail": "The ESP32-C3 module is located outside the housing at X = 68 mm rather than inside the enclosure."
+            },
+            {
+              "requirementId": "requirement-2",
+              "status": "issue",
+              "partIds": [
+                "radio",
+                "housing"
+              ],
+              "view": "top",
+              "detail": "The measured enclosure clearance check fails with a -41.6 mm margin against the required 1 mm interior clearance because the ESP32-C3 module lies outside the housing walls."
+            },
+            {
+              "requirementId": "requirement-3",
+              "status": "met",
+              "partIds": [
+                "housing"
+              ],
+              "view": "assembled",
+              "detail": "The housing preserves its original geometry and position at [0, 0, 0] with size [70, 26, 50] mm."
+            },
+            {
+              "requirementId": "requirement-4",
+              "status": "met",
+              "partIds": [
+                "button"
+              ],
+              "view": "assembled",
+              "detail": "The button remains unchanged in geometry and placement at [22, 12, 24] mm."
+            }
+          ],
+          "checks": [
+            {
+              "id": "references",
+              "status": "pass",
+              "detail": "Component IDs, graph references, motion bounds and source geometry passed deterministic validation.",
+              "partIds": []
+            },
+            {
+              "id": "envelopes",
+              "status": "pass",
+              "detail": "Procedural envelope metadata agrees with the actual solid bounds within 2% or 0.5 mm; source CAD dimensions are preserved.",
+              "partIds": []
+            },
+            {
+              "id": "physical",
+              "status": "info",
+              "detail": "Fit tolerances, forces, electrical compatibility, wiring, firmware and physical operation remain unverified.",
+              "partIds": []
+            },
+            {
+              "id": "design-1",
+              "status": "fail",
+              "detail": "Minimum envelope-to-interior margin -41.6 mm; required 1 mm. Interior from the actual box floor and four wall faces. Component envelopes are conservative; physical tolerances are unverified.",
+              "partIds": [
+                "radio",
+                "housing"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "ESP32-C3 module: enclosure clearance",
+              "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+              "value": -41.6,
+              "unit": "mm",
+              "limit": 1,
+              "repairPartIds": [
+                "radio"
+              ]
+            },
+            {
+              "id": "design-2",
+              "status": "pass",
+              "detail": "1 original components keep their actual geometry; movement is permitted.",
+              "partIds": [
+                "radio"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "Original geometry preserved",
+              "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+              "value": 0,
+              "unit": "changed",
+              "limit": 0,
+              "repairPartIds": []
+            },
+            {
+              "id": "design-3",
+              "status": "pass",
+              "detail": "2 original components keep their actual geometry and placement.",
+              "partIds": [
+                "housing",
+                "button"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "Original geometry preserved",
+              "evidence": "Keep the housing and the button unchanged.",
+              "value": 0,
+              "unit": "changed",
+              "limit": 0,
+              "repairPartIds": []
+            },
+            {
+              "id": "design-retained-containment",
+              "status": "pass",
+              "detail": "2 previously valid interior placements remain supported. This is derived from the baseline geometry, not a physical-fit certificate.",
+              "partIds": [
+                "carrier",
+                "battery"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "Existing interior placements retained",
+              "value": 0,
+              "unit": "placements lost",
+              "limit": 0,
+              "repairPartIds": []
+            }
+          ],
+          "frames": [
+            {
+              "view": "assembled",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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",
+              "documentHash": "b7dfaa516f7d36f1892c159a921117b4eb8c33b305e7bffa4953a0aa6a54db20",
+              "visiblePartIds": [
+                "housing",
+                "battery",
+                "carrier",
+                "charging-port",
+                "bracket",
+                "button",
+                "radio"
+              ],
+              "width": 640,
+              "height": 440,
+              "framing": {
+                "center": [
+                  19.799999952316284,
+                  11,
+                  4.5
+                ],
+                "radius": 63.579005927852194
+              },
+              "imageHash": "d93d687d61dfd2a142d6bd3060efb137dfd7881be5c8b2105f0ccd337a72845a"
+            },
+            {
+              "view": "top",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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",
+              "documentHash": "b7dfaa516f7d36f1892c159a921117b4eb8c33b305e7bffa4953a0aa6a54db20",
+              "visiblePartIds": [
+                "housing",
+                "battery",
+                "carrier",
+                "radio",
+                "charging-port",
+                "button",
+                "bracket"
+              ],
+              "width": 640,
+              "height": 440,
+              "framing": {
+                "center": [
+                  19.799999952316284,
+                  11,
+                  4.5
+                ],
+                "radius": 63.579005927852194
+              },
+              "imageHash": "9d154cec5390494c6d36108780858640760d46e354829fa978f2458ef8eebee4"
+            },
+            {
+              "view": "exploded",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAG4AoADASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAQFAQIDBgcI/8QAPhABAAIBAgIFCgQFBAEFAQAAAAECAwQRITEFElFhcQYTIjIzQYGRsdEHQlJyNKHB4fAUI2LxCCRDU2OSov/EABgBAQADAQAAAAAAAAAAAAAAAAABAgME/8QAIxEBAQEAAwABBAMBAQAAAAAAAAECAxExURIhMkEEEyJScf/aAAwDAQACEQMRAD8A/ToDBoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATMVjeZiI7ZAGK3reN62iY7pZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABrfJWnrW2Bsxa9aRvaYhE1HSFcUcbRjjv4zPwVubpDJkmfNRNY/XfjPwj/PBXW5EzNq0z62uOszvFK/qsrc/SVrz/tRMz+u8fSP+kOd7W617Ta3bIx1yW+NJhOxXy49rztkmY58rdvD5pWPpCd4i07T2Xjb+fJGp6lfCGZiJjaYiY715qouYs66nHM7TvWe+ODqpYpNPZ2mnd7vk6U1OXFO8xO3bSf6LzatythDw9IVvO3o2ns5Wj4JNM1LztFo37J5rSqtwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc8melN4j0rdkA6NL5qU4TPHshA1PSdaTNOtx/TTn8Z9yvy6zNl4V/wBqvZXn8/sprkkWmbVnqekq4+E2is/pjjZXZddlybxjjzUT7542n/PijxERygY65LWkxIbcd+MzPvmd5AZrAAJ9PUr4QyxT1K+EMtlQBKGLVreNrRuROSnq33j9N+MfdkB1x66+PhaLVj/9V+6Xi1lL1iZ4x214wr2s4679aI6tu2vCVpqq3K5pet43rMTDKnrky0nfeL7dvC3zSMfSPV4WnaezJw/nyWmorYsBypqaWje09Xx5fN1iYmN4mJiffCyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHDU6uummsTE7z7/dHiDu5X1Na8K+lPdy+avza7Jlp1sNLZ6z76zEU+8/DdX5c2XNM1y2mI99I4RHiprk6Wme1hqOlKxvWJnJPvrTlHjKDl1ObNG026lf004fzcojaNoGGt2tJmQiIiNoiIjuAUWAAAAAAT6epXwhlinqV8IZbKgCUAAAAAANYpNPZ2tTuieHy5OlNTlx84376T/SWodnSZh6QrfhvFpjnHK3ySaZqX22naZ90qm1K3ja1YnxI85T1b7x2X4wvNq3K5FZj1t8frRasd3pV+6Vi1tMkb8JjtrO601Fekka1yUv6tolslAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg6/2lfBOQdf7SvgjXic+oGDHHmcdo9G3Vj0q8J5Nr1m+3nKUzRHKZja0eE/9Gn9hj/bH0bsmnSPbT47z6F5xzP5MkcN+6f+3PJgyYvWpO36o4wmTETG0xEx3tYrNPZ2mndHL5K3Mp3UHffkJl6VvMzlxRM/rxztPycp0vWn/ZyVvP6bcLK3FT9TgNr0vjna9ZrPe1UWAAAAT6epXwhlinqV8IZbKgCUAAAAAAAAAADWaVmd+MT21naWwBXJmpO8TF/HhMfGEjH0j1Z2yTNe7J90flxlmK2vEzEbRtztyTLUWRZU1NLcJia988nWJi0RMTExPKYUFs2nxzMY4nL3Rwp8uUu3RufLl1sda0RExO9axtHL+a03O+lfp/a5AXVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEHX+0r4JyDr/aV8Ea8Tn1C0/sMf7Y+jdpp/YY/wBsfRuyaAADFq1vG1oiWQGNrxG0X61f03jePu5Ww4ZjjS2Ge2vGvydg/wDTpFtpckU69Zrlr20+zj3TExPZMbTCdOOvW60R1bdtZ2kv1716t4plr/y4THxhS4n6T3UFy1Gqw6Wu+bJFZnlHvn4JGr0s5MM10uonTZPd52N48In+vF5zX9DdIaSbZc2O2SnOctZ60T3z7/mvjil9rn5+fWJ/nL0uj6S0mrrWuLPXrcurbhPyTNtnz/km6TpnWaPq1plm1I/JfjDa8Xw58fzf+49kKXS+U+DJtXU47Yre+1eNfutsGpw6qvWwZaZI/wCM/wBGVzZ668cuN/jXQBDQDlxlrN9/VjfvnkmS3xFsnrZrOTf1Y63f7mNt/Wnfu9zLXPF8stcvw12m3rT8I4MxE15T8+LI0+iedM/rvvZF529KNvDjDNbRaN6zEx2w1mYjx7GZptXr5LRhr+qZ2n/P82Za45P21zyWtpmIjeZ2Z6s7da21KRztbgjW1cV9hTef/kyRx+Ef9OF7Wyz1sl5vPPjyjwhhdSNerUi2rx1n/arOW367cK790OGXJkz+1vNo/Tyj5NRS6tWkEzor+Nr4T9ENM6K/ja+E/Qx+UNeLwB1sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB1/tK+Ccg6/2lfBGvE59QtP7DH+2Po3aaf2GP8AbH0bsmgAAAACPPSGnjJNIvvMTtMxxiJ7CS3wtk9SBil63jelotHdLIDWKdT2drU8OXybAImr6P0us3nUaWlrT/7mL0b/AB7VRqfJfrTM6LUxf/6skdW0fH+0PRMWpW8bWrE+MLTdjHfBjfseH1Wh1OitNdRgyY+O3WmPRnwnlLlTJfFaL472paOU1naYe82vEbVtvH6bx1oV2q6D6P1Eza2G+mvM+thnes/D3fJrOWftyb/h2ffNVGk8o9bhmKZIjUV7LetPxei02pyanDXJOnvgmfy5P8+uyD0f0Lk0MXtiyY809feuSu2+23KY+fKfel11Vq2muSkTMc+rzj4J+nNacf8AZif6qRt2zMz3stKZseThW0TPZyn5N15Olu+wI3tO1YmZ9+3uYvbHi9teIn9FeMoupPUzNvhvx25z2QzaK443zXjHHZztLhfWXmJrhrGGvbztP+fFw2478ZmffM7y59c/w2zw/LvbVzG8aenm4n89uNv8/wA2cJ3tbrXtNrdsgwurfW0zIAKpAAEzor+Nr4T9ENM6K/ja+E/RbH5RGvF4A62AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg6/2lfBOQekPa1j/AIo14nPqFp/YY/2x9G7TT+wx/tj6N2TQAAAAeS1FY/1OS3K3XnjHCeb1ryeo/iMv75+rbh9rHm8jOLV58Nomtutt28J+axwdPTExGX/+o2/nyVI3uZfWM1Z49Pj6S0169ackUjnvbhHz5JL570pwyY6xM9WYmervw34cdn0JzcmJnx0ce7r0GK3raZitomY7JZZtAAGJpEzvxie2J2kmb7bWiuaOy/CY+OzIdnSLnx4Z4R16Xnea1vtt8J/u2jzemma5M9ss+7HXjt4zzdbe3p+y31hAxxEV2iNo3n6p1y6kUnHO0jJq8t46tIjDTsrz+f2cYiI5QDC231rJ0AISAAAAAAJnRX8bXwn6IaZ0V/G18J+i2PyiNeLwB1sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABD1+mtmmtox9eIj5JgWdkUkYbYfRpM12/Lfjt/UjJaI3yU6vfWetH3/kub4qZPXrFvFHyaCs8cdur3TxUuF5pApemSvWpatq9sTvDLfNo70mZtSf3V+7jEZKxwtGT93CfnH2UsW7bjSM0fni2Of8Al9+TcBVaroOMlrXw5dpmZna3atROdWeI1mX15fPoNTp+OTFbb9UcYR3sEXUdGaXUbzbHFbfqrwbZ5vlleH4eH6V9ti/bP1h7TNqMkZbRNYvSJ22322+6vzeSmPUaml8mot5qsTHVrG0z8U3N7W/jK31TV+yv03M+7pXU4rTETPUt7otwn4Ol/OWpatckxvynsRJiJjaY3hivWx+zvNY7Pd8k3MvqJqzx2rl1GDhavXrHvjnPy+0O2LXY77RPozPutw/s4V1Vq8MlN++v2RtVr9N6UY8fnLzwnh1Y+Ll1/Gs++K3nPL+UW1c+O95x1vE3iN5r74bqTyfjbLfl6s8o712z49XU+7Xckv2aW9vT9tvrCBj9WfGfqn29vT9tvrCBj9WfGfqnfisbAM1gAAAAAAABM6K/ja+E/RBtkrThM8eyOM/JL6Im9tdSZrFa7TwnjPJbH5RXXi/AdbEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc8mnxZd5tXj2xzdAEHJoLRv1LRaOyeaJfSzinhW2Ke7l8uS5JiJjaYiY7JVuYtNKTrZK+tWLx214T8v7sxlpa3Vi0db9M8J+SzyaLFffqx1J7uXyRc2gvFZ3iMle7n8lbmpmnAaTivS3C9q9tbRv/AHPOWi21sdoj9VeMff8Akqs3V2b2t/GVhW0WjesxMdyBniYzW34cd2nF6z5PHMB0MRUX9pk/fb6yt1Rf2mT99vrKKhY9A+1yftn6rpVdB6bJSs5rREVtExHHjPFauDjlnffzXdqy9dfEaW9vT9tvrCBj9WfGfqn29vT9tvrCBj9WfGfqnfisbAM1gAAAAaedrvMV3tMcJ6vu5/ZmuLJmtFZ348q0+/P6AWyVrO3Gbdkcf85wxFcmSdp9GJ/LXnPx+3zWWm6GvMR1+rir2RHFZ6fR4dNH+3Tj+qeMtc8Vvql3FRpeh8to4x5qvbbjPb/Va6bQ4dLxpEzb9U80gbZxIzurQBZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADW+OuSNr1iYR8mgrO847TWeyeSUFnZ2qc2hmlvOWxxvH5689vHm4zS/LeuSvZaOPz/svHPJp8WX1qxv2xwlW5+FvqUF8OKZ2nrYrd8ej8/7ud9NkrxiOtHbXiusmgtHHHaJ7pQ8mlnFPK+Ke2OX2JrULnNViov7TJ++31l6XJSZj08dcnfXhb/Pi00+m0uG0zSkReZmfS5/zW/t+yn9X3Oja2posVbRNZ2nhPikgxraTppb29P22+sIGP1Z8Z+qfb29P22+sIGP1Z8Z+qm/ExsBMxETMztEe9msDSclrxPm679lrcI/u3xaPJqbTWItl48tuEf53pk7R20jLFvUjrR2xy+f+cm2PT5c9orO95n8lI4f3+i30/Q9YjfPbef01+6wx4seGvVx0rWO6GueK/tS7+FXpuhp2ic1orEfkqssOmxaeu2OkV7Z98ug2mZPFLbQBKAa5cuPBjtly3rjx0ibWvadorEe+ZRdLr8XSWjpqdLnxZMWWvWx5KenS9Z5TExPHgmTtFqZMxDWbTvv7uxqLzMR28B+IOi8u9V1rdEarHXQ03tMaO1q6iY5bRT0etbjz87ETtvtG3HyOj/GbpfyZ61PKLQ5tJirwx4ddfranLtERMRWK9asb7z1rzMbct321H1vR2j6RrSNXpsOfzduvSb1iZpbtrPunvhS8f7lO3l/Jf8AFTonyhxYq6vT6rofWXrFp02rrtO0++Jj8vfMRzjtjf2Gm1ODWYKajTZsefDkjrUyY7Rato7YmOb5N5XfhD0L0T0f0j0z5P6m3RvSGHHl1E5Mtf8AU7RFJ9GvXnenDfjxmN+6NvlHQflZrfJK0dKdGa3LodBktbNOr6W1drX1EdaYnq4Mdtp36vGZi0bxxvETsre56nt+tB86/Cjy/wCnvLi+syazoTU4OicVf/S9JajF5q2qnfbbq8p22nea+i+ipSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAExvzAHDJosV+MRNZ7kXN0feYmJrTLXsn7SsRFzKmWqS2K9N60vNZj8to3iP6k5JpG96T40ibfy5rq1K3ja1YtHfCNk0FJ40tNe6eMK3C00rYtW+ak1mJjq25eMIFbRWkzaYiN54z4rbPob/mpM7fmpM7/OOKBoujMub0q0nnPp38Z+7PWb4tLHDr3v6ldo/VaP6f8ATrp9Bl1FomK2yTw9K3qxPb2QudN0Vhw7Wyf7lu/l8k2IisbRERHcnPF8ou/hX6bojHj2tmnzluyOSfSlcdYrWsViPdDI1mZPFLewBKAAAAFJ5Z+SWj8tvJ7UdCa7NnwYs01tGTBMRelqzvE8YmJ4xyl8hz/hl+KP4fxbJ5G+Uc9MaHH6mjzXjHkiOyMd98Uz3xNZ7IfeRMtiLHwvo/8A8hdV0HrqdFeXHk3q+jNd1I381Xa1p98xS0xE1299bTHCX1Lyd8ufJ7yqpE9EdK6bVZJr15wxbq5ax30njHyXPSPRmh6X0ttJ0jo9PrNPf1sWfHF6z8J4PlnlL/43eTXSEZc3k9qdR0BqrTFqRT/dwVmOykzEx4VtER2LzUR0+oW1+Guotp4605K0i8xtw2mZiPpLw3lf+M/kx5L1vivrf9brImKV0mjjr2tadtt7erG/Wj378eES8PT8GPxN6V1d+i+l/LaMXRFK0pOqxZL5MmopG+1fNztttM/mtaOXrbcPp3kZ+E/kn5DU63RvR0ZdXPrazVz53Nae6Z4V8KxEF1CSvmdsP4sfi1e2LFhx+SHk9mpxy5eOTLS0corwvfhO3HzdfGYe58jfwL8j/JHzOoto7dK9JY+M6zXelMTtMT1aR6FY2mY5b9sy+hCt1anoiNo2gBVIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=",
+              "documentHash": "b7dfaa516f7d36f1892c159a921117b4eb8c33b305e7bffa4953a0aa6a54db20",
+              "visiblePartIds": [
+                "housing",
+                "battery",
+                "carrier",
+                "charging-port",
+                "bracket",
+                "button",
+                "radio"
+              ],
+              "width": 640,
+              "height": 440,
+              "framing": {
+                "center": [
+                  19.799999952316284,
+                  28.5,
+                  4.5
+                ],
+                "radius": 63.579005927852194
+              },
+              "imageHash": "115ad840b244968dd41f88b65cc6b9f80962d9c5e849b5e55a4d98ddf72fcd29"
+            }
+          ],
+          "changedPartIds": [
+            "radio"
+          ],
+          "repairNote": "A scoped candidate was prepared. It must be rendered and reviewed before it can replace the saved object.",
+          "contractHash": "cc3e849b7324a801b27e5b5f1ae6b0599424385b230cec5787d52b62585e7011"
+        },
+        {
+          "number": 1,
+          "documentHash": "22648d3e429437348f13bd2b07adbc3aa01cb379e5f98a6266b7a2d99d7d05d7",
+          "model": "gemini-4-argon",
+          "summary": "The ESP32-C3 module is positioned inside the housing above the left side of the carrier board with a 3.8 mm interior margin, exceeding the required 1 mm clearance. Both the housing and the button remain unchanged in geometry and placement. Physical tolerances, electrical compatibility and operational performance remain unverified.",
+          "observations": [
+            {
+              "requirementId": "requirement-1",
+              "status": "met",
+              "partIds": [
+                "radio",
+                "housing"
+              ],
+              "view": "top",
+              "detail": "The ESP32-C3 module is visibly positioned inside the housing above the left side of the carrier board at [-12, 5, 0] mm."
+            },
+            {
+              "requirementId": "requirement-2",
+              "status": "met",
+              "partIds": [
+                "radio",
+                "housing"
+              ],
+              "view": "top",
+              "detail": "The measured enclosure clearance check passes with a 3.8 mm minimum margin between the ESP32-C3 module envelope and the housing interior, exceeding the 1 mm requirement."
+            },
+            {
+              "requirementId": "requirement-3",
+              "status": "met",
+              "partIds": [
+                "housing"
+              ],
+              "view": "assembled",
+              "detail": "The housing preserves its original geometry and placement at [0, 0, 0] mm with size [70, 26, 50] mm."
+            },
+            {
+              "requirementId": "requirement-4",
+              "status": "met",
+              "partIds": [
+                "button"
+              ],
+              "view": "assembled",
+              "detail": "The button remains unchanged in geometry and placement at [22, 12, 24] mm with size [8, 8, 6] mm."
+            }
+          ],
+          "checks": [
+            {
+              "id": "references",
+              "status": "pass",
+              "detail": "Component IDs, graph references, motion bounds and source geometry passed deterministic validation.",
+              "partIds": []
+            },
+            {
+              "id": "envelopes",
+              "status": "pass",
+              "detail": "Procedural envelope metadata agrees with the actual solid bounds within 2% or 0.5 mm; source CAD dimensions are preserved.",
+              "partIds": []
+            },
+            {
+              "id": "physical",
+              "status": "info",
+              "detail": "Fit tolerances, forces, electrical compatibility, wiring, firmware and physical operation remain unverified.",
+              "partIds": []
+            },
+            {
+              "id": "design-1",
+              "status": "pass",
+              "detail": "Minimum envelope-to-interior margin 3.8 mm; required 1 mm. Interior from the actual box floor and four wall faces. Component envelopes are conservative; physical tolerances are unverified.",
+              "partIds": [
+                "radio",
+                "housing"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "ESP32-C3 module: enclosure clearance",
+              "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+              "value": 3.8,
+              "unit": "mm",
+              "limit": 1,
+              "repairPartIds": [
+                "radio"
+              ]
+            },
+            {
+              "id": "design-2",
+              "status": "pass",
+              "detail": "1 original components keep their actual geometry; movement is permitted.",
+              "partIds": [
+                "radio"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "Original geometry preserved",
+              "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+              "value": 0,
+              "unit": "changed",
+              "limit": 0,
+              "repairPartIds": []
+            },
+            {
+              "id": "design-3",
+              "status": "pass",
+              "detail": "2 original components keep their actual geometry and placement.",
+              "partIds": [
+                "housing",
+                "button"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "Original geometry preserved",
+              "evidence": "Keep the housing and the button unchanged.",
+              "value": 0,
+              "unit": "changed",
+              "limit": 0,
+              "repairPartIds": []
+            },
+            {
+              "id": "design-retained-containment",
+              "status": "pass",
+              "detail": "2 previously valid interior placements remain supported. This is derived from the baseline geometry, not a physical-fit certificate.",
+              "partIds": [
+                "carrier",
+                "battery"
+              ],
+              "category": "design",
+              "required": true,
+              "title": "Existing interior placements retained",
+              "value": 0,
+              "unit": "placements lost",
+              "limit": 0,
+              "repairPartIds": []
+            }
+          ],
+          "frames": [
+            {
+              "view": "assembled",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z",
+              "documentHash": "22648d3e429437348f13bd2b07adbc3aa01cb379e5f98a6266b7a2d99d7d05d7",
+              "visiblePartIds": [
+                "housing",
+                "battery",
+                "carrier",
+                "charging-port",
+                "bracket",
+                "button"
+              ],
+              "width": 640,
+              "height": 440,
+              "framing": {
+                "center": [
+                  19.799999952316284,
+                  11,
+                  4.5
+                ],
+                "radius": 63.579005927852194
+              },
+              "imageHash": "aae536af34a98d871c7107821bf276a25cd9ed5967c4861103d68e536bf58ca2"
+            },
+            {
+              "view": "top",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAG4AoADASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAMFAQIEBgcI/8QASxABAAECAQUKCggEBAUFAAAAAAECAwQFEVOT0QYSFCE0VHJzsbITFSQyM1FjkZLhFjE1QVJhcYIHInSzNjdV0hdCQ4GhREVkdbT/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAlEQEAAgEEAgMAAgMAAAAAAAAAAQIRAxIxURMyFCFBBGEiofD/2gAMAwEAAhEDEQA/AP06AwaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgu3sTcxV6i1dot0280Zpo30znjPn+v8AN3uCnluL6VPdgEWHu469aiucTbic9UcVr1TMev8AJL5bzqjVfNDhsNbqtTM7/jrr+quqP+afzS8Ete01lW1GTDPlvOqNV8zy3nVGq+bHBLXtNZVtOCWvaayraZMM+W86o1XzPLedUar5scEte01lW04Ja9prKtpkwz5bzqjVfM8t51RqvmxwS17TWVbTglr2msq2mTDPlvOqNV8zy3nVGq+bHBLXtNZVtOCWvaayraZMM+W86o1XzPLedUar5scEte01lW04Ja9prKtpkwz5bzqjVfM8t51RqvmxwS17TWVbTglr2msq2mTDPlvOqNV8zy3nVGq+bHBLXtNZVtOCWvaayraZMM+W86o1XzPLedUar5scEte01lW04Ja9prKtpkwz5bzqjVfM8t51RqvmxwS17TWVbTglr2msq2mTDPlvOqNV8zy3nVGq+bHBLXtNZVtOCWvaayraZMM+W86o1XzPLedUar5scEte01lW04Ja9prKtpkw0v3MbasXLkYm3M0UzVm8F6o/Vmm/i6LmHmu9RXTcrimqPB5vrifzaYrCWuDXvSeZV/1KvV+re75+E62OyU5MLIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwU8txfSp7sO9wU8txfSp7sE8DGE9D++vvSmQ4T0P76+9KZVIOLF5WwmCu+CvV1RXm32aKJni/7IfpFk/SXNXVsTiVZvWPqZWYrPpFk/SXNXVsPpFk/SXNXVsNsnkr2sxWfSLJ+kuaurYfSLJ+kuaurYbZPJXtZis+kWT9Jc1dWw+kWT9Jc1dWw2yeSvazFZ9Isn6S5q6th9Isn6S5q6thtk8le1mKz6RZP0lzV1bD6RZP0lzV1bDbJ5K9rMVn0iyfpLmrq2H0iyfpLmrq2G2TyV7WM100zmmqI/WTwlH46ferMLdw2PrxF+3RFdM3IjPVRmnzafW6OD2dFb+GFoor5HX4Sj8dPvPCUfjp97k4PZ0Vv4YOD2dFb+GE+M8jr8JR+On3nhKPx0+9ycHs6K38MHB7Oit/DB4zyOvwlH46fezE54zw4+D2dFb+GE2B4sHa6MK2rhatstsVyW90Kuxrd8/CdbHZLbFclvdCrsa3fPwnWx2SiFpWICUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgp5bi+lT3Yd7gp5bi+lT3YJ4GMJ6H99felMhwnof3196UyqXlt0X2nPVU9sq1ZbovtOeqp7ZVravDzdb3kAWZgAAAAAAAAAL3c9yS91s92laKvc9yS91s92laDsp6wACwAA3wPJLXRaN8DyS10Weo0py2xXJb3Qq7Gt3z8J1sdktsVyW90Kuxrd8/CdbHZKkNJWICUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgp5bi+lT3Yd7gp5bi+lT3YJ4GMJ6H99felMhwnof3196UyqXlt0X2nPVU9sq1ZbovtOeqp7ZVravDzdb3kcOUMq28n3sPY4PicRexE1Rbt2KN9VO9jPP3x9zuea3Wcrwf9Lj//AM9RecVmYRp1i1oiVn43xH+hZZ4//jxtVU/xByZGP8Xzhcoxi9/vPAzY/m33qzZ3zTLER9FNz3FH/qv7kPT0ZOxtX8T8PjIweJnC+HtVeGi1VvM0W6ePfZs2Zj5ZiJmcfv8Ap1/HpL2GP3U0ZLwtWKxuSsrWLFObfXKsPGaM/wD3RZM3Z4XLVuq7k7J2VMVRRVvaqrdiJiJ4pzfX+ce98v3L2K8Rk3L1mzaquXa8DTFNFFOeqqfDW54ohNjsHfwX8PLVnFYe7YuTliuqKLtE01THgKYz5p+760zqWj/H9z/36j49H1jJ+XLWPxt7BThsXhsRZopuVUYi3vZmmZmImOOfviVk8XuGjNfwH/0ln+/ee0aUnMZly6tYrbEAC6gAC93PckvdbPdpWir3PckvdbPdpWg7KesAAsAAN8DyS10WjfA8ktdFnqNKctsVyW90Kuxrd8/CdbHZLbFclvdCrsa3fPwnWx2SpDSViAlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4KeW4vpU92He4KeW4vpU92CeBjCeh/fX3pTIcJ6H99felMql5bdF9pz1VPbKtWW6L7Tnqqe2Va2rw83W95Hl919yacfky1RbuXbuIt4vD27dumaqq667M00xER+cw9QqcR/jncj/U3v7UpmMxiTS94fPspbid09/IuR8n0bnspzfwtV+m5HgJ3sTVXEx/N9Wb8/qcs7l/4hWqIt+Lt0MUZuKmmLkxEerifqURFIj6d2X5TsbiN2uAub/D5EyzYrmmP5rNquJzTx5s8djbG7jN3WLqi3i8kZcxG9ni8JRXXET+U8cP1UJ2xyZfn/cBOPtZYv4DKWCu4O/gMDaw3g7kTFWbf11RMxPTe8VWO/wA1N0P9Nhu5C1IiI+ocOt7yAJZgAL3c9yS91s92laKvc9yS91s92laDsp6wACwAA3wPJLXRaN8DyS10Weo0py2xXJb3Qq7Gt3z8J1sdktsVyW90Kuxrd8/CdbHZKkNJWICUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgp5bi+lT3Yd7gp5bi+lT3YJ4GMJ6H99felMhwnof3196UyqXlt0X2nPVU9sq1ZbovtOeqp7ZVravDzdb3kVGJ/wAc7kf6m9/albqjE/463If1N7+1KyNL2h9bGlF+1cuXLdF2iqu3MRXTTVEzRMxnjPH3cTdLuAAfJ8f/AJp7oP6bDdyForMf/mlug/psN3IWaHFre8gAzAAXu57kl7rZ7tK0Ve57kl7rZ7tK0HZT1gAFgABvgeSWui0b4Hklros9RpTltiuS3uhV2Nbvn4TrY7JbYrkt7oVdjW75+E62OyVIaSsQEoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBTy3F9Knuw73BTy3F9KnuwTwMYT0P76+9KZDhPQ/vr70plUvLbovtOeqp7ZVqy3Rfac9VT2yrW1eHm63vI8ruvyzO5zLm5vLE4S9ireExNyqu3aj+aaZozTm/Pj/wDD1QspW22cq21/HjIdu5cuW9zeWKK7sxNdUWaImuYjNGed9x8SaP4+ZJn/ANhy1q6P9zsBv8j+nJ/x6yT/AKFlnV0f7j/jzkn/AELLPwUf7nWGT5H9PLZEy/G6ndtlrK9vCX8LavWbVNFF2P5s1MZuP3PUgMb23TkAFQAFpkfKOGwli7Rerqpqm5vo/kqni3seqHf47wGmq1dWx5wGsasxGHo/HeA01Wrq2HjvAaarV1bHnAT5pej8d4DTVaurYeO8BpqtXVsecA80vS28r4O7cpt0XK6q6uKIi3Vx/wDhYYOmacLaiqJiYp44mHlckfamG6U92XsGWpP46dC26MosVyW90Kuxrd8/CdbHZLbFclvdCrsa3fPwnWx2SrDeViAlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4KeW4vpU92He4KeW4vpU92CeBjCeh/fX3pTIcJ6H99felMql5bdF9pz1VPbKtW+X8NfuZR39uxeuUzbpjPRRNUfXPqV3A8VzTE6mrY2rP08/VrM3n6QibgeK5pidTVsOB4rmmJ1NWxOWey3SETcDxXNMTqathwPFc0xOpq2GTZbpCJuB4rmmJ1NWw4HiuaYnU1bDJst0hE3A8VzTE6mrYcDxXNMTqathk2W6QibgeK5pidTVsOB4rmmJ1NWwybLdIRNwPFc0xOpq2HA8VzTE6mrYZNlukIm4HiuaYnU1bDgeK5pidTVsMmy3SETcDxXNMTqathwPFc0xOpq2GTZbpCJuB4rmmJ1NWw4HiuaYnU1bDJst0lyR9qYbpT3ZeweUyVhMTTlLD1VYa/TTTVMzVVbqiI4p9cPVs78u3+NExX7RYrkt7oVdjW75+E62OyW2K5Le6FXY1u+fhOtjslWG8rEBKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwU8txfSp7sO9wU8txfSp7sE8DGE9D++vvSmQ4T0P76+9KZVIAAAAAAAAOO7lO1au12/B3aponNM0xGbP72nje1ob/ALo2p2yjdDvHB43taG/7o2nje1ob/ujabZ6N0O8cNOVrNVdNPg71O+qimJmIzZ5nN63ciYmOUxOQAAHPXjaaLlduLV2uaJzTNMRmz5on75/NEzjlLoHLw6Ob3vdTtOHRze97qdqN1ezbLqEVjEU34qzU1UzTOaYqjjSpQixXJb3Qq7Gt3z8J1sdktsVyW90Kuxrd8/CdbHZK0ErEBKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwU8txfSp7sO9zXcn2rt2q7v7tFVWbfbyuYicwOLCcIqszNNdqKZrrzRNMzPnT+abe4nSWfgna3oyTZt072m7iYjjnN4WW3iy3psTrZMCLe4nSWfgnab3E6Sz8E7Uviy3psTrZPFlvTYnWyjAi3uJ0ln4J2m9xOks/BO1L4st6bE62TxZb02J1smBFvcTpLPwTtN7idJZ+CdqXxZb02J1sniy3psTrZMCLe4nSWfgnab3E6Sz8E7Uviy3psTrZPFlvTYnWyYFdXku9XduXJv289dWfNFE8XF+rHiq7p6Pgna58Teqw+LvWYxVyIoqzRFVzjzZoR8Mq53V8bWItjlnM16dniq7p6PgnaeKruno+Cdrj4ZVzur4zhlXO6vjTi3ZmvTs8VXd9TMX6M9NVNXmT90xPr/ACdu9xOks/BO1T0Ymu7dtW4xdz+e5RTOavjzTVESvfFlvTYnWypaJ/VqzH4i3uJ0ln4J2m9xOks/BO1L4st6bE62TxZb02J1sqYWRb3E6Sz8E7UMYS9v7lc3bczXVvvMni4oj1/k6/FlvTYnWy4Lm9sYi9anEXIimqN7vrnHm3sT251NTER9rVzn6TcGvaS38M7Tg17SW/hnag8Lb5zOsPC2+czrGOadNcW7T2sPiLVVc03bU7+Ynjoni4s3rSb3E6Sz8E7UWCw9OLm7VOIvTFNURG9uTm+qHV4st6bE62XRWPr6Yzy5cXGJjC3pmuzm3lX/ACT6v1b3Jz1YSfa09kpqslWa6Zpqu4maaozTHhZ44Zt5Ms267de/vVeDnPTFVyZjPmzLYQ6wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYmimZzzTTM/ox4Oj8FPubANfB0fgp9x4Oj8FPubAMRRTE54ppif0ZAAABiaKZnPNNMz+ikm1RXcu1VUxVPha+OelLPB7Wjp9y+1TcufB0fgp9x4Oj8FPuU3B7Wjp9xwe1o6fcbTcu4pimM0REfoKTg9rR0+505MpijE3aaYzRvKZzR+somuExZZAKrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKucFiqa7m9otzE11VRM15uKZmfV+ZwTF6K3rPktBbdKu2FXwTF6K3rPkcExeit6z5LQN0m2FXwTF6K3rPknwOGvWr1y5dpopiaYiM1Wf75doTaUxWABVIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=",
+              "documentHash": "22648d3e429437348f13bd2b07adbc3aa01cb379e5f98a6266b7a2d99d7d05d7",
+              "visiblePartIds": [
+                "housing",
+                "battery",
+                "carrier",
+                "radio",
+                "charging-port",
+                "button",
+                "bracket"
+              ],
+              "width": 640,
+              "height": 440,
+              "framing": {
+                "center": [
+                  19.799999952316284,
+                  11,
+                  4.5
+                ],
+                "radius": 63.579005927852194
+              },
+              "imageHash": "ecc63ac75d0239d92881766c2bf74c8d58e95f563a8ffbea214dd8b6e9e10df8"
+            },
+            {
+              "view": "exploded",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z",
+              "documentHash": "22648d3e429437348f13bd2b07adbc3aa01cb379e5f98a6266b7a2d99d7d05d7",
+              "visiblePartIds": [
+                "housing",
+                "battery",
+                "carrier",
+                "charging-port",
+                "bracket",
+                "button"
+              ],
+              "width": 640,
+              "height": 440,
+              "framing": {
+                "center": [
+                  19.799999952316284,
+                  28.5,
+                  4.5
+                ],
+                "radius": 63.579005927852194
+              },
+              "imageHash": "a4075819d38fbbaa51af2b1a3e613db292272b23465d47ff76e0cb5c653893e4"
+            }
+          ],
+          "changedPartIds": [],
+          "contractHash": "cc3e849b7324a801b27e5b5f1ae6b0599424385b230cec5787d52b62585e7011"
+        }
+      ],
+      "createdAt": "2026-10-25T05:24:12.140Z",
+      "limitations": [
+        "Visual findings are model judgments. Design checks measure supported geometry; request-to-check mapping is an AI interpretation.",
+        "Fixed studio cameras show static geometry; software fallback renders omit texture maps, transparency and reflective finishes.",
+        "Tolerances, mechanical fastening, loads, wiring, firmware and electrical operation remain unverified."
+      ],
+      "contract": {
+        "goals": [
+          {
+            "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+            "kind": "inside",
+            "partId": "radio",
+            "containerId": "housing",
+            "clearanceMm": 1
+          },
+          {
+            "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+            "kind": "preserve",
+            "partIds": [
+              "radio"
+            ],
+            "scope": "shape"
+          },
+          {
+            "evidence": "Keep the housing and the button unchanged.",
+            "kind": "preserve",
+            "partIds": [
+              "housing",
+              "button"
+            ],
+            "scope": "shape-and-placement"
+          }
+        ],
+        "unverified": [],
+        "version": 1,
+        "request": "Place the ESP32-C3 module inside the housing with 1 mm clearance. Keep the housing and the button unchanged.",
+        "baselineHash": "b7dfaa516f7d36f1892c159a921117b4eb8c33b305e7bffa4953a0aa6a54db20",
+        "hash": "cc3e849b7324a801b27e5b5f1ae6b0599424385b230cec5787d52b62585e7011",
+        "model": "gemini-4-argon",
+        "retainedPlacements": [
+          {
+            "partId": "carrier",
+            "containerId": "housing"
+          },
+          {
+            "partId": "battery",
+            "containerId": "housing"
+          }
+        ]
+      },
+      "baselineChecks": [
+        {
+          "id": "design-1",
+          "status": "fail",
+          "detail": "Minimum envelope-to-interior margin -41.6 mm; required 1 mm. Interior from the actual box floor and four wall faces. Component envelopes are conservative; physical tolerances are unverified.",
+          "partIds": [
+            "radio",
+            "housing"
+          ],
+          "category": "design",
+          "required": true,
+          "title": "ESP32-C3 module: enclosure clearance",
+          "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+          "value": -41.6,
+          "unit": "mm",
+          "limit": 1,
+          "repairPartIds": [
+            "radio"
+          ]
+        },
+        {
+          "id": "design-2",
+          "status": "pass",
+          "detail": "1 original components keep their actual geometry; movement is permitted.",
+          "partIds": [
+            "radio"
+          ],
+          "category": "design",
+          "required": true,
+          "title": "Original geometry preserved",
+          "evidence": "Place the ESP32-C3 module inside the housing with 1 mm clearance.",
+          "value": 0,
+          "unit": "changed",
+          "limit": 0,
+          "repairPartIds": []
+        },
+        {
+          "id": "design-3",
+          "status": "pass",
+          "detail": "2 original components keep their actual geometry and placement.",
+          "partIds": [
+            "housing",
+            "button"
+          ],
+          "category": "design",
+          "required": true,
+          "title": "Original geometry preserved",
+          "evidence": "Keep the housing and the button unchanged.",
+          "value": 0,
+          "unit": "changed",
+          "limit": 0,
+          "repairPartIds": []
+        },
+        {
+          "id": "design-retained-containment",
+          "status": "pass",
+          "detail": "2 previously valid interior placements remain supported. This is derived from the baseline geometry, not a physical-fit certificate.",
+          "partIds": [
+            "carrier",
+            "battery"
+          ],
+          "category": "design",
+          "required": true,
+          "title": "Existing interior placements retained",
+          "value": 0,
+          "unit": "placements lost",
+          "limit": 0,
+          "repairPartIds": []
+        }
+      ],
+      "durationMs": 26621,
+      "baselineProject": "{\"version\":1,\"id\":\"design-evaluation-radio-outside-1\",\"name\":\"Desk controller \u00b7 controlled design study\",\"description\":\"A sourced radio module and authored enclosure, battery, board and interface envelopes for repeatable software evaluation.\",\"provenance\":\"Controlled evaluation fixture. Only the radio is manufacturer-sourced CAD. Other components are authored geometric studies. This fixture is never served as a generation fallback.\",\"parts\":[{\"id\":\"housing\",\"name\":\"Housing\",\"category\":\"Evaluation study\",\"description\":\"Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.\",\"role\":\"Explicit controlled design-study component.\",\"position\":[0,0,0],\"rotation\":[0,0,0],\"size\":[70,26,50],\"explode\":[0,25,0],\"color\":\"#e6c49c\",\"solids\":[{\"kind\":\"box\",\"position\":[0,-1,0],\"size\":[70,2,50]},{\"kind\":\"box\",\"position\":[-34,12,0],\"size\":[2,24,50]},{\"kind\":\"box\",\"position\":[34,12,0],\"size\":[2,24,50]},{\"kind\":\"box\",\"position\":[0,12,-24],\"size\":[66,24,2]},{\"kind\":\"box\",\"position\":[0,12,24],\"size\":[66,24,2]}],\"specs\":{\"Geometry basis\":\"Explicit five-surface evaluation enclosure\",\"Source status\":\"Authored fixture, not manufacturer CAD\"},\"connections\":[]},{\"id\":\"carrier\",\"name\":\"Carrier board\",\"category\":\"Evaluation study\",\"description\":\"Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.\",\"role\":\"Explicit controlled design-study component.\",\"position\":[0,3,0],\"rotation\":[0,0,0],\"size\":[54,1.6,32],\"explode\":[0,25,0],\"color\":\"#4f756b\",\"solids\":[{\"kind\":\"box\",\"position\":[0,0,0],\"size\":[54,1.6,32]}],\"specs\":{\"Hardware status\":\"Illustrative evaluation envelope; operation unverified\"},\"connections\":[]},{\"id\":\"radio\",\"name\":\"ESP32-C3 module\",\"category\":\"Electronics\",\"description\":\"Official Espressif radio module CAD. Module only; not a complete development board.\",\"role\":\"Official Espressif radio module CAD. Module only; not a complete development board.\",\"position\":[68,7,0],\"rotation\":[0,0,0],\"explode\":[0,24,0],\"color\":\"#ffffff\",\"specs\":{\"Catalog source\":\"Espressif\",\"Source revision\":\"dd76561812ab300351234ba6e0ec1295641796f0\",\"License\":\"CC-BY-SA-4.0 + KiCad exception\",\"CAD envelope\":\"13.2 \u00d7 2.4 \u00d7 16.6 mm\",\"Source SHA-256\":\"3ca5ac24b6943edf816eb1e75c525a42f13118cd5546b70812c1d21149bcdcab\"},\"connections\":[],\"notes\":\"Sourced Espressif geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: CC-BY-SA-4.0 + KiCad exception.\",\"catalogRef\":{\"id\":\"esp32-c3-mini-1\"}},{\"id\":\"battery\",\"name\":\"Illustrative battery\",\"category\":\"Evaluation study\",\"description\":\"Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.\",\"role\":\"Explicit controlled design-study component.\",\"position\":[19,12,-5],\"rotation\":[0,0,0],\"size\":[18,8,26],\"explode\":[0,25,0],\"color\":\"#9eb3ad\",\"solids\":[{\"kind\":\"box\",\"position\":[0,0,0],\"size\":[18,8,26]}],\"specs\":{\"Hardware status\":\"Illustrative evaluation envelope; operation unverified\"},\"connections\":[]},{\"id\":\"button\",\"name\":\"Button\",\"category\":\"Evaluation study\",\"description\":\"Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.\",\"role\":\"Explicit controlled design-study component.\",\"position\":[22,12,24],\"rotation\":[0,0,0],\"size\":[8,8,6],\"explode\":[0,25,0],\"color\":\"#dc9d64\",\"solids\":[{\"kind\":\"box\",\"position\":[0,0,0],\"size\":[8,8,6]}],\"specs\":{\"Hardware status\":\"Illustrative evaluation envelope; operation unverified\"},\"connections\":[]},{\"id\":\"charging-port\",\"name\":\"Charging port\",\"category\":\"Evaluation study\",\"description\":\"Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.\",\"role\":\"Explicit controlled design-study component.\",\"position\":[0,12,24],\"rotation\":[0,0,0],\"size\":[12,7,6],\"explode\":[0,25,0],\"color\":\"#7d878c\",\"solids\":[{\"kind\":\"box\",\"position\":[0,0,0],\"size\":[12,7,6]}],\"specs\":{\"Hardware status\":\"Illustrative evaluation envelope; operation unverified\"},\"connections\":[]},{\"id\":\"bracket\",\"name\":\"Bracket\",\"category\":\"Evaluation study\",\"description\":\"Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.\",\"role\":\"Explicit controlled design-study component.\",\"position\":[22,12,32],\"rotation\":[0,0,0],\"size\":[14,10,4],\"explode\":[0,25,0],\"color\":\"#9ca4a4\",\"solids\":[{\"kind\":\"box\",\"position\":[0,0,0],\"size\":[14,10,4]}],\"specs\":{\"Hardware status\":\"Illustrative evaluation envelope; operation unverified\"},\"connections\":[]}],\"steps\":[{\"title\":\"Inspect the design study\",\"description\":\"These controlled fixtures test software constraints. They are not physical-build instructions.\",\"partIds\":[\"housing\",\"carrier\",\"radio\",\"battery\",\"button\",\"charging-port\",\"bracket\"]}],\"source\":\"curated\",\"designBrief\":\"Place the ESP32-C3 module inside the housing with 1 mm clearance. Keep the housing and the button unchanged.\"}"
+    }
+  }
+}

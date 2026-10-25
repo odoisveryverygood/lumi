@@ -1,0 +1,19 @@
+{
+  "mode": "live",
+  "input": "Build a smart sofa with an iron base and an ESP32.",
+  "completed": false,
+  "observed": "Browser showed a generic generation error after model output; original lamp retained. First updated prompt had an invalid schematic JSON example and was revised before retesting. Raw response not captured, so exact parse failure is unknown.",
+  "performance": {
+    "model": "gemini-4-argon",
+    "transport": "interactions",
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "durationMs": 82212,
+    "firstTokenMs": 4949,
+    "inputTokens": 1052,
+    "outputTokens": 6305,
+    "thinkingTokens": 0,
+    "cachedTokens": 0,
+    "estimatedCostUsd": 0.117277
+  }
+}

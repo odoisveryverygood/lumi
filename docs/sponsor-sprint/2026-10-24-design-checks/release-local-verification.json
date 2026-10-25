@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-25T05:56:09.859073+00:00",
+  "runtimeManifest": "followup-source-manifest.json",
+  "referenceCheck": "reference-release-source-check.json",
+  "ordinaryTests": {
+    "passed": 320,
+    "skipped": 6
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "staticReferenceRepair": {
+    "authoredPartsWithCorrectedEnvelopeMetadata": 42,
+    "shapePoseAndSourceDimensionsUnchanged": true,
+    "originalNominalSizesPreservedInSpecs": true
+  },
+  "providerConfiguration": "Unchanged existing Gemini 4 Argon server configuration.",
+  "deployment": "not attempted",
+  "liveScope": "Older full evaluation and targeted follow-up are separate. The corrected-reference workspace retry was automatically accepted; exact undo/redo and save restoration were verified."
+}

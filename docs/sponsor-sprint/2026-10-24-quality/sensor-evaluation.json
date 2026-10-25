@@ -1,0 +1,21 @@
+{
+  "evidenceFile": "docs/sponsor-sprint/2026-10-24-quality/reviewed-sensor.part.json",
+  "status": "reviewed",
+  "request": "A compact desk sensor with an orange bracket. The ESP32 radio module must sit on the carrier board inside the housing, not floating separately.",
+  "models": [
+    "gemini-4-argon"
+  ],
+  "reviews": 2,
+  "verifiedImageHashes": 6,
+  "firstAttemptVisualIssues": 1,
+  "retainedVisualIssues": 0,
+  "firstAttemptMeasuredFailures": 0,
+  "retainedMeasuredFailures": 0,
+  "unverifiableRequirements": 0,
+  "preservation": {
+    "allOriginalIdsRetained": true,
+    "sourceIdentitiesRetained": true,
+    "unrelatedGeometryPreserved": true
+  },
+  "scope": "Recorded software evidence and image integrity. This does not authenticate the provider or certify physical hardware."
+}

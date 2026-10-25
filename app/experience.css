@@ -1,0 +1,589 @@
+/* Flare: the object is the workspace. All styles stay scoped and printable guides stay clean. */
+@media screen {
+  .device-studio.flare-experience { background: #f8f5f0; }
+  .flare-experience.device-studio .ds-header { height: 68px; padding: 0 30px; gap: 23px; background: #1c1915; }
+  .flare-experience.device-studio .ds-brand-edition { border: 0; padding: 0; margin-left: 15px; color: #ad9f92; letter-spacing: 1.6px; font-size: 7px; }
+  .flare-experience.device-studio .ds-brand > span:first-child { width: 26px; height: 30px; background: transparent; border: 0; box-shadow: none; margin-right: 8px; }
+  .flare-experience.device-studio .ds-brand-word { font-size: 27px; letter-spacing: -1.5px; }
+  .flare-experience.device-studio .ds-project-name { max-width: 180px; font-size: 11px !important; }
+  .flare-experience .fx-navigation { display: flex; gap: 22px; position: absolute; left: 50%; transform: translateX(-50%); height: 100%; align-items: center; }
+  .flare-experience .fx-navigation button { position: relative; font-size: 11px; color: #a39485; padding: 24px 1px; }
+  .flare-experience .fx-navigation button[aria-current] { color: #ffe8dd; }
+  .flare-experience .fx-navigation button[aria-current]::after { content: ''; position: absolute; bottom: 0; height: 2px; left: 0; right: 0; background: var(--flare-gradient); }
+  .flare-experience.device-studio .ds-saved { display: none; }
+  .flare-experience.device-studio .ds-header .ds-btn { height: 32px; border-radius: 7px; font-size: 10px !important; }
+  .flare-experience .ds-header-actions { gap: 9px; }
+  .flare-experience .ds-header-actions .ds-import-action { display: none; }
+  .flare-experience.device-studio .ds-workspace { isolation: isolate; }
+  .flare-experience.device-studio .ds-stage { width: 100%; border: 0; margin: 0; border-radius: 0; flex: 1; min-width: 0; background: radial-gradient(ellipse at 67% 38%, #fffdf8 0, #faf5f0 35%, #f0edea 100%); }
+  .flare-experience .ds-stage::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background-image: radial-gradient(#7c6c5d20 .6px, transparent .6px); background-size: 26px 26px; mask-image: linear-gradient(180deg,transparent 12%,#0007 100%); }
+  .flare-experience .ds-scene { position: absolute; inset: 0; }
+  .flare-experience .fx-stage-coordinate { position: absolute; pointer-events: none; color: #a69789; font: 7px var(--mono); letter-spacing: 1.9px; z-index: 2; }
+  .flare-experience .fx-coordinate-top { left: 36px; top: 24px; }
+  .flare-experience .fx-coordinate-side { right: 15px; top: 46%; writing-mode: vertical-rl; font-size: 6px; letter-spacing: 2px; }
+  .flare-experience.device-studio .ds-stage-top { top: 21px; left: auto; right: 36px; width: auto; gap: 17px; z-index: 8; }
+  .flare-experience .ds-stage-top > .ds-tools:first-child { order: 3; }
+  .flare-experience .ds-stage-top > .ds-tools:first-child > button[aria-label="Show assembly parts"], .flare-experience .ds-stage-top > .ds-tools:first-child > .ds-tool-divider { display: none; }
+  .flare-experience.device-studio .ds-stage-top .ds-icon { width: 27px; height: 28px; }
+  .flare-experience.device-studio .ds-views { border: 1px solid #70625519; background: #fff9f580; border-radius: 7px; padding: 2px; box-shadow: none; }
+  .flare-experience.device-studio .ds-views button { font-size: 9px; padding: 5px 11px; min-width: 0; border-radius: 5px; }
+  .flare-experience.device-studio .ds-figure-title { top: 62px; left: 64px; max-width: calc(100% - 360px); z-index: 3; }
+  .flare-experience.device-studio .ds-figure-title > span { display: flex; gap: 9px; align-items: center; font-size: 7px; letter-spacing: 1.7px; color: #988776; }
+  .flare-experience .ds-figure-title > span i { width: 3px; height: 3px; border-radius: 50%; background: #ed8b70; }
+  .flare-experience.device-studio .ds-figure-title h1 { font-size: clamp(37px,4.7vw,72px); font-weight: 430; letter-spacing: -3.1px; line-height: 1.08; color: #38312a; margin: 13px 0 0; max-width: 750px; }
+  .flare-experience .ds-figure-title h1 em { font: 11px var(--mono); font-style: normal; letter-spacing: -.4px; color: #b2a69a; margin-left: 17px; white-space: nowrap; }
+  .flare-experience.device-studio .ds-figure-title p { font-size: 11px; color: #9a8979; margin-top: 12px; }
+  .flare-experience.device-studio .ds-camera-tools { left: 25px; top: 46%; transform: translateY(-40%); padding: 7px 5px; gap: 3px; border: 1px solid #fff; border-radius: 11px; background: #fffcf7c9; box-shadow: 0 5px 20px #4033260b; backdrop-filter: blur(12px); z-index: 10; }
+  .flare-experience.device-studio .ds-camera-tools .ds-icon { border: 0; background: transparent; box-shadow: none; width: 29px; height: 29px; border-radius: 6px; }
+  .flare-experience .fx-parts-toggle { width: 38px; padding: 5px 0 4px; display: flex; flex-direction: column; align-items: center; gap: 5px; color: #7c6b5a; }
+  .flare-experience .fx-parts-toggle > span { font: 7px var(--mono); }
+  .flare-experience .fx-parts-toggle small { font: 7px var(--mono); color: #ad9d8d; }
+  .flare-experience .fx-rail-divider { height: 1px; background: #ddd4cc; width: 18px; align-self: center; margin: 7px 0; }
+  .flare-experience.device-studio .ds-parts-panel { position: absolute; top: 18px; left: 18px; bottom: 20px; width: 290px; transform: translateX(calc(-100% - 40px)); opacity: 0; pointer-events: none; border: 1px solid #ecdfd22b; border-radius: 15px; background: #27211cf5; box-shadow: 0 15px 70px #3a2b1d25; backdrop-filter: blur(24px); z-index: 20; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s; }
+  .flare-experience.device-studio .ds-parts-panel.ds-open { transform: translateX(0); opacity: 1; pointer-events: auto; }
+  .flare-experience .fx-close-parts { display: flex; margin-left: auto; padding: 2px; color: #c7b3a0; }
+  .flare-experience .ds-parts-head .ds-count { margin-left: 2px; }
+  .flare-experience .ds-part-select strong { max-width: 180px; }
+  .flare-experience .ds-library-footer { border-radius: 0 0 15px 15px; }
+  .flare-experience.device-studio .ds-inspector { display: none; position: absolute; right: 22px; top: 66px; bottom: 24px; width: 350px; z-index: 20; border: 1px solid #ecdfd22b; border-radius: 16px; box-shadow: 0 16px 70px #3a2b1d27; background: #28221cf5; overflow: hidden; backdrop-filter: blur(28px); }
+  .flare-experience.device-studio .ds-inspector.ds-open { display: flex; animation: fx-panel-arrive .3s cubic-bezier(.2,.8,.2,1) both; }
+  .flare-experience.device-studio .ds-inspector-tabs { padding: 0 18px; gap: 20px; height: 47px; background: #2a231de8; }
+  .flare-experience.device-studio .ds-inspector-scroll { padding: 23px; }
+  .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-figure-title { max-width: calc(100% - 420px); left: 64px; }
+  .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-stage-bottom { left: calc((100% - 365px)/2); width: min(650px,calc(100% - 435px)); min-width: 0; }
+  .flare-experience.device-studio .ds-stage-bottom { width: min(670px,calc(100% - 190px)); bottom: 40px; gap: 12px; z-index: 9; }
+  .flare-experience.device-studio .ds-assembly-control { width: auto; max-width: 100%; padding: 0; background: #fffcf6c9; border-color: #e0dad4; border-radius: 11px; box-shadow: 0 4px 20px #3a2b1d08; display: flex; align-items: center; backdrop-filter: blur(12px); }
+  .flare-experience.device-studio .ds-modes { padding: 4px; }
+  .flare-experience.device-studio .ds-modes button { font-size: 10px; gap: 6px; padding: 9px 13px; border-radius: 7px; }
+  .flare-experience.device-studio .ds-modes button[aria-pressed=true] { background: #3e3329; color: #ffdfcd; }
+  .flare-experience.device-studio .ds-explode-slider { border: 0; border-left: 1px solid #e6dfd9; padding: 0 12px; gap: 8px; }
+  .flare-experience .ds-explode-slider > span { display: none; }
+  .flare-experience .ds-explode-slider input { width: 66px; }
+  .flare-experience.device-studio .ds-ask-bar { min-height: 57px; border-radius: 13px; padding: 9px 11px 9px 19px; box-shadow: 0 15px 45px #38281920; }
+  .flare-experience .ds-ask-bar > input { font-size: 12px; }
+  .flare-experience .ds-ask-bar .ds-edit-request { border: 0; font-size: 9px; }
+  .flare-experience .ds-ask-bar > button[type=submit] { width: 34px; height: 34px; border-radius: 8px; }
+  .flare-experience.device-studio .ds-stage-footer { padding: 12px 26px; font-size: 7px; }
+  .flare-experience.device-studio .ds-transform-tools, .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-transform-tools { top: 60px; right: 50%; transform: translateX(50%); max-width: none; padding: 4px; gap: 3px; border-radius: 9px; z-index: 8; }
+  .flare-experience.device-studio .ds-show-all, .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-show-all { top: 60px; right: 35px; border-radius: 20px; font-size: 9px; }
+  .flare-experience .fx-discover { position: absolute; top: 93px; right: 36px; width: 211px; display: grid; gap: 1px; z-index: 4; }
+  .flare-experience .fx-discover > span { font: 6px var(--mono); letter-spacing: 1.6px; color: #afa194; margin-bottom: 10px; }
+  .flare-experience .fx-discover > button { display: flex; gap: 9px; align-items: center; text-align: left; padding: 10px 0; font-size: 12px; color: #766657; border-bottom: 1px solid #87766515; }
+  .flare-experience .fx-discover > button > svg:last-child { margin-left: auto; color: #b4a08d; }
+  .flare-experience .fx-discover > button:hover { color: #b44c6c; }
+  .flare-experience .fx-spotlight { position: absolute; right: 30px; top: 50%; transform: translateY(-43%); width: 290px; padding: 17px 20px 14px; background: #fffaf6ed; border: 1px solid #fff; border-radius: 15px; z-index: 7; color: #463a2e; box-shadow: 0 18px 60px #4b3b2c12,0 2px 8px #76624e10; backdrop-filter: blur(24px); animation: fx-card-arrive .25s ease-out both; }
+  .flare-experience .fx-spotlight-top { display: flex; align-items: center; justify-content: space-between; }
+  .flare-experience .fx-spotlight-top > span { display: flex; align-items: center; gap: 6px; font: 6px var(--mono); letter-spacing: .9px; text-transform: uppercase; color: #a39485; }
+  .flare-experience .fx-spotlight-top i { width: 4px; height: 4px; border-radius: 50%; background: #ff8b66; box-shadow: 0 0 0 3px #ff713e13; }
+  .flare-experience .fx-spotlight-top button { padding: 0; color: #ac9e91; display: flex; }
+  .flare-experience .fx-spotlight-object { height: 100px; margin: 8px 0 3px; position: relative; }
+  .flare-experience .fx-spotlight-object .ds-thumbnail { height: 100%; background: transparent; }
+  .flare-experience .fx-spotlight-object > button { position: absolute; bottom: 3px; right: 0; border: 1px solid #dfd2c6; padding: 4px; border-radius: 5px; color: #a18d79; display: flex; }
+  .flare-experience .fx-spotlight h2 { font-weight: 500; font-size: 22px; letter-spacing: -.9px; line-height: 1.15; margin: 11px 0 9px; }
+  .flare-experience .fx-spotlight p { font-size: 10px; line-height: 1.8; color: #7d6e5f; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .flare-experience .fx-spotlight-actions { display: flex; gap: 6px; margin-top: 16px; }
+  .flare-experience .fx-spotlight-actions button { display: flex; align-items: center; justify-content: center; gap: 5px; padding: 8px 7px; border-radius: 6px; border: 1px solid #e1d8d0; color: #887058; font-size: 9px; flex: 1; white-space: nowrap; }
+  .flare-experience .fx-spotlight-actions button:first-child { background: #43382d; color: #f9d1c0; border-color: #43382d; }
+  .flare-experience .fx-spotlight-actions button[aria-pressed=true] { background: #f3e9e0; border-color: #ccb7a3; }
+  .flare-experience .fx-spotlight > small { display: block; margin-top: 13px; font: 6px var(--mono); color: #a99a8c; }
+  .flare-experience.device-studio .ds-mechanism-player { max-width: 100%; padding: 18px 22px 15px; background: #2f271ff5; border-color: #e5c7aa42; border-radius: 15px; box-shadow: 0 16px 60px #4032242a; backdrop-filter: blur(24px); }
+  .flare-experience .ds-mechanism-copy h3 { font-size: 20px; font-weight: 450; letter-spacing: -.5px; }
+  .flare-experience .ds-mechanism-copy p { font-size: 11px; max-width: 550px; }
+  .flare-experience .ds-mechanism-stages { gap: 7px; }
+  .flare-experience .ds-mechanism-stages > button { height: 23px; min-width: 23px; font-size: 9px; border-radius: 50%; }
+  .flare-experience .ds-mechanism-heading > span { letter-spacing: 1.8px; }
+  .flare-experience.device-studio .ds-stage:has(.ds-mechanism-player) .ds-figure-title { top: 62px; }
+  .flare-experience.device-studio .ds-stage:has(.ds-mechanism-player) .ds-figure-title h1 { font-size: 37px; }
+  .flare-experience .ds-build-card { width: 100%; }
+
+  /* Explore shares the live renderer. Its object is interactive, not a decorative image. */
+  .flare-experience[data-gallery=true] .ds-stage :is(.ds-stage-top,.ds-figure-title,.ds-camera-tools,.ds-stage-bottom,.ds-stage-footer,.ds-transform-tools,.ds-show-all,.fx-discover,.fx-spotlight,.fx-stage-coordinate,.ds-hover-card) { display: none; }
+  .flare-experience[data-gallery=true] .ds-stage::before { opacity: .35; }
+  .flare-experience[data-gallery=true] :is(.ds-parts-panel,.ds-inspector) { display: none; }
+  .flare-experience .fx-gallery { position: absolute; inset: 0; z-index: 15; pointer-events: none; overflow: auto; }
+  .flare-experience .fx-gallery-copy { position: absolute; left: 6%; top: 35px; width: min(420px,37%); pointer-events: auto; }
+  .flare-experience .fx-overline { display: flex; align-items: center; gap: 8px; font: 7px var(--mono); letter-spacing: 1.8px; color: #a49587; }
+  .flare-experience .fx-overline i { width: 5px; height: 5px; border-radius: 50%; background: #ff875d; box-shadow: 0 0 0 4px #ff713e0b; }
+  .flare-experience .fx-gallery h1 { color: #3a3128; font-size: clamp(47px,5.1vw,78px); line-height: 1.02; font-weight: 420; letter-spacing: -3.5px; margin: 23px 0 18px; }
+  .flare-experience .fx-gallery h1 em { font-style: normal; background: linear-gradient(110deg,#df653b 8%,#e6688c 55%,#cca783 100%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+  .flare-experience .fx-gallery-copy > p { color: #847363; font-size: 13px; line-height: 1.85; margin: 0; max-width: 330px; }
+  .flare-experience .fx-create-form { margin-top: 19px; padding: 14px 16px 10px; border-radius: 13px; background: linear-gradient(#fffcf8,#fffcf8) padding-box,var(--flare-gradient) border-box; border: 1px solid transparent; box-shadow: 0 12px 35px #a18c770b; }
+  .flare-experience .fx-create-form > label { display: flex; gap: 7px; align-items: center; font-size: 12px; color: #77685a; font-weight: 500; }
+  .flare-experience .fx-create-form > label svg { color: #da8b81; }
+  .flare-experience .fx-create-form textarea { width: 100%; height: 30px; padding: 7px 0 0; resize: none; border: 0; background: transparent; outline: none; box-shadow: none; color: #56483b; font-size: 12px; line-height: 1.6; }
+  .flare-experience .fx-create-form textarea::placeholder { color: #b2a599; }
+  .flare-experience .fx-create-form > div { display: flex; align-items: center; justify-content: space-between; }
+  .flare-experience .fx-create-form > div > span { display: flex; align-items: center; gap: 5px; font: 8px var(--mono); letter-spacing: .2px; color: #978574; }
+  .flare-experience .fx-create-form > div i { width: 3px; height: 3px; border-radius: 50%; background: #d5bba1; }
+  .flare-experience .fx-create-form button { width: 27px; height: 27px; border-radius: 7px; background: var(--flare-gradient); color: #3f3226; display: grid; place-content: center; }
+  .flare-experience .fx-continue { display: flex; align-items: center; gap: 10px; font-size: 10px; color: #9d8c7c; margin-top: 17px; padding: 0; }
+  .flare-experience .fx-hero-caption { position: absolute; top: 28px; right: 6%; pointer-events: auto; text-align: right; color: #6c5b4b; padding: 0; }
+  .flare-experience .fx-hero-caption > span { font: 6px var(--mono); letter-spacing: 1.6px; color: #b2a599; display: flex; justify-content: flex-end; align-items: center; gap: 6px; }
+  .flare-experience .fx-hero-caption i { width: 4px; height: 4px; background: #d9c2ab; border-radius: 50%; }
+  .flare-experience .fx-hero-caption strong { font-size: 16px; font-weight: 450; letter-spacing: -.5px; display: flex; justify-content: flex-end; gap: 13px; align-items: center; margin: 11px 0 5px; }
+  .flare-experience .fx-hero-caption small { font-size: 10px; color: #907e6d; }
+  .flare-experience .fx-gallery-collection { position: absolute; left: 6%; right: 6%; bottom: 25px; pointer-events: auto; }
+  .flare-experience .fx-collection-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 13px; font: 6px var(--mono); letter-spacing: 1.4px; color: #b0a397; }
+  .flare-experience .fx-reference-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .flare-experience .fx-reference { background: #fffcf67d; border: 1px solid #fff; border-radius: 13px; overflow: hidden; transition: border-color .2s,background .2s,box-shadow .2s; backdrop-filter: blur(16px); }
+  .flare-experience .fx-reference:hover { background: #fffaf3; border-color: #e0d3c7; box-shadow: 0 7px 30px #7d695610; }
+  .flare-experience .fx-reference-main { display: flex; width: 100%; gap: 8px; padding: 12px 14px; text-align: left; align-items: center; height: 105px; }
+  .flare-experience .fx-reference-image { width: 44%; flex-shrink: 0; transform: rotate(-8deg); }
+  .flare-experience .fx-reference-image .ds-thumbnail { width: 100%; height: 90px; background: transparent; filter: drop-shadow(0 5px 3px #584c4020); }
+  .flare-experience .fx-reference-main > span:last-child { display: flex; flex-direction: column; gap: 6px; }
+  .flare-experience .fx-reference-main small { font: 7px var(--mono); color: #92806e; letter-spacing: 1px; }
+  .flare-experience .fx-reference-main strong { font-size: 17px; font-weight: 450; letter-spacing: -.5px; line-height: 1.2; color: #705f4e; }
+  .flare-experience .fx-reference-main > span:last-child > span { display: flex; gap: 6px; align-items: center; color: #8c7b6a; font-size: 9px; line-height: 1.4; }
+  .flare-experience .fx-reference-story { display: flex; align-items: center; gap: 7px; width: 100%; padding: 10px 14px; border-top: 1px solid #daccbf30; color: #877563; font-size: 10px; text-align: left; }
+  .flare-experience .fx-reference-story > svg:last-child { margin-left: auto; }
+  .flare-experience .fx-reference-story:hover { color: #b94f6e; background: #fbe9e828; }
+  .flare-experience .fx-import-orbit { position: relative; width: 38%; height: 75px; flex-shrink: 0; display: grid; place-items: center; color: #c6b4a2; }
+  .flare-experience .fx-import-orbit::before, .flare-experience .fx-import-orbit::after { content: ''; position: absolute; width: 72px; height: 48px; border: 1px solid #e1d3c5; border-radius: 50%; transform: rotate(-35deg); }
+  .flare-experience .fx-import-orbit::after { transform: rotate(35deg); border-color: #edc4ce; }
+  .flare-experience .fx-import-orbit i, .flare-experience .fx-import-orbit b { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #f6a789; top: 18px; right: 13px; }
+  .flare-experience .fx-import-orbit b { top: auto; bottom: 15px; left: 15px; background: #dcbea0; }
+  .flare-experience .fx-generation { margin-top: 10px; display: flex; gap: 8px; align-items: center; color: #9a8672; font-size: 10px; }
+  .flare-experience .fx-generation > span { flex: 1; }
+  .flare-experience .fx-generation small { display: block; font-size: 8px; margin-top: 5px; color: #b4a494; }
+  .flare-experience .fx-generation button { font-size: 9px; border: 1px solid #dfd1c3; padding: 6px; border-radius: 4px; }
+  .flare-experience .fx-gallery-copy > .fx-generation-error { margin-top: 10px; padding: 9px; background: #ffe2d8; border-radius: 6px; color: #9b514e; font-size: 10px; }
+  .flare-experience.device-studio .ds-toast { top: 80px; bottom: auto; padding: 11px 16px; max-width: calc(100vw - 38px); font-size: 11px; }
+  @keyframes fx-panel-arrive { from { opacity: 0; translate: 12px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes fx-card-arrive { from { opacity: 0; margin-right: -8px; } to { opacity: 1; margin-right: 0; } }
+  @media (min-width:1400px) { .flare-experience .fx-gallery-copy { top: 8%; } .flare-experience .fx-reference-main { height: 126px; } .flare-experience .fx-reference-main strong { font-size: 20px; } .flare-experience .fx-reference-main small { font-size: 8px; } .flare-experience .fx-reference-main > span:last-child > span { font-size: 9px; } .flare-experience .fx-reference-story { font-size: 11px; } }
+  @media (max-height:800px) and (min-width:901px) { .flare-experience .fx-continue { display: none; } .flare-experience .fx-gallery h1 { font-size: clamp(48px,5vw,68px); margin: 18px 0 14px; } .flare-experience .fx-gallery-copy { top: 27px; } .flare-experience .fx-create-form { margin-top: 15px; } }
+  @media (max-width:1100px) { .flare-experience .ds-brand-edition { display: none; } .flare-experience .fx-navigation { gap: 16px; } .flare-experience .fx-discover { width: 175px; right: 27px; } .flare-experience.device-studio .ds-figure-title { left: 54px; } .flare-experience.device-studio .ds-figure-title h1 { letter-spacing: -2px; } .flare-experience .fx-reference-main { padding: 10px; } .flare-experience .fx-reference-main strong { font-size: 14px; } .flare-experience .fx-spotlight { width: 265px; right: 22px; } .flare-experience.device-studio .ds-inspector { right: 15px; width: 320px; } .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-stage-bottom { left: calc((100% - 335px)/2); width: calc(100% - 385px); } }
+  @media (max-width:900px) {
+    .flare-experience.device-studio .ds-header { padding: 0 20px; height: 62px; gap: 14px; }
+    .flare-experience .ds-header-separator,.flare-experience .ds-header .ds-project-name { display: none; }
+    .flare-experience .fx-navigation { position: static; transform: none; margin-left: 15px; gap: 15px; }
+    .flare-experience .fx-navigation button { padding: 22px 0; font-size: 10px; }
+    .flare-experience .fx-discover { display: none; }
+    .flare-experience.device-studio .ds-figure-title { top: 70px; max-width: calc(100% - 90px); left: 47px; }
+    .flare-experience.device-studio .ds-figure-title h1 { font-size: 45px; }
+    .flare-experience.device-studio .ds-stage-top { right: 20px; top: 15px; }
+    .flare-experience .fx-coordinate-top { left: 25px; top: 23px; font-size: 6px; }
+    .flare-experience .fx-coordinate-side { display: none; }
+    .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-figure-title { left: 47px; max-width: calc(100% - 90px); }
+    .flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-stage-bottom { left: 50%; width: calc(100% - 140px); }
+    .flare-experience.device-studio .ds-inspector { top: 65px; bottom: 175px; width: 320px; }
+    .flare-experience .fx-gallery-copy { top: 28px; left: 6%; width: 44%; }
+    .flare-experience .fx-gallery h1 { font-size: 52px; letter-spacing: -2.5px; }
+    .flare-experience .fx-gallery-copy > p { font-size: 11px; }
+    .flare-experience .fx-hero-caption { top: 35px; right: 6%; }
+    .flare-experience .fx-hero-caption small { max-width: 180px; display: block; line-height: 1.6; }
+    .flare-experience .fx-hero-caption strong { font-size: 15px; }
+    .flare-experience .fx-gallery-collection { bottom: 22px; }
+    .flare-experience .fx-reference-grid { gap: 10px; }
+    .flare-experience .fx-reference-main { height: 160px; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0; padding: 10px 14px; }
+    .flare-experience .fx-reference-image { width: 100%; height: 70px; }
+    .flare-experience .fx-reference-image .ds-thumbnail { height: 75px; }
+    .flare-experience .fx-reference-main strong { font-size: 16px; }
+    .flare-experience .fx-reference-main strong br { display: none; }
+    .flare-experience .fx-reference-main small { font-size: 7px; }
+    .flare-experience .fx-reference-main > span:last-child > span { font-size: 9px; }
+    .flare-experience .fx-import-orbit { width: 100%; height: 70px; }
+    .flare-experience .fx-reference-story { min-height: 37px; padding: 8px 10px; font-size: 9px; }
+  }
+  @media (max-width:600px) {
+    .flare-experience.device-studio .ds-header { padding: 0 15px; gap: 10px; height: 58px; }
+    .flare-experience .fx-navigation { margin-left: 8px; gap: 13px; }
+    .flare-experience .fx-navigation button { font-size: 9px; padding: 20px 0; }
+    .flare-experience.device-studio .ds-brand-word { font-size: 23px; }
+    .flare-experience.device-studio .ds-brand > span:first-child { width: 19px; margin-right: 5px; }
+    .flare-experience .ds-brand svg { width: 17px; }
+    .flare-experience .ds-header-actions { gap: 1px; }
+    .flare-experience .ds-header-actions > .ds-icon { display: none; }
+    .flare-experience.device-studio .ds-header .ds-btn { height: 29px; min-width: 29px; padding: 0 7px; }
+    .flare-experience .ds-header-actions .ds-subtle { display: inline-flex !important; }
+    .flare-experience.device-studio .ds-stage-top { top: 14px; right: 13px; gap: 5px; }
+    .flare-experience .ds-stage-top > .ds-tools:last-child { display: none; }
+    .flare-experience.device-studio .ds-stage-top .ds-icon { width: 24px; }
+    .flare-experience.device-studio .ds-views button { font-size: 8px; padding: 5px 7px; }
+    .flare-experience .fx-coordinate-top { left: 20px; top: 24px; font-size: 5px; letter-spacing: 1.2px; }
+    .flare-experience.device-studio .ds-figure-title,.flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-figure-title { top: 75px; left: 26px; max-width: calc(100% - 52px); }
+    .flare-experience.device-studio .ds-figure-title h1 { font-size: 36px; letter-spacing: -1.9px; margin-top: 10px; max-width: 340px; }
+    .flare-experience .ds-figure-title h1 em { font-size: 8px; margin-left: 10px; }
+    .flare-experience.device-studio .ds-figure-title > span { font-size: 5px; letter-spacing: 1px; }
+    .flare-experience.device-studio .ds-figure-title p { font-size: 9px; margin-top: 9px; }
+    .flare-experience.device-studio .ds-camera-tools { left: 10px; padding: 4px 2px; border-radius: 9px; top: 49%; }
+    .flare-experience .fx-parts-toggle { width: 29px; }
+    .flare-experience .fx-parts-toggle > span { font-size: 6px; }
+    .flare-experience .fx-parts-toggle small { display: none; }
+    .flare-experience.device-studio .ds-camera-tools .ds-icon { width: 26px; height: 27px; }
+    .flare-experience.device-studio .ds-camera-tools .ds-icon:nth-last-child(-n+2) { display: none; }
+    .flare-experience.device-studio .ds-stage-bottom,.flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-stage-bottom { left: 50%; width: calc(100% - 26px); bottom: 37px; gap: 10px; }
+    .flare-experience.device-studio .ds-modes button { font-size: 8px; padding: 8px 9px; gap: 4px; }
+    .flare-experience .ds-modes button svg { width: 12px; }
+    .flare-experience .ds-explode-slider { padding: 0 8px; }
+    .flare-experience .ds-explode-slider input { width: 38px; }
+    .flare-experience .ds-explode-slider output { font-size: 6px; }
+    .flare-experience.device-studio .ds-ask-bar { min-height: 51px; padding: 7px 8px 7px 12px; }
+    .flare-experience .ds-ask-bar > input { font-size: 10px; }
+    .flare-experience .ds-ask-bar > svg { width: 15px; }
+    .flare-experience.device-studio .ds-stage-footer { padding: 12px 15px; font-size: 6px; }
+    .flare-experience.device-studio .ds-inspector { top: 58px; bottom: 152px; left: 12px; right: 12px; width: auto; max-height: 570px; }
+    .flare-experience.device-studio .ds-inspector-scroll { padding: 18px 20px; }
+    .flare-experience.device-studio .ds-inspector-tabs { height: 41px; gap: 22px; }
+    .flare-experience .fx-spotlight { right: 13px; left: 58px; width: auto; top: auto; bottom: 157px; transform: none; padding: 12px 15px; border-radius: 12px; }
+    .flare-experience .fx-spotlight-object { float: left; width: 65px; height: 60px; margin-right: 10px; }
+    .flare-experience .fx-spotlight h2 { margin: 13px 0 7px; font-size: 19px; }
+    .flare-experience .fx-spotlight p { font-size: 9px; -webkit-line-clamp: 2; }
+    .flare-experience .fx-spotlight-actions { clear: both; margin-top: 14px; gap: 7px; }
+    .flare-experience .fx-spotlight-actions button { font-size: 9px; padding: 9px 6px; }
+    .flare-experience .fx-spotlight > small { display: none; }
+    .flare-experience.device-studio .ds-transform-tools,.flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-transform-tools { top: 48px; right: 14px; transform: none; }
+    .flare-experience.device-studio .ds-transform-tools .ds-icon { width: 25px; height: 25px; }
+    .flare-experience.device-studio .ds-show-all,.flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-show-all { top: 190px; right: 16px; font-size: 8px; }
+    .flare-experience.device-studio .ds-mechanism-player { padding: 14px 16px; }
+    .flare-experience .ds-mechanism-copy h3 { font-size: 16px; }
+    .flare-experience .ds-mechanism-copy p { font-size: 10px; }
+    .flare-experience.device-studio .ds-stage:has(.ds-mechanism-player) .ds-figure-title h1 { font-size: 30px; }
+    .flare-experience .ds-mechanism-stages { gap: 5px; }
+    .flare-experience .ds-mechanism-stages > button { min-width: 20px; height: 20px; }
+    .flare-experience .ds-mechanism-stages > span { font-size: 7px; max-width: 100px; }
+    .flare-experience .fx-gallery { overflow-y: auto; padding-bottom: 24px; }
+    .flare-experience .fx-gallery-copy { left: 25px; right: 25px; width: auto; top: 27px; }
+    .flare-experience .fx-gallery h1 { font-size: 53px; letter-spacing: -3px; margin: 20px 0 15px; }
+    .flare-experience .fx-gallery-copy > p { font-size: 10px; max-width: 270px; line-height: 1.8; }
+    .flare-experience .fx-overline { font-size: 6px; letter-spacing: 1.2px; }
+    .flare-experience .fx-create-form { margin-top: 230px; padding: 13px 15px 10px; background: linear-gradient(#fffaf6ed,#fffaf6ed) padding-box,var(--flare-gradient) border-box; backdrop-filter: blur(18px); }
+    .flare-experience .fx-create-form label { font-size: 12px; }
+    .flare-experience .fx-create-form textarea { font-size: 16px; height: 41px; padding-top: 8px; }
+    .flare-experience .fx-create-form textarea::placeholder { font-size: 11px; }
+    .flare-experience .fx-create-form > div > span { font-size: 7px; }
+    .flare-experience .fx-create-form button { width: 30px; height: 30px; }
+    .flare-experience .fx-continue { display: none; }
+    .flare-experience .fx-hero-caption { top: 235px; left: 26px; right: auto; text-align: left; }
+    .flare-experience .fx-hero-caption > span,.flare-experience .fx-hero-caption strong { justify-content: flex-start; }
+    .flare-experience .fx-hero-caption > span { font-size: 5px; }
+    .flare-experience .fx-hero-caption strong { font-size: 13px; margin: 8px 0 4px; }
+    .flare-experience .fx-hero-caption small { font-size: 6px; max-width: none; }
+    .flare-experience .fx-gallery-collection { top: 610px; bottom: auto; left: 25px; right: 25px; padding-bottom: 26px; }
+    .flare-experience .fx-reference-grid { grid-template-columns: 1fr; gap: 10px; }
+    .flare-experience .fx-reference-main { height: 110px; flex-direction: row; padding: 12px 16px; gap: 15px; align-items: center; }
+    .flare-experience .fx-reference-image { width: 42%; height: 86px; }
+    .flare-experience .fx-reference-image .ds-thumbnail { height: 86px; }
+    .flare-experience .fx-reference-main strong { font-size: 20px; }
+    .flare-experience .fx-reference-main strong br { display: block; }
+    .flare-experience .fx-reference-main small { font-size: 8px; }
+    .flare-experience .fx-reference-main > span:last-child > span { font-size: 8px; }
+    .flare-experience .fx-reference-story { font-size: 9px; padding: 11px 16px; }
+    .flare-experience .fx-import-orbit { width: 42%; height: 86px; }
+    .flare-experience .fx-gallery-copy > .fx-generation-error { max-height: 80px; overflow: auto; }
+  }
+  @media (prefers-reduced-motion:reduce) { .flare-experience *, .flare-experience *::before, .flare-experience *::after { animation: none !important; transition: none !important; } }
+}
+
+@media screen {
+  .flare-experience.device-studio .ds-inspector-tabs { gap: 13px; padding-inline: 16px; }
+  .flare-experience[data-design=true] .ds-ask-bar { display: none; }
+  .flare-experience .fx-design { color: #eae5e0; }
+  .flare-experience .fx-design-heading { display: flex; align-items: center; justify-content: space-between; }
+  .flare-experience .fx-design-heading > span { display: flex; gap: 7px; align-items: center; font: 8px var(--mono); letter-spacing: 1.6px; color: #ffb895; }
+  .flare-experience .fx-design-heading button { display: flex; color: #cbbaaa; padding: 5px; }
+  .flare-experience .fx-design h2 { font-size: 29px; font-weight: 450; letter-spacing: -1.2px; line-height: 1.15; margin: 20px 0 12px; }
+  .flare-experience .fx-design h2 em { font-style: normal; color: #f9a5a1; }
+  .flare-experience .fx-design-intro { color: #baada1; font-size: 11px; line-height: 1.7; margin-bottom: 18px; }
+  .flare-experience .fx-constraints { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 21px; }
+  .flare-experience .fx-constraints > span { font: 8px var(--mono); display: flex; align-items: center; gap: 4px; padding: 6px 8px; border: 1px solid #e6c6a729; background: #e6c6a70c; border-radius: 6px; color: #dccab8; }
+  .flare-experience .fx-design form { border: 1px solid #cbb7a450; background: linear-gradient(135deg,#ff713e0c,#e6c6a712); border-radius: 11px; padding: 13px; }
+  .flare-experience .fx-design form > label { display: block; font: 8px var(--mono); color: #e8c0cb; margin-bottom: 10px; }
+  .flare-experience .fx-design textarea { width: 100%; resize: vertical; min-height: 65px; max-height: 210px; border: 0; background: transparent; color: #fae9e7; font: 12px/1.7 var(--sans, sans-serif); outline: none; padding: 0; }
+  .flare-experience .fx-design textarea:focus-visible { outline: 1px solid #e6c6a7; outline-offset: 4px; border-radius: 3px; }
+  .flare-experience .fx-design textarea::placeholder { color: #ab9d8f; }
+  .flare-experience .fx-design-submit { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 9px; }
+  .flare-experience .fx-design-submit small { color: #b7a696; font: 7px var(--mono); }
+  .flare-experience .fx-design-submit button { display: flex; gap: 6px; align-items: center; background: #f7b091; color: #362d24; padding: 9px; border-radius: 6px; font-size: 9px; }
+  .flare-experience .fx-design button:disabled { opacity: .4; cursor: not-allowed; }
+  .flare-experience .fx-design-progress { display: flex; gap: 10px; align-items: center; color: #e8d9ca; font-size: 11px; line-height: 1.7; margin: 16px 0; }
+  .flare-experience .fx-design-progress svg { flex-shrink: 0; color: #ffb895; }
+  .flare-experience .fx-design-error { margin: 13px 0; padding: 11px; border: 1px solid #ff6c8950; border-radius: 7px; color: #ffc1ce; font-size: 11px; line-height: 1.7; }
+  .flare-experience .fx-design-prompts { display: grid; gap: 4px; margin: 12px 0 18px; }
+  .flare-experience .fx-design-prompts button { display: flex; align-items: center; text-align: left; justify-content: space-between; font-size: 9px; color: #cab8a7; padding: 7px 0; border-bottom: 1px solid #ceb9a51a; }
+  .flare-experience .fx-design-verdict { display: flex; gap: 10px; padding: 13px; background: #9fdaa40b; border: 1px solid #9fdaa42d; border-radius: 9px; margin-top: 20px; }
+  .flare-experience .fx-design-verdict > svg { flex-shrink: 0; margin-top: 2px; color: #a9d9bc; }
+  .flare-experience .fx-design-verdict.blocked { background: #f66c8d0b; border-color: #f66c8d44; }
+  .flare-experience .fx-design-verdict.blocked > svg { color: #ffa4b8; }
+  .flare-experience .fx-design-verdict strong { font-size: 12px; font-weight: 550; }
+  .flare-experience .fx-design-verdict p { color: #c2b4a7; font-size: 10px; line-height: 1.7; margin: 6px 0 0; }
+  .flare-experience .fx-design-compare { display: flex; align-items: center; gap: 4px; margin: 15px 0; }
+  .flare-experience .fx-design-compare > button { font-size: 10px; color: #c7b3a0; padding: 7px 12px; border-radius: 6px; border: 1px solid #c7b3a029; }
+  .flare-experience .fx-design-compare > button[aria-pressed=true] { color: #ffccba; background: #ff713e15; border-color: #ff9d725c; }
+  .flare-experience .fx-design-compare small { font: 7px var(--mono); color: #b3a597; margin-left: auto; }
+  .flare-experience .fx-design-revisions { display: flex; gap: 5px; align-items: center; border-top: 1px solid #c7b3a024; padding-top: 14px; }
+  .flare-experience .fx-design-revisions button { display: flex; align-items: center; gap: 5px; color: #c5b4a4; font: 8px var(--mono); border: 1px solid #c5b4a429; padding: 6px; border-radius: 5px; }
+  .flare-experience .fx-design-revisions button span { display: flex; }
+  .flare-experience .fx-design-revisions button[aria-pressed=true] { background: #e6c6a719; color: #f4e6d8; border-color: #e6c6a766; }
+  .flare-experience .fx-design-revisions > span { color: #b9aa9c; font: 8px var(--mono); margin-left: auto; }
+  .flare-experience .fx-design-decision { font-size: 10px; line-height: 1.8; color: #d5c6b8; margin: 13px 0; }
+  .flare-experience .fx-check { padding: 10px 0; border-bottom: 1px solid #c5b4a424; }
+  .flare-experience .fx-check summary { list-style: none; display: flex; align-items: center; gap: 7px; cursor: pointer; font-size: 10px; }
+  .flare-experience .fx-check summary::-webkit-details-marker { display: none; }
+  .flare-experience .fx-check summary > svg { flex-shrink: 0; color: #aad7b9; }
+  .flare-experience .fx-check.fail summary > svg { color: #ff8ba3; }
+  .flare-experience .fx-check.unverified summary > svg { color: #e6c8ab; }
+  .flare-experience .fx-check summary > small { margin-left: auto; font: 6px var(--mono); color: #c1b09f; }
+  .flare-experience .fx-check p { color: #c4b6a8; font-size: 10px; line-height: 1.8; margin: 9px 0; }
+  .flare-experience .fx-check > button { color: #edc0b9; display: flex; gap: 5px; align-items: center; font-size: 9px; padding: 4px 0; }
+  .flare-experience .fx-design-apply { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 8px; border-radius: 7px; color: #362d24; background: linear-gradient(110deg,#ffb38c,#e7caae); font-size: 11px; margin: 18px 0 9px; }
+  .flare-experience .fx-design-export { width: 100%; display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 9px; padding: 9px; color: #cbbaaa; }
+  .flare-experience .fx-hardware-sources { margin-top: 25px; padding-top: 18px; border-top: 1px solid #c5b4a42b; }
+  .flare-experience .fx-hardware-sources h3 { font-size: 11px; font-weight: 500; margin: 0 0 13px; }
+  .flare-experience .fx-hardware-sources h3 span { display: block; color: #b9a694; font: 7px var(--mono); margin-top: 6px; }
+  .flare-experience .fx-hardware-sources a { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; color: #dccec0; border-bottom: 1px solid #c5b4a41a; text-decoration: none; }
+  .flare-experience .fx-hardware-sources a strong { font-size: 10px; font-weight: 500; }
+  .flare-experience .fx-hardware-sources a small { display: block; font: 8px var(--mono); margin-top: 5px; color: #aa9b8d; }
+  .flare-experience .fx-hardware-sources p, .flare-experience .fx-design-empty p, .flare-experience .fx-design-empty small { color: #baada1; font-size: 10px; line-height: 1.9; }
+  .flare-experience .fx-design-empty > svg { color: #f4acaa; margin: 12px 0; }
+  .flare-experience .fx-design-empty h2 { font-size: 25px; line-height: 1.2; font-weight: 450; letter-spacing: -.7px; }
+  .flare-experience .fx-design-empty .ds-btn { font-size: 10px; margin: 17px 0; padding: 12px; }
+  .flare-experience .fx-design-empty small { display: block; }
+  @media(max-width:600px) {
+    .flare-experience.device-studio .ds-inspector-tabs { gap: 12px; }
+    .flare-experience .fx-navigation button { padding-inline: 7px; }
+    .flare-experience .fx-design h2 { font-size: 27px; }
+  }
+}
+@media screen {
+  .flare-experience .fx-design-history { margin-top: 16px; border-block: 1px solid #c5b4a424; padding: 12px 0; }
+  .flare-experience .fx-design-history summary { cursor: pointer; font-size: 10px; color: #dccbba; }
+  .flare-experience .fx-design-history p { font-size: 10px; line-height: 1.7; color: #bbad9f; }
+  .flare-experience .fx-design-history strong { display: block; font-weight: 450; color: #dfd1c4; }
+  .flare-experience .fx-design-history span { display: block; font: 8px var(--mono); margin-top: 5px; }
+}
+@media screen {
+  .flare-experience .fx-design-next { display: flex; align-items: center; justify-content: space-between; width: 100%; font-size: 10px; color: #f6b9a8; border-bottom: 1px solid #cdb9a62b; padding: 14px 0 10px; }
+}
+@media screen and (max-width:600px) {
+  .flare-experience .fx-navigation .fx-lab-word { display: none; }
+  .flare-experience .fx-navigation button { white-space: nowrap; }
+}
+
+/* Object conversation: the canvas carries the explanation, evidence is an optional drawer. */
+@media screen {
+  .flare-experience[data-design=true] .fx-discover,.flare-experience[data-design=true] .ds-ask-bar { display:none; }
+  .flare-experience[data-design=true] .ds-stage-bottom { bottom:180px; width:min(620px,calc(100% - 490px)); left:calc((100% - 320px)/2); }
+  .flare-experience[data-design=true] .ds-figure-title { max-width:calc(100% - 440px); }
+  .flare-experience .fx-object-story { position:absolute;right:45px;top:105px;width:259px;z-index:7;color:#433a32; }
+  .flare-experience .fx-story-top {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:34px;}
+  .flare-experience .fx-story-top>button:last-child {color:#a7998b;padding:5px;}
+  .flare-experience .fx-source-pill {display:flex;gap:7px;align-items:center;border:1px solid #a794822c;border-radius:20px;padding:8px 10px;background:#fff9f67d;font:8px var(--mono);letter-spacing:.6px;color:#947d67;}
+  .flare-experience .fx-story-kicker {font:8px var(--mono);letter-spacing:1.6px;color:#a78d74;}
+  .flare-experience .fx-object-story h2 {font-size:31px;font-weight:430;line-height:1.15;letter-spacing:-1.3px;margin:15px 0 15px;}
+  .flare-experience .fx-object-story p {font-size:11px;line-height:1.9;color:#9d8d7e;margin:0 0 18px;max-width:245px;}
+  .flare-experience .fx-story-show {display:flex;align-items:center;justify-content:space-between;width:100%;background:#43382e;color:#ffede5;padding:11px 13px;border-radius:8px;font-size:10px;margin:8px 0 11px;}
+  .flare-experience .fx-evidence-link {display:flex;align-items:center;gap:15px;font-size:10px;color:#958372;padding:8px 0;border-bottom:1px solid #b8aa9c2b;}
+  .flare-experience .fx-object-composer {position:absolute;left:50%;transform:translateX(-50%);bottom:38px;width:min(850px,calc(100% - 180px));z-index:11;border:1px solid #fff9f1;border-radius:17px;background:linear-gradient(130deg,#fffaf5ee,#f9f5f2ef);box-shadow:0 16px 60px #60514317,0 0 0 1px #a6927f12;backdrop-filter:blur(28px);padding:12px 16px 10px;}
+  .flare-experience .fx-dialogue-constraints {display:flex;flex-wrap:wrap;gap:13px;align-items:center;padding:0 4px 9px;}
+  .flare-experience .fx-dialogue-constraints span {display:flex;align-items:center;gap:4px;font:8px var(--mono);color:#a59687;}
+  .flare-experience .fx-dialogue-constraints svg {color:#a4907c;}
+  .flare-experience .fx-object-answer {display:flex;align-items:flex-start;gap:10px;padding:7px 5px 12px;color:#605449;font-size:12px;line-height:1.65;max-height:160px;overflow:auto;}
+  .flare-experience .fx-object-answer>svg {flex:none;margin-top:3px;color:#b89e85;}
+  .flare-experience .fx-object-answer p {margin:0;white-space:pre-line;}
+  .flare-experience .fx-object-answer small {display:block;color:#ac9e90;font:8px var(--mono);margin-top:5px;}
+  .flare-experience .fx-answer-dot {flex:none;width:5px;height:5px;border-radius:50%;background:#e3958c;box-shadow:0 0 10px #e89b9b77;margin-top:8px;}
+  .flare-experience .fx-object-answer.has-error {color:#b24667;}
+  .flare-experience .fx-object-composer form {display:flex;gap:12px;align-items:center;padding:9px 8px 9px 13px;border:1px solid #bdb1a638;border-radius:10px;background:#fffaf8b8;}
+  .flare-experience .fx-object-composer form>svg {color:#ae9d8d;flex:none;}
+  .flare-experience .fx-object-composer textarea {resize:none;flex:1;min-width:0;outline:none;background:transparent;border:0;font:12px/1.6 var(--font-body,Inter,system-ui,sans-serif);height:24px;color:#605449;padding:1px 0;}
+  .flare-experience .fx-object-composer textarea::placeholder {color:#ab9d90;}
+  .flare-experience .fx-object-composer form>button {width:32px;height:32px;display:grid;place-items:center;flex:none;background:linear-gradient(130deg,#e4a388,#c1a78e,#cdb49a);color:#fff9f2;border-radius:8px;box-shadow:0 3px 12px #c8b39e2b;}
+  .flare-experience .fx-object-composer form>button:disabled {opacity:.4;}
+  .flare-experience .fx-object-composer form>.fx-cancel-dialogue {width:auto;padding:0 10px;font-size:10px;background:#ede7e1;color:#857464;}
+  .flare-experience .fx-context-part {max-width:115px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:8px var(--mono);color:#a99581;background:#efe9e3;padding:5px 8px;border-radius:4px;}
+  .flare-experience .fx-dialogue-bottom {display:flex;gap:10px;justify-content:space-between;padding:8px 3px 0;align-items:center;}
+  .flare-experience .fx-dialogue-bottom>button {display:flex;align-items:center;gap:4px;font:8px var(--mono);color:#a6988a;white-space:nowrap;}
+  .flare-experience .fx-dialogue-prompts {display:flex;gap:15px;flex:1;overflow-x:auto;scrollbar-width:none;}
+  .flare-experience .fx-dialogue-prompts button {display:flex;align-items:center;gap:5px;white-space:nowrap;font-size:9px;color:#9e8e7e;padding:3px 0;}
+  .flare-experience .fx-dialogue-prompts button:hover {color:#9c8064;}
+  .flare-experience .fx-dialogue-connection {display:block;font-size:9px;color:#a8998b;padding:7px;}
+  .flare-experience .fx-object-review {display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:0 4px 10px;}
+  .flare-experience .fx-object-review>span {font-size:9px;color:#a69789;margin-left:auto;}
+  .flare-experience .fx-view-compare {display:flex;gap:2px;border:1px solid #d7cfc8;border-radius:6px;padding:2px;}
+  .flare-experience .fx-view-compare button {font-size:9px;color:#a39384;border-radius:4px;padding:5px 9px;}
+  .flare-experience .fx-view-compare button[aria-pressed=true] {background:#e8e2dd;color:#7d6d5e;}
+  .flare-experience .fx-revision-dots {display:flex;gap:5px;}
+  .flare-experience .fx-revision-dots button {display:flex;gap:4px;align-items:center;color:#a59688;padding:5px 6px;font:8px var(--mono);border-radius:4px;border:1px solid transparent;}
+  .flare-experience .fx-revision-dots button[aria-pressed=true] {border-color:#c6b9ad;color:#827161;}
+  .flare-experience .fx-apply-inline {display:flex;gap:15px;align-items:center;background:#4b3f34;color:#fff2ec;padding:8px 11px;border-radius:6px;font-size:9px;}
+  .flare-experience .fx-apply-inline:disabled {opacity:.35;}
+  .flare-experience .fx-dialogue-history {position:absolute;bottom:calc(100% + 12px);left:0;right:0;max-height:320px;overflow:auto;background:#fffaf8f5;border:1px solid #e7e0d9;border-radius:14px;padding:20px;box-shadow:0 16px 50px #3f332717;}
+  .flare-experience .fx-dialogue-history p {font-size:11px;line-height:1.7;color:#7d6e5f;white-space:pre-line;margin:0 0 20px;}
+  .flare-experience .fx-dialogue-history strong {display:block;font:7px var(--mono);letter-spacing:1.5px;color:#b7a899;margin-bottom:6px;}
+  .flare-experience .fx-dialogue-history .user {padding-left:18%;}
+  .flare-experience .fx-object-evidence {position:absolute;right:20px;top:65px;bottom:23px;width:365px;z-index:21;background:#29231ef5;border:1px solid #c7b4a222;border-radius:15px;box-shadow:0 14px 65px #392b1e27;backdrop-filter:blur(28px);display:flex;flex-direction:column;overflow:hidden;color:#dbd2c9;}
+  .flare-experience .fx-object-evidence header {display:flex;align-items:center;justify-content:space-between;padding:18px 21px;border-bottom:1px solid #a08c791c;}
+  .flare-experience .fx-object-evidence header span {display:flex;gap:9px;align-items:center;font:8px var(--mono);letter-spacing:1.5px;color:#c1b3a5;}
+  .flare-experience .fx-object-evidence header button {color:#b9ab9d;}
+  .flare-experience .fx-evidence-scroll {padding:23px;overflow:auto;}
+  .flare-experience .fx-evidence-scroll h2 {font-size:27px;font-weight:420;letter-spacing:-1px;line-height:1.2;margin:0 0 22px;color:#f1eae3;}
+  .flare-experience .fx-evidence-scroll>p {font-size:10px;line-height:1.85;color:#a99b8e;}
+  .flare-experience .fx-evidence-scroll h3 {font-size:11px;font-weight:500;margin:26px 0 12px;color:#d7cabd;}
+  .flare-experience .fx-evidence-scroll h3 small {display:block;font-size:8px;font-weight:400;color:#9d8d7d;margin-top:6px;}
+  .flare-experience .fx-evidence-scroll>a {display:flex;gap:10px;align-items:center;justify-content:space-between;text-decoration:none;padding:11px 0;border-bottom:1px solid #9e8b781a;color:#bcad9f;}
+  .flare-experience .fx-evidence-scroll>a strong {font-size:10px;font-weight:500;}
+  .flare-experience .fx-evidence-scroll>a small {display:block;font-size:9px;line-height:1.7;color:#978676;margin-top:4px;}
+  .flare-experience .fx-evidence-export,.flare-experience .fx-evidence-reset {display:flex;align-items:center;gap:10px;border-radius:7px;padding:11px;font-size:10px;width:100%;margin-top:20px;color:#dcd1c6;background:#55493e;}
+  .flare-experience .fx-evidence-reset {margin-top:8px;background:transparent;color:#a39384;}
+  .flare-experience .fx-dialogue-welcome {position:absolute;right:6%;top:24%;z-index:11;width:300px;padding:27px;border:1px solid #fff;border-radius:15px;background:#fffaf6e8;backdrop-filter:blur(20px);box-shadow:0 12px 50px #5c4f4213;}
+  .flare-experience .fx-dialogue-welcome>span {display:flex;align-items:center;gap:7px;font:8px var(--mono);letter-spacing:1px;color:#a9937d;}
+  .flare-experience .fx-dialogue-welcome h2 {font-size:25px;font-weight:450;letter-spacing:-.7px;line-height:1.25;color:#615448;}
+  .flare-experience .fx-dialogue-welcome p {font-size:11px;line-height:1.8;color:#a99a8c;}
+  .flare-experience .fx-dialogue-welcome>button {display:flex;align-items:center;justify-content:space-between;width:100%;font-size:10px;padding:12px;background:#4c3f33;color:#fff1e8;border-radius:8px;margin-top:18px;}
+  .flare-experience .fx-dialogue-welcome>.fx-dialogue-dismiss {background:transparent;color:#aa9b8d;justify-content:center;margin-top:4px;}
+}
+@media screen and (max-width:1100px) {
+  .flare-experience .fx-object-story {right:30px;width:220px;top:100px;}
+  .flare-experience .fx-object-story h2 {font-size:25px;}
+  .flare-experience .fx-object-story p {font-size:10px;}
+  .flare-experience .fx-object-composer {width:calc(100% - 150px);}
+  .flare-experience[data-design=true] .ds-stage-bottom {width:calc(100% - 375px);left:calc((100% - 240px)/2);}
+}
+@media screen and (max-width:700px) {
+  .flare-experience .fx-object-story {top:125px;right:17px;width:170px;}
+  .flare-experience .fx-story-top {margin-bottom:12px;}
+  .flare-experience .fx-source-pill {font-size:6px;padding:6px;gap:4px;}
+  .flare-experience .fx-story-kicker {font-size:6px;letter-spacing:1px;}
+  .flare-experience .fx-object-story h2 {font-size:20px;letter-spacing:-.7px;margin:10px 0;}
+  .flare-experience .fx-object-story p {display:none;}
+  .flare-experience .fx-story-show {padding:8px;font-size:9px;}
+  .flare-experience .fx-evidence-link {font-size:8px;}
+  .flare-experience .fx-object-composer {width:calc(100% - 26px);bottom:30px;padding:10px;border-radius:13px;}
+  .flare-experience .fx-object-answer {font-size:10px;max-height:120px;line-height:1.6;}
+  .flare-experience .fx-dialogue-constraints {gap:7px;}
+  .flare-experience .fx-dialogue-constraints span {font-size:6px;}
+  .flare-experience .fx-object-composer textarea {font-size:11px;}
+  .flare-experience .fx-object-composer form {gap:8px;padding-left:9px;}
+  .flare-experience .fx-context-part {display:none;}
+  .flare-experience .fx-dialogue-prompts {gap:14px;}
+  .flare-experience .fx-dialogue-prompts button {font-size:8px;}
+  .flare-experience .fx-object-review {gap:5px;}
+  .flare-experience .fx-object-review>span {font-size:7px;}
+  .flare-experience .fx-apply-inline {font-size:8px;padding:7px;gap:5px;}
+  .flare-experience[data-design=true] .ds-stage-bottom {bottom:177px;left:50%;width:calc(100% - 40px);}
+  .flare-experience[data-design=true] .ds-stage-bottom:has(.ds-mechanism-player) {bottom:220px;}
+  .flare-experience[data-design=true] .ds-figure-title {max-width:calc(100% - 45px);}
+  .flare-experience .fx-object-evidence {inset:115px 10px 22px;width:auto;}
+  .flare-experience .fx-dialogue-welcome {top:27%;right:15px;width:245px;padding:20px;}
+}
+@media screen {
+  .flare-experience[data-design=true].device-studio .ds-stage-bottom {bottom:calc(var(--dialogue-height,130px) + 53px);}
+  .flare-experience[data-design=true] .ds-mechanism-copy p {display:none;}
+  .flare-experience[data-design=true].device-studio .ds-mechanism-player {padding:12px 17px;}
+  .flare-experience[data-design=true] .ds-mechanism-copy h3 {font-size:16px;margin:8px 0 10px;}
+  .flare-experience[data-evidence=true] .fx-object-composer {left:calc((100% - 390px)/2);width:min(800px,calc(100% - 510px));}
+}
+@media screen and (max-width:700px) {
+  .flare-experience[data-design=true].device-studio .ds-stage-bottom {bottom:calc(var(--dialogue-height,130px) + 43px);}
+  .flare-experience[data-evidence=true] .fx-object-composer {left:50%;width:calc(100% - 26px);}
+}
+@media screen and (max-width:700px) {
+  .flare-experience .fx-story-kicker {display:none;}
+  .flare-experience .fx-story-top {margin-bottom:8px;}
+  .flare-experience .fx-object-story h2 {font-size:16px;line-height:1.2;margin:7px 0;}
+  .flare-experience .fx-object-answer {max-height:85px;}
+}
+
+/* Grounded design copy: the notebook is a focused reading surface beside the object. */
+.flare-experience .fn-notebook-open {display:flex;align-items:center;gap:10px;width:100%;text-align:left;margin:17px 0 10px;padding:13px;border:1px solid #c4bab145;border-radius:10px;background:linear-gradient(115deg,#fffbf1c9,#f2e9e0a3);color:#655749;box-shadow:0 8px 28px #9884710c;}
+.flare-experience .fn-notebook-open>span {flex:1;font-size:12px;font-weight:550;}
+.flare-experience .fn-notebook-open small {display:block;font-size:9px;color:#a69788;font-weight:400;margin-top:5px;}
+.flare-experience .fn-view-review {display:flex;align-items:center;gap:7px;font-size:10px;line-height:1.6;color:#9b8b7b;margin:12px 0 18px;text-align:left;}
+.flare-experience .fn-view-review:disabled {opacity:.45;}
+.flare-experience .fn-answer-citations {display:flex;gap:6px;flex-wrap:wrap;margin:0 8px 10px;}
+.flare-experience .fn-answer-citations button {display:flex;gap:5px;align-items:center;max-width:240px;padding:5px 7px;background:#efe6dea6;border:1px solid #d3c7bb47;color:#887766;border-radius:5px;font-size:9px;}
+.flare-experience .fn-answer-citations button span {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.flare-experience .fn-answer-citations small {color:#aa9b8d;white-space:nowrap;}
+.flare-experience .fn-visual-result {margin:0 8px 10px;border:1px solid #d0c5ba5e;border-radius:7px;padding:8px;color:#847363;font-size:10px;}
+.flare-experience .fn-visual-result summary {display:flex;gap:6px;align-items:center;cursor:pointer;}
+.flare-experience .fn-visual-result>div {display:flex;gap:12px;margin-top:10px;max-height:180px;overflow:auto;}
+.flare-experience .fn-visual-result img {width:150px;object-fit:contain;border:1px solid #dcd6d0;border-radius:5px;align-self:flex-start;}
+.flare-experience .fn-visual-result ul {margin:0;padding-left:14px;font-size:10px;line-height:1.7;}
+.flare-experience .fn-storage-warning {display:block;color:#aa5e44;padding:7px;font-size:10px;}
+.fn-backdrop {position:fixed;inset:0;z-index:150;background:#251e1757;backdrop-filter:blur(12px);display:grid;place-items:center;padding:35px;color:#4d4339;}
+.fn-notebook {width:min(1120px,100%);height:min(850px,calc(100dvh - 70px));display:flex;flex-direction:column;background:#fbf6f3;border:1px solid #fff5ebc4;border-radius:19px;box-shadow:0 28px 120px #241c1447;overflow:hidden;font:12px var(--font-body,Inter,system-ui,sans-serif);}
+.fn-notebook button,.fn-notebook a {cursor:pointer;transition:background .18s,color .18s;}
+.fn-notebook button:disabled {cursor:default;opacity:.45;}
+.fn-notebook button:focus-visible,.fn-notebook a:focus-visible,.fn-notebook select:focus-visible {outline:2px solid #c4a586;outline-offset:3px;}
+.fn-notebook>header {display:flex;align-items:flex-start;justify-content:space-between;padding:27px 31px 22px;gap:20px;background:radial-gradient(ellipse at 90% -20%,#e7d8cab3,transparent 60%);}
+.fn-notebook>header span {display:flex;align-items:center;gap:7px;font-size:9px;font-weight:600;letter-spacing:1.7px;color:#a79380;}
+.fn-notebook h2 {font-size:27px;line-height:1.2;font-weight:450;letter-spacing:-.9px;margin:11px 0 0;outline:none;}
+.fn-notebook>header>button {padding:3px;color:#a39384;}
+.fn-notebook-meta {display:flex;gap:20px;align-items:center;padding:13px 31px;border-top:1px solid #d8cfc73b;border-bottom:1px solid #d8cfc74f;background:#f4f0ed7a;font-size:10px;color:#a49587;flex-wrap:wrap;}
+.fn-notebook-meta>span:first-child {color:#8a7866;display:flex;align-items:center;gap:6px;}
+.fn-notebook-meta i {width:5px;height:5px;border-radius:50%;background:#b69d84;box-shadow:0 0 8px #b69d845e;}
+.fn-notebook-meta small {margin-left:auto;font-size:9px;color:#b3a69a;}
+.fn-notebook-body {display:grid;grid-template-columns:275px 1fr;flex:1;min-height:0;}
+.fn-notebook nav {padding:22px 14px;overflow:auto;border-right:1px solid #d8cfc74f;background:#f6f2ef81;}
+.fn-file-label {font-size:8px;letter-spacing:1.3px;font-weight:600;color:#b4a79b;margin:0 10px 13px;}
+.fn-notebook nav>button {display:flex;gap:9px;align-items:center;width:100%;text-align:left;color:#a29283;padding:13px 11px;border-radius:8px;font-size:11px;margin:3px 0;}
+.fn-notebook nav>button>svg {flex-shrink:0;color:#b6a89a;}
+.fn-notebook nav>button span {flex:1;line-height:1.4;}
+.fn-notebook nav>button small {display:block;margin-top:5px;font-size:8px;color:#b3a69a;letter-spacing:.3px;}
+.fn-notebook nav>button[aria-pressed=true] {background:linear-gradient(120deg,#efe6de,#f0e8e1);color:#826f5d;box-shadow:0 3px 12px #9a87740c;}
+.fn-notebook nav>button i {height:5px;width:5px;border-radius:50%;background:#c4a98e;flex:none;}
+.fn-import {margin-top:24px;border-top:1px solid #d8cfc74f;padding:18px 10px 0;}
+.fn-import label {display:block;font-size:9px;color:#a59687;margin-bottom:8px;}
+.fn-import select {width:100%;color:#827262;border:1px solid #d7cec6;border-radius:6px;background:#fffaf8;font-size:10px;padding:8px 6px;}
+.fn-import>button {width:100%;display:flex;align-items:center;justify-content:center;gap:7px;margin-top:10px;padding:11px 8px;border:1px dashed #c4b5a7;border-radius:6px;background:#f3ede8;color:#9b846e;font-size:10px;}
+.fn-import>small {font-size:9px;color:#b2a69a;line-height:1.7;display:block;margin-top:10px;}
+.fn-notebook main {min-width:0;overflow:auto;padding:27px 32px;scroll-behavior:smooth;}
+.fn-source-heading {display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.fn-source-heading span {font-size:8px;color:#b1a090;letter-spacing:1.3px;}
+.fn-source-heading h3 {font-size:22px;letter-spacing:-.5px;font-weight:450;margin:10px 0 15px;overflow-wrap:anywhere;}
+.fn-source-heading button {padding:7px;color:#b0a396;}
+.fn-source-actions {display:flex;gap:15px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #d6cec65c;padding-bottom:17px;margin-bottom:21px;}
+.fn-source-actions a,.fn-source-actions button {font-size:9px;color:#ab9580;display:flex;gap:4px;align-items:center;}
+.fn-source-actions>span {margin-left:auto;font:8px ui-monospace,monospace;color:#bbb0a6;}
+.fn-source-facts {background:linear-gradient(120deg,#f1ebe599,#f6eee799);border:1px solid #d6cdc566;border-radius:9px;padding:16px;margin-bottom:24px;}
+.fn-source-facts h4 {font-size:10px;font-weight:500;color:#9d8d7e;margin:0 0 14px;}
+.fn-source-facts>div {display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.fn-source-facts>div+div {border-top:1px solid #d6cdc44f;padding-top:14px;}
+.fn-source-facts>div>span {display:flex;gap:10px;align-items:center;flex:1;font-size:10px;color:#a29283;}
+.fn-source-facts strong {font-size:20px;font-weight:450;letter-spacing:-.6px;color:#897460;white-space:nowrap;}
+.fn-source-facts small {display:flex;align-items:center;gap:4px;font-size:8px;letter-spacing:.6px;color:#a19283;}
+.fn-source-facts button {display:flex;align-items:center;gap:4px;font-size:9px;padding:7px;border:1px solid #cdc1b6;border-radius:4px;color:#9a8571;background:#fbf8f5;}
+.fn-source-facts button[aria-pressed=true] {background:#e9e0d7;}
+.fn-source-facts blockquote {width:100%;font-size:10px;line-height:1.8;color:#a49587;margin:2px 0 12px;padding-left:10px;border-left:2px solid #d3c6ba;}
+.fn-page-heading {display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#afa296;font-size:8px;letter-spacing:1.2px;}
+.fn-page-heading>div {display:flex;gap:7px;align-items:center;}
+.fn-page-heading button {padding:3px;color:#ad9d8e;}
+.fn-page-heading small {font-size:9px;letter-spacing:0;}
+.fn-source-text {white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;font:11px/1.85 ui-monospace,SFMono-Regular,monospace;color:#948271;background:#fffcf9;padding:19px;border:1px solid #e1dad482;border-radius:8px;min-height:150px;margin:0;}
+.fn-source-text mark {background:#f1d398;color:#805a33;box-shadow:0 0 0 3px #f1d398;}
+.fn-source-image {width:100%;max-height:240px;object-fit:contain;border-radius:8px;margin:0 0 20px;border:1px solid #e1dad4;}
+.fn-source-note {font-size:10px;color:#afa296;line-height:1.8;margin-top:18px;}
+.fn-import-status {padding:12px 30px;font-size:11px;color:#958473;background:#efe8e2;border-top:1px solid #d9cfc6;line-height:1.6;}
+.fn-import-status.error {color:#aa6457;background:#f7e7df;}
+.fn-notebook footer {display:flex;justify-content:space-between;align-items:center;gap:15px;padding:16px 30px;border-top:1px solid #d8cfc74f;background:#f5f1ee;color:#b1a497;font-size:9px;}
+.fn-notebook footer span,.fn-notebook footer button {display:flex;align-items:center;gap:6px;}
+.fn-notebook footer button {white-space:nowrap;color:#9d8c7c;}
+@media(max-width:900px){.fn-backdrop{padding:15px}.fn-notebook{height:calc(100dvh - 30px)}.fn-notebook-body{grid-template-columns:220px 1fr}.fn-notebook main{padding:24px 20px}.fn-notebook-meta{gap:12px}.fn-notebook-meta small{display:none}.fn-notebook h2{font-size:24px}.fn-source-heading h3{font-size:19px}}
+@media(max-width:600px){.fn-backdrop{padding:7px}.fn-notebook{height:calc(100dvh - 14px);border-radius:12px}.fn-notebook>header{padding:20px 17px 17px}.fn-notebook h2{font-size:21px;max-width:250px}.fn-notebook-meta{padding:11px 17px;gap:10px;font-size:9px}.fn-notebook-body{display:flex;flex-direction:column}.fn-notebook nav{max-height:180px;flex-shrink:0;border-right:0;border-bottom:1px solid #d8cfc74f;padding:12px;display:flex;gap:7px;flex-wrap:nowrap;align-items:stretch}.fn-file-label{display:none}.fn-notebook nav>button{min-width:165px;max-width:165px;padding:9px;align-self:flex-start;font-size:10px}.fn-notebook nav>button small{font-size:7px}.fn-import{min-width:205px;max-width:205px;margin:0;padding:0 5px;border:0}.fn-import label,.fn-import>small{display:none}.fn-import>button{padding:8px;margin-top:5px}.fn-notebook main{padding:20px 17px;flex:1}.fn-source-heading h3{font-size:18px}.fn-source-facts{padding:12px}.fn-source-facts>div>span{flex-basis:100%}.fn-source-text{font-size:10px;padding:13px}.fn-notebook footer{padding:12px 17px}.fn-notebook footer>span{display:none}.fn-notebook footer>button{margin-left:auto}.flare-experience .fn-notebook-open{margin:10px 0;padding:9px;gap:6px}.flare-experience .fn-notebook-open>span{font-size:10px}.flare-experience .fn-notebook-open small{font-size:8px;margin-top:3px}.flare-experience .fn-view-review{font-size:8px;margin:8px 0;gap:4px}.flare-experience .fn-answer-citations button{max-width:160px;font-size:8px}.flare-experience .fn-visual-result>div{flex-direction:column;max-height:210px}.flare-experience .fn-visual-result img{width:100%;max-height:120px}}
+.fn-cited-excerpt{margin-bottom:20px;padding:15px 17px;background:#fbefda;border:1px solid #e7ca9666;border-radius:8px;color:#a38053}
+.fn-cited-excerpt>span{font-size:8px;letter-spacing:1px}.fn-cited-excerpt blockquote{font:12px/1.8 var(--font-body,Inter,system-ui,sans-serif);margin:9px 0 0;color:#8c6b43}
+@media(min-width:1100px){.flare-experience .fx-object-composer{left:calc(50% - 120px);width:min(780px,calc(100% - 440px))}.flare-experience[data-evidence=true] .fx-object-composer{left:calc((100% - 390px)/2);width:min(780px,calc(100% - 510px))}}
+.flare-experience .fn-history-cites{display:flex;gap:7px;margin-top:8px}.flare-experience .fn-history-cites button{display:flex;align-items:center;gap:4px;font-size:9px;color:#af9e8e}
+.flare-experience .fn-mobile-view{display:none}
+@media(max-width:600px){.flare-experience .fx-object-story .fx-story-show,.flare-experience .fx-object-story .fn-view-review{display:none}.flare-experience .fn-mobile-view{display:flex;align-items:center;justify-content:center;color:#a39485;flex:none}.flare-experience .fx-object-story .fx-evidence-link{margin-top:7px}.flare-experience .fx-object-story h2{font-size:17px;line-height:1.2}.flare-experience .fx-object-story .fn-notebook-open{margin:9px 0 5px;padding:8px}.flare-experience .fn-answer-citations{gap:4px}}
+.flare-experience .fx-dialogue-bottom>button.fn-mobile-view{display:none}
+@media(max-width:600px){.flare-experience .fx-dialogue-bottom>button.fn-mobile-view{display:flex}}
+
+/* Actual schema-valid component names arrive from the model stream. */
+.flare-experience .fx-generation-parts{margin:12px 0 0;padding:12px 14px;border:1px solid #d0c1b233;border-radius:11px;background:#fffaf7c9;max-width:390px;}
+.flare-experience .fx-generation-parts>span{font:7px var(--mono);letter-spacing:1.2px;color:#8a7866;}
+.flare-experience .fx-generation-parts>div{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;}
+.flare-experience .fx-generation-parts small{font-size:9px;display:flex;align-items:center;gap:5px;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 7px;border-radius:5px;background:#ede4dc66;color:#7a6959;}
+.flare-experience .fx-generation-parts small i{width:4px;height:4px;border-radius:50%;background:#b0967d;flex:none;}
+.flare-experience .fx-generation-parts p{font-size:9px;line-height:1.5;color:#a59687;margin:9px 0 0;}
+@media(max-width:600px){.flare-experience .fx-generation-parts{padding:9px 11px;margin-top:8px}.flare-experience .fx-generation-parts small{font-size:8px;max-width:135px}.flare-experience .fx-generation-parts small:nth-child(n+4){display:none}.flare-experience[data-gallery=true]:has(.fx-generation) .fx-gallery-collection{display:none;}}
+/* The gallery already has live status; a second full-screen spinner obscures it. */
+.flare-experience[data-gallery=true] .ds-busy{display:none;}
+.flare-experience[data-gallery=true]:has(.fx-generation) .fx-gallery-collection{opacity:0;pointer-events:none;}
+
+.flare-experience.device-studio .ds-figure-title h1{letter-spacing:-.045em;line-height:1.1;overflow-wrap:anywhere;}
+
+/* Generated names can be long; keep their heading clear of object controls. */
+.flare-experience.device-studio .ds-figure-title[data-long-title=true] h1{font-size:clamp(24px,3.1vw,42px);max-width:650px;}
+@media(min-width:601px){.flare-experience.device-studio .ds-transform-tools,.flare-experience.device-studio .ds-stage:has(+.ds-inspector.ds-open) .ds-transform-tools{top:24px;}}

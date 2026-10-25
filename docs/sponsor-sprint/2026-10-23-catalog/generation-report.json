@@ -1,0 +1,14 @@
+{
+  "model": "gemini-4-argon",
+  "elapsedSeconds": 57.762864875,
+  "parts": 9,
+  "sourced": [
+    {
+      "id": "m3-cap-12"
+    },
+    {
+      "id": "esp32-c3-mini-1"
+    }
+  ],
+  "customSolids": 110
+}

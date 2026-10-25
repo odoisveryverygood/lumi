@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-24T21:03:52.217886-07:00",
+  "environment": "Local production build at http://127.0.0.1:3001",
+  "liveArgonCases": 2,
+  "recordedCompletedReviews": 3,
+  "completedReviewImages": 9,
+  "testsPassed": 275,
+  "optInTestsSkipped": 4,
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "browserCancellation": "exact document preserved",
+  "mountedEditUndo": "exact document restored",
+  "productionBrowserErrors": [],
+  "deployed": false,
+  "physicalVerification": false,
+  "limitations": [
+    "Argon findings are judgments, not measured hardware accuracy.",
+    "Eight evaluation briefs unrun.",
+    "Software fallback rasterization tested locally; forced browser fallback session unrun.",
+    "No deployed-host or physical hardware verification."
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "document": {
+    "version": 1,
+    "id": "design-evaluation-radio-outside-1",
+    "name": "Desk controller \u00b7 controlled design study",
+    "description": "A sourced radio module and authored enclosure, battery, board and interface envelopes for repeatable software evaluation.",
+    "provenance": "Controlled evaluation fixture. Only the radio is manufacturer-sourced CAD. Other components are authored geometric studies. This fixture is never served as a generation fallback.",
+    "parts": [
+      {
+        "id": "housing",
+        "name": "Housing",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          70,
+          26,
+          50
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#e6c49c",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -1,
+              0
+            ],
+            "size": [
+              70,
+              2,
+              50
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              -34,
+              12,
+              0
+            ],
+            "size": [
+              2,
+              24,
+              50
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              34,
+              12,
+              0
+            ],
+            "size": [
+              2,
+              24,
+              50
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              12,
+              -24
+            ],
+            "size": [
+              66,
+              24,
+              2
+            ]
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              12,
+              24
+            ],
+            "size": [
+              66,
+              24,
+              2
+            ]
+          }
+        ],
+        "specs": {
+          "Geometry basis": "Explicit five-surface evaluation enclosure",
+          "Source status": "Authored fixture, not manufacturer CAD"
+        },
+        "connections": []
+      },
+      {
+        "id": "carrier",
+        "name": "Carrier board",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          0,
+          3,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          54,
+          1.6,
+          32
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#4f756b",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              54,
+              1.6,
+              32
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "radio",
+        "name": "ESP32-C3 module",
+        "category": "Electronics",
+        "description": "Official Espressif radio module CAD. Module only; not a complete development board.",
+        "role": "Official Espressif radio module CAD. Module only; not a complete development board.",
+        "position": [
+          68,
+          7,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "explode": [
+          0,
+          24,
+          0
+        ],
+        "color": "#ffffff",
+        "specs": {
+          "Catalog source": "Espressif",
+          "Source revision": "dd76561812ab300351234ba6e0ec1295641796f0",
+          "License": "CC-BY-SA-4.0 + KiCad exception",
+          "CAD envelope": "13.2 \u00d7 2.4 \u00d7 16.6 mm",
+          "Source SHA-256": "3ca5ac24b6943edf816eb1e75c525a42f13118cd5546b70812c1d21149bcdcab"
+        },
+        "connections": [],
+        "notes": "Sourced Espressif geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: CC-BY-SA-4.0 + KiCad exception.",
+        "catalogRef": {
+          "id": "esp32-c3-mini-1"
+        }
+      },
+      {
+        "id": "battery",
+        "name": "Illustrative battery",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          19,
+          12,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          18,
+          8,
+          26
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#9eb3ad",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              18,
+              8,
+              26
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "button",
+        "name": "Button",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          22,
+          12,
+          24
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          8,
+          8,
+          6
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#dc9d64",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              8,
+              8,
+              6
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "charging-port",
+        "name": "Charging port",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          0,
+          12,
+          24
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          12,
+          7,
+          6
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#7d878c",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              12,
+              7,
+              6
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      },
+      {
+        "id": "bracket",
+        "name": "Bracket",
+        "category": "Evaluation study",
+        "description": "Authored evaluation geometry; not manufacturer CAD or an AI-generated customer result.",
+        "role": "Explicit controlled design-study component.",
+        "position": [
+          22,
+          12,
+          32
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          14,
+          10,
+          4
+        ],
+        "explode": [
+          0,
+          25,
+          0
+        ],
+        "color": "#9ca4a4",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              14,
+              10,
+              4
+            ]
+          }
+        ],
+        "specs": {
+          "Hardware status": "Illustrative evaluation envelope; operation unverified"
+        },
+        "connections": []
+      }
+    ],
+    "steps": [
+      {
+        "title": "Inspect the design study",
+        "description": "These controlled fixtures test software constraints. They are not physical-build instructions.",
+        "partIds": [
+          "housing",
+          "carrier",
+          "radio",
+          "battery",
+          "button",
+          "charging-port",
+          "bracket"
+        ]
+      }
+    ],
+    "source": "curated",
+    "designBrief": "Place the ESP32-C3 module inside the housing with 1 mm clearance. Keep the housing and the button unchanged."
+  }
+}

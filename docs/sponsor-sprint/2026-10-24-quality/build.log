@@ -1,0 +1,39 @@
+
+> flare-grounded@1.0.0 build
+> next build
+
+▲ Next.js 16.4.3 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.ts took 13ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1030ms
+  Running TypeScript ...
+  Finished TypeScript in 2.3s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/12) ...
+  Generating static pages using 9 workers (3/12) 
+  Generating static pages using 9 workers (6/12) 
+  Generating static pages using 9 workers (9/12) 
+✓ Generating static pages using 9 workers (12/12) in 424ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/ask
+├ ƒ /api/catalog
+├ ƒ /api/catalog/models/[id]
+├ ƒ /api/compile
+├ ƒ /api/design-sources
+├ ƒ /api/device
+├ ƒ /api/project
+├ ƒ /api/redesign
+├ ƒ /api/review
+├ ƒ /api/status
+└ ○ /circuits
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,31 @@
+
+> flare-grounded@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /Users/aradhyamishra/Documents/Codex/2026-10-21/thsi/outputs/flare-grounded
+
+ ✓ tests/exports.test.ts (4 tests) 119ms
+ ✓ tests/device-stream.test.ts (7 tests) 133ms
+ ✓ tests/api.test.ts (38 tests) 174ms
+ ✓ tests/keyboard.test.ts (8 tests) 234ms
+ ✓ tests/conversation-api.test.ts (6 tests) 279ms
+ ✓ tests/grounded-design.test.ts (13 tests) 280ms
+ ✓ tests/domain.test.ts (29 tests) 53ms
+ ✓ tests/interaction.test.ts (8 tests) 23ms
+ ✓ tests/compile.test.ts (10 tests) 64ms
+ ✓ tests/editor.test.ts (18 tests) 42ms
+ ✓ tests/desktop-motion.test.ts (1 test) 11ms
+ ✓ tests/studio.test.ts (17 tests) 536ms
+   ✓ real Stack Chan KiCad assembly > decodes the bundled meshopt board locally, preserves component grouping and enriches source metadata  427ms
+ ✓ tests/ai-timeout.test.ts (8 tests) 16ms
+ ✓ tests/framing.test.ts (4 tests) 2ms
+ ↓ tests/live-api.test.ts (1 test | 1 skipped)
+ ✓ tests/redesign.test.ts (13 tests) 890ms
+ ✓ tests/corne.test.ts (10 tests) 953ms
+
+ Test Files  16 passed | 1 skipped (17)
+      Tests  194 passed | 1 skipped (195)
+   Start at  00:49:45
+   Duration  1.51s (transform 597ms, setup 0ms, collect 2.02s, tests 3.81s, environment 2ms, prepare 1.11s)
+

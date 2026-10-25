@@ -1,0 +1,211 @@
+{
+  "checkedAt": "2026-10-25T06:00:28.065436+00:00",
+  "origin": "http://127.0.0.1:3001/",
+  "request": "Move the ESP32-C3 module inside the Corne enclosure with 0.2 mm clearance. Leave 0.2 mm separation from the Corne PCB and acoustic insert. Keep every existing keyboard component unchanged.",
+  "sourceReferenceCorrections": "corne-bounds-repair.json",
+  "automaticallyAccepted": true,
+  "partCount": 70,
+  "existingKeyboardComponents": 69,
+  "all69OriginalPartsUnchanged": true,
+  "sourceRadioGeometryAndMetadataUnchanged": true,
+  "radioBeforePosition": [
+    85,
+    5.5,
+    -15
+  ],
+  "radioAfterPosition": [
+    0,
+    5.2,
+    -10
+  ],
+  "acceptedReviewCount": 2,
+  "acceptedImageCount": 6,
+  "reportedDurationSeconds": 66.9,
+  "designMeasurements": [
+    {
+      "id": "design-1",
+      "status": "pass",
+      "detail": "Minimum envelope-to-interior margin 2 mm; required 0.2 mm. Registered Corne design region; actual source case triangles and nine floor samples are checked separately.",
+      "partIds": [
+        "source-radio-fit",
+        "keyboard-case-base"
+      ],
+      "category": "design",
+      "required": true,
+      "title": "ESP32-C3 module \u00b7 fit study: enclosure clearance",
+      "evidence": "Move the ESP32-C3 module inside the Corne enclosure with 0.2 mm clearance.",
+      "value": 2,
+      "unit": "mm",
+      "limit": 0.2,
+      "repairPartIds": [
+        "source-radio-fit"
+      ]
+    },
+    {
+      "id": "design-2",
+      "status": "pass",
+      "detail": "1 original components keep their actual geometry; movement is permitted.",
+      "partIds": [
+        "source-radio-fit"
+      ],
+      "category": "design",
+      "required": true,
+      "title": "Original geometry preserved",
+      "evidence": "Move the ESP32-C3 module inside the Corne enclosure with 0.2 mm clearance.",
+      "value": 0,
+      "unit": "changed",
+      "limit": 0,
+      "repairPartIds": []
+    },
+    {
+      "id": "design-3",
+      "status": "pass",
+      "detail": "Conservative world envelope gap 2.1 mm; required 0.2 mm. Negative values indicate envelope overlap, not necessarily surface collision.",
+      "partIds": [
+        "source-radio-fit",
+        "keyboard-pcb"
+      ],
+      "category": "design",
+      "required": true,
+      "title": "ESP32-C3 module \u00b7 fit study: envelope separation",
+      "evidence": "Leave 0.2 mm separation from the Corne PCB and acoustic insert.",
+      "value": 2.1,
+      "unit": "mm",
+      "limit": 0.2,
+      "repairPartIds": [
+        "source-radio-fit"
+      ]
+    },
+    {
+      "id": "design-4",
+      "status": "pass",
+      "detail": "Conservative world envelope gap 0.4 mm; required 0.2 mm. Negative values indicate envelope overlap, not necessarily surface collision.",
+      "partIds": [
+        "source-radio-fit",
+        "keyboard-dampener"
+      ],
+      "category": "design",
+      "required": true,
+      "title": "ESP32-C3 module \u00b7 fit study: envelope separation",
+      "evidence": "Leave 0.2 mm separation from the Corne PCB and acoustic insert.",
+      "value": 0.4,
+      "unit": "mm",
+      "limit": 0.2,
+      "repairPartIds": [
+        "source-radio-fit"
+      ]
+    },
+    {
+      "id": "design-5",
+      "status": "pass",
+      "detail": "69 original components keep their actual geometry and placement.",
+      "partIds": [
+        "keyboard-case-base",
+        "keyboard-case-frame",
+        "keyboard-pcb",
+        "key-sw1",
+        "switch-sw1",
+        "socket-sw1",
+        "key-sw2",
+        "switch-sw2",
+        "socket-sw2",
+        "key-sw3",
+        "switch-sw3",
+        "socket-sw3",
+        "key-sw4",
+        "switch-sw4",
+        "socket-sw4",
+        "key-sw5",
+        "switch-sw5",
+        "socket-sw5",
+        "key-sw6",
+        "switch-sw6",
+        "socket-sw6",
+        "key-sw7",
+        "switch-sw7",
+        "socket-sw7",
+        "key-sw8",
+        "switch-sw8",
+        "socket-sw8",
+        "key-sw9",
+        "switch-sw9",
+        "socket-sw9",
+        "key-sw10",
+        "switch-sw10",
+        "socket-sw10",
+        "key-sw11",
+        "switch-sw11",
+        "socket-sw11",
+        "key-esc",
+        "socket-sw12",
+        "key-sw13",
+        "switch-sw13",
+        "socket-sw13",
+        "key-sw14",
+        "switch-sw14",
+        "socket-sw14",
+        "key-sw15",
+        "switch-sw15",
+        "socket-sw15",
+        "key-sw16",
+        "switch-sw16",
+        "socket-sw16",
+        "key-sw17",
+        "switch-sw17",
+        "socket-sw17",
+        "key-sw18",
+        "switch-sw18",
+        "socket-sw18",
+        "key-sw19",
+        "switch-sw19",
+        "socket-sw19",
+        "key-sw20",
+        "switch-sw20",
+        "socket-sw20",
+        "key-sw21",
+        "switch-sw21",
+        "socket-sw21",
+        "keyboard-controller",
+        "keyboard-usb",
+        "keyboard-dampener",
+        "keyboard-wired-cable"
+      ],
+      "category": "design",
+      "required": true,
+      "title": "Original geometry preserved",
+      "evidence": "Keep every existing keyboard component unchanged.",
+      "value": 0,
+      "unit": "changed",
+      "limit": 0,
+      "repairPartIds": []
+    },
+    {
+      "id": "design-retained-containment",
+      "status": "pass",
+      "detail": "1 previously valid interior placements remain supported. This is derived from the baseline geometry, not a physical-fit certificate.",
+      "partIds": [
+        "keyboard-dampener"
+      ],
+      "category": "design",
+      "required": true,
+      "title": "Existing interior placements retained",
+      "value": 0,
+      "unit": "placements lost",
+      "limit": 0,
+      "repairPartIds": []
+    }
+  ],
+  "failedChecks": [],
+  "undoExactDocumentMatch": true,
+  "redoExactDocumentMatch": true,
+  "saveAndReload": "The normal saved project restored all six measured checks and the accepted report after reload.",
+  "screenshot": "corne-measured-ui.png",
+  "history": [
+    "First attempt used the original reference and stayed a draft because of pre-existing envelope metadata errors. Its six requested geometric checks passed. The draft was exported explicitly and undo restored the original.",
+    "The corrected reference changes only authored size/spec metadata; actual geometry, source dimensions and poses are preserved.",
+    "The first corrected-reference attempt timed out on the second review. It did not accept an unreviewed correction; its UI evidence is preserved in corne-corrected-timeout.txt and .png.",
+    "The normal Review again control started a separate retry. This accepted result is that retry, not a first-attempt reliability claim."
+  ],
+  "physicalValidation": false,
+  "humanStudyRun": false
+}

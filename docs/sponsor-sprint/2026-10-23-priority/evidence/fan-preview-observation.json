@@ -1,0 +1,33 @@
+{
+  "as_of": "2026-10-23",
+  "mode": "live",
+  "prompt": "Distinctive turquoise and brushed-brass tabletop fan with 10-12 selectable components and a bounded rotor mechanism.",
+  "observations": [
+    {
+      "uiElapsedSeconds": 27,
+      "receivedParts": 1,
+      "visibleGeometry": "Weighted turquoise base, brass details and feet rendered while generation continued."
+    },
+    {
+      "uiElapsedSeconds": 60,
+      "receivedParts": 6
+    },
+    {
+      "uiElapsedSeconds": 108,
+      "receivedParts": 12
+    }
+  ],
+  "firstAttempt": {
+    "validated": false,
+    "durationMs": 111372,
+    "firstTokenMs": 12315,
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "inputTokens": 1222,
+    "outputTokens": 9239,
+    "thinkingTokens": 718,
+    "estimatedCostUsd": 0.183625
+  },
+  "outcome": "Full first attempt failed structural validation. Repair began. A development hot reload then cancelled the request around 150s; the saved 14-part cassette assembly remained intact. No completed fan is claimed.",
+  "issueAndFix": "The preview initially fitted only the base and cropped later tall parts. Camera framing now refits when the transient part count grows; separate post-fix browser check is recorded in ui-flow.json."
+}

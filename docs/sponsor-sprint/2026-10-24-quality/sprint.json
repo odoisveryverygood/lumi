@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "project": "Lumi actual-geometry review and connected editing",
+  "as_of": "2026-10-24",
+  "scope": "Local-only generate/render/review/scoped-correction loop; mounted editing; preservation and evidence. No deployment.",
+  "integrations": [
+    {
+      "integration_id": "I001",
+      "sponsor": "Google Gemini 4 Argon",
+      "purpose": "Inspect actual rendered candidates, propose scoped corrections, then review their new renders against a frozen brief.",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/image-understanding",
+      "docs_checked_at": "2026-10-24",
+      "implementation_ref": "lib/studio/quality-client.ts; lib/studio/quality-engine.ts; lib/studio/review-renderer.ts; app/api/review/route.ts; components/studio/QualityPanel.tsx",
+      "env_vars": [
+        "GEMINI_API_KEY",
+        "GEMINI_MODEL",
+        "GEMINI_SERVICE_TIER",
+        "GEMINI_TRANSPORT"
+      ],
+      "checks": [
+        {
+          "check_id": "C001",
+          "mode": "live",
+          "required": true,
+          "status": "passed",
+          "expected": "Actual candidate renders go to Argon; scoped correction is rendered and reviewed again.",
+          "observed": "Real sensor with deliberately floating ESP32 module: two reviews and six WebGL images; reported placement issues 1 to 0; original IDs, source identity and unrelated geometry preserved. Model finding, not physical verification.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "sensor-evaluation.json",
+          "evidence_sha256": "5f123285cd9364b0f57322fce922a0dd591805edf05836282dcbc3d3486a3a06"
+        },
+        {
+          "check_id": "C002",
+          "mode": "live",
+          "required": true,
+          "status": "passed",
+          "expected": "A fresh prompt generates an original object and runs automatic visual review.",
+          "observed": "Fresh desktop fan: 11 parts, 91 custom solids, sourced bearing-608, 8 mounts; one three-view Argon review reported no required correction.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "fan-evaluation.json",
+          "evidence_sha256": "c544fa4593fc3c981ffe0437dc626bdfb938031daa0e1a9f96e68c309eeaa287"
+        },
+        {
+          "check_id": "C003",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "Mounted components follow a parent edit; one undo restores all changes and report validity.",
+          "observed": "Production browser moved motor housing Y by 5 mm; motor, sourced bearing and grille followed; exported document after one undo equals baseline exactly.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "mount-edit-evidence.json",
+          "evidence_sha256": "f42fefb9c4674f479bef1d08e3d6a883e67041ea5c2c820e0b7ccd3757bdf6e2"
+        },
+        {
+          "check_id": "C004",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "Cancelling a pending review never replaces the saved document or report.",
+          "observed": "Browser cancelled during Argon inspection; saved report restored; exported document equals original reviewed fan exactly.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "cancellation-evidence.json",
+          "evidence_sha256": "cf620b79e13079343805004043decf357b19e00c20a94b8a3b77bd1f14b92e5c"
+        },
+        {
+          "check_id": "C005",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "Saved evidence survives reload/import and full comparison opens.",
+          "observed": "Production browser reloaded and imported reviewed fan; brief, recorded images and findings restored. Comparison dialog opened and Escape closed it.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "fan-comparison.png",
+          "evidence_sha256": "97347c8a103230b9e93103d15e4d373d6ef7db87025a3ba4fd317ca9cf1afddb"
+        },
+        {
+          "check_id": "C006",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "Automated geometry, transaction, scope, integrity and rollback checks pass.",
+          "observed": "275 tests passed, 4 optional billable provider suites skipped; live checks were performed separately.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "tests.log",
+          "evidence_sha256": "36d3cedf9d50d92c5b2647648a5600477c510933b43e41dbcd4a168ecc38225b"
+        },
+        {
+          "check_id": "C007",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "TypeScript check passes.",
+          "observed": "tsc --noEmit completed successfully.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "typecheck.log",
+          "evidence_sha256": "b0fd84b7788a0a331efa09c20ca6cc57b4a87531829dc150f1a7963028c554e4"
+        },
+        {
+          "check_id": "C008",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "Production build succeeds.",
+          "observed": "Next.js production build completed; production server started on 127.0.0.1:3001.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "build.log",
+          "evidence_sha256": "e84918f8a5cc023c3e372123cf38b270063e30f49654203b265addb744b052c9"
+        },
+        {
+          "check_id": "C009",
+          "mode": "local",
+          "required": true,
+          "status": "passed",
+          "expected": "Production viewport and report render visibly.",
+          "observed": "Inspected GPU fan and recorded views in production browser; latest browser console error query returned no entries.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "final-production.png",
+          "evidence_sha256": "9fdc496f8cff139635368675e5aba3eba28d65c472f44a4bd3cd000bcf448ac3"
+        },
+        {
+          "check_id": "C010",
+          "mode": "live",
+          "required": true,
+          "status": "passed",
+          "expected": "Existing server-only Gemini configuration remains available.",
+          "observed": "Production status reports available and model gemini-4-argon. This is availability evidence; C001/C002 supply actual inference evidence.",
+          "checked_at": "2026-10-24T21:03:52.217886-07:00",
+          "evidence_path": "provider-status.json",
+          "evidence_sha256": "4bb0565492803c5c9909730f18a1f891c70c122b641f40ab95ea5d8aa47fb0ea"
+        },
+        {
+          "check_id": "C011",
+          "mode": "local",
+          "required": false,
+          "status": "not_run",
+          "expected": "Force a software-only browser session and exercise complete fallback controls.",
+          "observed": "Not forced in this session. Unit tests exercised depth buffering, pixel picking, complete triangles, source CAD and saved sofa/sensor renders; current live browser used WebGL."
+        },
+        {
+          "check_id": "C012",
+          "mode": "live",
+          "required": false,
+          "status": "not_run",
+          "expected": "Evaluate all remaining object briefs with live generation and review.",
+          "observed": "Eight of twelve evaluation briefs remain unrun. Two live cases and two local regression cases are recorded; no general success rate is claimed."
+        },
+        {
+          "check_id": "C013",
+          "mode": "local",
+          "required": false,
+          "status": "not_run",
+          "expected": "Establish physical fit, structural loads, wiring and firmware behavior.",
+          "observed": "No physical hardware was connected or tested. Image findings and geometry checks do not establish these properties."
+        }
+      ]
+    }
+  ]
+}

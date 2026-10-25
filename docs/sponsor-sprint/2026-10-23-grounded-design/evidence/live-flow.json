@@ -1,0 +1,1259 @@
+{
+  "checkedAt": "2026-10-23T07:48:20.592566+00:00",
+  "reportSha256": "a96e72cb18db0832f81205e3dd3026cbfa0e2f321e5288cf75bb7c331a8f4f3d",
+  "format": "flare-grounded-design-v1",
+  "appliedParts": 76,
+  "baselineParts": 75,
+  "constraints": {
+    "minChargeMa": 100,
+    "minCapacityMah": 150,
+    "maxBatteryHeight": 4,
+    "maxBatteryWidth": null,
+    "maxBatteryDepth": null,
+    "clearance": 0.4,
+    "keepPad": false,
+    "batterySide": "any"
+  },
+  "sources": [
+    {
+      "id": "cell-150",
+      "name": "Adafruit 150 mAh \u00b7 product description",
+      "kind": "text",
+      "pages": 1,
+      "facts": [
+        {
+          "property": "maxChargeMa",
+          "value": 150,
+          "reviewed": true,
+          "citation": {
+            "sourceId": "cell-150",
+            "page": 1,
+            "quote": "and at a rate of 150mA or less."
+          }
+        }
+      ],
+      "sha256": "65f61ee8eee212ca61292746a83ed0ff0c976fad12f0cf9d927af066f76de9d3"
+    },
+    {
+      "id": "cell-500",
+      "name": "Adafruit 500 mAh \u00b7 product description",
+      "kind": "text",
+      "pages": 1,
+      "facts": [
+        {
+          "property": "maxChargeMa",
+          "value": 500,
+          "reviewed": true,
+          "citation": {
+            "sourceId": "cell-500",
+            "page": 1,
+            "quote": "and at a rate of 500mA or less."
+          }
+        }
+      ],
+      "sha256": "844b8dd1bda2f248a4b77457696d424331547b659961025abd068b3eb5d6af1f"
+    },
+    {
+      "id": "nano-spec",
+      "name": "nice!nano \u00b7 manufacturer specifications",
+      "kind": "text",
+      "pages": 1,
+      "facts": [
+        {
+          "property": "chargeModeMa",
+          "value": 100,
+          "reviewed": true,
+          "citation": {
+            "sourceId": "nano-spec",
+            "page": 1,
+            "quote": "4.2V Lithium @ 100/500mA rate"
+          }
+        },
+        {
+          "property": "chargeModeMa",
+          "value": 500,
+          "reviewed": true,
+          "citation": {
+            "sourceId": "nano-spec",
+            "page": 1,
+            "quote": "4.2V Lithium @ 100/500mA rate"
+          }
+        }
+      ],
+      "sha256": "fcd04808aa5aa29dc23ef194a8740d1f68fb28bd7a35d5eca27f1e0b6ef47d6d"
+    },
+    {
+      "id": "nano-guide",
+      "name": "nice!nano \u00b7 battery and integration guide",
+      "kind": "text",
+      "pages": 1,
+      "facts": [],
+      "sha256": "090005c9e145873158a9bcbf3da29ca8ed352d1d38ed4460de00aae74d6186b9"
+    },
+    {
+      "id": "xiao-guide",
+      "name": "Seeed XIAO \u00b7 hardware documentation",
+      "kind": "text",
+      "pages": 1,
+      "facts": [
+        {
+          "property": "chargeModeMa",
+          "value": 50,
+          "reviewed": true,
+          "citation": {
+            "sourceId": "xiao-guide",
+            "page": 1,
+            "quote": "The battery charging current can be set to approximately 50 mA or 100 mA using P0.13. Configure P0.13 as a high-impedance input with no pull-up or pull-down to select 50 mA, or as an output driven LOW to select 100 mA. These values apply during the constant-current charging phase; the actual charging current decreases as the battery approaches full charge."
+          }
+        },
+        {
+          "property": "chargeModeMa",
+          "value": 100,
+          "reviewed": true,
+          "citation": {
+            "sourceId": "xiao-guide",
+            "page": 1,
+            "quote": "The battery charging current can be set to approximately 50 mA or 100 mA using P0.13. Configure P0.13 as a high-impedance input with no pull-up or pull-down to select 50 mA, or as an output driven LOW to select 100 mA. These values apply during the constant-current charging phase; the actual charging current decreases as the battery approaches full charge."
+          }
+        }
+      ],
+      "sha256": "706525d05ad3bdf8282c528070801c5114689989c8e6a0972247dfeb301e92ff"
+    },
+    {
+      "id": "corne-build",
+      "name": "Corne \u00b7 pinned original build guide",
+      "kind": "text",
+      "pages": 1,
+      "facts": [],
+      "sha256": "d9b7f4443fb9db81a118cb639addfcfc80c64dd1311ef9e852faf0a3f65607df"
+    },
+    {
+      "id": "file-9c2a3168b51e2a87996a",
+      "name": "Adafruit-150mAh-product-description.txt",
+      "kind": "text",
+      "pages": 1,
+      "facts": [
+        {
+          "property": "maxChargeMa",
+          "value": 150,
+          "citation": {
+            "sourceId": "file-9c2a3168b51e2a87996a",
+            "page": 1,
+            "quote": "at a rate of 150mA or less."
+          },
+          "reviewed": true
+        }
+      ],
+      "sha256": "9c2a3168b51e2a87996a95216ac6758fd4dd7fa3f3b200a25b3ca29fdaa8016b"
+    },
+    {
+      "id": "file-20a5584d0c17a153565f",
+      "name": "Adafruit-150mAh-datasheet.pdf",
+      "kind": "pdf",
+      "pages": 5,
+      "facts": [],
+      "sha256": "20a5584d0c17a153565f6b0f9b40e875ba6aa184d1bc3cbc13ebcb332819489d"
+    }
+  ],
+  "revisions": [
+    {
+      "request": "Make this keyboard wireless. Keep the original case and USB charging. Use normal 100 mA charging and keep the battery under 4 mm tall.",
+      "status": "ready",
+      "model": "gemini-4-argon",
+      "constraints": {
+        "minChargeMa": 100,
+        "minCapacityMah": 150,
+        "maxBatteryHeight": 4,
+        "maxBatteryWidth": null,
+        "maxBatteryDepth": null,
+        "clearance": 0.4,
+        "keepPad": false,
+        "batterySide": "any"
+      },
+      "attempts": [
+        {
+          "number": 1,
+          "summary": "Removing the optional acoustic insert fits the 3.8 mm Adafruit 150 mAh LiPo and 3.2 mm nice!nano BLE controller at 100 mA normal charging under the Corne sockets; nice!nano width/depth use a community footprint and wiring is unverified.",
+          "chargeCurrentMa": 100,
+          "battery": "adafruit-1317",
+          "failedChecks": []
+        }
+      ],
+      "checks": [
+        {
+          "id": "preserve",
+          "status": "pass",
+          "title": "Original case, PCB and keys preserved",
+          "detail": "Every original rigid component retains its geometry and assembled placement.",
+          "partIds": []
+        },
+        {
+          "id": "radio-dimensions",
+          "status": "unverified",
+          "title": "Radio footprint source",
+          "detail": "Height is manufacturer specified. Horizontal envelope comes from a community KiCad drawing, including its USB outline; it requires manufacturer CAD verification.",
+          "partIds": [
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "capacity",
+          "status": "pass",
+          "title": "Battery capacity",
+          "detail": "150 mAh stated capacity; minimum 150 mAh. Runtime is not calculated.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "maxBatteryHeight",
+          "status": "pass",
+          "title": "Battery height",
+          "detail": "3.8 mm component dimension; maximum 4 mm.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "side",
+          "status": "pass",
+          "title": "Battery placement",
+          "detail": "No side restriction.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "pad",
+          "status": "pass",
+          "title": "Acoustic pad constraint",
+          "detail": "Pad removal is proposed to create vertical space.",
+          "partIds": []
+        },
+        {
+          "id": "usb",
+          "status": "pass",
+          "title": "USB charging architecture",
+          "detail": "Retained USB receptacle is linked to the board\u2019s integrated charger in the object graph. Adapter wiring is unverified.",
+          "partIds": [
+            "keyboard-usb",
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "cavity-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: case interior",
+          "detail": "Envelope remains inside the conservative lower-case region with 0.4 mm boundary allowance.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base",
+            "keyboard-pcb"
+          ]
+        },
+        {
+          "id": "floor-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: source floor coverage",
+          "detail": "The component footprint is sampled at corners, edge midpoints and center against the original CAD floor. Tolerance and mounting remain unverified.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base"
+          ]
+        },
+        {
+          "id": "clearance-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: envelope clearance",
+          "detail": "No overlap with modeled rigid solids at 0.4 mm allowance. Round and rotated solids use conservative world-space bounds.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "space-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: vertical room",
+          "detail": "At this footprint, the largest modeled vertical gap is 4.28 mm; the component needs 3.80 mm. Allowance is already included.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base",
+            "keyboard-pcb",
+            "socket-sw14"
+          ],
+          "metrics": {
+            "requiredMm": 3.8,
+            "availableMm": 4.275,
+            "shortfallMm": 0
+          },
+          "measurement": {
+            "from": [
+              -6.99,
+              2.4,
+              -11
+            ],
+            "to": [
+              -6.99,
+              6.674999999999999,
+              -11
+            ],
+            "label": "4.28 mm available",
+            "detail": "3.80 mm required",
+            "tone": "pass"
+          }
+        },
+        {
+          "id": "cavity-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: case interior",
+          "detail": "Envelope remains inside the conservative lower-case region with 0.4 mm boundary allowance.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base",
+            "keyboard-pcb"
+          ]
+        },
+        {
+          "id": "floor-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: source floor coverage",
+          "detail": "The component footprint is sampled at corners, edge midpoints and center against the original CAD floor. Tolerance and mounting remain unverified.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base"
+          ]
+        },
+        {
+          "id": "clearance-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: envelope clearance",
+          "detail": "No overlap with modeled rigid solids at 0.4 mm allowance. Round and rotated solids use conservative world-space bounds.",
+          "partIds": [
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "space-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: vertical room",
+          "detail": "At this footprint, the largest modeled vertical gap is 4.28 mm; the component needs 3.20 mm. Allowance is already included.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base",
+            "keyboard-pcb",
+            "socket-sw2"
+          ],
+          "metrics": {
+            "requiredMm": 3.2,
+            "availableMm": 4.275,
+            "shortfallMm": 0
+          },
+          "measurement": {
+            "from": [
+              42.760000000000005,
+              2.4,
+              -11
+            ],
+            "to": [
+              42.760000000000005,
+              6.674999999999999,
+              -11
+            ],
+            "label": "4.28 mm available",
+            "detail": "3.20 mm required",
+            "tone": "pass"
+          }
+        },
+        {
+          "id": "physical",
+          "status": "unverified",
+          "title": "Physical and electrical verification",
+          "detail": "Original enclosure/plate geometry with registered assembly and labeled reconstructed details. Tolerances, mounting, battery swelling, leads, antenna clearance, firmware, charge current, adapter wiring and real-world operation have not been verified.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "source-charge-mode",
+          "title": "Documented charger setting",
+          "status": "pass",
+          "detail": "100 mA is a documented setting for the proposed controller. Selecting and wiring that mode remain unverified.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ],
+          "citations": [
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            }
+          ]
+        },
+        {
+          "id": "source-charge-limit",
+          "title": "Battery charge-current limit",
+          "status": "pass",
+          "detail": "100 mA proposed charge current \u2264 150 mA documented battery limit. This numerical comparison does not verify charger termination, protection, wiring or real hardware.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ],
+          "citations": [
+            {
+              "sourceId": "cell-150",
+              "page": 1,
+              "quote": "and at a rate of 150mA or less."
+            },
+            {
+              "sourceId": "file-9c2a3168b51e2a87996a",
+              "page": 1,
+              "quote": "at a rate of 150mA or less."
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            }
+          ]
+        },
+        {
+          "id": "source-charge-request",
+          "title": "Requested charging rate",
+          "status": "pass",
+          "detail": "100 mA proposed; your minimum is 100 mA.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "request": "Use at least 500 mA charging. Keep the battery under 4 mm tall and all other constraints.",
+      "status": "blocked",
+      "model": "gemini-4-argon",
+      "constraints": {
+        "minChargeMa": 500,
+        "minCapacityMah": 150,
+        "maxBatteryHeight": 4,
+        "maxBatteryWidth": null,
+        "maxBatteryDepth": null,
+        "clearance": 0.4,
+        "keepPad": false,
+        "batterySide": "any"
+      },
+      "attempts": [
+        {
+          "number": 1,
+          "summary": "500 mA charging conflicts with the 4 mm height limit: the 3.8 mm Adafruit 150 mAh LiPo is limited to 150 mA charging, while the 500 mAh LiPo is 4.75 mm tall and exceeds the 4 mm constraint and 4.28 mm socket gap.",
+          "chargeCurrentMa": 500,
+          "battery": "adafruit-1317",
+          "failedChecks": [
+            {
+              "id": "source-charge-limit",
+              "title": "Battery charge-current limit",
+              "status": "fail",
+              "detail": "500 mA proposed charge current > 150 mA documented battery limit. The cell fits geometrically, but this charging setting exceeds its stated limit.",
+              "partIds": [
+                "wireless-battery",
+                "wireless-controller"
+              ],
+              "citations": [
+                {
+                  "sourceId": "cell-150",
+                  "page": 1,
+                  "quote": "and at a rate of 150mA or less."
+                },
+                {
+                  "sourceId": "file-9c2a3168b51e2a87996a",
+                  "page": 1,
+                  "quote": "at a rate of 150mA or less."
+                },
+                {
+                  "sourceId": "nano-spec",
+                  "page": 1,
+                  "quote": "4.2V Lithium @ 100/500mA rate"
+                },
+                {
+                  "sourceId": "nano-spec",
+                  "page": 1,
+                  "quote": "4.2V Lithium @ 100/500mA rate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "summary": "500 mA charging conflicts with the 4 mm height limit: the 3.8 mm Adafruit 150 mAh LiPo is limited to 150 mA charging, while the 500 mAh LiPo is 4.75 mm tall and exceeds the 4 mm constraint and 4.28 mm socket gap.",
+          "chargeCurrentMa": 500,
+          "battery": "adafruit-1317",
+          "failedChecks": [
+            {
+              "id": "source-charge-limit",
+              "title": "Battery charge-current limit",
+              "status": "fail",
+              "detail": "500 mA proposed charge current > 150 mA documented battery limit. The cell fits geometrically, but this charging setting exceeds its stated limit.",
+              "partIds": [
+                "wireless-battery",
+                "wireless-controller"
+              ],
+              "citations": [
+                {
+                  "sourceId": "cell-150",
+                  "page": 1,
+                  "quote": "and at a rate of 150mA or less."
+                },
+                {
+                  "sourceId": "file-9c2a3168b51e2a87996a",
+                  "page": 1,
+                  "quote": "at a rate of 150mA or less."
+                },
+                {
+                  "sourceId": "nano-spec",
+                  "page": 1,
+                  "quote": "4.2V Lithium @ 100/500mA rate"
+                },
+                {
+                  "sourceId": "nano-spec",
+                  "page": 1,
+                  "quote": "4.2V Lithium @ 100/500mA rate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "summary": "No catalog battery meets both 500 mA charging and the 4 mm height limit: the 3.8 mm Adafruit 150 mAh LiPo is limited to 150 mA, while the 500 mAh LiPo is 4.75 mm tall (nice!nano width/depth use a community drawing).",
+          "chargeCurrentMa": 500,
+          "battery": "adafruit-1317",
+          "failedChecks": [
+            {
+              "id": "source-charge-limit",
+              "title": "Battery charge-current limit",
+              "status": "fail",
+              "detail": "500 mA proposed charge current > 150 mA documented battery limit. The cell fits geometrically, but this charging setting exceeds its stated limit.",
+              "partIds": [
+                "wireless-battery",
+                "wireless-controller"
+              ],
+              "citations": [
+                {
+                  "sourceId": "cell-150",
+                  "page": 1,
+                  "quote": "and at a rate of 150mA or less."
+                },
+                {
+                  "sourceId": "file-9c2a3168b51e2a87996a",
+                  "page": 1,
+                  "quote": "at a rate of 150mA or less."
+                },
+                {
+                  "sourceId": "nano-spec",
+                  "page": 1,
+                  "quote": "4.2V Lithium @ 100/500mA rate"
+                },
+                {
+                  "sourceId": "nano-spec",
+                  "page": 1,
+                  "quote": "4.2V Lithium @ 100/500mA rate"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "id": "preserve",
+          "status": "pass",
+          "title": "Original case, PCB and keys preserved",
+          "detail": "Every original rigid component retains its geometry and assembled placement.",
+          "partIds": []
+        },
+        {
+          "id": "radio-dimensions",
+          "status": "unverified",
+          "title": "Radio footprint source",
+          "detail": "Height is manufacturer specified. Horizontal envelope comes from a community KiCad drawing, including its USB outline; it requires manufacturer CAD verification.",
+          "partIds": [
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "capacity",
+          "status": "pass",
+          "title": "Battery capacity",
+          "detail": "150 mAh stated capacity; minimum 150 mAh. Runtime is not calculated.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "maxBatteryHeight",
+          "status": "pass",
+          "title": "Battery height",
+          "detail": "3.8 mm component dimension; maximum 4 mm.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "side",
+          "status": "pass",
+          "title": "Battery placement",
+          "detail": "No side restriction.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "pad",
+          "status": "pass",
+          "title": "Acoustic pad constraint",
+          "detail": "Pad removal is proposed to create vertical space.",
+          "partIds": []
+        },
+        {
+          "id": "usb",
+          "status": "pass",
+          "title": "USB charging architecture",
+          "detail": "Retained USB receptacle is linked to the board\u2019s integrated charger in the object graph. Adapter wiring is unverified.",
+          "partIds": [
+            "keyboard-usb",
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "cavity-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: case interior",
+          "detail": "Envelope remains inside the conservative lower-case region with 0.4 mm boundary allowance.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base",
+            "keyboard-pcb"
+          ]
+        },
+        {
+          "id": "floor-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: source floor coverage",
+          "detail": "The component footprint is sampled at corners, edge midpoints and center against the original CAD floor. Tolerance and mounting remain unverified.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base"
+          ]
+        },
+        {
+          "id": "clearance-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: envelope clearance",
+          "detail": "No overlap with modeled rigid solids at 0.4 mm allowance. Round and rotated solids use conservative world-space bounds.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "space-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: vertical room",
+          "detail": "At this footprint, the largest modeled vertical gap is 4.28 mm; the component needs 3.80 mm. Allowance is already included.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base",
+            "keyboard-pcb",
+            "socket-sw14"
+          ],
+          "metrics": {
+            "requiredMm": 3.8,
+            "availableMm": 4.275,
+            "shortfallMm": 0
+          },
+          "measurement": {
+            "from": [
+              -6.99,
+              2.4,
+              -11
+            ],
+            "to": [
+              -6.99,
+              6.674999999999999,
+              -11
+            ],
+            "label": "4.28 mm available",
+            "detail": "3.80 mm required",
+            "tone": "pass"
+          }
+        },
+        {
+          "id": "cavity-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: case interior",
+          "detail": "Envelope remains inside the conservative lower-case region with 0.4 mm boundary allowance.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base",
+            "keyboard-pcb"
+          ]
+        },
+        {
+          "id": "floor-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: source floor coverage",
+          "detail": "The component footprint is sampled at corners, edge midpoints and center against the original CAD floor. Tolerance and mounting remain unverified.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base"
+          ]
+        },
+        {
+          "id": "clearance-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: envelope clearance",
+          "detail": "No overlap with modeled rigid solids at 0.4 mm allowance. Round and rotated solids use conservative world-space bounds.",
+          "partIds": [
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "space-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: vertical room",
+          "detail": "At this footprint, the largest modeled vertical gap is 4.28 mm; the component needs 3.20 mm. Allowance is already included.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base",
+            "keyboard-pcb",
+            "socket-sw2"
+          ],
+          "metrics": {
+            "requiredMm": 3.2,
+            "availableMm": 4.275,
+            "shortfallMm": 0
+          },
+          "measurement": {
+            "from": [
+              42.760000000000005,
+              2.4,
+              -11
+            ],
+            "to": [
+              42.760000000000005,
+              6.674999999999999,
+              -11
+            ],
+            "label": "4.28 mm available",
+            "detail": "3.20 mm required",
+            "tone": "pass"
+          }
+        },
+        {
+          "id": "physical",
+          "status": "unverified",
+          "title": "Physical and electrical verification",
+          "detail": "Original enclosure/plate geometry with registered assembly and labeled reconstructed details. Tolerances, mounting, battery swelling, leads, antenna clearance, firmware, charge current, adapter wiring and real-world operation have not been verified.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "source-charge-mode",
+          "title": "Documented charger setting",
+          "status": "pass",
+          "detail": "500 mA is a documented setting for the proposed controller. Selecting and wiring that mode remain unverified.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ],
+          "citations": [
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            }
+          ]
+        },
+        {
+          "id": "source-charge-limit",
+          "title": "Battery charge-current limit",
+          "status": "fail",
+          "detail": "500 mA proposed charge current > 150 mA documented battery limit. The cell fits geometrically, but this charging setting exceeds its stated limit.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ],
+          "citations": [
+            {
+              "sourceId": "cell-150",
+              "page": 1,
+              "quote": "and at a rate of 150mA or less."
+            },
+            {
+              "sourceId": "file-9c2a3168b51e2a87996a",
+              "page": 1,
+              "quote": "at a rate of 150mA or less."
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            }
+          ]
+        },
+        {
+          "id": "source-charge-request",
+          "title": "Requested charging rate",
+          "status": "pass",
+          "detail": "500 mA proposed; your minimum is 500 mA.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ]
+        }
+      ]
+    },
+    {
+      "request": "Use normal 100 mA charging. Keep the battery under 4 mm tall and all other constraints.",
+      "status": "ready",
+      "model": "gemini-4-argon",
+      "constraints": {
+        "minChargeMa": 100,
+        "minCapacityMah": 150,
+        "maxBatteryHeight": 4,
+        "maxBatteryWidth": null,
+        "maxBatteryDepth": null,
+        "clearance": 0.4,
+        "keepPad": false,
+        "batterySide": "any"
+      },
+      "attempts": [
+        {
+          "number": 1,
+          "summary": "Removing the optional acoustic insert fits the 3.8 mm Adafruit 150 mAh LiPo and 3.2 mm nice!nano BLE controller at 100 mA normal charging under the Corne sockets; nice!nano width/depth use a community footprint and wiring is unverified.",
+          "chargeCurrentMa": 100,
+          "battery": "adafruit-1317",
+          "failedChecks": []
+        }
+      ],
+      "checks": [
+        {
+          "id": "preserve",
+          "status": "pass",
+          "title": "Original case, PCB and keys preserved",
+          "detail": "Every original rigid component retains its geometry and assembled placement.",
+          "partIds": []
+        },
+        {
+          "id": "radio-dimensions",
+          "status": "unverified",
+          "title": "Radio footprint source",
+          "detail": "Height is manufacturer specified. Horizontal envelope comes from a community KiCad drawing, including its USB outline; it requires manufacturer CAD verification.",
+          "partIds": [
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "capacity",
+          "status": "pass",
+          "title": "Battery capacity",
+          "detail": "150 mAh stated capacity; minimum 150 mAh. Runtime is not calculated.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "maxBatteryHeight",
+          "status": "pass",
+          "title": "Battery height",
+          "detail": "3.8 mm component dimension; maximum 4 mm.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "side",
+          "status": "pass",
+          "title": "Battery placement",
+          "detail": "No side restriction.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "pad",
+          "status": "pass",
+          "title": "Acoustic pad constraint",
+          "detail": "Pad removal is proposed to create vertical space.",
+          "partIds": []
+        },
+        {
+          "id": "usb",
+          "status": "pass",
+          "title": "USB charging architecture",
+          "detail": "Retained USB receptacle is linked to the board\u2019s integrated charger in the object graph. Adapter wiring is unverified.",
+          "partIds": [
+            "keyboard-usb",
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "cavity-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: case interior",
+          "detail": "Envelope remains inside the conservative lower-case region with 0.4 mm boundary allowance.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base",
+            "keyboard-pcb"
+          ]
+        },
+        {
+          "id": "floor-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: source floor coverage",
+          "detail": "The component footprint is sampled at corners, edge midpoints and center against the original CAD floor. Tolerance and mounting remain unverified.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base"
+          ]
+        },
+        {
+          "id": "clearance-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: envelope clearance",
+          "detail": "No overlap with modeled rigid solids at 0.4 mm allowance. Round and rotated solids use conservative world-space bounds.",
+          "partIds": [
+            "wireless-battery"
+          ]
+        },
+        {
+          "id": "space-wireless-battery",
+          "status": "pass",
+          "title": "Adafruit 150 mAh LiPo: vertical room",
+          "detail": "At this footprint, the largest modeled vertical gap is 4.28 mm; the component needs 3.80 mm. Allowance is already included.",
+          "partIds": [
+            "wireless-battery",
+            "keyboard-case-base",
+            "keyboard-pcb",
+            "socket-sw14"
+          ],
+          "metrics": {
+            "requiredMm": 3.8,
+            "availableMm": 4.275,
+            "shortfallMm": 0
+          },
+          "measurement": {
+            "from": [
+              -6.99,
+              2.4,
+              -11
+            ],
+            "to": [
+              -6.99,
+              6.674999999999999,
+              -11
+            ],
+            "label": "4.28 mm available",
+            "detail": "3.80 mm required",
+            "tone": "pass"
+          }
+        },
+        {
+          "id": "cavity-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: case interior",
+          "detail": "Envelope remains inside the conservative lower-case region with 0.4 mm boundary allowance.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base",
+            "keyboard-pcb"
+          ]
+        },
+        {
+          "id": "floor-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: source floor coverage",
+          "detail": "The component footprint is sampled at corners, edge midpoints and center against the original CAD floor. Tolerance and mounting remain unverified.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base"
+          ]
+        },
+        {
+          "id": "clearance-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: envelope clearance",
+          "detail": "No overlap with modeled rigid solids at 0.4 mm allowance. Round and rotated solids use conservative world-space bounds.",
+          "partIds": [
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "space-wireless-controller",
+          "status": "pass",
+          "title": "nice!nano BLE controller: vertical room",
+          "detail": "At this footprint, the largest modeled vertical gap is 4.28 mm; the component needs 3.20 mm. Allowance is already included.",
+          "partIds": [
+            "wireless-controller",
+            "keyboard-case-base",
+            "keyboard-pcb",
+            "socket-sw2"
+          ],
+          "metrics": {
+            "requiredMm": 3.2,
+            "availableMm": 4.275,
+            "shortfallMm": 0
+          },
+          "measurement": {
+            "from": [
+              42.760000000000005,
+              2.4,
+              -11
+            ],
+            "to": [
+              42.760000000000005,
+              6.674999999999999,
+              -11
+            ],
+            "label": "4.28 mm available",
+            "detail": "3.20 mm required",
+            "tone": "pass"
+          }
+        },
+        {
+          "id": "physical",
+          "status": "unverified",
+          "title": "Physical and electrical verification",
+          "detail": "Original enclosure/plate geometry with registered assembly and labeled reconstructed details. Tolerances, mounting, battery swelling, leads, antenna clearance, firmware, charge current, adapter wiring and real-world operation have not been verified.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ]
+        },
+        {
+          "id": "source-charge-mode",
+          "title": "Documented charger setting",
+          "status": "pass",
+          "detail": "100 mA is a documented setting for the proposed controller. Selecting and wiring that mode remain unverified.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ],
+          "citations": [
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            }
+          ]
+        },
+        {
+          "id": "source-charge-limit",
+          "title": "Battery charge-current limit",
+          "status": "pass",
+          "detail": "100 mA proposed charge current \u2264 150 mA documented battery limit. This numerical comparison does not verify charger termination, protection, wiring or real hardware.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ],
+          "citations": [
+            {
+              "sourceId": "cell-150",
+              "page": 1,
+              "quote": "and at a rate of 150mA or less."
+            },
+            {
+              "sourceId": "file-9c2a3168b51e2a87996a",
+              "page": 1,
+              "quote": "at a rate of 150mA or less."
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            },
+            {
+              "sourceId": "nano-spec",
+              "page": 1,
+              "quote": "4.2V Lithium @ 100/500mA rate"
+            }
+          ]
+        },
+        {
+          "id": "source-charge-request",
+          "title": "Requested charging rate",
+          "status": "pass",
+          "detail": "100 mA proposed; your minimum is 100 mA.",
+          "partIds": [
+            "wireless-battery",
+            "wireless-controller"
+          ]
+        }
+      ]
+    }
+  ],
+  "vision": [
+    {
+      "model": "gemini-4-argon",
+      "imageSha256": "874a1a5f3a94bb852fcfd82528391178eec63acb43cf110427748b769d460386",
+      "receivedAt": "2026-10-23T07:46:47.743Z",
+      "observations": [
+        "The Adafruit 150 mAh LiPo (left) and nice!nano BLE controller (right) are rendered as small, distant solids inside a faint wireframe/ghosted outline of the Corne enclosure base, with dashed conceptual relationship arcs between them.",
+        "The Corne PCB, underside hot-swap sockets, switch plate, MX switches, and retained USB-C receptacle are ghosted or hidden in this isolated view, so vertical and lateral obstructions are not visually apparent.",
+        "The rendered battery box omits the 100\u2013127.5 mm wire leads and JST-PH-2P plug shown on page 5 of the PKCELL datasheet (which also notes 'Reverse the plug JST PH-2P' and a 4.0+/-0.3mm thickness tolerance alongside Adafruit's stated 3.8 mm thickness), and pixel rendering cannot verify numeric clearance, wiring, or electrical operation."
+      ],
+      "documentFingerprint": "6fbd587"
+    }
+  ],
+  "conversation": [
+    {
+      "role": "user",
+      "text": "In the uploaded Adafruit PDF, what charging voltage is specified and on which page? Does that prove the proposed wiring works?",
+      "citations": []
+    },
+    {
+      "role": "assistant",
+      "text": "The uploaded Adafruit 150 mAh LiPo datasheet specifies a charging voltage of 4.2 V on page 2. However, this battery specification does not verify the proposed keyboard wiring, connector polarity, retained USB-C adapter circuit, or controller electrical integration.",
+      "citations": []
+    },
+    {
+      "role": "user",
+      "text": "Make this keyboard wireless. Keep the original case and USB charging. Use normal 100 mA charging and keep the battery under 4 mm tall."
+    },
+    {
+      "role": "assistant",
+      "text": "Removing the optional acoustic insert fits the 3.8 mm Adafruit 150 mAh LiPo and 3.2 mm nice!nano BLE controller at 100 mA normal charging under the Corne sockets; nice!nano width/depth use a community footprint and wiring is unverified.",
+      "citations": [
+        {
+          "sourceId": "cell-150",
+          "page": 1,
+          "quote": "Size: 19.75mm x 26.02mm x 3.8mm / 0.77\" x 1.02\" x 0.14\""
+        },
+        {
+          "sourceId": "cell-150",
+          "page": 1,
+          "quote": "and at a rate of 150mA or less."
+        },
+        {
+          "sourceId": "nano-spec",
+          "page": 1,
+          "quote": "With a mid-mount USB-C port, the nice!nano is only 3.2mm thick."
+        },
+        {
+          "sourceId": "nano-spec",
+          "page": 1,
+          "quote": "4.2V Lithium @ 100/500mA rate"
+        }
+      ],
+      "model": "gemini-4-argon"
+    },
+    {
+      "role": "user",
+      "text": "Use at least 500 mA charging. Keep the battery under 4 mm tall and all other constraints."
+    },
+    {
+      "role": "assistant",
+      "text": "No catalog battery meets both 500 mA charging and the 4 mm height limit: the 3.8 mm Adafruit 150 mAh LiPo is limited to 150 mA, while the 500 mAh LiPo is 4.75 mm tall (nice!nano width/depth use a community drawing).",
+      "citations": [
+        {
+          "sourceId": "file-9c2a3168b51e2a87996a",
+          "page": 1,
+          "quote": "at a rate of 150mA or less."
+        },
+        {
+          "sourceId": "file-20a5584d0c17a153565f",
+          "page": 2,
+          "quote": "Constant current 1C5A"
+        },
+        {
+          "sourceId": "cell-500",
+          "page": 1,
+          "quote": "Size: 29mm x 36mm x 4.75mm / 1.15\" x 1.4\" x 0.19\""
+        },
+        {
+          "sourceId": "nano-spec",
+          "page": 1,
+          "quote": "4.2V Lithium @ 100/500mA rate"
+        }
+      ],
+      "model": "gemini-4-argon"
+    },
+    {
+      "role": "user",
+      "text": "Use normal 100 mA charging. Keep the battery under 4 mm tall and all other constraints."
+    },
+    {
+      "role": "assistant",
+      "text": "Removing the optional acoustic insert fits the 3.8 mm Adafruit 150 mAh LiPo and 3.2 mm nice!nano BLE controller at 100 mA normal charging under the Corne sockets; nice!nano width/depth use a community footprint and wiring is unverified.",
+      "citations": [
+        {
+          "sourceId": "nano-spec",
+          "page": 1,
+          "quote": "4.2V Lithium @ 100/500mA rate"
+        },
+        {
+          "sourceId": "cell-150",
+          "page": 1,
+          "quote": "and at a rate of 150mA or less."
+        }
+      ],
+      "model": "gemini-4-argon"
+    },
+    {
+      "role": "user",
+      "text": "Inspect this actual canvas view against the design documents. Describe what is visible, what is obscured, and what this image cannot verify."
+    },
+    {
+      "role": "assistant",
+      "text": "The current canvas view shows the Adafruit 150 mAh LiPo on the left and the nice!nano BLE controller on the right inside a faint ghosted outline of the Corne enclosure, while the PCB, hot-swap sockets, switches, and USB-C receptacle are hidden or faded out. Neither this rendered view nor the component documents can verify exact numeric clearances, battery lead and JST connector routing, polarity, or physical and electrical compatibility, which depend on measured geometry checks and real hardware engineering.",
+      "citations": [
+        {
+          "sourceId": "cell-150",
+          "page": 1,
+          "quote": "Size: 19.75mm x 26.02mm x 3.8mm / 0.77\" x 1.02\" x 0.14\""
+        },
+        {
+          "sourceId": "file-20a5584d0c17a153565f",
+          "page": 5,
+          "quote": "11 Battery pack drawings"
+        },
+        {
+          "sourceId": "nano-spec",
+          "page": 1,
+          "quote": "With a mid-mount USB-C port, the nice!nano is only 3.2mm thick."
+        }
+      ],
+      "model": "gemini-4-argon"
+    }
+  ]
+}

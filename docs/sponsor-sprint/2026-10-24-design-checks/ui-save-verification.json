@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-25T05:32:17.137542+00:00",
+  "origin": "http://127.0.0.1:3001",
+  "sourceFile": "saved-reviewed-study.part.json",
+  "normalUiExport": "ui-saved-study.part.json",
+  "exactParsedDocumentPreserved": true,
+  "observed": [
+    "The prior saved fan was exported before importing the measured study.",
+    "The normal object-picker import accepted the reviewed project.",
+    "Review restored 4 of 4 measured checks, including -41.6 mm original and first-attempt margin, and 3.8 mm retained margin against the 1 mm requirement.",
+    "The explanation displayed the exact original request and geometric measurement basis.",
+    "Focusing the clearance check focused the source radio and produced its contextual Lumi guidance.",
+    "The full-size comparison displayed both recorded images; Escape closed it.",
+    "The ordinary project export was downloaded. Reload restored the measured check panel.",
+    "The main 3D viewport was visibly rendering the imported study; the accessibility tree also includes fallback canvas text, which alone is not a GPU-failure observation."
+  ],
+  "screenshot": "measured-review-ui.png",
+  "newProviderCalls": false,
+  "limits": [
+    "This is save/import/render/interaction verification, not an additional independent generation trial.",
+    "The UI project is an accepted controlled study from the fixed evaluation; its measurements are rechecked separately by the opt-in offline test."
+  ]
+}

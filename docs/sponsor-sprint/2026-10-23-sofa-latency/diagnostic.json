@@ -1,0 +1,121 @@
+{
+  "completed": true,
+  "durationMs": 78214,
+  "performance": {
+    "transport": "interactions",
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "durationMs": 78202,
+    "firstTokenMs": 2306,
+    "inputTokens": 1052,
+    "outputTokens": 6702,
+    "thinkingTokens": 0,
+    "cachedTokens": 0,
+    "estimatedCostUsd": 0.124423
+  },
+  "parts": 14,
+  "progress": [
+    {
+      "atMs": 0,
+      "message": "Designing the components and assembly…"
+    },
+    {
+      "atMs": 226,
+      "message": "Gemini is designing your object…"
+    },
+    {
+      "atMs": 2307,
+      "message": "Receiving component geometry and the assembly guide…"
+    },
+    {
+      "atMs": 9178,
+      "message": "1 custom component received. Building the rest…",
+      "parts": 1
+    },
+    {
+      "atMs": 12507,
+      "message": "2 custom components received. Building the rest…",
+      "parts": 2
+    },
+    {
+      "atMs": 15461,
+      "message": "3 custom components received. Building the rest…",
+      "parts": 3
+    },
+    {
+      "atMs": 19313,
+      "message": "4 custom components received. Building the rest…",
+      "parts": 4
+    },
+    {
+      "atMs": 22536,
+      "message": "5 custom components received. Building the rest…",
+      "parts": 5
+    },
+    {
+      "atMs": 24951,
+      "message": "6 custom components received. Building the rest…",
+      "parts": 6
+    },
+    {
+      "atMs": 27960,
+      "message": "7 custom components received. Building the rest…",
+      "parts": 7
+    },
+    {
+      "atMs": 30653,
+      "message": "8 custom components received. Building the rest…",
+      "parts": 8
+    },
+    {
+      "atMs": 33795,
+      "message": "9 custom components received. Building the rest…",
+      "parts": 9
+    },
+    {
+      "atMs": 38441,
+      "message": "10 custom components received. Building the rest…",
+      "parts": 10
+    },
+    {
+      "atMs": 44120,
+      "message": "11 custom components received. Building the rest…",
+      "parts": 11
+    },
+    {
+      "atMs": 52050,
+      "message": "12 custom components received. Building the rest…",
+      "parts": 12
+    },
+    {
+      "atMs": 56418,
+      "message": "13 custom components received. Building the rest…",
+      "parts": 13
+    },
+    {
+      "atMs": 59360,
+      "message": "14 custom components received. Building the rest…",
+      "parts": 14
+    },
+    {
+      "atMs": 78205,
+      "message": "Geometry received. Checking the assembly…",
+      "performance": {
+        "transport": "interactions",
+        "requestedTier": "priority",
+        "servedTier": "priority",
+        "durationMs": 78202,
+        "firstTokenMs": 2306,
+        "inputTokens": 1052,
+        "outputTokens": 6702,
+        "thinkingTokens": 0,
+        "cachedTokens": 0,
+        "estimatedCostUsd": 0.124423
+      }
+    },
+    {
+      "atMs": 78205,
+      "message": "Checking component references, geometry and assembly relationships…"
+    }
+  ]
+}

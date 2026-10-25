@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-23T07:58:37.921204+00:00",
+  "screenshots": {
+    "Flare grounded design.png": {
+      "sha256": "0cd4f704eff18d3aa80eb8460c8b15a11853a51b6876db0d8b16f88d612e2dee",
+      "width": 65536,
+      "height": 4292542531
+    },
+    "Flare grounded phone.png": {
+      "sha256": "dcec1e0b10d76c7baf613ab09f1a4d908c0adf11cea593de01496ffce949855c",
+      "width": 65536,
+      "height": 4292542531
+    },
+    "Flare grounded notebook.png": {
+      "sha256": "3ebe71df3efcc3e9f66a8d4c9f00e1a6c3d8d4df07bf0e773678f3968954ff4d",
+      "width": 65536,
+      "height": 4292542531
+    },
+    "Flare grounded notebook phone.png": {
+      "sha256": "db7201a6a875a5296caa946dcb8db97d4f63b13e2d160f9674b8863f2f731ed3",
+      "width": 65536,
+      "height": 4292542531
+    },
+    "Flare grounded conflict.png": {
+      "sha256": "9749a7207d839d322e8ad20622b78eee3b7c50cc7644d61b1289c775fd545394",
+      "width": 65536,
+      "height": 4292542531
+    }
+  },
+  "viewportReset": true,
+  "browserErrorLogs": [],
+  "notebookRestored": true,
+  "restoredPartCount": 76,
+  "restoredSources": 8,
+  "constraints": {
+    "minChargeMa": 100,
+    "minCapacityMah": 150,
+    "maxBatteryHeight": 4,
+    "maxBatteryWidth": null,
+    "maxBatteryDepth": null,
+    "clearance": 0.4,
+    "keepPad": false,
+    "batterySide": "any"
+  }
+}

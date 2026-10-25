@@ -1,0 +1,97 @@
+import type { LibraryPart, Vec3 } from './types';
+
+type PinType = LibraryPart['pins'][number]['type'];
+type PinSpec = [name: string, type: PinType, voltage?: number];
+/** Millimetres, with y pointing up. Header positions are schematic anchors, not PCB CAD. */
+function header(specs: PinSpec[], width: number, length: number): LibraryPart['pins'] {
+  const half = Math.ceil(specs.length / 2);
+  return specs.map(([name, type, voltage], i) => ({
+    name, type, ...(voltage === undefined ? {} : { voltage }),
+    position: [i < half ? -width / 2 : width / 2, 3, -length / 2 + 3 + (i % half) * Math.min(2.54, (length - 6) / Math.max(half - 1, 1))] as Vec3,
+  }));
+}
+function part(id: string, name: string, category: LibraryPart['category'], whatItIs: string, size: Vec3,
+  fallback: LibraryPart['model']['fallback'], colour: string, voltage: [number, number], currentMa: number,
+  priceUsd: number, buyUrl: string, specs: PinSpec[] = [], alternatives: string[] = []): LibraryPart {
+  return { id, name, category, whatItIs, size, model: { fallback }, colour,
+    voltage: { min: voltage[0], max: voltage[1] }, currentMa, priceUsd, buyUrl,
+    pins: header(specs, size[0], size[2]), alternatives, sourceUrl: SOURCES[id] ?? buyUrl };
+}
+/** Source links describe the chip/part family; generic module variants still require verification. */
+const SOURCES: Record<string,string> = {
+  'arduino-nano':'https://docs.arduino.cc/hardware/nano/',
+  'arduino-uno':'https://docs.arduino.cc/hardware/uno-rev3/',
+  'esp32-devkit':'https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html',
+  'raspberry-pi-pico':'https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf',
+  'max30102':'https://www.analog.com/media/en/technical-documentation/data-sheets/max30102.pdf',
+  'dht22':'https://learn.adafruit.com/dht/connecting-to-a-dhtxx-sensor',
+  'hc-sr04':'https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf',
+  'soil-moisture':'https://wiki.dfrobot.com/sen0193/',
+  'mpu6050':'https://learn.adafruit.com/mpu6050-6-dof-accelerometer-and-gyro/overview',
+  'pir-motion':'https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview',
+  'photoresistor':'https://learn.adafruit.com/photocells/overview',
+  'ssd1306-oled':'https://learn.adafruit.com/monochrome-oled-breakouts/overview',
+  'lcd-1602':'https://wiki.dfrobot.com/I2C_TWI_LCD1602_Module__Gadgeteer_Compatible___SKU_DFR0063_',
+  'led-red':'https://learn.adafruit.com/all-about-leds/overview',
+  'rgb-led':'https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/overview',
+  'push-button':'https://learn.adafruit.com/adafruit-arduino-lesson-6-digital-inputs/overview',
+  'potentiometer':'https://learn.adafruit.com/adafruit-arduino-lesson-8-analog-inputs/overview',
+  'piezo-buzzer':'https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/overview',
+  'sg90-servo':'https://www.adafruit.com/product/169',
+  'water-pump':'https://www.adafruit.com/product/1150',
+  'relay-module':'https://www.sunfounder.com/collections/relay/products/5v-one-channel-relay-module-relay-switch',
+  'diode-1n4007':'https://www.vishay.com/docs/88503/1n4001.pdf',
+  'resistor-220':'https://learn.sparkfun.com/tutorials/resistors/all',
+  'resistor-10k':'https://learn.sparkfun.com/tutorials/resistors/all',
+  'resistor-1k':'https://learn.sparkfun.com/tutorials/resistors/all',
+  'breadboard':'https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all',
+  'lipo-37v':'https://learn.adafruit.com/li-ion-and-lipoly-batteries/overview',
+  'tp4056':'https://www.toppwr.com/uploadfile/file/20230304/640301eae1260.pdf',
+};
+const nanoPins: PinSpec[] = [ ['USB','power',5],['VIN','power',9],['5V','power',5],['3V3','power',3.3],['GND','ground',0],
+  ...Array.from({length:14},(_,i):PinSpec=>[`D${i}`, [3,5,6,9,10,11].includes(i)?'pwm':'digital',5]),
+  ...Array.from({length:8},(_,i):PinSpec=>[`A${i}`,i===4?'i2c-sda':i===5?'i2c-scl':'analog',5]) ];
+const espPins: PinSpec[] = [['USB','power',5],['5V','power',5],['3V3','power',3.3],['GND','ground',0],
+  ...[2,4,5,12,13,14,15,16,17,18,19,21,22,23,25,26,27,32,33,34,35,36,39].map((n):PinSpec=>[`GPIO${n}`,n===21?'i2c-sda':n===22?'i2c-scl':n>=32?'analog':'digital',3.3])];
+
+/** Prices are indicative USD planning estimates, not live quotes. Buy links identify the specified part family. */
+export const PARTS: LibraryPart[] = [
+  part('arduino-nano','Arduino Nano (classic, headers fitted)','microcontroller','Compact ATmega328P board with 5 V logic. Select the classic Nano in Arduino IDE; the Nano 33 and Nano ESP32 are electrically different boards.',[18,7,45],'pcb','#348975',[5,12],25,8.9,'https://store.arduino.cc/products/arduino-nano',nanoPins,['arduino-uno','esp32-devkit','raspberry-pi-pico']),
+  part('arduino-uno','Arduino Uno R3','microcontroller','ATmega328P development board with 5 V I/O and a USB programming connector. Its 3.3 V output is limited to 50 mA; motors need their own supply and driver.',[53,14,69],'pcb','#348975',[5,12],50,27.6,'https://store.arduino.cc/products/arduino-uno-rev3',nanoPins.filter(p=>!['A6','A7'].includes(p[0])),['arduino-nano','esp32-devkit']),
+  part('esp32-devkit','ESP32 DevKitC (WROOM-32)','microcontroller','Wi-Fi and Bluetooth development board with 3.3 V GPIO. This entry models the original ESP32-WROOM DevKit, not C3/S3 boards; never apply 5 V to a GPIO.',[27,9,54],'pcb','#3d6962',[3.3,5],80,11.5,'https://www.espressif.com/en/products/devkits/esp32-devkitc/overview',espPins,['arduino-nano','raspberry-pi-pico']),
+  part('raspberry-pi-pico','Raspberry Pi Pico H','microcontroller','RP2040 microcontroller board supplied with soldered headers. GPIO uses 3.3 V; this is not a Linux Raspberry Pi. Install the Arduino-Pico board package for Arduino sketches.',[21,7,51],'pcb','#298964',[1.8,5.5],30,5,'https://www.raspberrypi.com/products/raspberry-pi-pico/',[['USB','power',5],['VSYS','power',5],['3V3','power',3.3],['GND','ground',0],...[...Array.from({length:23},(_,n)=>n),26,27,28].map((n):PinSpec=>[`GP${n}`,n===4?'i2c-sda':n===5?'i2c-scl':n>=26?'analog':'digital',3.3])],['esp32-devkit','arduino-nano']),
+  part('max30102','MAX30102 pulse sensor breakout (3.3 V logic)','sensor','Optical red/infrared pulse sensor breakout with its required onboard 1.8 V regulator and 3.3 V I²C pull-ups. This entry is for a verified 3.3 V breakout, not a bare MAX30102 chip; inexpensive modules vary. It estimates pulse for learning, not medical use.',[20,5,21],'pcb','#7d3138',[3.3,3.3],12,6.9,'https://www.analog.com/en/products/max30102.html',[['VIN','power',3.3],['GND','ground',0],['SDA','i2c-sda',3.3],['SCL','i2c-scl',3.3],['INT','digital',3.3]],[]),
+  part('dht22','DHT22 / AM2302 sensor (bare 4-pin)','sensor','Temperature and relative humidity sensor sampled no faster than once every 2 seconds. Pin 3 is unused; connect a 10 kΩ pull-up from DATA to the controller logic supply.',[15,8,25],'box','#f3f3ef',[3.3,5.5],2.5,5.8,'https://www.adafruit.com/product/385',[['VCC','power',3.3],['DATA','digital',3.3],['NC','digital'],['GND','ground',0]],[]),
+  part('hc-sr04','HC-SR04 ultrasonic range module','sensor','5 V distance module with separate TRIG and ECHO pins. ECHO outputs 5 V, so 3.3 V controllers require a resistor divider or level shifter on ECHO.',[45,16,20],'pcb','#3a72a5',[5,5],15,3.5,'https://www.sparkfun.com/ultrasonic-distance-sensor-hc-sr04.html',[['VCC','power',5],['TRIG','digital',5],['ECHO','digital',5],['GND','ground',0]],[]),
+  part('soil-moisture','Capacitive soil sensor (DFRobot SEN0193)','sensor','Analog capacitive probe powered from 3.3–5.5 V, with output limited to about 0–3 V. Only the sensing area enters soil; keep the top electronics dry and calibrate with your own soil.',[23,5,98],'pcb','#343b35',[3.3,5.5],5,7.5,'https://www.dfrobot.com/product-1385.html',[['VCC','power',3.3],['GND','ground',0],['AOUT','analog',3]],[]),
+  part('mpu6050','MPU6050 IMU breakout (3.3 V logic)','sensor','Six-axis acceleration and rotation sensor on a 3.3 V breakout. Some GY-521 boards regulate VIN but do not level-shift their I²C pins; this entry always uses 3.3 V power and logic.',[21,5,16],'pcb','#3f7c9c',[3.3,3.3],4,5.5,'https://www.adafruit.com/product/3886',[['VCC','power',3.3],['GND','ground',0],['SDA','i2c-sda',3.3],['SCL','i2c-scl',3.3],['INT','digital',3.3],['AD0','digital',3.3]],[]),
+  part('pir-motion','HC-SR501 PIR motion sensor','sensor','Passive infrared module that detects changes in warm moving objects. Supply it with 5 V; its OUT signal is approximately 3.3 V and it needs roughly a minute to settle after startup.',[32,24,24],'pcb','#d9dbd4',[5,12],0.2,3.2,'https://www.adafruit.com/product/189',[['VCC','power',5],['OUT','digital',3.3],['GND','ground',0]],[]),
+  part('photoresistor','Photoresistor / LDR','passive','Light-dependent resistor whose resistance falls in brighter light. Pair it with a 10 kΩ resistor as a voltage divider; it cannot produce an analog voltage on its own.',[7,4,10],'cylinder','#c1945b',[0,5],0,0.6,'https://www.adafruit.com/product/161',[['A','analog'],['B','analog']],[]),
+  part('ssd1306-oled','0.96″ SSD1306 OLED (128 × 64, I²C)','display','Monochrome I²C display, normally at address 0x3C. This entry assumes the 4-pin module supports 3.3 V power and pull-ups; check the printed pin order before wiring.',[28,5,28],'screen','#294b5b',[3.3,3.3],20,5.9,'https://www.adafruit.com/product/326',[['VCC','power',3.3],['GND','ground',0],['SDA','i2c-sda',3.3],['SCL','i2c-scl',3.3]],['lcd-1602']),
+  part('lcd-1602','16 × 2 LCD with PCF8574 I²C backpack','display','5 V character display with an I²C backpack, commonly at 0x27 or 0x3F. Backpack pull-ups are usually 5 V; use a bidirectional level shifter with 3.3 V controllers.',[80,15,36],'screen','#6c9660',[5,5],30,7.4,'https://www.dfrobot.com/product-135.html',[['VCC','power',5],['GND','ground',0],['SDA','i2c-sda',5],['SCL','i2c-scl',5]],['ssd1306-oled']),
+  part('led-red','Red 5 mm LED','output','Indicator LED; the long anode lead is positive and the flat edge marks the cathode. Use a series resistor on every LED; never wire it straight across a supply.',[6,8,6],'led','#ec665f',[1.8,2.2],10,0.2,'https://www.adafruit.com/product/299',[['ANODE','digital'],['CATHODE','ground',0]],['rgb-led']),
+  part('rgb-led','RGB LED (common cathode)','output','One package containing red, green and blue LEDs with a shared ground. Each colour needs its own series resistor; common-anode LEDs require different wiring and code.',[6,8,6],'led','#ede8f5',[1.8,3.3],30,0.7,'https://www.adafruit.com/product/159',[['R','pwm'],['G','pwm'],['B','pwm'],['CATHODE','ground',0]],['led-red']),
+  part('push-button','Momentary tactile push button','input','Normally open switch with four legs in two internally joined pairs. The A and B pins here mean opposite switch contacts; use INPUT_PULLUP and place it across the breadboard centre gap.',[12,8,12],'button','#c9bd8f',[0,5],0,0.4,'https://www.adafruit.com/product/367',[['A','digital'],['B','ground',0]],[]),
+  part('potentiometer','10 kΩ linear potentiometer','input','Variable voltage divider with two end contacts and a moving wiper. Connect the ends to the logic rail and ground; connect the wiper to an analog input.',[11,13,11],'cylinder','#6b94ae',[0,5],0.5,1.2,'https://www.adafruit.com/product/562',[['VCC','power',3.3],['WIPER','analog',3.3],['GND','ground',0]],[]),
+  part('piezo-buzzer','Passive piezo buzzer','output','Small passive piezo transducer driven by tone() or an equivalent PWM waveform. This is a low-current piezo, not an active electromagnetic buzzer that needs a transistor driver.',[12,9,12],'cylinder','#353b3c',[0,5],2,1.1,'https://www.adafruit.com/product/160',[['PLUS','digital'],['MINUS','ground',0]],[]),
+  part('sg90-servo','SG90 micro servo','output','Small positional servo with signal, positive supply and ground. Use a separate regulated 5 V supply rated for at least 1 A and share ground; startup/stall current can reset a USB-powered controller.',[23,29,12],'box','#4b88c0',[4.8,6],250,3.9,'https://www.adafruit.com/product/169',[['VCC','power',5],['GND','ground',0],['SIGNAL','pwm',3.3]],[]),
+  part('water-pump','5 V mini DC water pump with fitted leads','output','Low-voltage pump for brief, supervised watering. This entry assumes a 5 V model under 500 mA with a fitted cable; use a relay/MOSFET, separate supply, tubing and reverse-biased flyback diode.',[27,24,45],'cylinder','#b9c9c6',[5,5],250,5.8,'https://www.adafruit.com/product/1150',[['PLUS','power',5],['MINUS','ground',0]],[]),
+  part('relay-module','5 V relay module (active-LOW, fitted terminals)','output','One-channel relay board with its own coil driver and flyback protection. Set the trigger-select jumper to L: the selected module accepts 5 V logic and switches on at LOW; COM/NO are separate from the control pins. Use it only for low-voltage DC here.',[26,19,50],'pcb','#327fbc',[5,5],70,3.2,'https://www.sunfounder.com/collections/relay/products/5v-one-channel-relay-module-relay-switch',[['VCC','power',5],['GND','ground',0],['IN','digital',5],['COM','power',5],['NO','power',5],['NC','power',5]],[]),
+  part('diode-1n4007','1N4007 flyback diode','passive','Rectifier diode fitted in reverse across the pump terminals: striped cathode to pump positive, anode to pump negative. It absorbs the motor transient when the relay opens.',[5,4,14],'cylinder','#3d4043',[0,1000],0,0.15,'https://www.adafruit.com/product/755',[['CATHODE','power'],['ANODE','ground',0]],[]),
+  part('resistor-220','220 Ω resistor','passive','Current-limiting resistor for a small LED. At 5 V a red LED draws roughly 14 mA through 220 Ω; use one resistor for each LED colour.',[3,3,12],'cylinder','#c4ac8c',[0,50],0,0.05,'https://www.adafruit.com/product/2780',[['A','analog'],['B','analog']],['resistor-1k']),
+  part('resistor-10k','10 kΩ resistor','passive','Useful for pull-ups, pull-downs and analog voltage dividers. Resistors have no polarity; A and B are interchangeable.',[3,3,12],'cylinder','#c4ac8c',[0,50],0,0.05,'https://www.adafruit.com/product/2784',[['A','analog'],['B','analog']],['resistor-1k']),
+  part('resistor-1k','1 kΩ resistor','passive','A general-purpose resistor for low-current indicators and signal dividers. Its value must be chosen for the circuit; it is not a universal replacement for a 10 kΩ pull-up.',[3,3,12],'cylinder','#c4ac8c',[0,50],0,0.05,'https://www.adafruit.com/product/2782',[['A','analog'],['B','analog']],['resistor-220','resistor-10k']),
+  part('breadboard','Half-size solderless breadboard','wiring','Reusable 400-point board for plug-in wiring. Each five-hole terminal group is connected; opposite sides of the centre gap are separate. Check whether the power rails are split.',[83,9,55],'box','#ecebe4',[0,12],0,3.5,'https://www.adafruit.com/product/64',[],[]),
+  part('jumper-wires','Jumper wire set (20 leads)','wiring','A set of 20 pre-terminated male/male and male/female Dupont leads. Use fitted headers and screw terminals for a solder-free build; each drawn connection is one electrical net, and USB includes multiple conductors.',[30,5,15],'box','#aeab9f',[0,12],0,2.2,'https://www.adafruit.com/product/1956',[],[]),
+  part('usb-cable','USB data cable','power','USB cable matched to the development board connector. The USB connection shown bundles 5 V VBUS, ground and data; it does not need separate jumper wires for those conductors.',[14,9,30],'box','#e0ddd5',[5,5],0,2.5,'https://www.adafruit.com/category/943',[['USB','power',5]],[]),
+  part('battery-9v','9 V alkaline battery with clip','power','Alkaline battery with a fitted snap clip. Connect only to a compatible board VIN input; it cannot drive a 3.3 V sensor directly and is a poor supply for motors.',[26,17,48],'battery','#c4ab73',[7,9.6],0,3.2,'https://www.adafruit.com/product/1321',[['PLUS','power',9],['MINUS','ground',0]],['usb-cable']),
+  part('lipo-37v','Protected 3.7 V LiPo cell (500 mAh)','power','Single protected lithium-polymer cell, 3.0–4.2 V across discharge/charge. A charger is not a voltage regulator; this cell needs a compatible protection/charging circuit and regulated power path for the project.',[30,7,40],'battery','#c9c9c5',[3,4.2],0,6.5,'https://www.adafruit.com/product/1578',[['PLUS','power',4.2],['MINUS','ground',0]],['usb-cable']),
+  part('tp4056','TP4056 protected single-cell charger module','power','Single-cell LiPo charger with battery protection on the specified variant. It has no load-sharing power path and no regulated 5 V output; do not run the project while charging. Verify charge current matches the cell.',[17,5,26],'pcb','#427aa4',[4.5,5.5],0,1.5,'https://www.best-microcontroller-projects.com/tp4056.html',[['IN+','power',5],['IN-','ground',0],['B+','power',4.2],['B-','ground',0],['OUT+','power',4.2],['OUT-','ground',0]],[]),
+  part('supply-5v','Regulated 5 V / 1 A DC supply with terminal adapter','power','Separate regulated low-voltage DC adapter for a pump or servo, supplied with a screw-terminal output adapter. Never attach its positive output to the controller 5 V rail while USB is attached.',[44,24,65],'battery','#d8d8d1',[5,5],0,8.5,'https://www.adafruit.com/product/276',[['PLUS','power',5],['MINUS','ground',0]],[]),
+  part('enclosure-bottom','Project case · base','enclosure','Nonconductive case base with room for an 83 × 55 mm breadboard. Dry-fit the real parts and cut suitable openings before closing; this procedural shell is illustrative, not manufacturing CAD.',[110,8,84],'box','#e2e1d9',[0,0],0,3.5,'https://www.adafruit.com/category/225',[],[]),
+  part('enclosure-top','Project case · lid','enclosure','Removable nonconductive lid. Leave a display window, sensor opening, ventilation and USB access where needed; keep it loose until the functional checks pass.',[110,5,84],'box','#e9e8e1',[0,0],0,1.5,'https://www.adafruit.com/category/225',[],[]),
+  part('screw-m3','M3 nylon screw','enclosure','Nonconductive nylon fastener for a matching enclosure. Quantity describes the shopping count; the illustrated screw stands for that set and does not define a hole pattern.',[5,8,5],'cylinder','#b6b8b3',[0,0],0,0.12,'https://www.adafruit.com/product/3299',[],[]),
+  part('wristband','Hook-and-loop wrist strap','enclosure','Soft adjustable strap for a compact prototype. The breadboard demonstration is a desktop build; redesign and secure the electronics before attempting a wearable enclosure.',[22,3,90],'box','#9aada7',[0,0],0,2,'https://www.adafruit.com/product/2883',[],[]),
+];
+
+export const PART_MAP: Record<string, LibraryPart> = Object.fromEntries(PARTS.map(p => [p.id, p]));

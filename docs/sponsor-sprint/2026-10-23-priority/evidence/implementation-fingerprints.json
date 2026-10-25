@@ -1,0 +1,16 @@
+{
+  "lib/ai.ts": "7eebd48552802e432a50cdc1e8821d3aab6d4aa4494f7806d8fde0a32fd0d4c4",
+  "lib/inference.ts": "90c612069d20fbc89c5e1c3fc7ccbbc78d6327bcbda8da2e1a9ce401ad336873",
+  "lib/studio/device-generation.ts": "e266f1610a69db36f4c50158f46d8e797c1489df68cc96bd3e61ec0d45d4dd87",
+  "lib/studio/geometry-codec.ts": "63d66386ce6b741eae9613bc23417f7729e80ca178692db6a3a4dcc4fcab2434",
+  "lib/studio/generation-progress.ts": "9543bc42c3fca197120cbd4d197dbbee22cb955d1c881a981152067608b23d96",
+  "lib/studio/response.ts": "9b1713724e693d34d1eb6940a0f4885fbc6ee304b918b465a5c5b0639ed93da9",
+  "app/api/device/route.ts": "c0c9341b66c385222471a66a5feca9e3bfeab8da7b49f1c301c0c44e144b76b6",
+  "components/studio/DeviceStudio.tsx": "6a0a9d9686a0e85d98e39096fea95cb21b9c0713ba4858f16e39d3ee8254336f",
+  "components/studio/ObjectGallery.tsx": "9279194acdc0509ae2e9d5321282de39a15e25caf83a234c209ea63db601bb0d",
+  "components/studio/DeviceScene.tsx": "9729a1e7ddd73601d77d3e766a56ca9605af34804cb14eee774cf299d0f7db24",
+  "app/experience.css": "159adfe1be8a3613345b147312d8db2d83e420f2ca876f2ea218760255c66f44",
+  "tests/inference.test.ts": "39e5ea336baabb3d8ab91dae63babdcf04fac4f3a9c5f782c6c8f33a9b7acfa0",
+  "tests/geometry-codec.test.ts": "89ddf6ed37da349f60c1cabc08773c6c081cba226b6779f55b4b17b820cd18a2",
+  "tests/inference-live.test.ts": "9c12007edea2ae072b63b014866daec2959de50b556a5af3557fa4eee4a94336"
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "project": "Lumi",
+  "as_of": "2026-10-24",
+  "scope": "Reduce exact custom sofa generation latency while retaining Argon, original object identity, editable parts and structural validation. Local only.",
+  "integrations": [
+    {
+      "integration_id": "I001",
+      "sponsor": "Gemini 4 Argon",
+      "purpose": "Generate an editable smart sofa with iron base and ESP32 without a full repeated JSON rewrite",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/interactions-overview",
+      "docs_checked_at": "2026-10-24",
+      "implementation_ref": "lib/studio/device-generation.ts; lib/studio/geometry-codec.ts",
+      "env_vars": [
+        "GEMINI_API_KEY",
+        "GEMINI_MODEL",
+        "GEMINI_TRANSPORT",
+        "GEMINI_SERVICE_TIER"
+      ],
+      "checks": [
+        {
+          "check_id": "C001",
+          "required": false,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Record a bounded same-prompt baseline, with original generator.",
+          "observed": "Original generator completed the exact prompt in 149.782s; first completed part at21.464s; actual Priority Argon;14 parts/180 solids/13336 output tokens. This is a single live baseline.",
+          "checked_at": "2026-10-24T03:55:44.626423+00:00",
+          "evidence_path": "baseline.json",
+          "evidence_sha256": "f1b1d1d462d34b1fe01fc6a5b3779f66cceafe0d72bc4dd997fd5cb34645aa4e"
+        },
+        {
+          "check_id": "C002",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Bounded geometry recipes preserve solids, reject expansion bombs; schema defaults and targeted repairs validated; existing suite and production build pass.",
+          "observed": "243 local/mock tests pass;3 opt-in live suites skipped in default run. Standalone typecheck and production build also pass. A separate live exact-prompt API test passed in78.214 seconds.",
+          "checked_at": "2026-10-24T04:03:44.981437+00:00",
+          "evidence_path": "tests.txt",
+          "evidence_sha256": "ab8707e6fd40b2ab884f919493e69c185036cdf1bcd4740158ab5544ec784073"
+        },
+        {
+          "check_id": "C003",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Exact smart sofa prompt finishes, contains distinct iron base and ESP32 parts, validates, and shows clickable parts in local UI.",
+          "observed": "The final browser Create form completed the same sofa prompt via Priority Argon in87.072 seconds. Its exported bytes validate:15 parts,254 solids,19 relationships,6 steps. Separate iron frame and ESP32 components; ESP32 independently selected. See actual project and screenshots. A previous failed browser attempt is recorded, not counted as a successful generation.",
+          "checked_at": "2026-10-24T04:03:44.981437+00:00",
+          "evidence_path": "browser-final.json",
+          "evidence_sha256": "ea0bb10a1c5dcb93ac5d79464978b79da61189596255c077e64ec9f463a612d6"
+        },
+        {
+          "check_id": "C004",
+          "required": true,
+          "mode": "mock",
+          "status": "passed",
+          "expected": "Malformed generation, repair failure, deadline and cancellation fail without replacing current object; no full second regeneration for a small structural defect.",
+          "observed": "Mocked targeted-reference repair keeps the geometry and emits one generation reset; exhausted repairs/malformed output/cancellation fail without a sample fallback. Recipe tests reject expansion bombs and unsafe repair paths.",
+          "checked_at": "2026-10-24T04:03:44.981437+00:00",
+          "evidence_path": "tests.txt",
+          "evidence_sha256": "ab8707e6fd40b2ab884f919493e69c185036cdf1bcd4740158ab5544ec784073"
+        }
+      ]
+    }
+  ]
+}

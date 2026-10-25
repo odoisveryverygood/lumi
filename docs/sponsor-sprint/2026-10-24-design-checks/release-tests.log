@@ -1,0 +1,54 @@
+
+> flare-grounded@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /Users/aradhyamishra/Documents/Codex/2026-10-21/thsi/outputs/flare-grounded
+
+ ↓ tests/evaluation-evidence.test.ts (1 test | 1 skipped)
+ ✓ tests/keyboard.test.ts (8 tests) 182ms
+ ✓ tests/grounded-design.test.ts (13 tests) 606ms
+   ✓ document-grounded hardware reasoning > freezes the requested minimum and gives the real source failure to the repair loop  566ms
+ ✓ tests/api.test.ts (38 tests) 201ms
+ ✓ tests/conversation-api.test.ts (8 tests) 376ms
+   ✓ structured object conversation API > runs deterministic wireless conversion only when the model selects that explicit operation  307ms
+ ✓ tests/studio.test.ts (17 tests) 920ms
+   ✓ real Stack Chan KiCad assembly > decodes the bundled meshopt board locally, preserves component grouping and enriches source metadata  703ms
+ ✓ tests/exports.test.ts (4 tests) 163ms
+ ✓ tests/catalog.test.ts (11 tests) 1293ms
+   ✓ pinned sourced geometry > validates every real catalog mesh, attribution and dimension without a pretend solid  390ms
+   ✓ pinned sourced geometry > saves and streams IDs instead of megabytes and restores the exact canonical mesh  810ms
+ ✓ tests/device-stream.test.ts (7 tests) 113ms
+ ✓ tests/quality.test.ts (21 tests) 1637ms
+   ✓ actual geometry renderer > opens and renders the real saved regression object docs/sponsor-sprint/2026-10-23-catalog/generated-sensor.part.json  645ms
+   ✓ actual geometry renderer > opens and renders the real saved regression object docs/sponsor-sprint/2026-10-23-catalog/sofa-catalog-export.part.json  695ms
+ ✓ tests/domain.test.ts (29 tests) 156ms
+ ✓ tests/redesign.test.ts (13 tests) 1722ms
+ ✓ tests/inference.test.ts (16 tests) 121ms
+ ✓ tests/compile.test.ts (10 tests) 91ms
+ ✓ tests/geometry-codec.test.ts (11 tests) 312ms
+ ✓ tests/corne.test.ts (10 tests) 1934ms
+   ✓ source Corne geometry and object conversation > reuses the initial Argon plan and streams checked candidates before accepting a redesign  344ms
+   ✓ source geometry request boundaries > accepts the real source document pair and keeps mesh arrays out of Argon context  424ms
+ ✓ tests/ai-timeout.test.ts (8 tests) 9ms
+ ✓ tests/editor.test.ts (18 tests) 40ms
+ ✓ tests/framing.test.ts (4 tests) 2ms
+ ✓ tests/lumi-motion.test.ts (4 tests) 7ms
+ ✓ tests/generation-speed.test.ts (13 tests) 83ms
+ ✓ tests/interaction.test.ts (8 tests) 61ms
+ ✓ tests/desktop-motion.test.ts (1 test) 30ms
+ ✓ tests/lumi-pet.test.ts (4 tests) 4ms
+ ↓ tests/live-api.test.ts (1 test | 1 skipped)
+ ↓ tests/inference-live.test.ts (1 test | 1 skipped)
+ ↓ tests/catalog-live.test.ts (1 test | 1 skipped)
+ ↓ tests/project-design-evidence.test.ts (1 test | 1 skipped)
+ ↓ tests/sofa-live.test.ts (1 test | 1 skipped)
+ ✓ tests/reference-envelopes.test.ts (1 test) 57ms
+ ✓ tests/design-constraints.test.ts (43 tests) 4079ms
+   ✓ fixed, measured design requirements > measures a sourced module against actual Corne case triangles, PCB and insert geometry  531ms
+
+ Test Files  25 passed | 6 skipped (31)
+      Tests  320 passed | 6 skipped (326)
+   Start at  22:53:25
+   Duration  4.87s (transform 1.31s, setup 0ms, collect 7.33s, tests 14.20s, environment 5ms, prepare 2.56s)
+

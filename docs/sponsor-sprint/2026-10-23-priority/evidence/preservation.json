@@ -1,0 +1,8 @@
+{
+  "originalHead": "510216d9aed26f9c1078740a0dadd9e2d779b85b",
+  "originalWorkingTreeClean": true,
+  "deployed": false,
+  "pushed": false,
+  "scope": "Local separate copy only. Private credential stays in the existing ignored .env.local; no remote or Vercel mutation was performed in this scope.",
+  "credentialBoundary": "Configured credential was absent from changed public source, exports/evidence and the compiled browser bundle; private env remains mode 0600. See credential-boundary.json."
+}

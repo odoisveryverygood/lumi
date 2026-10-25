@@ -1,0 +1,21 @@
+{
+  "as_of": "2026-10-23",
+  "mode": "live",
+  "model": "gemini-4-argon",
+  "transport": "interactions",
+  "requestedTier": "priority",
+  "servedTier": "priority",
+  "durationMs": 107644,
+  "firstTokenMs": 4002,
+  "inputTokens": 1228,
+  "outputTokens": 9266,
+  "thinkingTokens": 0,
+  "cachedTokens": 0,
+  "estimatedCostUsd": 0.171209,
+  "parts": 14,
+  "solids": 132,
+  "relationships": 7,
+  "mechanisms": 1,
+  "steps": 5,
+  "limits": "Single run, different stochastic geometry; slower than the baseline. Not evidence of a general latency improvement."
+}

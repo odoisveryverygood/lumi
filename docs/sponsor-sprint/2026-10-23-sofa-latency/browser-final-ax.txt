@@ -1,0 +1,90 @@
+Browser tab: 8, Title: "Lumi — A little light on everything.", URL: "http://127.0.0.1:3001/".
+1 AXWebArea Lumi — A little light on everything., URL: 127.0.0.1:3001/
+	2 button Import device file
+	3 container
+		4 button Lumi home
+			5 text lumi
+			6 text .
+		7 button Smart Sofa with Wrought Iron Base and ESP32
+		8 container Workspace
+			9 button Explore
+			10 button Studio
+			11 button Design Lab
+				12 text Design
+				13 text  Lab
+		14 button New device
+		15 button Share assembly
+		16 button Export
+	70 container Interactive device assembly
+		71 text LUMI / OBJECT STUDY
+		72 text A DIFFERENT PERSPECTIVE CHANGES EVERYTHING
+		73 container
+			74 checkbox Description: Play object motion, Value: 0
+			75 button (disabled) Undo edit
+			76 button (disabled) Redo edit
+			77 checkbox 3D, Value: 1
+			78 checkbox Top, Value: 0
+			79 checkbox Front, Value: 0
+			80 checkbox Description: Toggle component labels, Value: 0
+			81 checkbox Description: Device information, Value: 0
+		82 container Interactive three-dimensional Smart Sofa with Wrought Iron Base and ESP32. Select a component, orbit the device, and use the Move or Rotate tools to edit it.
+			83 container
+				84 image
+					85 text WebGL is unavailable. Component properties and build instructions remain available.
+				86 container Component callouts
+		87 container
+			88 text OBJECT  / INTERACTIVE STUDY 15  PARTS
+			89 heading Smart Sofa with Wrought Iron Base and ESP32/ 01, Value: 1
+				90 text Smart Sofa with Wrought Iron Base and ESP32
+				91 text / 01
+			92 text A little closer. A lot clearer.
+		93 container
+			94 checkbox Description: Browse components, Value: 0
+				95 text Parts
+				96 text 15
+			97 button Reset camera
+			98 button Fit assembly
+			99 button Zoom in
+			100 button Zoom out
+		101 container
+			102 checkbox Description: Select component, Value: 1
+			103 checkbox Description: Move component, Value: 0
+			104 checkbox Description: Rotate component, Value: 0
+		105 container Selected component: ESP32-WROOM-32 Smart Sofa Controller
+			106 text IN FOCUS /  ELECTRONICS
+			107 button Deselect component
+			108 container
+				109 image ESP32-WROOM-32 Smart Sofa Controller geometry thumbnail
+				110 button Bring ESP32-WROOM-32 Smart Sofa Controller closer
+			111 heading ESP32-WROOM-32 Smart Sofa Controller, Value: 2
+				112 text ESP32-WROOM-32 Smart Sofa Controller
+			113 text Custom carrier PCB hosting an ESP32-WROOM-32 Wi-Fi/BLE module, MOSFET LED drivers, sensor ADC header, and USB-C diagnostic port.
+			114 button Explain
+			115 checkbox Isolate, Value: 0
+			116 button Edit part
+			117 container
+				118 text Part  esp32-controller-board  ·  5  connection s
+		119 container
+			120 checkbox Assembled, Value: 0
+			121 checkbox Exploded, Value: 1
+			122 button Build guide, Help: Walk through assembly
+			123 slider (settable, float) Description: Explode assembly, Value: 0.3799999952316284, Details: 0.38
+			124 container
+				125 text 38 %
+			126 text field (settable) Ask about or edit the device
+			127 checkbox Description: Voice input, Help: Voice input · hold Space to speak, Value: 0
+			128 button (disabled) Edit, Help: Apply your requested edit
+			129 button (disabled) Send to object assistant
+		130 container
+			131 text Illustrative geometry · millimetres Drag to orbit · scroll to zoom
+			132 button About this workspace
+	62 container
+		63 container
+			64 text LET’S LOOK HERE ESP32-WROOM-32 Smart Sofa Controller. Custom carrier PCB hosting an ESP32-WROOM-32 Wi-Fi/BLE module, MOSFET LED drivers, sensor ADC header, and USB-C diagnostic port.
+			65 button Ask Lumi
+		66 button (collapsed) Description: Talk to Lumi, Secondary Actions: Expand
+		67 button (collapsed) Description: Lumi pet controls, Help: Pet controls, Secondary Actions: Expand
+		68 text Drag Lumi to move. Arrow keys move 12 pixels; Shift moves 40. Click to talk. Pet controls let Lumi guide, stay or wander.
+		69 text Drag me anywhere. Click to talk.
+
+The focused UI element is 1 AXWebArea Lumi — A little light on everything., URL: 127.0.0.1:3001/

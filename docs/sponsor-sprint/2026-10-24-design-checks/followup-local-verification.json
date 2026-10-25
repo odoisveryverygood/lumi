@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-25T05:43:25.786552+00:00",
+  "codeManifest": "followup-source-manifest.json",
+  "tests": {
+    "passed": 319,
+    "skipped": 6,
+    "defaultSkipped": "Four billable provider suites and two opt-in evidence suites. Live browser artifacts and offline evidence checks are separate."
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "provider": "Existing pinned Gemini 4 Argon configuration unchanged. No new key or model fallback.",
+  "newDependencies": false,
+  "deployment": "not attempted",
+  "runtimeChanges": [
+    "app/api/device/route.ts",
+    "lib/studio/constraint-planner.ts"
+  ],
+  "changesInScope": [
+    "Actual procedural solids are included in whole-object editing context; canonical mesh payloads remain excluded.",
+    "One planning timeout may be retried inside the existing two-attempt budget; quota and cancellation are not retried."
+  ],
+  "liveFollowup": "in progress; results not included in these local test claims."
+}

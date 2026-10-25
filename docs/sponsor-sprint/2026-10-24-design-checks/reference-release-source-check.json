@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-25T05:54:23.008202+00:00",
+  "runtimeComparedWith": "followup-source-manifest.json",
+  "changedRuntimeFiles": [],
+  "referenceFile": "public/assemblies/corne/document.json",
+  "referenceSha256": "d4a9ffae7f726a414b307d74902569fee61cd91bba45af5c0f69736a0fce0326",
+  "referenceRepair": "corne-bounds-repair.json",
+  "scope": "Only static reference size/spec metadata changed after the eight-trial follow-up; live task fixtures, prompts, oracle and runtime source remain unchanged."
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "project": "Flare",
+  "as_of": "2026-10-23",
+  "scope": "Local-only Argon Priority support, distinct one-prompt object generation, compact lossless geometry, temporary streamed 3D preview, honest service-tier/usage timings and bounded live comparisons. No deployment.",
+  "integrations": [
+    {
+      "integration_id": "I001",
+      "sponsor": "Google Gemini 4 Argon",
+      "purpose": "Generate a unique editable object from one prompt with measured Priority support and unchanged validation.",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/priority-inference",
+      "docs_checked_at": "2026-10-23",
+      "implementation_ref": "lib/ai.ts; lib/inference.ts; lib/studio/device-generation.ts; lib/studio/geometry-codec.ts; components/studio/DeviceStudio.tsx",
+      "env_vars": [
+        "GEMINI_API_KEY",
+        "GEMINI_MODEL",
+        "GEMINI_SERVICE_TIER",
+        "GEMINI_TRANSPORT"
+      ],
+      "checks": [
+        {
+          "check_id": "C001",
+          "required": true,
+          "mode": "mock",
+          "status": "passed",
+          "expected": "Interactions transport handles streaming, text-only extraction, attachments, actual tier, errors and cancellation.",
+          "observed": "Interactions request/stream tests pass, including stateless text/PDF/image mapping, actual/downgraded tier, split UTF-8, thought exclusion, truncation, errors, terminal events and cancellation. These are mocked protocol checks.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/tests.txt",
+          "evidence_sha256": "64d3af2b527028432762aad2fff3b65dd405cfcd01fa4106b06b10e6c4a13010"
+        },
+        {
+          "check_id": "C002",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "All regression tests, TypeScript and production build pass.",
+          "observed": "222 tests passed; two opt-in paid-provider tests skipped in the normal suite. TypeScript and the final Next.js production build passed.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/build.txt",
+          "evidence_sha256": "71ca65098c899e3f79021d9e13744b9a5949fefdab77f80559bceec6a6ef0e18"
+        },
+        {
+          "check_id": "C003",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Same-prompt Standard/Priority generation completes with validated custom geometry and observed timings/usage.",
+          "observed": "Real same-prompt calls each returned valid 14-part cassette assemblies. Standard 99.109s vs actual Priority 91.178s in one pair. A later compact run was slower at 107.644s; no general speed or quality superiority is claimed.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/report.json",
+          "evidence_sha256": "feef3f105b3c2c283544010c8f512c579e138fe8a6d9a8ae38d9ff7b73f23259"
+        },
+        {
+          "check_id": "C004",
+          "required": true,
+          "mode": "mock",
+          "status": "passed",
+          "expected": "Failed/truncated responses preserve the current assembly and never substitute a shared template.",
+          "observed": "Mocked stream failures do not return a complete result, invalid component graphs are rejected, cancellation aborts, and custom generation refuses the former keyboard-template shortcut. Current geometry is committed only after validation.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/tests.txt",
+          "evidence_sha256": "64d3af2b527028432762aad2fff3b65dd405cfcd01fa4106b06b10e6c4a13010"
+        },
+        {
+          "check_id": "C005",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Local browser creates, selects, edits and undoes a newly generated object.",
+          "observed": "Real Argon generated a new six-part, 51-solid lamp in 45.712s. Two parts were visibly fitted by the sampled 18s observation. Direct 3D arm selection worked. A base X edit changed 0 to 12 mm; exported Undo matched the complete original document exactly.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/ui-flow.json",
+          "evidence_sha256": "cf42337517d815d58758e482e63f7651d90db88926a3a279b075c75d5f4362f9"
+        },
+        {
+          "check_id": "C006",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Compact geometry preserves all coordinates/materials and the temporary preview rejects invalid or over-budget components.",
+          "observed": "Codec round-trip, malformed geometry, unique IDs, scene budgets and transient preview guards pass. Exact baseline re-encoding saved 21.6% of JSON bytes with the same 121 solids.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/geometry-compression.json",
+          "evidence_sha256": "194fe6e55b16d5c4e2ffaff3bfc496caf17178f01d9d56d4d027011be040777c"
+        },
+        {
+          "check_id": "C007",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Original sibling stays clean and local-only boundaries are preserved.",
+          "observed": "The original sibling working tree remains clean at its preserved revision. No push or deployment was made.",
+          "checked_at": "2026-10-23T21:42:21.842102+00:00",
+          "evidence_path": "evidence/preservation.json",
+          "evidence_sha256": "0fb36ec30f2a9ecff4890c8710d016d207045e08f7baa9cc93da37f19009f964"
+        }
+      ]
+    }
+  ]
+}

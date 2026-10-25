@@ -1,0 +1,10 @@
+import { expect, it, vi, afterEach } from 'vitest';
+import { createBuildPdf, shoppingCsv, shareUrl, readShare } from '../lib/client';
+import { getDemoProject } from '../lib/projects';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+afterEach(()=>vi.unstubAllGlobals());
+it('exports every component and actual quantity in escaped shopping CSV',()=>{const p=getDemoProject('heart');const csv=shoppingCsv(p);expect(csv.split('\r\n')).toHaveLength(p.parts.length+1);expect(csv).toContain('"4"');expect(csv).toContain('https://');expect(csv).toContain('Quantity');});
+it('generates a real multipage PDF with all build steps and shopping list',async()=>{const p=getDemoProject('heart');const buffer=await createBuildPdf(p);const pdf=Buffer.from(buffer);expect(pdf.subarray(0,5).toString()).toBe('%PDF-');const content=pdf.toString('latin1');expect(content).toContain('FLARE / BUILD GUIDE');expect(content).toContain('Shopping list');expect(content).toContain('10. Upload the code and test');if(process.env.EXPORT_QA==='1'){const target=resolve(process.cwd(),'../../work/exports');await mkdir(target,{recursive:true});await writeFile(resolve(target,'build-guide.pdf'),pdf)}});
+it('round-trips compressed read-only sharing without losing wiring or firmware',async()=>{vi.stubGlobal('location',{origin:'http://127.0.0.1:3000'});const p=getDemoProject('weather');const url=await shareUrl(p);expect(url).toContain('/#shared=');const result=await readShare(url.slice(url.indexOf('#')));expect(result).toEqual(p)});
+it('rejects oversized compressed share payloads before accepting JSON',async()=>{const raw=new TextEncoder().encode(JSON.stringify({padding:'x'.repeat(600000)}));const zipped=new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer());const hash='#shared='+encodeURIComponent(btoa(String.fromCharCode(...zipped)));await expect(readShare(hash)).rejects.toThrow('too large')});

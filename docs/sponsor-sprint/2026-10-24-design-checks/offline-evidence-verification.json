@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-25T06:01:05.934718+00:00",
+  "providerCallsMadeByTheseChecks": false,
+  "results": [
+    {
+      "file": "full-evidence-recompute.log",
+      "sha256": "7eac5a1f137c07731e4b907b61471948c91d25503e23f6dd63fbc19cfbacb5cd",
+      "passed": true
+    },
+    {
+      "file": "followup-recompute.log",
+      "sha256": "d79cc5105d07ee43104b437a53817f16dc4c6089fe19ba580cb18196b3f9ab2f",
+      "passed": true
+    },
+    {
+      "file": "saved-project-recompute.log",
+      "sha256": "e7e405ad6f0a466d153a2eedd215402fd11e8e3863d07c7732705162bc50cf2d",
+      "passed": true
+    },
+    {
+      "file": "corne-first-recompute.log",
+      "sha256": "e29cef227ddc5f8b1f2937c181d758fba52fb113232bbcecfe965f6a81014130",
+      "passed": true
+    },
+    {
+      "file": "corne-recompute.log",
+      "sha256": "b3845e768c581ed66384379dc2c94edd170d78ad03c9576844f846dd0b7efa07",
+      "passed": true
+    }
+  ],
+  "scope": "Recomputed recorded geometry, fixed task oracles, baseline and final fingerprints, contracts, exact image hashes and camera associations. Does not authenticate a provider or certify hardware."
+}
