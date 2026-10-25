@@ -1,6 +1,6 @@
 # Morf — local identity and mechanical companion
 
-October 25, 2026. Local branch `codex/morf-companion`, based on merged revision `3f26257`. Nothing pushed or deployed for this change.
+October 25, 2026. Local branch `codex/morf-companion`, based on merged revision `3f26257`. Prepared and verified locally, then published to GitHub at the owner’s request. No deployment was performed for this change.
 
 Morf replaces the Lumi name throughout the live interface, metadata, assistant labels, circuit editor, PDF/export labels and current model identity prompts. The wordmark, favicon and gallery copy now match the product's understand → modify → verify direction. Historical evidence and upstream source attribution retain their original names.
 
