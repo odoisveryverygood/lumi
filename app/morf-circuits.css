@@ -69,6 +69,7 @@
 .editor-app .step-check{background:#e8eddb;color:#5f6d3a;border-radius:10px;}
 .editor-app .step-tags button{background:#fff3dc;border:1px solid #ecd3a8;color:#855520;border-radius:7px;}
 /* Centre viewport: Studio's cream stage, floating rail and pills */
+.editor-app .center-panel{background:#fff8ed;}
 .editor-app .canvas-stage{background:radial-gradient(ellipse at 65% 35%,#fffefa 0,#fffaf0 48%,#f9f0df 100%);}
 .editor-app .canvas-stage::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(#b28b5420 .7px,transparent .7px);background-size:26px 26px;mask-image:linear-gradient(180deg,transparent 10%,#0007);}
 .editor-app .canvas-stage.light-stage{background:#fffaf0;}
@@ -160,4 +161,13 @@
 .editor-app .checks-disclaimer{font-size:9px;color:#8a6a49;line-height:1.7;border-top:1px solid #dec29a55;padding-top:10px;margin-top:12px;}
 .editor-app .show-in-studio{display:inline-flex;align-items:center;gap:6px;color:#855520;font-size:10px;text-decoration:none;background:#fff3dc;border:1px solid #ecd3a8;border-radius:8px;padding:7px 10px;}
 .editor-app .morf-guide-layer{z-index:60;}
+.editor-app .schematic-stage{position:absolute;inset:0;overflow:auto;padding:70px 24px 150px;z-index:1}
+.editor-app .schematic{width:100%;max-width:1200px;height:auto;display:block;margin:0 auto;font-family:var(--ui)}
+.editor-app .schematic-part,.editor-app .schematic-wire{cursor:pointer}
+.editor-app .schematic-part:hover rect{stroke:#cda66c}
+.editor-app .schematic-empty{position:absolute;inset:0;display:grid;place-content:center;color:#8a6a49;font-size:12px}
+.editor-app .schematic-preview{margin:0 0 6px}
+.editor-app .schematic-preview > button{display:block;width:calc(100% - 36px);margin:0 18px;padding:6px;background:#fffdf7;border:1px solid #e6d5be;border-radius:12px;cursor:pointer}
+.editor-app .schematic--compact{max-height:190px}
+.editor-app .schematic--compact text{display:none}
 }
