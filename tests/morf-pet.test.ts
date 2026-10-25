@@ -1,7 +1,7 @@
 import {describe,expect,it} from 'vitest';
-import {clampPet,isPetDrag,readPetMemory,rememberPet,restorePet} from '../lib/studio/lumi-pet';
+import {clampPet,isPetDrag,readPetMemory,rememberPet,restorePet} from '../lib/studio/morf-pet';
 
-describe('movable Lumi pet',()=>{
+describe('movable Morf pet',()=>{
   it('keeps the pet reachable at each edge of a phone and a desktop',()=>{
     for(const [width,height] of [[390,844],[1440,900]]){
       const a=clampPet({x:-900,y:-900},width,height),b=clampPet({x:9000,y:9000},width,height);

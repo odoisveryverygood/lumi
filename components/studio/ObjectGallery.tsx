@@ -18,9 +18,9 @@ export default function ObjectGallery(props: Props) {
   useEffect(() => { let alive = true; import('@/lib/studio/corne').then(module=>module.loadCorneReference()).then(reference=>{if(alive)setKeyboard(reference);}).catch(()=>{}); return () => { alive = false; }; }, []);
   return <section className="fx-gallery" aria-label="Explore objects">
     <div className="fx-gallery-copy">
-      <span className="fx-overline"><i/>MEET LUMI. FOLLOW YOUR CURIOSITY.</span>
-      <h1>A little light.<br/><em>A whole new world.</em></h1>
-      <p>Big ideas start with a little curiosity.<br/>Take things apart. Ask why. Make something yours.</p>
+      <span className="fx-overline"><i/>MEET MORF. MAKE SENSE OF THINGS.</span>
+      <h1>See what’s inside.<br/><em>Shape what’s next.</em></h1>
+      <p>Explore every part. Understand every connection.<br/>Describe a change. See a new possibility.</p>
       <form className="fx-create-form" onSubmit={event => { event.preventDefault(); props.onGenerate(); }}>
         <label htmlFor="fx-object-prompt"><Sparkles size={15}/>What shall we explore?</label>
         <textarea id="fx-object-prompt" aria-label="Describe a new device" placeholder="A camera. A coffee grinder. Your next idea…" value={props.prompt} onChange={event => props.onPrompt(event.target.value)} disabled={props.busy}/>
@@ -30,7 +30,7 @@ export default function ObjectGallery(props: Props) {
       {props.busy && !!props.partNames.length && <div className="fx-generation-parts" aria-label="Components received from Gemini"><span>{props.partNames.length} CUSTOM {props.partNames.length===1?'COMPONENT':'COMPONENTS'} RECEIVED</span><div>{props.partNames.slice(-6).map((name,index)=><small key={`${index}-${name}`}><i/>{name}</small>)}</div><p>The complete assembly is checked before it opens.</p></div>}
       {props.error && !props.busy && <p className="fx-generation-error" role="alert">{props.error}</p>}
       <button className="fx-continue" disabled={props.busy} onClick={props.onContinue}>Explore {props.document.name}<ArrowUpRight size={15}/></button>
-      <button className="lumi-gallery-library" disabled={props.busy} onClick={props.onLibrary}><span><Cpu size={18}/></span><span><strong>Real parts. Ready to play.</strong><small>ESP32 modules, gears, rails & thousands of object references</small></span><ArrowUpRight size={17}/></button>
+      <button className="morf-gallery-library" disabled={props.busy} onClick={props.onLibrary}><span><Cpu size={18}/></span><span><strong>Real parts. Ready to play.</strong><small>ESP32 modules, gears, rails & thousands of object references</small></span><ArrowUpRight size={17}/></button>
     </div>
     <button className="fx-hero-caption" disabled={props.busy} onClick={props.onContinue}><span><i/>{props.busy?(props.partNames.length?'YOUR CUSTOM ASSEMBLY · IN PROGRESS':'YOUR CURRENT ASSEMBLY'):'LIVE, EXPLORABLE ASSEMBLY'}</span><strong>{props.document.name}<ArrowUpRight size={18}/></strong><small>{props.busy&&props.partNames.length?`${props.partNames.length} ${props.partNames.length===1?'component':'components'} received · final checks pending`:`${props.document.parts.length} individual components · ${props.busy?'your saved object':'drag to look around'}`}</small></button>
     <div className="fx-gallery-collection">

@@ -1,6 +1,7 @@
 export type PetPoint = {x:number;y:number};
 export type PetMode = 'guide'|'stay'|'roam';
 export type PetMemory = {version:1;home:PetPoint|null;mode:PetMode;motion:boolean|null};
+// Stable key keeps the companion's saved position across the Morf rename.
 export const PET_STORAGE_KEY='lumi.pet.v1';
 export const DRAG_THRESHOLD=6;
 const clamp=(n:number,min:number,max:number)=>Math.max(min,Math.min(max,n));

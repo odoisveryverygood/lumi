@@ -1,5 +1,7 @@
 # Three minutes, one maker, one checked correction
 
+> Current tested fan script: [LIVE_DEMO_RUNBOOK.md](LIVE_DEMO_RUNBOOK.md). The October 25 fresh run completed in 36.085 seconds; the operator flow and saved-result fallback were exercised. The script below is the earlier static-module plan and remains historical. A spoken three-minute rehearsal is still pending.
+
 Status (October 25, 2026, revision 226f792): this script matches what Lumi actually implements today. It has **not** been timed against live Argon calls on this revision; the server key was not available to the independent evaluator. Historical live timings are quoted below with their source. Rehearse once with the key before presenting, record the real elapsed times in [the rehearsal record](sponsor-sprint/2026-10-25-independent-evidence/demo-rehearsal.json), and cut the task if it does not fit. Do not edit waiting time out of a recording and call it live.
 
 Integration note: the original independent script below was written against revision 226f792. Later generation recovery and sampled-motion work are now integrated. The full live demo still needs a timed rehearsal; keep the original evidence limits.

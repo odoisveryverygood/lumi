@@ -1,0 +1,25 @@
+{
+  "revision": "3f26257be3237356787719b988ef28930ed888b9",
+  "status": "reviewed",
+  "createdAt": "2026-10-25T19:06:08.280Z",
+  "durationMs": 36085,
+  "rounds": 2,
+  "models": [
+    "gemini-4-argon",
+    "gemini-4-argon"
+  ],
+  "originalYokeMm": 48,
+  "retainedYokeMm": 78,
+  "poses": 19,
+  "minimumClearanceMm": 0.8153189588437844,
+  "shapesAndSourcesPreserved": true,
+  "allRoundMeasurementsRecomputed": true,
+  "verifiedImageCount": 12,
+  "initialHash": "c470867f6674a13fed6bc46493920f1b40532fa542b41e51204e46682cbe9bb4",
+  "finalHash": "4cd528fe99be68dac79ce0030acc04eb0ebe1b162bbcb34cc4b191e829e327b3",
+  "retainedRenderer": [
+    "webgl",
+    "webgl",
+    "webgl"
+  ]
+}

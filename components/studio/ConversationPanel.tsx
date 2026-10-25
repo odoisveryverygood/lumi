@@ -1,6 +1,6 @@
 'use client';
 import { ArrowUpRight, Check, Focus, Layers3, LoaderCircle, Play, Sparkles } from 'lucide-react';
-import LumiFace from './LumiFace';
+import MorfFace from './MorfFace';
 import type { DeviceDocument, SceneAction } from '@/lib/studio/types';
 
 export interface ConversationEntry {
@@ -23,10 +23,10 @@ export default function ConversationPanel({ document, entries, model, busy, onAs
   const keyboard = document.capabilities?.includes('wired-keyboard') || document.parts.some(p => p.id === 'switch-stem');
   const prompts = keyboard ? ['Show what happens when I press a key.', 'What connects the keys to the computer?', 'Make this wireless.'] : ['Show how the main components connect.', 'Explain the selected component and show me its neighbors.', 'Which parts could I change, and what would that affect?'];
   return <div className="ds-chat" aria-label="Object conversation">
-    <div className="ds-chat-intro"><span><LumiFace small/></span><div className="ds-conversation-kicker">A CONVERSATION WITH YOUR OBJECT</div><h2>A little light on everything.</h2><p>Answers point to real parts in this scene. Describe a change to edit the assembly.</p><small><i/>{model || 'Gemini'}</small></div>
+    <div className="ds-chat-intro"><span><MorfFace small/></span><div className="ds-conversation-kicker">A CONVERSATION WITH YOUR OBJECT</div><h2>Every part has a purpose.</h2><p>Answers point to real parts in this scene. Describe a change to edit the assembly.</p><small><i/>{model || 'Gemini'}</small></div>
     {entries.length === 0 && <div className="ds-chat-suggestions">{prompts.map(text => <button disabled={busy} key={text} onClick={() => onAsk(text)}>{text}<ArrowUpRight size={14}/></button>)}</div>}
     <div aria-live="polite" aria-relevant="additions text">{entries.map((entry, i) => <div className={'ds-message ds-' + entry.role} key={i}>
-      {entry.role === 'assistant' && <span><LumiFace small/>LUMI</span>}
+      {entry.role === 'assistant' && <span><MorfFace small/>MORF</span>}
       <Answer text={entry.text}/>
       {!!entry.actions?.length && <div className="ds-scene-actions">{entry.actions.filter(a => a.type !== 'highlight').map((action, index) => <button key={index} onClick={() => onActions([action])} disabled={busy}>
         {action.type === 'animate' ? <Play size={12}/> : action.type === 'explode' ? <Layers3 size={12}/> : <Focus size={12}/>}

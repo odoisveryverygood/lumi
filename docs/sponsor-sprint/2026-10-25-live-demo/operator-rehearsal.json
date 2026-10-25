@@ -1,0 +1,24 @@
+{
+  "revision": "3f26257be3237356787719b988ef28930ed888b9",
+  "mode": "live provider plus local browser operations",
+  "freshReviewDurationMs": 36085,
+  "reviewResultObservedWithinSeconds": 42,
+  "reviewExportedAtSeconds": 46.583,
+  "inspectThroughCompareAcceptUndoRedoExportSeconds": 89.716,
+  "spokenPitchRehearsed": false,
+  "spokenPitchNote": "Operator actions timed through tools. No human spoken three-minute delivery or audience understanding was measured.",
+  "originalEvidenceSelectionAndPoseFocus": true,
+  "retainedEvidenceSelectionAndPoseFocus": true,
+  "acceptedExportEqualsFreshReviewedDocument": true,
+  "undoExportExactlyEqualsBaseline": true,
+  "redoExportExactlyEqualsFreshReviewedDocument": true,
+  "reloadShowsFreshReviewAndRetainedPosePass": true,
+  "backupOrigin": "http://localhost:3004/",
+  "liveOrigin": "http://127.0.0.1:3004/",
+  "backupImported": "docs/team-integration/evidence/live-merged-fan.part.json",
+  "backupMode": "Prior recorded result replay; no new model request. Separate origin isolates saved browser storage.",
+  "notes": [
+    "A first backup preparation at the same origin showed a restored pending draft; it was explicitly discarded before inspecting the imported report. Final backup preparation uses the separate localhost origin and showed the imported prior report.",
+    "No application code changed, no push and no deployment in this task."
+  ]
+}

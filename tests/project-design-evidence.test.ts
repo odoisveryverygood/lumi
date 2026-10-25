@@ -4,7 +4,7 @@ import {validateDeviceDocument} from '../lib/studio/validation';
 import {evaluateDesignContract,validateDesignContract} from '../lib/studio/design-constraints';
 import {qualityFingerprint,sha256} from '../lib/studio/quality-fingerprint';
 const path=process.env.LUMI_PROJECT_EVIDENCE;
-describe.skipIf(!path)('recompute a saved Lumi design project (no provider requests)',()=>{
+describe.skipIf(!path)('recompute a saved Morf design project (no provider requests)',()=>{
  it('recomputes its recorded geometry checks against the embedded original project',async()=>{
   const raw=JSON.parse(readFileSync(path!,'utf8')),document=validateDeviceDocument(raw.document??raw),report=document.review;
   expect(report?.contract,'This export needs a measured design contract.').toBeTruthy();expect(report?.baselineProject,'This export needs its original baseline snapshot.').toBeTruthy();

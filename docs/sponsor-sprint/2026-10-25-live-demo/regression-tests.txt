@@ -1,0 +1,4 @@
+2026-10-25; revision 3f26257
+Node 24 / Vitest
+npx vitest run tests/motion.test.ts tests/review-acceptance.test.ts tests/team-integration-evidence.test.ts tests/retired-comparison.test.ts tests/exports.test.ts
+5 test files passed; 28 tests passed; 1.87 seconds. No skipped tests in this focused run.

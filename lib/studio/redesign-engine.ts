@@ -8,7 +8,7 @@ import { sceneActionSchema, validateSceneActions } from './interaction';
 import type { SceneAction } from './types';
 import type { DeviceDocument } from './types';
 
-const system=`You are Flare's constraint-aware hardware layout planner. Return one JSON object, no Markdown.
+const system=`You are Morf's constraint-aware hardware layout planner. Return one JSON object, no Markdown.
 Your output schema is {summary:string,constraintChanges:[{key,value,evidence}],unsupportedConstraints:string[],battery:{catalogId,position:[x,y,z],rotationY:0|90},radio:{catalogId,position:[x,y,z],rotationY:0|90},removePad:boolean}.
 Use readable component names in summary; keep catalog IDs only in structured fields. Choose real components ONLY from the supplied catalog. Geometry units are mm, X left/right, Y up, Z front/back. Sources are authoritative for component envelopes, never for this illustrative keyboard case. The server creates the geometry and performs conservative solid envelope checks; do not invent check results, runtime, wiring validation, firmware or physical tests.
 The workflow preserves all original rigid components and the outer case, PCB and keys. Only the acoustic pad can be removed. The BLE board includes charging; keep the existing USB connector and propose its charging connection, but its adapter, firmware, mounting, polarity and charge compatibility remain unverified. No separate power board is needed.

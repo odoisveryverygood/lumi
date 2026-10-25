@@ -1,14 +1,14 @@
 'use client';
 import {useEffect,useRef,useState,type KeyboardEvent,type PointerEvent,type RefObject} from 'react';
-import {guidePosition,type GuideAnchor} from '@/lib/studio/lumi-motion';
-import {clampPet,isPetDrag,PET_STORAGE_KEY,readPetMemory,rememberPet,restorePet,type PetMemory,type PetPoint} from '@/lib/studio/lumi-pet';
+import {guidePosition,type GuideAnchor} from '@/lib/studio/morf-motion';
+import {clampPet,isPetDrag,PET_STORAGE_KEY,readPetMemory,rememberPet,restorePet,type PetMemory,type PetPoint} from '@/lib/studio/morf-pet';
 
 type Options={forceMotion:boolean;open:boolean;guideKey:string;busy:boolean;hidden:boolean;gallery:boolean;rightInset:number;leftInset:number;answerKey:number};
 type Drag={id:number;start:PetPoint;origin:PetPoint;offset:PetPoint;moved:boolean};
 type Emotion='idle'|'wave'|'happy'|'land'|'look';
 
 /** High-frequency position stays outside React; only deliberate pet actions render. */
-export function useLumiPet(options:Options,actor:RefObject<HTMLDivElement|null>,leader:RefObject<SVGPathElement|null>,dot:RefObject<SVGCircleElement|null>,anchor:RefObject<GuideAnchor|null>){
+export function useMorfPet(options:Options,actor:RefObject<HTMLDivElement|null>,leader:RefObject<SVGPathElement|null>,dot:RefObject<SVGCircleElement|null>,anchor:RefObject<GuideAnchor|null>){
   const [dragging,setDragging]=useState(false);
   const [emotion,setEmotion]=useState<Emotion>('idle');
   const [notice,setNotice]=useState('Drag me anywhere. Click to talk.');
@@ -20,7 +20,13 @@ export function useLumiPet(options:Options,actor:RefObject<HTMLDivElement|null>,
   const drag=useRef<Drag|null>(null),suppressClick=useRef(false);
   const reactionTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
   const lastActivity=useRef(0),lastAnswer=useRef(options.answerKey);
-  const animations=true;
+  const [reducedMotion,setReducedMotion]=useState(false);
+  useEffect(()=>{
+    const preference=window.matchMedia('(prefers-reduced-motion: reduce)'),update=()=>setReducedMotion(preference.matches);
+    update();preference.addEventListener('change',update);
+    return()=>preference.removeEventListener('change',update);
+  },[]);
+  const animations=options.forceMotion||!reducedMotion;
   const animationsRef=useRef(animations);animationsRef.current=animations;
 
   function save(){try{localStorage.setItem(PET_STORAGE_KEY,JSON.stringify(memory.current));}catch{/* Placement still works when browser storage is unavailable. */}}
@@ -117,7 +123,7 @@ export function useLumiPet(options:Options,actor:RefObject<HTMLDivElement|null>,
     const delta=event.shiftKey?40:12;
     const moves:Record<string,PetPoint>={ArrowLeft:{x:-delta,y:0},ArrowRight:{x:delta,y:0},ArrowUp:{x:0,y:-delta},ArrowDown:{x:0,y:delta}};
     const step=moves[event.key];if(!step)return;
-    event.preventDefault();event.stopPropagation();place({x:position.current.x+step.x,y:position.current.y+step.y});setNotice('Lumi moved. This spot is saved.');
+    event.preventDefault();event.stopPropagation();place({x:position.current.x+step.x,y:position.current.y+step.y});setNotice('Morf moved. This spot is saved.');
   }
   function consumeDragClick(){if(!suppressClick.current)return false;suppressClick.current=false;return true;}
   return {animations,dragging,emotion,notice,consumeDragClick,

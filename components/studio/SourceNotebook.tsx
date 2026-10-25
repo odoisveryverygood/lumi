@@ -51,6 +51,6 @@ export default function SourceNotebook({sources,onChange,onClose,citation,disabl
       <pre className="fn-source-text">{at>=0&&quote?<>{content.slice(0,at)}<mark>{quote}</mark>{content.slice(at+quote.length)}</>:content}</pre>
       {!!current&&current.origin==='upload'&&<p className="fn-source-note">Your file is stored in this browser’s notebook and sent to Gemini when you ask a design question. Excerpts are matched against extracted text. Review numerical extractions before enabling them for checks.</p>}
     </main></div>{(error||notice)&&<div className={`fn-import-status ${error?'error':''}`} role={error?'alert':'status'}>{error||notice}</div>}
-    <footer><span><Upload size={13}/>An assembly, its documents, and your question. In one conversation.</span><button onClick={()=>download('Lumi-design-notebook.json',JSON.stringify({format:'flare-notebook-v1',sources},null,2))}>Export notebook<ArrowUpRight size={12}/></button></footer>
+    <footer><span><Upload size={13}/>An assembly, its documents, and your question. In one conversation.</span><button onClick={()=>download('Morf-design-notebook.json',JSON.stringify({format:'flare-notebook-v1',sources},null,2))}>Export notebook<ArrowUpRight size={12}/></button></footer>
   </div></div>,document.body);
 }

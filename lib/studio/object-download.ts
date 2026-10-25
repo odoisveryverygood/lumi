@@ -11,7 +11,7 @@ export async function downloadObjectReference(reference:ObjectReference,signal?:
  const response=await fetcher(reference.url,{signal:combined,redirect:'error',cache:'no-store'});
  if(!response.ok||!response.body)throw new Error('The source model is currently unavailable. Choose another reference.');
  const length=Number(response.headers.get('content-length'));
- if(length>MAX_BYTES){await response.body.cancel();throw new Error('This source model is larger than Lumi’s 25 MB import limit. Choose another reference.');}
+ if(length>MAX_BYTES){await response.body.cancel();throw new Error('This source model is larger than Morf’s 25 MB import limit. Choose another reference.');}
  const reader=response.body.getReader(),chunks:Uint8Array[]=[];let size=0;
  try{while(true){const {value,done}=await reader.read();if(done)break;if(value){size+=value.length;if(size>MAX_BYTES)throw new Error('This source model exceeds the 25 MB import limit.');chunks.push(value);}}}catch(error){await reader.cancel().catch(()=>{});throw error;}finally{reader.releaseLock();}
  const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}

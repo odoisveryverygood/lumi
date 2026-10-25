@@ -85,7 +85,7 @@ export interface DeviceSceneProps {
   forceMotion?:boolean;
   onShowcaseStop?:()=>void;
   guidePartId?:string|null;
-  onGuideAnchor?:(anchor:import('./lumi-motion').GuideAnchor|null)=>void;
+  onGuideAnchor?:(anchor:import('./morf-motion').GuideAnchor|null)=>void;
   document: DeviceDocument;
   reviewMode?: boolean;
   collisionRegions?: { position:Vec3; size:Vec3 }[];

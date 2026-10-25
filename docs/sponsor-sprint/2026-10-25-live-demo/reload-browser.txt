@@ -1,0 +1,170 @@
+Browser tab: 7, Title: "Lumi — A little light on everything.", URL: "http://127.0.0.1:3004/".
+1 AXWebArea Lumi — A little light on everything., URL: 127.0.0.1:3004/
+	2 button Import device file
+	3 container
+		4 button Lumi home
+			5 text lumi
+			6 text .
+		7 button Adjustable fan · seeded tilt study
+		8 container Workspace
+			9 button Explore
+			10 button Studio
+			11 button Design Lab
+				12 text Design
+				13 text  Lab
+		14 button Review design
+		15 button Parts library
+		16 button New device
+		17 button Share assembly
+		18 button Export
+	19 container Interactive device assembly
+		20 text LUMI / OBJECT STUDY
+		21 text A DIFFERENT PERSPECTIVE CHANGES EVERYTHING
+		22 container
+			23 checkbox Description: Play object motion, Value: 0
+			24 button (disabled) Undo edit
+			25 button (disabled) Redo edit
+			26 checkbox 3D, Value: 1
+			27 checkbox Top, Value: 0
+			28 checkbox Front, Value: 0
+			29 checkbox Description: Toggle component labels, Value: 0
+			30 checkbox Description: Device information, Value: 0
+		31 container Interactive three-dimensional Adjustable fan · seeded tilt study. Select a component, orbit the device, and use the Move or Rotate tools to edit it.
+			72 container
+				73 image
+					74 container
+						75 image Software-rendered geometry of Adjustable fan · seeded tilt study. Drag to orbit; click to select a part.
+						76 text Geometry view · drag to orbit · source textures omitted
+				77 container Component callouts
+		32 container
+			33 text OBJECT  / INTERACTIVE STUDY 11  PARTS
+			34 heading Adjustable fan · seeded tilt study/ 01, Value: 1
+				35 text Adjustable fan · seeded tilt study
+				36 text / 01
+			37 text A little closer. A lot clearer.
+		38 container
+			39 checkbox Description: Browse components, Value: 0
+				40 text Parts
+				41 text 11
+			42 button Reset camera
+			43 button Fit assembly
+			44 button Zoom in
+			45 button Zoom out
+		46 container
+			47 text FOLLOW YOUR CURIOSITY
+			48 button Take it apart
+			49 button See it in motion
+			50 button Start a conversation
+		51 container
+			52 checkbox Assembled, Value: 0
+			53 checkbox Exploded, Value: 1
+			54 button See it work
+			55 slider (settable, float) Description: Explode assembly, Value: 0.3799999952316284, Details: 0.38
+			56 container
+				57 text 38 %
+			58 text field (settable) Ask about or edit the device
+			59 checkbox Description: Voice input, Help: Voice input · hold Space to speak, Value: 0
+			60 button (disabled) Edit, Help: Apply your requested edit
+			61 button (disabled) Send to object assistant
+		62 container
+			63 text Illustrative geometry · millimetres Drag to orbit · scroll to zoom
+			64 button About this workspace
+	65 container
+		66 container
+			67 text YOUR LITTLE SPARK OF CURIOSITY Hi, I’m Lumi. Pick a part. Let’s see what makes it work.
+			68 button Ask Lumi
+		69 button (collapsed) Description: Talk to Lumi, Secondary Actions: Expand
+		70 text Drag Lumi anywhere. Arrow keys move 12 pixels; Shift moves 40. Click to talk. Lumi automatically guides you when you select a part or receive an answer.
+		71 text Drag me anywhere. Click to talk.
+	78 container Visual design review
+		79 container
+			80 text LUMI / DESIGN REVIEW
+			81 button Close design review
+		82 container
+			83 heading Rendered views reviewed, Value: 2
+				84 text Rendered views reviewed
+			85 text Evidence from the recorded geometry views. THE DESIGN BRIEF
+			86 text entry area (disabled) Description: Design review brief, Value: Repair the deliberately lowered fan stand while keeping it at least 10 mm shorter than the original reference. Retain the full -45 to +45 degree tilt range relative to its original resting head angle, with 0.5 mm sampled clearance. Only raise or lower the tilt yoke within the declared limits; preserve every original shape and the sourced 608 bearing.
+			87 container Review camera view
+				88 checkbox Assembled, Value: 1
+				89 checkbox Top, Value: 0
+				90 checkbox Exploded, Value: 0
+			91 image First checked assembled geometry render
+			92 text First checked
+			93 image Retained assembled geometry render
+			94 text Retained candidate
+			95 text Actual geometry and source materials · locked comparison cameras
+			96 button Compare at full size
+			97 container Sampled motion evidence
+				98 heading Sampled motion · pass, Value: 3
+					99 text Sampled motion ·  pass
+				100 container
+					101 text -45 ° to  45 ° relative to rest · required clearance  0.5  mm
+				102 container
+					103 text 19  checked poses:  -45°, -40°, -35°, -30°, -25°, -20°, -15°, -10°, -5°, 0°, 5°, 10°, 15°, 20°, 25°, 30°, 35°, 40°, 45 °. Between-sample motion remains unverified.
+				104 container
+					105 text Inspect attempt 
+					106 pop up button (collapsed, settable) Description: Motion evidence attempt, Value: Correction 1 · retained, Secondary Actions: Expand
+						107 menu
+							108 Original
+							109 (selected) Correction 1 · retained
+				110 container
+					111 text Minimum sampled clearance bound:  0.815 mm . Zero records contact/overlap, not penetration depth.
+				112 container
+					113 text pass  at  -45 ° speed-knob / tilt-yoke  ·  3.000 mm  ·  aabb-lower-bound Sampled geometric separation exceeds the requested threshold.
+					114 button Show this pose
+				115 container
+					116 image Actual motion geometry at -45 degrees, attempt 1
+					117 text -45 ° ·  webgl
+				118 container
+					119 image Actual motion geometry at 45 degrees, attempt 1
+					120 text 45 ° ·  webgl
+				121 container
+					122 image Actual motion geometry at 0 degrees, attempt 1
+					123 text 0 ° ·  webgl
+				124 button (collapsed) Original / retained witness, Secondary Actions: Expand
+					125 text Original / retained witness
+				126 button (collapsed) Frozen joint, allowed edits and contact exclusions, Secondary Actions: Expand
+					127 text Frozen joint, allowed edits and contact exclusions
+			128 button Measure motion locally
+			129 button Export motion evidence
+			130 text 6  supported 0  issues 0  unverified SUPPORTED BY THE VIEWS
+			131 button Show parts for Repair the deliberately lowered fan stand while keeping it at least 10 mm shorter than the original reference
+			132 heading Value: 3, Repair the deliberately lowered fan stand while keeping it at least 10 mm shorter than the original reference
+				133 text Repair the deliberately lowered fan stand while keeping it at least 10 mm shorter than the original reference
+			134 text In the assembled view, the U-Shaped Tilt Yoke is raised to [0, 78, 0] mm so its lower pedestal remains seated in the Weighted Base Stand while keeping the stand at least 10 mm shorter than the original reference and clearing the PWM Speed Controller PCB and Knurled Speed Knob.
+			135 text SUPPORTED BY THE VIEWS
+			136 button Show parts for Retain the full -45 to +45 degree tilt range relative to its original resting head angle,
+			137 heading Retain the full -45 to +45 degree tilt range relative to its original resting head angle,, Value: 3
+				138 text Retain the full -45 to +45 degree tilt range relative to its original resting head angle,
+			139 text The fan head assembly retains its full -45 to +45 degree revolute tilt range relative to the -12 degree resting angle of the Tilted Motor Pod & Bearing Boss, as confirmed across all 19 sampled angles and the -45, 0, and +45 degree motion frames.
+			140 text SUPPORTED BY THE VIEWS
+			141 button Show parts for 0.5 mm sampled clearance
+			142 heading 0.5 mm sampled clearance, Value: 3
+				143 text 0.5 mm sampled clearance
+			144 text Sampled motion clearance passes across all 19 poses from -45 to +45 degrees with a minimum measured separation of 0.815 mm at +20 degrees, exceeding the required 0.5 mm threshold.
+			145 text SUPPORTED BY THE VIEWS
+			146 button Show parts for Only raise or lower the tilt yoke within the declared limits
+			147 heading Only raise or lower the tilt yoke within the declared limits, Value: 3
+				148 text Only raise or lower the tilt yoke within the declared limits
+			149 text Only the U-Shaped Tilt Yoke vertical placement was adjusted to [0, 78, 0] mm, which is within the declared [0, 48, 0] to [0, 78, 0] mm allowed edit bounds.
+			150 text SUPPORTED BY THE VIEWS
+			151 button Show parts for preserve every original shape
+			152 heading preserve every original shape, Value: 3
+				153 text preserve every original shape
+			154 text In the exploded view and geometry data, all custom solids and component envelope dimensions are preserved without shape modifications.
+			155 text SUPPORTED BY THE VIEWS
+			156 button Show parts for the sourced 608 bearing
+			157 heading the sourced 608 bearing, Value: 3
+				158 text the sourced 608 bearing
+			159 text The sourced 608 Axle Ball Bearing is visible in the exploded view between the Tilted Motor Pod & Bearing Boss and Exposed Three-Blade Rotor with its NopSCADlib catalog reference and 22 x 7 x 22 mm dimensions intact.
+			160 button (collapsed) 2 recorded reviews, Secondary Actions: Expand
+				161 text 2
+				162 text  recorded 
+				163 text reviews
+			164 button (collapsed) Measured checks and limits, Secondary Actions: Expand
+				165 text Measured checks and limits
+			166 text Visual findings are Argon’s judgments about these images. Mechanical tolerances, forces, wiring, firmware and physical operation require separate verification.
+		167 button Review current object
+
+The focused UI element is 14 button Review design

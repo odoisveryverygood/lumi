@@ -1,6 +1,6 @@
 import {describe,expect,it} from 'vitest';
-import {guidePosition,showcaseFrame} from '../lib/studio/lumi-motion';
-describe('Lumi presentation motion',()=>{
+import {guidePosition,showcaseFrame} from '../lib/studio/morf-motion';
+describe('Morf presentation motion',()=>{
   it('grows the object before separating it, then allows a slow orbit',()=>{
     expect(showcaseFrame(0,.6)).toMatchObject({scale:.12,explode:0,rotating:false});
     expect(showcaseFrame(750,.6).explode).toBe(0);

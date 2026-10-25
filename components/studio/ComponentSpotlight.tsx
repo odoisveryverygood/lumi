@@ -12,7 +12,7 @@ export default function ComponentSpotlight({ part, connectionCount=part.connecti
     <div className="fx-spotlight-object"><PartThumbnail part={part} large scene={scene}/><button aria-label={`Bring ${part.name} closer`} onClick={onFocus}><ArrowUpRight size={16}/></button></div>
     <h2>{part.name}</h2><p>{part.role}</p>
     <div className="fx-spotlight-actions"><button disabled={busy} onClick={onExplain}><MessageCircle size={14}/>Explain</button><button aria-pressed={isolated} onClick={onIsolate}><Focus size={14}/>{isolated ? 'Show all' : 'Isolate'}</button><button onClick={onEdit}><SlidersHorizontal size={14}/>Edit part</button></div>
-    {part.catalogRef&&<a className="lumi-catalog-citation" href={part.sourceUrl} target="_blank" rel="noreferrer">Sourced CAD · {part.specs['Catalog source']}<ArrowUpRight size={12}/></a>}
+    {part.catalogRef&&<a className="morf-catalog-citation" href={part.sourceUrl} target="_blank" rel="noreferrer">Sourced CAD · {part.specs['Catalog source']}<ArrowUpRight size={12}/></a>}
     <small>Part {part.id} · {connectionCount} connection{connectionCount === 1 ? '' : 's'}</small>
   </section>;
 }

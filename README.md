@@ -1,4 +1,8 @@
-# Lumi — grounded design studio
+# Morf — understand, modify, verify
+
+Morf is the current name of the project previously called Lumi/Flare. The mechanical cube companion replaces the yellow character; older dated evidence retains its original branding.
+
+Current local identity: [Morf companion, behavior and verification](docs/MORF.md). This rebrand has not been pushed or deployed.
 
 Team handoffs: [Teammate 1 — generation reliability](docs/team/README_TEAMMATE_1.md) · [Teammate 2 — movement verification](docs/team/README_TEAMMATE_2.md) · [Teammate 3 — independent evidence and demo](docs/team/README_TEAMMATE_3.md). Create a feature branch from `main` and open a PR for changes.
 

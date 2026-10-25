@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "project": "Lumi",
+  "as_of": "2026-10-25",
+  "scope": "Three-minute Track 2 fan repair demo on revision 3f26257. Live provider run plus browser and offline evidence checks. No application code changes or deployment.",
+  "integrations": [
+    {
+      "integration_id": "I001",
+      "sponsor": "Gemini 4 Argon",
+      "purpose": "Review actual rendered fan geometry and measured motion, propose a permitted repair, and review the measured correction.",
+      "docs_url": "https://ai.google.dev/gemini-api/docs/interactions",
+      "docs_checked_at": "2026-10-25",
+      "implementation_ref": "3f26257: lib/studio/motion-client.ts and app/api/review/route.ts",
+      "env_vars": [
+        "GEMINI_API_KEY"
+      ],
+      "checks": [
+        {
+          "check_id": "D01",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "The motion, acceptance, export and saved-evidence regression tests pass.",
+          "observed": "28 focused regression tests passed across five files; includes motion failures, timeout/cancellation behavior, acceptance, export and saved-evidence checks.",
+          "checked_at": "2026-10-25T19:09:45.855178+00:00",
+          "evidence_path": "regression-tests.txt",
+          "evidence_sha256": "15efff6ac52ec216be88e0f19a8bbfa9755cfab3d7ddd1a351f3de1aced8b3bd"
+        },
+        {
+          "check_id": "D02",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "A fresh seeded fan review uses actual Argon calls and yields a retained sampled-motion pass within 90 seconds.",
+          "observed": "Two real gemini-4-argon review rounds completed in 36.085 seconds; original failed; retained correction passed 19 poses at 0.8153189588437844 mm minimum sampled clearance.",
+          "checked_at": "2026-10-25T19:09:45.855178+00:00",
+          "evidence_path": "live-check.json",
+          "evidence_sha256": "69948382e6f10dbc517e9f60ffb0816489626e4e9227b36e5b58075060ba4621"
+        },
+        {
+          "check_id": "D03",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Accepted browser export independently reproduces final and per-round geometry and image hashes; source shapes preserved.",
+          "observed": "Fresh export reparsed; all round measurements and document/image hashes independently checked. Twelve image hashes match. Source shapes and canonical bearing preserved.",
+          "checked_at": "2026-10-25T19:09:45.855178+00:00",
+          "evidence_path": "live-check.json",
+          "evidence_sha256": "69948382e6f10dbc517e9f60ffb0816489626e4e9227b36e5b58075060ba4621"
+        },
+        {
+          "check_id": "D04",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Browser acceptance, undo, redo, reload and original/retained selection preserve the actual checked project.",
+          "observed": "Selected original fail and retained pass, focused both poses, accepted, undid and redid. Complete exports exactly equal baseline and accepted candidate. Reload displayed fresh report and retained pass.",
+          "checked_at": "2026-10-25T19:09:45.855178+00:00",
+          "evidence_path": "operator-rehearsal.json",
+          "evidence_sha256": "a1e777935486257c4e8030dd32a870ae4c22244985412299a621920b29708085"
+        },
+        {
+          "check_id": "D05",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "A separate fallback tab imports the prior saved result and displays its recorded evidence without calling the provider.",
+          "observed": "On isolated http://localhost:3004, imported the previous live-merged-fan result; Review displayed its original recorded explanations, 19 poses and retained 0.815 mm pass without starting a review.",
+          "checked_at": "2026-10-25T19:09:45.855178+00:00",
+          "evidence_path": "fallback-browser.txt",
+          "evidence_sha256": "ed6da5e3871482dfa04c4d6d1d1e60a3ee14ab491c76044aa1a6ff3323479ba8"
+        }
+      ]
+    }
+  ]
+}

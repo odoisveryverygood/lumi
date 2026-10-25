@@ -9,7 +9,7 @@ import {buildModel,localPartBounds,type GeometryBank} from '@/lib/studio/render-
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { setEtchFade } from '@/lib/etch-models';
 import { sceneFrame } from '@/lib/studio/framing';
-import { showcaseFrame } from '@/lib/studio/lumi-motion';
+import { showcaseFrame } from '@/lib/studio/morf-motion';
 import type { DeviceMechanism, DevicePart, DeviceSceneProps, Solid, Vec3 } from '@/lib/studio/types';
 import SoftwareViewport from './SoftwareViewport';
 
@@ -303,8 +303,8 @@ function Callouts({ parts, objects, selectedId, hoveredId, highlightedIds, enabl
       path.style.pointerEvents='none';dot.style.pointerEvents='none';category.style.pointerEvents='none';
       path.setAttribute('fill', 'none'); path.setAttribute('stroke', focused ? '#c19b60' : '#b3a18b'); path.setAttribute('stroke-width', '.85'); path.setAttribute('stroke-linejoin', 'round'); path.setAttribute('opacity', '.8');
       dot.setAttribute('r', '2.1'); dot.setAttribute('fill', focused ? '#c08a3e' : '#ad9169'); dot.setAttribute('stroke', '#fffbf6'); dot.setAttribute('stroke-width', '1.4');
-      title.setAttribute('font-family', 'var(--font-lumi), ui-sans-serif, system-ui, sans-serif'); title.setAttribute('font-size', '12'); title.setAttribute('font-weight', '500'); title.setAttribute('fill', focused ? '#946829' : '#76603f'); title.setAttribute('paint-order','stroke'); title.setAttribute('stroke','#f8f5f0'); title.setAttribute('stroke-width','4'); title.setAttribute('stroke-linejoin','round');
-      category.setAttribute('font-family','var(--font-lumi), ui-sans-serif, system-ui, sans-serif'); category.setAttribute('font-size','11'); category.setAttribute('fill','#aa8f68'); category.setAttribute('paint-order','stroke'); category.setAttribute('stroke','#f8f5f0'); category.setAttribute('stroke-width','3');
+      title.setAttribute('font-family', 'var(--font-morf), ui-sans-serif, system-ui, sans-serif'); title.setAttribute('font-size', '12'); title.setAttribute('font-weight', '500'); title.setAttribute('fill', focused ? '#946829' : '#76603f'); title.setAttribute('paint-order','stroke'); title.setAttribute('stroke','#f8f5f0'); title.setAttribute('stroke-width','4'); title.setAttribute('stroke-linejoin','round');
+      category.setAttribute('font-family','var(--font-morf), ui-sans-serif, system-ui, sans-serif'); category.setAttribute('font-size','11'); category.setAttribute('fill','#aa8f68'); category.setAttribute('paint-order','stroke'); category.setAttribute('stroke','#f8f5f0'); category.setAttribute('stroke-width','3');
       const names:Record<string,string>={motherboard:'Motherboard','cooler-fins':'CPU heatsink','cooler-base':'Cooler base','cpu-fan':'CPU cooling fan',processor:'Processor','gpu-board':'Graphics card','gpu-heatsink':'GPU heatsink','gpu-shroud':'GPU fan shroud','gpu-fan-left':'GPU fan · left','gpu-fan-right':'GPU fan · right','ram-a':'Memory A','ram-b':'Memory B','m2-ssd':'NVMe storage','power-unit':'Power supply','case-tray':'Chassis tray','case-feet':'Isolation feet',standoffs:'Board standoffs','rear-frame':'Rear I/O frame','front-panel':'Front fascia','left-panel':'Left panel','right-panel':'Right panel','top-frame':'Service rim','front-io':'Front I/O','rear-io':'Rear I/O','power-harness':'Power harness','riser-cable':'PCIe riser',screws:'Captive screws'};
       const short=names[part.id]||part.name.replace(/\bCompact\s+/i,'').replace(/\bProcessor\s+/i,'CPU ').replace(/\s*&\s*heatpipes/i,'').replace(/\s*package$/i,'');
       const lines:string[]=[];let line='';for(const word of short.split(' ')){if(line.length+word.length>20&&line){lines.push(line);line=word;}else line+=(line?' ':'')+word;}if(line)lines.push(line);
@@ -352,7 +352,7 @@ function MeasurementWitness({measurement,props}:{measurement:NonNullable<DeviceS
     const color=measurement.tone==='fail'?'#dc3e61':'#b48646';
     line.setAttribute('fill','none');line.setAttribute('stroke',color);line.setAttribute('stroke-width','1.5');leader.setAttribute('fill','none');leader.setAttribute('stroke',color);leader.setAttribute('stroke-width','1');leader.setAttribute('stroke-dasharray','3 4');
     rect.setAttribute('width','176');rect.setAttribute('height','55');rect.setAttribute('rx','10');rect.setAttribute('fill','#fffcf9');rect.setAttribute('stroke',color+'55');label.append(rect);
-    [measurement.label,measurement.detail||''].forEach((value,index)=>{const text=document.createElementNS(svgNS,'text');text.textContent=value;text.setAttribute('x','13');text.setAttribute('y',String(22+index*17));text.setAttribute('fill',index?'#8a788a':color);text.setAttribute('font-family','var(--font-lumi),system-ui,sans-serif');text.setAttribute('font-size',index?'10':'12');text.setAttribute('font-weight',index?'400':'600');label.append(text);});
+    [measurement.label,measurement.detail||''].forEach((value,index)=>{const text=document.createElementNS(svgNS,'text');text.textContent=value;text.setAttribute('x','13');text.setAttribute('y',String(22+index*17));text.setAttribute('fill',index?'#8a788a':color);text.setAttribute('font-family','var(--font-morf),system-ui,sans-serif');text.setAttribute('font-size',index?'10':'12');text.setAttribute('font-weight',index?'400':'600');label.append(text);});
     svg.append(leader,line,label);gl.domElement.parentElement?.append(svg);drawing.current={svg,line,leader,label};return()=>{svg.remove();drawing.current=null;};
   },[gl,size,measurement]);
   useFrame(()=>{const el=drawing.current;if(!el)return;const from=new THREE.Vector3(...measurement.from).project(camera),to=new THREE.Vector3(...measurement.to).project(camera);el.svg.style.display=from.z>1||to.z>1?'none':'';
