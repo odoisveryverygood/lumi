@@ -1,0 +1,201 @@
+/* The existing circuit workbench, using Morf's shared warm material palette. */
+.editor-app.morf-circuits{
+  --bg:var(--flare-canvas);--stage:var(--flare-canvas);--ink:var(--morf-ink);
+  --ink2:#70583f;--ink3:#806b54;--line:var(--morf-line);--line2:#dfc7a5;
+  --accent:#bc7934;--blue:#b77735;--accent-ink:#8d5823;--accent-bg:#fae4c4;
+  --ok:#3f7754;--bad:#ad493b;--warn:#98661f;
+  background:var(--flare-canvas);color:var(--morf-ink);
+}
+.editor-app.morf-circuits ::selection{background:#f1d3a4;color:var(--morf-ink)}
+.editor-app.morf-circuits ::-webkit-scrollbar-thumb{background:#cdb797}
+.editor-app.morf-circuits :is(button,a):focus-visible{outline:2px solid #b67b3d;outline-offset:3px}
+.editor-app.morf-circuits :is(input,textarea,select):focus{border-color:#c59964!important;box-shadow:0 0 0 3px #edc57c25}
+.editor-app.morf-circuits :is(input,textarea)::placeholder{color:#897359;opacity:1}
+.editor-app.morf-circuits :is(h1,h2,h3,h4,strong){color:var(--morf-ink);-webkit-text-fill-color:currentColor}
+
+/* Shared header and navigation. The active workspace already uses the same component. */
+.editor-app.morf-circuits .app-header{height:70px;padding:0 24px;gap:17px;background:var(--flare-gradient);border-color:var(--morf-line);box-shadow:0 3px 25px #b67f3010}
+.editor-app.morf-circuits .brand{color:#4a3522;flex-shrink:0}
+.editor-app.morf-circuits .brand-icon{background:none;box-shadow:none;border:0;transform:none;width:34px;height:36px;margin-right:9px}
+.editor-app.morf-circuits .brand-word{font-size:31px;font-weight:650;letter-spacing:-1.5px}
+.editor-app.morf-circuits .brand b{max-width:115px;padding:0;margin-left:16px;white-space:normal;font-size:6px;line-height:1.7;letter-spacing:1.4px;font-weight:450;color:#8d6941;background:none;border:0}
+.editor-app.morf-circuits .header-rule{background:var(--morf-line)}
+.editor-app.morf-circuits .project-breadcrumb{color:#806244;font-size:11px}
+.editor-app.morf-circuits .project-breadcrumb>svg{color:#96734b}
+.editor-app.morf-circuits .save-status{color:#735f49}
+.editor-app.morf-circuits .header-actions{gap:5px}
+.editor-app.morf-circuits .app-header .icon-btn{color:#896b49}
+.editor-app.morf-circuits .app-header .icon-btn:hover{background:#fff7e9;color:#624528}
+.editor-app.morf-circuits .text-action{color:#6b5135;border:1px solid transparent;border-radius:8px}
+.editor-app.morf-circuits .text-action:hover{background:#fff7e9;border-color:#dcb98a66}
+.editor-app.morf-circuits :is(.primary,.send-btn){background:var(--flare-gradient);border-color:#d9b581;color:#68441f;box-shadow:0 2px 9px #9c6b2410}
+.editor-app.morf-circuits :is(.primary,.send-btn):hover{background:#f7d09a;box-shadow:0 4px 15px #aa773119;transform:none}
+.editor-app.morf-circuits .secondary{background:#fffaf1;border-color:var(--line2);color:#705234}
+.editor-app.morf-circuits .secondary:hover{background:#f9e8cd}
+
+/* Light explorer and inspector; native scrolling and editing remain unchanged. */
+.editor-app.morf-circuits :is(.left-panel,.right-panel){background:linear-gradient(155deg,#fff9ef,#fff0dd);border-color:var(--morf-line)}
+.editor-app.morf-circuits :is(.panel-topline,.left-tabs,.right-tabs,.right-footer,.workspace-status,.explorer-footer){background:#fff9ef;border-color:var(--morf-line);color:#7b6247}
+.editor-app.morf-circuits :is(.panel-topline>span,.section-label,.panel-kicker,.group-heading){color:#826849;font-weight:500}
+.editor-app.morf-circuits .panel-topline{height:45px;padding-inline:16px}
+.editor-app.morf-circuits .left-tabs{height:39px;gap:5px;padding:0 10px 6px;border-bottom:0}
+.editor-app.morf-circuits .left-tabs>button{padding:7px 9px;border-radius:7px;font-size:11px;color:#82674c}
+.editor-app.morf-circuits .left-tabs>button.active{background:#f8e3c4;color:#704b26;font-weight:550}
+.editor-app.morf-circuits :is(.left-tabs,.right-tabs)>button.active:after{display:none}
+.editor-app.morf-circuits .left-tabs small{background:#f2e8d9;color:#806447;border:0;border-radius:4px}
+.editor-app.morf-circuits .left-tabs>button.active small{background:#fff5e4;color:#79532e}
+.editor-app.morf-circuits .right-tabs{height:45px;padding:6px 10px;gap:4px;flex-shrink:0}
+.editor-app.morf-circuits .right-tabs>button{height:32px;padding:7px 12px;border:1px solid transparent;border-radius:7px;color:#82654a;font-size:11px}
+.editor-app.morf-circuits .right-tabs>button.active{background:#f8e3c4;border-color:#e2c69f;color:#704b26}
+.editor-app.morf-circuits .search-field{height:35px;margin:10px 12px 12px;padding-inline:10px;border-radius:8px;background:#fffdf7;border-color:#dfc7a5;color:#96774f}
+.editor-app.morf-circuits .search-field input{color:#624b34;font-size:11px}
+.editor-app.morf-circuits .search-field:focus-within{border-color:#c39156;box-shadow:0 0 0 3px #edc57c20}
+.editor-app.morf-circuits .explorer-content{padding:0 10px 16px}
+.editor-app.morf-circuits .assembly-row{background:#fff9ef;border-color:#e4ceb0;color:#725536;border-radius:9px;padding:12px 10px}
+.editor-app.morf-circuits .assembly-row.selected{background:#f8e8d0;border-color:#dec097}
+.editor-app.morf-circuits .assembly-row :is(strong,span,svg){color:#715334}
+.editor-app.morf-circuits .group-heading{padding-inline:6px;font-size:9px;letter-spacing:.6px}
+.editor-app.morf-circuits .group-heading>small{color:#806d56}
+.editor-app.morf-circuits .part-list-row{min-height:49px;margin:3px 0;border-radius:9px}
+.editor-app.morf-circuits :is(.part-list-row:hover,.wire-list-row:hover,.library-row:hover){background:#fffaf2}
+.editor-app.morf-circuits :is(.part-list-row.selected,.wire-list-row.selected){background:#fbe5c5;border-color:#d9b688}
+.editor-app.morf-circuits .part-type-icon{background:#fffaf1;border-color:#e5d1b6;border-radius:7px}
+.editor-app.morf-circuits .part-select strong{color:#614a33;font-size:10.5px;font-weight:550}
+.editor-app.morf-circuits .part-select small{color:#826b51;font-size:9px}
+.editor-app.morf-circuits .part-select small i{color:#a99479}
+.editor-app.morf-circuits .row-eye{color:#8b6c47}
+.editor-app.morf-circuits .explorer-footer>button{color:#865f34}
+.editor-app.morf-circuits .explorer-footer .bom-shortcut{color:#755536}
+.editor-app.morf-circuits :is(.library-row strong,.wire-list-row strong,.wire-list-row b){color:#614a33}
+.editor-app.morf-circuits :is(.library-row small,.library-row p,.library-row em,.wire-list-row small,.list-caption,.catalog-note){color:#806a51}
+.editor-app.morf-circuits .library-row{border-color:#e4d0b2;border-radius:9px}
+.editor-app.morf-circuits :is(.library-row>button,.library-row>span){color:#90632e}
+.editor-app.morf-circuits .inspector-scroll{padding:20px 20px 25px}
+.editor-app.morf-circuits :is(.overview-heading,.selected-title h2,.build-panel>h2){color:#60472e;font-weight:500;letter-spacing:-.8px}
+.editor-app.morf-circuits .overview-heading{font-size:26px;line-height:1.25;margin:20px 0 13px}
+.editor-app.morf-circuits :is(.body-copy,.part-description,.micro-copy,.field>span,.field-heading,.step-details>p,.select-hint p,.spec-grid dt){color:#7c644a}
+.editor-app.morf-circuits .body-copy{font-size:11px;line-height:1.85}
+.editor-app.morf-circuits :is(.field>input,.field>textarea,.field>select,.full-select,.vector-inputs>label,.assistant-composer>textarea){background:#fffdf7;border-color:#dec7a6;color:#614a33;border-radius:7px}
+.editor-app.morf-circuits .vector-inputs input{color:#614a33;background:transparent}
+.editor-app.morf-circuits :is(.vector-inputs label>span,.vector-field>span,.vector-field small){color:#82684b}
+.editor-app.morf-circuits :is(.detail-section,.assistant-composer,.pin-table,.spec-grid>div,.select-hint){border-color:#e3cfb2}
+.editor-app.morf-circuits .project-metrics{border:0;background:none;gap:8px;margin:20px 0 25px;border-radius:0}
+.editor-app.morf-circuits .project-metrics>div{background:#fffbf4;border:1px solid #e5d0b0!important;border-radius:10px;padding:14px 12px;gap:5px}
+.editor-app.morf-circuits .project-metrics b{color:#79552e;font-size:21px;font-weight:500}
+.editor-app.morf-circuits .project-metrics span{color:#80684c;font-size:9px}
+.editor-app.morf-circuits :is(.spec-grid dd,.pin-table strong,.pin-table button,.color-row>span){color:#705334}
+.editor-app.morf-circuits :is(.section-label>span,.pin-table small,.selection-actions button,.source-links a){color:#82684b}
+.editor-app.morf-circuits .selection-actions button{border-color:#e3cbaa;background:#fff9ef;border-radius:7px}
+.editor-app.morf-circuits .selection-actions button.selected{background:#f6dfb9;color:#704a23}
+.editor-app.morf-circuits .detail-note{color:#82572c;background:#fff0d4;border-color:#e5c797;border-radius:9px}
+.editor-app.morf-circuits :is(.step-details,.step-list button){border-color:#e1c9a6}
+.editor-app.morf-circuits .step-list button{border-radius:9px;color:#7a6248}
+.editor-app.morf-circuits .step-list button.active{background:#f9e4c5;border-color:#d6b082}
+.editor-app.morf-circuits .step-list button.active>span{background:#efc88f;color:#63451f}
+.editor-app.morf-circuits .step-list button.done>span{color:#47734d;background:#edf0df}
+.editor-app.morf-circuits .step-list strong{color:#715235}
+.editor-app.morf-circuits .step-progress{background:#eaddc7}.editor-app.morf-circuits .step-progress>div{background:#cb975a}
+.editor-app.morf-circuits .step-tags button{background:#fff6e5;border-color:#e0c49c;color:#7a572d}
+.editor-app.morf-circuits .step-check{background:#f3f1e1;border-color:#d8d9ba;color:#57704a}
+.editor-app.morf-circuits .step-check p{color:#57704a}
+.editor-app.morf-circuits .danger-text{color:#a8513d}
+
+/* The same quiet canvas controls and prompt material as Studio. */
+.editor-app.morf-circuits .center-panel{background:var(--flare-canvas)}
+.editor-app.morf-circuits .canvas-toolbar{height:45px;padding:0 17px;background:#fff9ef;border-color:var(--morf-line)}
+.editor-app.morf-circuits .view-tabs{background:#fffaf1;border:1px solid #e3ccaa;border-radius:8px;padding:3px}
+.editor-app.morf-circuits .view-tabs>button{color:#866a4a;font-size:10px}
+.editor-app.morf-circuits .view-tabs>button.active{background:#f5d39b;color:#725025;box-shadow:0 2px 7px #a8844614;border-radius:5px}
+.editor-app.morf-circuits .canvas-options>button:not(.icon-btn){color:#7e674d;font-size:10px}
+.editor-app.morf-circuits .canvas-options>button.on{color:#8a5925}
+.editor-app.morf-circuits .canvas-options>.icon-btn{color:#8c6f4c}
+.editor-app.morf-circuits .canvas-stage{background:radial-gradient(ellipse at 65% 35%,#fffefa 0,#fffaf0 48%,#f9f0df 100%)}
+.editor-app.morf-circuits .canvas-caption{top:25px;left:27px;right:27px}
+.editor-app.morf-circuits .canvas-caption h1{font-size:clamp(22px,2.4vw,34px);font-weight:500;line-height:1.2;letter-spacing:-1.2px;color:#5f4931}
+.editor-app.morf-circuits .canvas-caption h1>span{font-size:10px;color:#80694e;letter-spacing:0}
+.editor-app.morf-circuits :is(.canvas-kicker,.canvas-caption>p,.canvas-footnote){color:#806b50}
+.editor-app.morf-circuits .canvas-kicker{letter-spacing:1.1px;font-size:8px}
+.editor-app.morf-circuits .canvas-caption>p{font-size:10px;margin-top:10px}
+.editor-app.morf-circuits .transform-toolbar{left:17px;padding:5px;gap:3px;background:#fffaf0ed;border-color:#e4cfae;border-radius:12px;box-shadow:0 5px 22px #aa7f3310}
+.editor-app.morf-circuits .transform-toolbar .icon-btn{color:#92724c;width:29px;height:30px;border-radius:7px}
+.editor-app.morf-circuits .transform-toolbar .icon-btn:hover{background:#fff0d8;color:#805426}
+.editor-app.morf-circuits .transform-toolbar .icon-btn.active{background:#f9dfb5;color:#80501e}
+.editor-app.morf-circuits .transform-toolbar>span{background:#e7d4b7}
+.editor-app.morf-circuits .stage-bottom{bottom:44px;gap:13px;width:min(590px,calc(100% - 90px))}
+.editor-app.morf-circuits .assembly-controls{gap:11px}
+.editor-app.morf-circuits .mode-switch{background:#fffaf1ee;border-color:#dec29b;box-shadow:0 4px 20px #a47d4010;padding:4px;border-radius:10px}
+.editor-app.morf-circuits .mode-switch>button{padding:8px 10px;color:#856849;font-size:10px;border-radius:7px}
+.editor-app.morf-circuits .mode-switch>button:hover{color:#795023;background:#faedd7}
+.editor-app.morf-circuits .mode-switch>button.active{background:#f5d39b;color:#725025;box-shadow:0 2px 7px #a8844620}
+.editor-app.morf-circuits .explode-control{display:flex;background:none;border:0;box-shadow:none;color:#80694b;font-size:8px}
+.editor-app.morf-circuits .explode-control input{accent-color:#bc8647}.editor-app.morf-circuits .explode-control small{color:#765939}
+.editor-app.morf-circuits .canvas-composer{height:50px;padding:9px 11px 9px 14px;background:#fff9ed;border:1px solid #ddbb8d;border-radius:12px;box-shadow:0 10px 35px #ac7b3c13;color:#a27945;gap:8px}
+.editor-app.morf-circuits .canvas-composer>input{font-size:11px;color:#6e5132}.editor-app.morf-circuits .canvas-composer>input::placeholder{font-size:11px;color:#887154}
+.editor-app.morf-circuits .canvas-composer :is(.intent-switch,.voice-button){color:#89683f}
+.editor-app.morf-circuits .canvas-composer>svg{display:block;color:#b78344;width:17px}
+.editor-app.morf-circuits .canvas-composer .send-btn{width:32px;height:32px;border-radius:9px;background:#f6c77e;color:#755025}
+.editor-app.morf-circuits .build-controls{background:#fffaf1f5;border-color:#dec29b;color:#735537;border-radius:12px;box-shadow:0 4px 20px #a47d4010}
+.editor-app.morf-circuits :is(.build-controls small,.build-controls strong,.build-back,.build-exit){color:#806240}
+.editor-app.morf-circuits .build-controls .primary{color:#65471f}
+.editor-app.morf-circuits .canvas-footnote{font-size:8px}
+.editor-app.morf-circuits .workspace-status{height:34px;font-size:9px}.editor-app.morf-circuits .workspace-status button{color:#7a6247}
+.editor-app.morf-circuits .workspace-status .checks-ok{color:#52764e}.editor-app.morf-circuits .workspace-status .checks-error{color:#a7513c}
+.editor-app.morf-circuits .workspace-status .project-source{color:#826d56}
+.editor-app.morf-circuits .right-footer{padding:11px 15px;font-size:9px;color:#80694e}
+.editor-app.morf-circuits .right-footer button{color:#8e6c42}
+.editor-app.morf-circuits .hover-readout{background:#fffaf0f5;border-color:#e1c7a0;color:#775838;box-shadow:0 5px 20px #a4773015}
+.editor-app.morf-circuits .hover-readout :is(strong,p,span){color:#795c3b}
+.editor-app.morf-circuits :is(.show-all,.readonly-copy){background:#fff5e1;border-color:#e1c49c;color:#805b30}
+.editor-app.morf-circuits .notice-strip{background:#fff1d9;border-color:#dfbe92;color:#825c31}
+
+/* The existing assistant, guides and dialogs keep their handlers. */
+.editor-app.morf-circuits .assistant-intro .ai-orb{background:#fce9ca;color:#a77332;border-color:#e4c699;box-shadow:none}
+.editor-app.morf-circuits .assistant-intro h2{color:#654a2f;font-weight:500;letter-spacing:-.8px}
+.editor-app.morf-circuits .assistant-intro>p{color:#7d644a}
+.editor-app.morf-circuits .assistant-intro>button{background:#fffaf1;border-color:#e2cbaa;color:#7b5832;border-radius:9px}
+.editor-app.morf-circuits .assistant-intro>button:hover{background:#f9e6c7}
+.editor-app.morf-circuits .message{border-color:#e4cfae;color:#755738}
+.editor-app.morf-circuits .message.user{background:#fae4c2;border-color:#dfbd90}
+.editor-app.morf-circuits .message.assistant{background:#fffaf1;border-color:#e2caaa}
+.editor-app.morf-circuits :is(.message-copy,.message>p,.message.user .message-copy){color:#725335}
+.editor-app.morf-circuits .message-copy strong{color:#584027}
+.editor-app.morf-circuits .message-copy code{background:#f5e6cf;border-color:#e0c39c;color:#805520}
+.editor-app.morf-circuits :is(.message>span,.message small,.composer-footer,.thinking){color:#88663e}
+.editor-app.morf-circuits .assistant-composer{background:#fff9ee;border-color:#e2c8a4}
+.editor-app.morf-circuits .composer-tabs>button{color:#826a50}.editor-app.morf-circuits .composer-tabs>button.active{color:#895b25}
+.editor-app.morf-circuits .assistant-composer>textarea{color:#674c2e;background:#fffcf5;border-color:#dfc8a5}
+.editor-app.morf-circuits .modal-backdrop{background:#3d302963;backdrop-filter:blur(8px)}
+.editor-app.morf-circuits .modal{background:linear-gradient(150deg,#fffaf1,#fff1da);border:1px solid #dec094;color:#795e3e;box-shadow:0 25px 100px #49322535;border-radius:19px}
+.editor-app.morf-circuits :is(.modal>h2,.code-modal-head h2){color:#674b2e;font-weight:500;letter-spacing:-.8px}
+.editor-app.morf-circuits .modal>p{color:#80654a}
+.editor-app.morf-circuits :is(.modal>textarea,.modal input,.modal select){background:#fffdf7;color:#674c32;border-color:#dec7a4}
+.editor-app.morf-circuits .code-modal>textarea.firmware-source{background:#fffcf5;color:#62472f;border:1px solid #e0c9a7;border-radius:10px;font:11px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace;padding:20px 22px;caret-color:#b87930}
+.editor-app.morf-circuits :is(.code-footer,.code-libraries,.new-model,.new-import>button){color:#80684b}
+.editor-app.morf-circuits :is(.code-libraries>b,.example-grid>button,.export-grid>button){background:#fffbf4;color:#795735;border-color:#e1c9a7;border-radius:10px}
+.editor-app.morf-circuits :is(.example-grid strong,.export-grid strong){color:#67492d}
+.editor-app.morf-circuits :is(.example-grid small,.export-grid small,.example-grid p,.export-grid p){color:#82694b}
+.editor-app.morf-circuits .compiler-output{background:#fff8e9;border-color:#dec39b;color:#725133}
+.editor-app.morf-circuits .compiler-output.success{border-color:#c4cfac}.editor-app.morf-circuits .compiler-output.failure{border-color:#d7ad93}
+.editor-app.morf-circuits .compiler-output pre{color:#735334;background:none}
+.editor-app.morf-circuits .bom-table{color:#71583d}.editor-app.morf-circuits .bom-table :is(th,td){border-color:#e4cfb0}
+.editor-app.morf-circuits .checks-list>div{border-color:#e3c8a0;color:#775837;background:#fffaf1}
+.editor-app.morf-circuits .checks-list .check-good{color:#4d774f;background:#f2f2df;border-color:#d3d9b8}
+.editor-app.morf-circuits .checks-list .warning{color:#8b622c;background:#fff0d5;border-color:#e4c18d}
+.editor-app.morf-circuits .check-number{background:#f4dec3;color:#936039}.editor-app.morf-circuits .form-error{color:#aa4d3e}
+.editor-app.morf-circuits :is(.toast,.generation-indicator){background:#fff4df;color:#79552c;border:1px solid #dec293;box-shadow:0 8px 30px #96714122}
+.editor-app.morf-circuits .generation-indicator :is(strong,span,b,button){color:#856139}
+.editor-app.morf-circuits .scene-loading{background:var(--flare-canvas);color:#977345}
+.editor-app.morf-circuits .morf-chat{right:calc(var(--circuit-right-inset,0px) + 18px)}
+
+@media(min-width:1600px){.editor-app.morf-circuits .project-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:1220px){.editor-app.morf-circuits .app-header{gap:12px;padding:0 17px}.editor-app.morf-circuits .brand b{display:none}.editor-app.morf-circuits .project-breadcrumb>span{max-width:120px}.editor-app.morf-circuits .canvas-options>button:not(.icon-btn){gap:4px}.editor-app.morf-circuits .canvas-toolbar{padding-inline:11px}}
+@media(max-width:1020px){.editor-app.morf-circuits .inspector-scroll{padding:17px 15px}.editor-app.morf-circuits .right-tabs{padding-inline:7px}.editor-app.morf-circuits .right-tabs>button{font-size:10px;padding-inline:8px}.editor-app.morf-circuits .left-tabs{gap:3px;padding-inline:7px}.editor-app.morf-circuits .left-tabs>button{padding-inline:7px;font-size:10px}.editor-app.morf-circuits .stage-bottom{width:calc(100% - 76px);bottom:37px}.editor-app.morf-circuits .canvas-composer>input,.editor-app.morf-circuits .canvas-composer>input::placeholder{font-size:10px}.editor-app.morf-circuits .canvas-options>button>span{display:none}.editor-app.morf-circuits .brand-word{font-size:28px}}
+@media(max-width:780px){.editor-app.morf-circuits .app-header{height:64px;padding:0 13px;gap:11px}.editor-app.morf-circuits .brand-icon{width:26px;margin-right:5px}.editor-app.morf-circuits .brand-word{font-size:26px}.editor-app.morf-circuits .save-status,.editor-app.morf-circuits .header-rule,.editor-app.morf-circuits .header-actions>.icon-btn,.editor-app.morf-circuits .text-action:not(.import-action):not(.share-action){display:none}.editor-app.morf-circuits .header-actions{gap:4px;margin-left:0}.editor-app.morf-circuits .export-button{font-size:0;padding:8px 10px;gap:0}.editor-app.morf-circuits .canvas-toolbar{height:42px}.editor-app.morf-circuits .stage-bottom{width:calc(100% - 75px);bottom:31px;gap:9px}.editor-app.morf-circuits .mode-switch>button{font-size:9px;padding:7px 9px}.editor-app.morf-circuits .project-metrics{gap:7px}.editor-app.morf-circuits .project-metrics>div{padding:10px}.editor-app.morf-circuits .canvas-caption{top:20px;left:22px}.editor-app.morf-circuits .transform-toolbar{left:11px;padding:3px;gap:1px}.editor-app.morf-circuits .transform-toolbar .icon-btn{width:25px;height:26px}.editor-app.morf-circuits .morf-chat{right:18px}}
+@media(max-width:520px){.editor-app.morf-circuits .app-header{gap:8px;padding-inline:10px}.editor-app.morf-circuits .brand-word{font-size:23px}.editor-app.morf-circuits .brand-icon{width:24px}.editor-app.morf-circuits .header-actions .import-action,.editor-app.morf-circuits .header-actions .share-action{display:none}.editor-app.morf-circuits .canvas-caption h1{font-size:24px}.editor-app.morf-circuits .canvas-toolbar{padding-inline:8px}.editor-app.morf-circuits .canvas-options{gap:1px}.editor-app.morf-circuits .view-tabs>button{font-size:9px;padding:5px 7px}.editor-app.morf-circuits .canvas-composer{height:42px;padding:7px;gap:5px}.editor-app.morf-circuits .canvas-composer>svg{display:none}.editor-app.morf-circuits .canvas-composer>input::placeholder{font-size:9px}.editor-app.morf-circuits .stage-bottom{width:calc(100% - 68px)}.editor-app.morf-circuits .explode-control{gap:7px}.editor-app.morf-circuits .explode-control input{width:100px}.editor-app.morf-circuits .morf-chat{width:calc(100vw - 30px);right:15px}.editor-app.morf-circuits .code-modal>textarea.firmware-source{padding:13px;font-size:10px}}
+/* Keep the model usable above the inspector instead of compressing both into one phone screen. */
+@media(max-width:780px){
+  .editor-app.morf-circuits .editor-layout{grid-template-rows:500px 360px;align-content:start;overflow-y:auto;overscroll-behavior:contain}
+  .editor-app.morf-circuits .left-tabs{gap:2px;padding-inline:6px}
+  .editor-app.morf-circuits .left-tabs>button{font-size:9px;padding-inline:6px;gap:3px}
+  .editor-app.morf-circuits .morf-whisper{display:none}
+}
