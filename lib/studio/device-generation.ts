@@ -4,7 +4,7 @@ import { checkedInteraction } from './interaction';
 import {expandGeneratedPart} from './generated-part';
 import {applyGenerationRepair,generationIssues} from './generation-repair';
 import {z} from 'zod';
-import { completedParts } from './generation-progress';
+import { createGenerationProgress } from './generation-progress';
 import type { DeviceConversationResponse } from './types';
 import type { DeviceProgress } from './response';
 import {catalogContext,catalogPrompt} from './catalog';
@@ -65,16 +65,22 @@ export async function generateCustomDevice(prompt:string,signal:AbortSignal,onPr
   try{
     check();
     onProgress?.({resetGeneration:true,message:'Designing the components and assembly…'});
-    let receiving=false,reported=0,lastScan=0;
+    let receiving=false,reported=0,lastScan=-Infinity,partsFinished=false;
+    const streamProgress=createGenerationProgress();
+    const receive=(text:string,force=false)=>{
+      if(!force&&performance.now()-lastScan<200)return;
+      lastScan=performance.now();const {parts,partsComplete}=streamProgress.read(text);
+      if(parts.length>reported){const newParts=parts.slice(reported);reported=parts.length;onProgress?.({message:`${reported} custom ${reported===1?'component':'components'} received. Building the rest…`,partNames:parts.map(p=>p.name),newParts});}
+      if(partsComplete&&reported>0&&!partsFinished){partsFinished=true;onProgress?.({message:'Component geometry received. Finishing connections, mechanisms and the assembly guide…'});}
+    };
     const readyParts=catalogContext(prompt);
     if(readyParts.length)onProgress?.({message:`Found ${readyParts.length} relevant sourced parts. Designing the custom assembly…`});
     const result=await generateText(generationSystem+'\n'+catalogPrompt,JSON.stringify({request:prompt,readyParts}),{serviceTier:options.serviceTier,transport:options.transport,json:true,maxTokens:16000,timeoutMs:180000,signal:operation,onPerformance:performance=>onProgress?.({message:performance.servedTier==='standard'&&performance.requestedTier==='priority'?'Geometry received via Standard processing. Checking the assembly…':'Geometry received. Checking the assembly…',performance}),onModel:model=>onProgress?.({message:'Gemini is designing your object…',model}),onPartial:text=>{
       check();
       if(!receiving){receiving=true;onProgress?.({message:'Receiving component geometry and the assembly guide…'});}
-      if(performance.now()-lastScan<200)return;lastScan=performance.now();const parts=completedParts(text);
-      if(parts.length>reported){const newParts=parts.slice(reported);reported=parts.length;onProgress?.({message:`${reported} custom ${reported===1?'component':'components'} received. Building the rest…`,partNames:parts.map(p=>p.name),newParts});}
+      receive(text);
     }});
-    check();options.onRawOutput?.(result.text);if(result.performance)calls.push(result.performance);
+    check();receive(result.text,true);options.onRawOutput?.(result.text);if(result.performance)calls.push(result.performance);
     onProgress?.({message:'Checking component references, geometry and assembly relationships…',model:result.model});
     let text=assemblyJsonText(result.text),raw:unknown,lastError:unknown;
     try{raw=envelope(parseAssemblyJson(text));}catch(error){lastError=error;}

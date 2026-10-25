@@ -24,8 +24,15 @@
   },
   "limits": [
     "No quantitative design requirement was supplied; 0/0 numerical checks is not a measured fit pass.",
-    "The existing GPU viewport startup failure remains; software geometry previews and review images were visible.",
     "No physical operation, electrical wiring, motion clearance or broad reliability rate was verified.",
     "Exact browser end-to-end duration was not recorded."
-  ]
+  ],
+  "graphicsCorrection": {
+    "reason": "Canvas fallback text exposed in the accessibility tree was mistaken for a live error.",
+    "webgl2": true,
+    "contextLost": false,
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "softwareFallback": false,
+    "browserErrorsObserved": 0
+  }
 }

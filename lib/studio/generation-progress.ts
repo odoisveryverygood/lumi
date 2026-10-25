@@ -3,29 +3,42 @@ import { devicePartSchema } from './validation';
 import {expandGeneratedPart} from './generated-part';
 import {canonicalCatalogGeometry} from './catalog';
 
-/** Only name complete, schema-valid parts from the real output. Never invent progress. */
-export function completedParts(text: string): DevicePart[] {
-  const match = /"parts"\s*:\s*\[/.exec(text);
-  if (!match) return [];
-  const parts: DevicePart[] = [], ids = new Set<string>();
-  let quoted = false, escaped = false, depth = 0, start = -1;
-  for (let i = match.index + match[0].length; i < text.length; i++) {
-    const char = text[i];
-    if (quoted) { if (escaped) escaped = false; else if (char === '\\') escaped = true; else if (char === '"') quoted = false; continue; }
-    if (char === '"') { quoted = true; continue; }
-    if (!depth && char === ']') break;
-    if (char === '{' || char === '[') { if (!depth && char === '{') start = i; depth++; }
-    if (char === '}' || char === ']') {
-      depth--;
-      if (!depth && start >= 0) {
-        try { const raw=JSON.parse(text.slice(start,i+1));const part = devicePartSchema.safeParse(expandGeneratedPart(raw)); if (part.success && (canonicalCatalogGeometry(part.data)||part.data.solids.length&&!part.data.mesh) && !part.data.assetNode && !ids.has(part.data.id)) { ids.add(part.data.id); parts.push(part.data); } } catch { /* An incomplete object is not progress. */ }
-        start = -1;
-        if (parts.length === 60) break;
+/** Decode each completed component once as cumulative provider text arrives.
+ * A replaced/shortened response resets the cursor; partial strings never become parts. */
+export function createGenerationProgress(){
+  let previous='',offset=0,started=false,done=false,quoted=false,escaped=false,depth=0,start=-1;
+  let parts:DevicePart[]=[],ids=new Set<string>();
+  const reset=()=>{offset=0;started=false;done=false;quoted=false;escaped=false;depth=0;start=-1;parts=[];ids=new Set();};
+  return {read(text:string):{parts:DevicePart[];partsComplete:boolean}{
+    if(!text.startsWith(previous))reset();previous=text;
+    if(!started){
+      const match=/"parts"\s*:\s*\[/.exec(text);
+      if(!match)return {parts:[],partsComplete:false};
+      started=true;offset=match.index+match[0].length;
+    }
+    if(!done)for(;offset<text.length;offset++){
+      const char=text[offset];
+      if(quoted){if(escaped)escaped=false;else if(char==='\\')escaped=true;else if(char==='"')quoted=false;continue;}
+      if(char==='"'){quoted=true;continue;}
+      if(!depth&&char===']'){done=true;offset++;break;}
+      if(char==='{'||char==='['){if(!depth&&char==='{')start=offset;depth++;}
+      if(char==='}'||char===']'){
+        depth--;
+        if(!depth&&start>=0){
+          if(parts.length<60)try{
+            const raw=JSON.parse(text.slice(start,offset+1)),part=devicePartSchema.safeParse(expandGeneratedPart(raw));
+            if(part.success&&(canonicalCatalogGeometry(part.data)||part.data.solids.length&&!part.data.mesh)&&!part.data.assetNode&&!ids.has(part.data.id)){ids.add(part.data.id);parts.push(part.data);}
+          }catch{/* Invalid/incomplete geometry is never progress. */}
+          start=-1;
+        }
       }
     }
-  }
-  return parts;
+    return {parts:[...parts],partsComplete:done};
+  }};
 }
+
+/** One-shot compatibility for imports, diagnostics and syntax-preservation guards. */
+export function completedParts(text:string):DevicePart[]{return createGenerationProgress().read(text).parts;}
 
 export const completedPartNames=(text:string)=>completedParts(text).map(part=>part.name);
 

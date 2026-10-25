@@ -81,3 +81,7 @@ New-object generation now removes trailing commas outside strings locally. Other
 Final performance totals include all successful model calls in the generation/repair operation. Missing usage stays unknown rather than becoming zero. Transport cancellation also interrupts a stalled streaming body after headers arrive.
 
 A fresh `a robot dog` request through the actual streaming route passed schema validation with 18 parts and 234 solids in 106.583 seconds. The failed initial run is retained alongside that result. This is one successful generation, not a broad reliability rate or a latency improvement claim. Browser review evidence and exact checks are recorded in [the teammate 1 handoff](team/README_TEAMMATE_1.md).
+
+### Incremental progress decoding
+
+The streaming component reader retains its scan position and validates each complete component once. It no longer repeats all previous decoding on every progress tick. A replay of the same 18-part, 234-solid document across 96 snapshots reduced median local parser time from 73.958 ms to 3.022 ms, with identical geometry (one warm-up, five measured runs). This removes local CPU work without changing Argon, its prompt or generated detail. It does not establish an end-to-end generation speedup. The last snapshot is always processed, and progress now identifies when component geometry has finished while relationships/mechanisms/guide text is still arriving.

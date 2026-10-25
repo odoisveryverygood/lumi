@@ -52,6 +52,10 @@ The live test writes a new timestamped evidence directory under ignored `work/ge
 
 - Large or incomplete output can still fail the fixed repair budget; the saved assembly must remain unchanged.
 - Generation and visual review take separate time. No universal latency guarantee is made.
-- The GPU viewport has an existing startup failure in this environment. Software previews and review renders do not prove GPU interaction.
+- The initial GPU warning in the report was a diagnosis error: fallback text was exposed by the accessibility tree while the canvas was working. Direct inspection confirmed active WebGL 2 on Apple M4, no context loss and software fallback off.
 - Independent held-out evaluation, maker studies, motion verification and physical hardware validation remain separate work.
 - Before any future publication, have teammate 3 exercise the exact browser flow and inspect the full evidence, including unsuccessful attempts. Create a PR from this branch; do not push to `main` or merge/deploy without the owner's instruction.
+
+## Local stream-performance follow-up
+
+`generation-progress.ts` now scans only new characters and expands each completed component once per request. The final snapshot is always flushed; the UI receives a truthful transition after the parts array closes. Eight additional regressions cover arbitrary character boundaries, escaped strings, reset, invalid/duplicate parts and exact real-object geometry. An identical-stream benchmark reduced median parser CPU time from about 74 ms to 3 ms across 96 snapshots. This does not measure provider latency; API calls and output quality are unchanged.

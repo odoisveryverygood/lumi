@@ -13,7 +13,7 @@ Fixed the observed empty-schema SDK failure and moved malformed new-object JSON 
 - `robot-dog-reviewed.png`: completed browser review with actual assembled render comparisons.
 - `review-after-reload.png`: project and recorded review persisted after reload.
 
-Browser component selection, undo to the prior 75-part Corne document and redo to the 18-part robot dog were verified. The known GPU startup failure remains; displayed software geometry and review rendering do not prove working WebGL. No hardware claims are made.
+Browser component selection, undo to the prior 75-part Corne document and redo to the 18-part robot dog were verified. Correction following direct graphics inspection: WebGL 2 was active on the Apple M4 through ANGLE Metal, the context was not lost, software fallback was off and no browser errors were recorded. The earlier startup-failure diagnosis mistakenly treated canvas fallback text in the accessibility tree as an active error. No hardware claims are made.
 
 ## Checks
 
@@ -29,3 +29,11 @@ The tests cover conservative comma normalization, unique literal edits, preserve
 ## Boundaries
 
 This establishes two successful fresh requests and specific regression coverage, not universal generation reliability, a speed benchmark, continuous motion verification or physical engineering correctness. Existing independent evaluation and maker studies remain teammate 3's lane. Runtime source content hashes are in `source-hashes.json`; base revision is the merged public source.
+
+## Stream-processing follow-up
+
+The progressive decoder now advances a cursor through cumulative text and expands each completed component only once. The final provider snapshot is flushed even when it arrives within the progress throttle window. Geometry is still validated, previews remain transient, and final assembly checks remain unchanged. Once the parts array is closed, progress explicitly says connections, mechanisms and the guide are finishing. No model, prompt, reasoning, geometry or repair budget was reduced.
+
+An identical 47,846-character saved robot-dog response was replayed in 96 cumulative snapshots, with one warm-up and five recorded runs. Median local parsing/decoding time fell from 73.958 ms to 3.022 ms; every expanded part matched exactly. See `stream-progress-benchmark.json`. This is a CPU microbenchmark, not a claim that a 107-second provider generation is now 24 times faster.
+
+Follow-up validation on Node 24.19.0: 349 tests passed, seven opt-in tests skipped; type checking, production build and diff checks passed. No additional provider calls were made for the parser-only change.
