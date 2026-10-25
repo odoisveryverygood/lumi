@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-23T07:58:37.921204+00:00",
+  "pdfSha256": "20a5584d0c17a153565f6b0f9b40e875ba6aa184d1bc3cbc13ebcb332819489d",
+  "nativePages": 5,
+  "page2VerifiedExcerpt": "4 Charging voltage 4.2V",
+  "numericExtraction": [
+    {
+      "property": "maxChargeMa",
+      "value": 150,
+      "citation": {
+        "sourceId": "file-9c2a3168b51e2a87996a",
+        "page": 1,
+        "quote": "at a rate of 150mA or less."
+      },
+      "reviewed": true
+    }
+  ],
+  "sourceCount": 8,
+  "browserCitationEvidence": "pdf-page-citation-ui.txt",
+  "restoreEvidence": "notebook-restored-ui.txt"
+}

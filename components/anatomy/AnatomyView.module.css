@@ -1,0 +1,24 @@
+.viewport{position:relative;width:100%;height:100%;min-height:320px;overflow:hidden;isolation:isolate;background:#f4f6f0;contain:layout paint;--anatomy-accent:#315fda}
+.svg{display:block;width:100%;height:100%;min-height:320px;touch-action:none;user-select:none;outline:none}
+.part{cursor:pointer;outline:none;transition:opacity .28s ease}
+.part:focus-visible .selection{stroke:#315fda;stroke-width:1.4}
+.part:focus-visible .hitTarget{stroke:#315fda;stroke-opacity:.5}
+.hitTarget{fill:transparent;stroke:transparent;pointer-events:all;stroke-linejoin:round}
+.selection{stroke:var(--anatomy-accent);stroke-linejoin:round;opacity:.9;filter:drop-shadow(0 0 2px #7197e83b)}
+.viewport[data-tool=move] .part{cursor:move}
+.viewport[data-tool=rotate] .part{cursor:ew-resize}
+.dragging,.dragging .part{cursor:grabbing}
+.figureHeader,.figureFooter{position:absolute;left:26px;right:26px;display:flex;justify-content:space-between;gap:16px;pointer-events:none;z-index:2;font:9px/1.4 ui-monospace,SFMono-Regular,monospace;letter-spacing:1.2px;color:#8e998a}
+.figureHeader{top:24px}.figureFooter{bottom:23px;font-size:8px;letter-spacing:.65px}
+.figureHeader span:last-child,.figureFooter span:last-child{text-align:right}
+.partReadout{position:absolute;bottom:58px;left:25px;max-width:min(430px,calc(100% - 50px));display:flex;gap:11px;align-items:center;padding:10px 12px;background:#fbfcf8ed;border:1px solid #d5ded0;box-shadow:0 3px 12px #36472707;border-radius:5px;pointer-events:none;animation:readout-in .16s ease-out}
+.reference{font:10px ui-monospace,SFMono-Regular,monospace;color:#315fda;border:1px solid #c7d2eb;border-radius:3px;padding:5px 6px;background:#edf1fb}
+.partReadout div{display:flex;gap:4px;flex-direction:column}.partReadout strong{font-size:11px;font-weight:500;line-height:1.4;color:#354133}.partReadout div>span{font:9px/1.4 ui-monospace,SFMono-Regular,monospace;color:#929d89}
+.wireEntering{stroke-dasharray:1;stroke-dashoffset:1;animation:wire-draw .85s ease-out forwards}
+@keyframes wire-draw{to{stroke-dashoffset:0}}
+.wires path{transition:opacity .25s ease,stroke .18s ease}
+@keyframes readout-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.figureHeader,.figureFooter{left:15px;right:15px;font-size:7px;letter-spacing:.6px}.figureHeader{top:16px}.figureFooter{bottom:15px}.figureFooter span:first-child{max-width:210px}.partReadout{left:14px;bottom:42px;max-width:calc(100% - 28px)}.viewport,.svg{min-height:280px}}
+@media(prefers-reduced-motion:reduce){.part,.wireEntering{stroke-dasharray:1;stroke-dashoffset:1;animation:wire-draw .85s ease-out forwards}
+@keyframes wire-draw{to{stroke-dashoffset:0}}
+.wires path{transition:none}.partReadout,.wireEntering{animation:none}.wireEntering{stroke-dashoffset:0}}

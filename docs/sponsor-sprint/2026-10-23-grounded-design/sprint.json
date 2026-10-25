@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "project": "Flare Grounded Design",
+  "as_of": "2026-10-23",
+  "scope": "Separate local copy: multi-document hardware reasoning, excerpt citations, deterministic charging checks, proposal repair and actual canvas image review. No physical hardware validation, deployment or model superiority claim.",
+  "integrations": [
+    {
+      "integration_id": "I001",
+      "sponsor": "Gemini 4 Argon",
+      "purpose": "Reason over the assembly and full included design documents, revise proposals using deterministic check feedback, and visually inspect the actual rendered canvas.",
+      "docs_url": "https://ai.google.dev/api/generate-content",
+      "docs_checked_at": "2026-10-23",
+      "implementation_ref": "lib/studio/redesign-engine.ts; app/api/design-sources/route.ts; components/studio/DesignReviewPanel.tsx",
+      "env_vars": [
+        "GEMINI_API_KEY",
+        "GEMINI_MODEL"
+      ],
+      "checks": [
+        {
+          "check_id": "C001",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Domain tests: exact citation matching, unsupported charge values, preservation and frozen requirements.",
+          "observed": "194 tests passed; one older opt-in provider test skipped. New tests cover citations, source limits, review-gated numbers, frozen charging requirements and raw-image evidence.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/tests.txt",
+          "evidence_sha256": "df9aaab157c4fb11a0487dcfdf1f8873f597c8f6b7f6bebba8fe8886f897efc8"
+        },
+        {
+          "check_id": "C002",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Production build and TypeScript complete.",
+          "observed": "Next.js production build and TypeScript completed successfully. Final production server is on loopback port 3001.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/build.txt",
+          "evidence_sha256": "794f5610d7ab5f7608e29449bd0a609e2f3bf8493deb30fb53196dd16fef4e87"
+        },
+        {
+          "check_id": "C003",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Browser conversion uses real Argon and passes listed geometry plus source checks.",
+          "observed": "Live gemini-4-argon conversion used eight files. Final proposal passed 17 listed checks; two engineering/source limits remained explicitly unverified. Apply changed 75 to 76 parts.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/live-flow.json",
+          "evidence_sha256": "109beb28def534c1188964173e320612d44d7efb65c3789d6a6cfd803c3d77b6"
+        },
+        {
+          "check_id": "C004",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Conflicting charging requirement is blocked without silently relaxing it; normal-rate recovery passes.",
+          "observed": "500 mA minimum with battery height <=4 mm was blocked after three attempts. Apply stayed disabled. Explicit return to 100 mA preserved the 4 mm requirement and passed.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/live-flow.json",
+          "evidence_sha256": "109beb28def534c1188964173e320612d44d7efb65c3789d6a6cfd803c3d77b6"
+        },
+        {
+          "check_id": "C005",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "Actual canvas image is sent to Argon and yields explicitly limited visual observations.",
+          "observed": "Actual browser canvas JPEG plus documents produced three live Argon observations. Exported JPEG SHA-256 matches the server-received image fingerprint.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/live-flow.json",
+          "evidence_sha256": "109beb28def534c1188964173e320612d44d7efb65c3789d6a6cfd803c3d77b6"
+        },
+        {
+          "check_id": "C006",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "A real PDF imports with correct page text and source numeric extraction; excerpt citations open their source.",
+          "observed": "Real manufacturer PDF imported with five native pages. Answer cited page 2 and opened the exact charging-voltage excerpt. Live numeric extraction produced a reviewed 150 mA maximum. Eight sources survived reload and notebook export/restore.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/pdf-evidence.json",
+          "evidence_sha256": "261df9980cebeb105f4dc81afdc48c884bf9d0bb18606b7cd60f1032ab7a295e"
+        },
+        {
+          "check_id": "C007",
+          "required": true,
+          "mode": "local",
+          "status": "passed",
+          "expected": "Original app remains clean at its original revision; new secrets excluded from source archive.",
+          "observed": "Original remains clean at the preserved revision. New copy has no remote or deployment link. Packaged source excludes environment files, dependencies, build output, Git internals and actual configured credential bytes.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/preservation.json",
+          "evidence_sha256": "e2f63f0e17a031192bbcc313056e2083ca5c6ad4729922fe91e929794c87f66e"
+        },
+        {
+          "check_id": "C008",
+          "required": true,
+          "mode": "live",
+          "status": "passed",
+          "expected": "An image import preserves image bytes without fabricated text or numeric facts, and real Argon can interpret it as visual evidence in the source-aware conversation.",
+          "observed": "Raw image import retained the image, with zero invented text pages and zero numeric facts. Real gemini-4-argon interpreted the visible 3.7 V nominal value as visual evidence and explicitly rejected exact-text/numeric-check authority.",
+          "checked_at": "2026-10-23T07:58:37.921204+00:00",
+          "evidence_path": "evidence/image-evidence.json",
+          "evidence_sha256": "98e9e437440584264653aae500e7b4a822ecf522f34c68e9ab736432a5087f00"
+        }
+      ]
+    }
+  ]
+}

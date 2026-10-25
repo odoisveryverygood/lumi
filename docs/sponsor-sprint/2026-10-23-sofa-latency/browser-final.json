@@ -1,0 +1,42 @@
+{
+  "mode": "live",
+  "completed": true,
+  "prompt": "Build a smart sofa with an iron base and an ESP32.",
+  "inputPath": "Browser Explore > Create device",
+  "model": "gemini-4-argon",
+  "performance": {
+    "transport": "interactions",
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "durationMs": 87072,
+    "firstTokenMs": 3384,
+    "inputTokens": 1073,
+    "outputTokens": 7069,
+    "thinkingTokens": 0,
+    "estimatedCostUsd": 0.131105
+  },
+  "quality": {
+    "valid": true,
+    "parts": 15,
+    "solids": 254,
+    "relationships": 19,
+    "steps": 6,
+    "iron": {
+      "id": "iron-base-frame",
+      "name": "Wrought Iron Base Frame"
+    },
+    "esp": {
+      "id": "esp32-controller-board",
+      "name": "ESP32-WROOM-32 Smart Sofa Controller"
+    }
+  },
+  "browserChecks": [
+    "Created through actual browser form",
+    "Assembled and exploded view toggles",
+    "ESP32 controller selected independently",
+    "Editable project exported and revalidated from actual downloaded bytes",
+    "Saved sofa survives reload",
+    "Final part badge reads five ESP32 neighbors from shared graph"
+  ],
+  "limits": "Illustrative generated assembly, not physical hardware verification. One fresh browser run plus a separate API test; not a latency guarantee."
+}

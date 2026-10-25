@@ -1,0 +1,207 @@
+{
+  "asOf": "2026-10-23T21:29:49.577Z",
+  "prompt": "Create a distinctive portable cassette player: burnt-orange split enclosure with dark rounded corner pieces, transparent tape window and two visible tape reels, a capstan/pinch roller, play/stop controls, side volume wheel, headphone socket, drive motor and battery compartment. Use 10–14 independently selectable meaningful parts, detailed multi-solid geometry, readable names, at least five relationships and one bounded animated tape mechanism. Keep the complete player compact and coherent. This is an illustrative study, not verified hardware. Generate this exact custom object, with no shared demo or template.",
+  "limits": {
+    "modelCalls": 2,
+    "maxAttemptsPerObject": 1,
+    "maxOutputTokensPerCall": 24000
+  },
+  "reports": [
+    {
+      "requestedTier": "standard",
+      "completed": true,
+      "durationMs": 99109,
+      "performance": {
+        "transport": "interactions",
+        "requestedTier": "standard",
+        "servedTier": "standard",
+        "durationMs": 99100,
+        "firstTokenMs": 4529,
+        "inputTokens": 1094,
+        "outputTokens": 9690,
+        "thinkingTokens": 0,
+        "cachedTokens": 0,
+        "estimatedCostUsd": 0.099088
+      },
+      "calls": [
+        {
+          "transport": "interactions",
+          "requestedTier": "standard",
+          "servedTier": "standard",
+          "durationMs": 99100,
+          "firstTokenMs": 4529,
+          "inputTokens": 1094,
+          "outputTokens": 9690,
+          "thinkingTokens": 0,
+          "cachedTokens": 0,
+          "estimatedCostUsd": 0.099088
+        }
+      ],
+      "partProgress": [
+        {
+          "atMs": 12582,
+          "count": 1
+        },
+        {
+          "atMs": 19135,
+          "count": 2
+        },
+        {
+          "atMs": 25056,
+          "count": 3
+        },
+        {
+          "atMs": 31059,
+          "count": 4
+        },
+        {
+          "atMs": 35650,
+          "count": 5
+        },
+        {
+          "atMs": 39713,
+          "count": 6
+        },
+        {
+          "atMs": 45673,
+          "count": 7
+        },
+        {
+          "atMs": 52563,
+          "count": 8
+        },
+        {
+          "atMs": 57578,
+          "count": 9
+        },
+        {
+          "atMs": 62895,
+          "count": 10
+        },
+        {
+          "atMs": 67594,
+          "count": 11
+        },
+        {
+          "atMs": 71982,
+          "count": 12
+        },
+        {
+          "atMs": 79194,
+          "count": 13
+        },
+        {
+          "atMs": 85252,
+          "count": 14
+        }
+      ],
+      "quality": {
+        "valid": true,
+        "parts": 14,
+        "solids": 121,
+        "relationships": 7,
+        "mechanisms": 1,
+        "steps": 5,
+        "independentParts": 14
+      }
+    },
+    {
+      "requestedTier": "priority",
+      "completed": true,
+      "durationMs": 91178,
+      "performance": {
+        "transport": "interactions",
+        "requestedTier": "priority",
+        "servedTier": "priority",
+        "durationMs": 91174,
+        "firstTokenMs": 1444,
+        "inputTokens": 1094,
+        "outputTokens": 9898,
+        "thinkingTokens": 0,
+        "cachedTokens": 0,
+        "estimatedCostUsd": 0.182102
+      },
+      "calls": [
+        {
+          "transport": "interactions",
+          "requestedTier": "priority",
+          "servedTier": "priority",
+          "durationMs": 91174,
+          "firstTokenMs": 1444,
+          "inputTokens": 1094,
+          "outputTokens": 9898,
+          "thinkingTokens": 0,
+          "cachedTokens": 0,
+          "estimatedCostUsd": 0.182102
+        }
+      ],
+      "partProgress": [
+        {
+          "atMs": 12520,
+          "count": 1
+        },
+        {
+          "atMs": 16668,
+          "count": 2
+        },
+        {
+          "atMs": 25119,
+          "count": 3
+        },
+        {
+          "atMs": 29974,
+          "count": 4
+        },
+        {
+          "atMs": 36567,
+          "count": 5
+        },
+        {
+          "atMs": 40717,
+          "count": 6
+        },
+        {
+          "atMs": 44961,
+          "count": 7
+        },
+        {
+          "atMs": 48902,
+          "count": 8
+        },
+        {
+          "atMs": 53686,
+          "count": 9
+        },
+        {
+          "atMs": 58296,
+          "count": 10
+        },
+        {
+          "atMs": 62603,
+          "count": 11
+        },
+        {
+          "atMs": 69772,
+          "count": 12
+        },
+        {
+          "atMs": 75379,
+          "count": 13
+        },
+        {
+          "atMs": 80123,
+          "count": 14
+        }
+      ],
+      "quality": {
+        "valid": true,
+        "parts": 14,
+        "solids": 114,
+        "relationships": 8,
+        "mechanisms": 1,
+        "steps": 4,
+        "independentParts": 14
+      }
+    }
+  ]
+}

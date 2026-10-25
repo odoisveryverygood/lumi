@@ -1,0 +1,364 @@
+/* Flare / Solar flare. Screen-only so exported build guides stay printable. */
+@media screen {
+  :root {
+    --flare-ink: #1b1714;
+    --flare-panel: #231f1b;
+    --flare-raised: #2e2823;
+    --flare-line: #ffffff13;
+    --flare-text: #f7f4f1;
+    --flare-muted: #b8ada2;
+    --flare-ember: #ff713e;
+    --flare-rose: #fa6c8d;
+    --flare-lilac: #e6c6a7;
+    --flare-canvas: #f8f5f0;
+    --flare-gradient: linear-gradient(115deg, #ff713e 0%, #fa6c8d 52%, #e6c6a7 100%);
+  }
+  .device-studio.device-studio, .editor-app {
+    --ds-ink: var(--flare-text);
+    --ds-muted: var(--flare-muted);
+    --ds-line: var(--flare-line);
+    --ds-accent: #eed9c5;
+    --ds-accent-bg: #e6c6a716;
+    --ds-paper: var(--flare-panel);
+    --bg: var(--flare-ink);
+    --ink: var(--flare-text);
+    --ink2: #d1c9c1;
+    --ink3: var(--flare-muted);
+    --line: var(--flare-line);
+    --line2: #ffffff24;
+    --accent: #ebd3bb;
+    --blue: #ebd3bb;
+    --accent-ink: #f3e4d6;
+    --accent-bg: #e6c6a717;
+    color: var(--flare-text);
+    background: var(--flare-ink);
+  }
+  .device-studio ::selection, .editor-app ::selection { background: #e6c6a744; color: inherit; }
+  .device-studio ::-webkit-scrollbar-thumb, .editor-app ::-webkit-scrollbar-thumb { background: #6d6053; }
+  .device-studio :is(button,a):focus-visible, .editor-app :is(button,a):focus-visible { outline: 2px solid #ecd5bf; outline-offset: 3px; }
+  .device-studio :is(input,textarea,select):focus, .editor-app :is(input,textarea,select):focus { border-color: #e6c6a7 !important; box-shadow: 0 0 0 3px #e6c6a718; }
+  .device-studio a:hover { color: #ffc09f; }
+  .device-studio button { transition: background .18s, color .18s, border-color .18s, box-shadow .18s, transform .18s; }
+  .device-studio .ds-header, .editor-app .app-header {
+    height: 72px; background: #1b1714f5; border-bottom: 1px solid #ffffff12;
+    position: relative; gap: 22px; padding: 0 24px;
+  }
+  .device-studio .ds-header::after, .editor-app .app-header::after {
+    content: ''; position: absolute; height: 1px; left: 0; right: 0; bottom: -1px; pointer-events: none;
+    background: linear-gradient(90deg, #ff713e00, #ff713e80 25%, #fa6c8d65 57%, #e6c6a750 82%, #e6c6a700);
+  }
+  .device-studio .ds-brand, .editor-app .brand { color: #fdfaf8; letter-spacing: -1.1px; gap: 0; }
+  .device-studio .ds-brand-word, .editor-app .brand-word { font-size: 27px; font-weight: 650; }
+  .device-studio .ds-brand > span:first-child, .editor-app .brand-icon {
+    background: #2e2823; border: 1px solid #ffffff15; color: #fda884;
+    width: 31px; height: 32px; border-radius: 9px; box-shadow: inset 0 1px 0 #ffffff09; transform: none;
+  }
+  .editor-app .brand-icon svg { transform: none; }
+  .device-studio .ds-brand-edition, .editor-app .brand b {
+    font: 8px var(--mono); letter-spacing: 1.3px; font-weight: 500; color: #c4b6a9;
+    margin-left: 14px; padding: 5px 7px; border: 1px solid #ffffff15; border-radius: 5px; background: #ffffff04;
+  }
+  .device-studio .ds-header-separator, .editor-app .header-rule { background: #ffffff16; }
+  .device-studio .ds-project-name, .editor-app .project-breadcrumb { color: #d9d1ca; font-size: 12px !important; }
+  .device-studio .ds-project-name svg, .editor-app .project-breadcrumb svg { color: #b0a396; }
+  .device-studio .ds-saved, .editor-app .save-status { color: #b1a498; }
+  .device-studio .ds-saved i { background: #eacfb5; box-shadow: 0 0 8px #e6c6a740; }
+  .device-studio .ds-subtle { color: #e7ded6; background: #ffffff05 !important; border-color: #ffffff1c !important; border-radius: 9px; }
+  .device-studio .ds-subtle:hover { background: #ffffff0d !important; border-color: #ffffff33 !important; }
+  .device-studio .ds-dark, .editor-app .primary, .editor-app .send-btn {
+    color: #241e18 !important; background: var(--flare-gradient) !important; border: 1px solid #ffffff18 !important;
+    box-shadow: 0 3px 17px #fa6c8d20, inset 0 1px 0 #ffffff38; font-weight: 650 !important;
+  }
+  .device-studio .ds-dark:hover, .editor-app .primary:hover { box-shadow: 0 4px 24px #fa6c8d42, inset 0 1px 0 #ffffff38; transform: translateY(-1px); }
+  .device-studio .ds-header .ds-icon, .editor-app .app-header .icon-btn { color: #c8beb4; }
+  .device-studio .ds-header .ds-icon:hover, .editor-app .app-header .icon-btn:hover { background: #ffffff0d; color: #ffe1d4; }
+  .device-studio .ds-parts-panel, .device-studio .ds-inspector, .editor-app :is(.left-panel,.right-panel) {
+    background: #231f1b; border-color: #ffffff13;
+  }
+  .device-studio .ds-parts-head { padding-top: 24px; color: #beb1a5; letter-spacing: 1.7px; }
+  .device-studio .ds-count { background: #e6c6a719; color: #eed9c4; border: 1px solid #e6c6a718; }
+  .device-studio .ds-machine-icon { background: linear-gradient(140deg,#ff713e12,#e6c6a718); color: #e6b9a6; border-color: #c2af9d2a; }
+  .device-studio :is(.ds-parts-project strong,.ds-part-select strong) { color: #f3ede7; }
+  .device-studio :is(.ds-parts-project > div > span,.ds-part-select small) { color: #b1a498; }
+  .device-studio .ds-search, .editor-app .search-field { background: #1a1714; color: #bcaea0; border: 1px solid #ffffff13; border-radius: 9px; }
+  .device-studio .ds-search input, .editor-app .search-field input { color: #f4ede6; }
+  .device-studio .ds-search input::placeholder, .editor-app .search-field input::placeholder { color: #afa295; }
+  .device-studio .ds-search kbd { color: #afa295; }
+  .device-studio .ds-part-row { border-radius: 9px; }
+  .device-studio .ds-part-row:hover { background: #ffffff06; }
+  .device-studio .ds-part-row:is(.is-selected,.is-highlighted) { background: linear-gradient(100deg,#ff713e14,#fa6c8d13 50%,#e6c6a719); border-color: #e6c6a742; }
+  .device-studio .ds-part-row.is-selected::before { content: ''; position: absolute; left: -1px; top: 11px; bottom: 11px; width: 2px; border-radius: 2px; background: var(--flare-gradient); }
+  .device-studio .ds-thumbnail { background: radial-gradient(ellipse at 45% 30%,#ffffff12,#ffffff02); border-radius: 7px; }
+  .device-studio .ds-part-eye { color: #c8bbaf; background: #2f2923; border-radius: 4px; }
+  .device-studio :is(.ds-assembly-group summary,.ds-part-category h3) { color: #cfc4b9; }
+  .device-studio :is(.ds-assembly-group summary > svg,.ds-assembly-group summary > small,.ds-focus-assembly) { color: #af9f8f; }
+  .device-studio .ds-focus-assembly:hover { color: #ffc09f; }
+  .device-studio .ds-assembly-child { border-color: #ffffff14; }
+  .device-studio .ds-library-footer { border-color: #ffffff12; background: #1f1b17; }
+  .device-studio .ds-library-footer > button { color: #f3ece5; }
+  .device-studio .ds-library-footer > button:first-child { border-bottom: 1px solid #ffffff12; }
+  .device-studio :is(.ds-library-footer small,.ds-library-footer > a) { color: #b7aa9d; }
+  .device-studio .ds-library-footer svg { color: #cdbfb1; }
+
+  /* The canvas is an ivory light table, surrounded by ink. No material recoloring. */
+  .device-studio .ds-stage, .editor-app .canvas-stage {
+    background: radial-gradient(ellipse at 7% 2%,#fa6c8d0d,transparent 38%), radial-gradient(ellipse at 94% 65%,#e6c6a717,transparent 47%), radial-gradient(ellipse at 40% 24%,#fffdf8,#f8f5f0 72%);
+  }
+  .device-studio .ds-stage { border-radius: 18px 0 0 0; margin-top: 10px; border-top: 1px solid #fff; }
+  .device-studio .ds-stage-top { top: 15px; }
+  .device-studio .ds-icon { color: #807061; border-radius: 8px; }
+  .device-studio .ds-icon:hover { color: #9b7249; background: #e6c6a717; }
+  .device-studio .ds-icon.is-active { background: #f3eae1; color: #a57a50; }
+  .device-studio .ds-tool-divider { background: #dbd5d0; }
+  .device-studio .ds-views { background: #e9e3e5a6; border-color: #ddd8d3; border-radius: 10px; box-shadow: 0 2px 8px #33261a08; }
+  .device-studio .ds-views button { color: #877666; }
+  .device-studio .ds-views button[aria-pressed=true] { background: #fffcf8; color: #4b3b2c; box-shadow: 0 1px 5px #33261a1a; }
+  .device-studio .ds-figure-title { top: 77px; max-width: 84%; }
+  .device-studio .ds-figure-title > span { color: #93816f; font: 8px var(--mono); letter-spacing: 1.8px; }
+  .device-studio .ds-figure-title h1 { color: #342c25; font-size: 28px; font-weight: 550; letter-spacing: -1.2px; max-width: 540px; }
+  .device-studio .ds-figure-title p { color: #8c7a69; }
+  .device-studio .ds-camera-tools .ds-icon { background: #fffcf8df; border-color: #e2ddd8; box-shadow: 0 3px 8px #2b201609; }
+  .device-studio .ds-camera-tools .ds-icon:hover { background: #f4ede7; }
+  .device-studio :is(.ds-transform-tools,.ds-show-all,.ds-hover-card) { background: #fffbf7f2; border-color: #e1dbd6; color: #706255; box-shadow: 0 5px 20px #35271915; }
+  .device-studio .ds-transform-tools > button:last-child { color: #907d6a; }
+  .device-studio .ds-transform-tools > span { background: #e3dad2; }
+  .device-studio .ds-hover-card small { color: #8b7968; }
+  .device-studio .ds-stage-footer { color: #8d7b6a; }
+  .device-studio .ds-stage-footer i { background: #e6c6a7; }
+  .device-studio .ds-stage-footer > button { color: #8e7c6b; }
+  .device-studio .ds-assembly-control { background: #fffcf8f5; border-color: #e5e1dd; border-radius: 14px; box-shadow: 0 7px 25px #3c2c1d0b; }
+  .device-studio .ds-modes button { color: #887766; border-radius: 9px; }
+  .device-studio .ds-modes button:hover { background: #f2ece6; color: #74604c; }
+  .device-studio .ds-modes button[aria-pressed=true] { background: #2e2721; color: #ffdfcc; box-shadow: 0 2px 8px #2b211820; }
+  .device-studio .ds-modes button[aria-pressed=true]:hover { background: #453a2f; color: #fff0e7; }
+  .device-studio .ds-explode-slider { border-color: #e9e4e0; color: #968473; }
+  .device-studio .ds-explode-slider input { background: #ded5cc; accent-color: #b6916c; }
+  .device-studio .ds-explode-slider input::-webkit-slider-thumb { background: #b99674; border-color: #fff8f4; box-shadow: 0 0 0 1px #bba58f; }
+  .device-studio .ds-explode-slider output { color: #7f6d5b; }
+  .device-studio .ds-ask-bar {
+    background: linear-gradient(#2c2621,#2c2621) padding-box,var(--flare-gradient) border-box;
+    border: 1px solid transparent; border-radius: 16px; padding: 9px 10px 9px 19px;
+    box-shadow: 0 12px 30px #3827171a,0 2px 7px #fa6c8d0c;
+  }
+  .device-studio .ds-ask-bar > svg { color: #f2a58f; }
+  .device-studio .ds-ask-bar > input { color: #f8f3ee; font-size: 12px; }
+  .device-studio .ds-ask-bar > input::placeholder { color: #cdbfb2; }
+  .device-studio .ds-ask-bar > button { color: #d8c7b6; }
+  .device-studio .ds-ask-bar .ds-edit-request { border-color: #ffffff24; color: #ddcfc2; }
+  .device-studio .ds-ask-bar > button[type=submit] { background: var(--flare-gradient); color: #2b231c; border-radius: 9px; }
+  .device-studio .ds-ask-bar .voice-button { color: #dacbbd; }
+
+  /* Inspector, contextual explanations, and manual controls. */
+  .device-studio .ds-inspector-tabs { background: #1f1b17; border-color: #ffffff12; gap: 17px; }
+  .device-studio .ds-inspector-tabs > button { color: #b5a89c; }
+  .device-studio .ds-inspector-tabs > button.is-active { color: #ffe3d3; }
+  .device-studio .ds-inspector-tabs > button.is-active::after { background: var(--flare-gradient); }
+  .device-studio .ds-inspector-tabs > button.ds-close-inspector { color: #c4b5a7; }
+  .device-studio :is(.ds-description,.ds-panel-section p,.ds-chat-intro p,.ds-answer,.ds-message p) { color: #cac0b7; }
+  .device-studio :is(.ds-inspector h2,.ds-panel-section h3,.ds-answer strong,.ds-name-input,.ds-relationship-inspector strong) { color: #faf3ec !important; }
+  .device-studio .ds-eyebrow { color: #beafa0; }
+  .device-studio .ds-panel-section, .device-studio .ds-specs > div { border-color: #ffffff12; }
+  .device-studio :is(.ds-panel-button,.ds-connection,.ds-part-actions > button,.ds-chat-suggestions button) { background: #ffffff04; border-color: #ffffff18 !important; color: #dacdc1; }
+  .device-studio :is(.ds-panel-button,.ds-connection,.ds-part-actions > button,.ds-chat-suggestions button):hover { background: #e6c6a713; border-color: #e6c6a745 !important; color: #f8efe7; }
+  .device-studio .ds-part-actions > button[aria-pressed=true] { background: #e6c6a720; color: #f6ebe0; }
+  .device-studio .ds-chat-intro > span, .device-studio .ds-overview-icon { background: linear-gradient(145deg,#ff713e19,#e6c6a720); border-color: #e6c6a730; color: #eab6b5; }
+  .device-studio .ds-chat-intro h2 { font-size: 29px; font-weight: 500; letter-spacing: -1.15px; line-height: 1.15; max-width: 250px; }
+  .device-studio :is(.ds-chat-intro small,.ds-conversation-kicker,.ds-message > span) { color: #c2b2a3; }
+  .device-studio .ds-chat-intro small i { background: #ecd5bf; }
+  .device-studio .ds-chat-thinking { color: #d5c3b2; }
+  .device-studio .ds-message.ds-user { background: linear-gradient(110deg,#ff713e0c,#e6c6a718); border: 1px solid #e6c6a725; border-radius: 13px 13px 3px 13px; padding: 14px; }
+  .device-studio .ds-message.ds-user .ds-answer { color: #ebded2; }
+  .device-studio .ds-answer code { background: #e6c6a714; border-color: #e6c6a725; color: #f2e1d0; }
+  .device-studio .ds-scene-actions button { border-color: #ddc3a92e; background: #e6c6a713; color: #ecd8c4; border-radius: 7px; }
+  .device-studio .ds-scene-actions button:hover { background: #e6c6a728; }
+  .device-studio .ds-followup-prompts button { color: #ddc8b4; }
+  .device-studio :is(.ds-model-notes,.ds-conversation-checks,.ds-relationship-type,.ds-relationship-inspector small) { color: #bbaea2; }
+  .device-studio .ds-conversation-checks > div { background: #ffffff04; border-color: #ffffff10; color: #ccc1b6; }
+  .device-studio .ds-conversation-checks .ds-check-pass { color: #c0cfae; }
+  .device-studio .ds-relationship-inspector > button { border-color: #ffffff12; }
+  .device-studio .ds-trace-link { color: #e9ceb4; }
+  .device-studio .ds-component-preview { background: radial-gradient(ellipse at 30% 15%,#463c33,#2f2822 70%); border-color: #ffffff15; border-radius: 12px; }
+  .device-studio .ds-component-preview > span:last-child { color: #c9baab; }
+  .device-studio .ds-component-preview .ds-thumbnail { background: transparent; }
+  .device-studio .ds-name-input { border-bottom-color: #ffffff0c; }
+  .device-studio :is(.ds-specs dt,.ds-vector legend,.ds-color-field > span,.ds-vector legend > span) { color: #bcafa2; }
+  .device-studio :is(.ds-specs dd,.ds-vector input) { color: #ebe1d8; }
+  .device-studio .ds-vector label { background: #1a1613; border-color: #ffffff1a; }
+  .device-studio .ds-vector label > span { color: #bca58e; }
+  .device-studio .ds-color-field > input { background: #28221c; border-color: #ffffff24; }
+  .device-studio .ds-color-field > input[type=text] { background: #1a1613; color: #e4d5c6; border-color: #ffffff24; }
+  .device-studio .ds-overview-stats { border-color: #ffffff19; background: #ffffff03; }
+  .device-studio .ds-overview-stats > div + div { border-color: #ffffff13; }
+  .device-studio .ds-overview-stats strong { color: #f3c3c0; }
+  .device-studio .ds-overview-stats span { color: #c6b6a7; }
+  .device-studio .ds-source-tag { background: #e6c6a718; color: #edd6bf; }
+  .device-studio .ds-note { background: #ffb4630b; border-color: #ffb46328; color: #debd8d; }
+  .device-studio :is(.ds-source-link,.ds-empty,.ds-empty-selection) { color: #c6b8aa; }
+  .device-studio .ds-mechanism-option { border-color: #ffffff13; color: #ead8c6; }
+  .device-studio .ds-mechanism-option small { color: #bfb0a2; }
+
+  .device-studio :is(.ds-mechanism-player,.ds-build-card) { background: #2c2620f7; color: #f4ece4; border-color: #e6c6a736; border-radius: 15px; box-shadow: 0 10px 35px #36271825; }
+  .device-studio .ds-mechanism-heading, .device-studio .ds-build-heading { color: #cfbba7; }
+  .device-studio .ds-mechanism-heading i { background: #fa6c8d; box-shadow: 0 0 8px #fa6c8d55; }
+  .device-studio :is(.ds-mechanism-copy h3,.ds-build-card h3) { color: #f8efe7; }
+  .device-studio :is(.ds-mechanism-copy p,.ds-build-card p) { color: #cdc1b5; }
+  .device-studio .ds-mechanism-timeline > button { background: #4c3f32; color: #f1e0cf; border-color: #e6c6a742; }
+  .device-studio .ds-mechanism-timeline > input { accent-color: #fa93aa; }
+  .device-studio .ds-mechanism-timeline > output { color: #dcc9b7; }
+  .device-studio .ds-mechanism-stages > button { background: #ffffff04; color: #d0beac; border-color: #ffffff20; }
+  .device-studio .ds-mechanism-stages > button.is-active { background: var(--flare-gradient); border-color: transparent; color: #241e18; }
+  .device-studio .ds-mechanism-stages > span { color: #c3b4a5; }
+  .device-studio .ds-build-progress { background: #ffffff0d; }
+  .device-studio .ds-build-progress i { background: var(--flare-gradient); }
+  .device-studio .ds-build-actions button { border-color: #ffffff20; color: #e5d7ca; }
+
+  /* Creation is its own dark, luminous surface; references remain easy to scan. */
+  .device-studio .ds-modal-backdrop { background: #1b130c9c; backdrop-filter: blur(12px); }
+  .device-studio .ds-modal {
+    background: radial-gradient(ellipse at 100% 0%,#e6c6a717,transparent 42%),radial-gradient(ellipse at 0% 0%,#ff713e12,transparent 42%),#211d19;
+    border: 1px solid #e6c6a736; box-shadow: 0 30px 120px #0c080590,inset 0 1px 0 #ffffff0a; border-radius: 21px;
+  }
+  .device-studio .ds-new-modal { width: 760px; padding: 35px 40px 26px; }
+  .device-studio .ds-modal-symbol { width: 42px; height: 42px; margin-bottom: 22px; background: #ffffff06; border-color: #ffffff16; color: #eab0a9; border-radius: 12px; }
+  .device-studio .ds-modal-close { color: #dac9b8; padding: 4px; }
+  .device-studio .ds-modal h2 { color: #fcf8f5; font-weight: 500; font-size: 38px; letter-spacing: -1.5px; }
+  .device-studio .ds-modal h2 em { font-style: normal; background: var(--flare-gradient); background-clip: text; -webkit-background-clip: text; color: transparent; }
+  .device-studio .ds-modal p { color: #ccbeb1; max-width: 590px; font-size: 12px; }
+  .device-studio .ds-new-modal form { background: #17130f80; border-color: #d7bba038; padding: 19px; border-radius: 14px; box-shadow: inset 0 1px 8px #1b120a30; margin-top: 22px; }
+  .device-studio .ds-new-modal textarea { color: #faf4ee; height: 75px; font-size: 15px; }
+  .device-studio .ds-new-modal textarea::placeholder { color: #bcaa98; }
+  .device-studio .ds-new-form-actions > span { color: #c8b6a5; font-size: 10px; }
+  .device-studio .ds-new-form-actions > span i { background: #ebd3bb; }
+  .device-studio .ds-example-chips { margin: 13px 0 23px; gap: 7px; flex-wrap: wrap; }
+  .device-studio .ds-example-chips button { background: #ffffff03; color: #dacdc1; border-color: #ffffff20; font-size: 10px; }
+  .device-studio .ds-example-chips button:hover { background: #e6c6a718; border-color: #e6c6a750; }
+  .device-studio .ds-new-imports { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; border: 0; }
+  .device-studio .ds-new-imports > button, .device-studio .ds-new-imports > button:first-child { background: #ffffff03; border: 1px solid #ffffff12; padding: 15px 13px; border-radius: 11px; color: #cebeae; gap: 10px; min-width: 0; }
+  .device-studio .ds-new-imports > button:hover { background: linear-gradient(120deg,#ff713e10,#e6c6a716); border-color: #e6c6a750; }
+  .device-studio .ds-new-imports strong { color: #efe7df; font-size: 12px; }
+  .device-studio .ds-new-imports small { color: #bfb1a3; font-size: 10px; line-height: 1.5; }
+  .device-studio .ds-circuit-link { color: #cbb9a7; font-size: 10px; }
+  .device-studio .ds-generation-progress { border-color: #ffffff13; color: #e0cfbf; }
+  .device-studio .ds-generation-progress span { color: #c2b09e; }
+  .device-studio .ds-generation-progress button { background: #e6c6a713; border-color: #e6c6a730; color: #efdcc9; }
+  .device-studio .ds-request-error { color: #ffc6b2 !important; background: #ff713e0c; border-color: #ff713e45; }
+  .device-studio .ds-export-option { color: #e3cfbc; border-color: #ffffff13; background: #ffffff03; }
+  .device-studio .ds-export-option strong { color: #f5eadf; }
+  .device-studio .ds-export-option small { color: #cbb9a8; }
+  .device-studio .ds-copy-project { color: #e4d0bd; }
+  .device-studio .ds-toast { background: #2e2721f5; border-color: #ddbe9f4a; color: #f3e7db; box-shadow: 0 10px 40px #2d1f1130; }
+  .device-studio .ds-toast > svg { color: #f4b6bf; }
+  .device-studio .ds-toast > button { color: #e1cdba; }
+  .device-studio .ds-restore-overlay { background: #1d1814e8; color: #f1dfcd; }
+  .device-studio .ds-busy { background: #f8f5f2c2; }
+  .device-studio .ds-busy strong { color: #5b4a39; }
+  .device-studio .ds-busy span, .device-studio .ds-busy button, .device-studio .ds-busy svg { color: #917d69; }
+
+  /* The circuit workspace shares the same identity, surfaces, and states. */
+  .editor-app .assembly-row { background: #ffffff04; border-color: #ffffff15; color: #e7dcd2; }
+  .editor-app .assembly-row.selected { background: linear-gradient(110deg,#ff713e11,#e6c6a71c); border-color: #e6c6a736; }
+  .editor-app .assembly-row strong { color: #f3eae2; }
+  .editor-app .assembly-row span { color: #cebdac; }
+  .editor-app .project-metrics b { color: #ead9c9; }
+  .editor-app .project-metrics span { color: #c5b5a5; }
+  .editor-app :is(.left-tabs small,.part-type-icon) { background: #ffffff09; border-color: #ffffff16; color: #c7b6a6; }
+  .editor-app .wire-list-row strong { color: #d2c2b3; }
+  .editor-app .wire-list-row b { color: #f4e7da; }
+  .editor-app .wire-list-row small { color: #baa794; }
+  .editor-app .transform-toolbar .icon-btn.active { background: #e6c6a728; color: #efdac6; }
+  .editor-app .explode-control { color: #d4c3b2; }
+  .editor-app .explode-control input { accent-color: #d4b495; }
+  .editor-app .detail-note { color: #ddbd94; background: #ffb46309; border-color: #ffb46328; }
+  .editor-app .select-hint { border-color: #ffffff12; }
+  .editor-app .select-hint strong { color: #e4d0bc; }
+  .editor-app .select-hint p { color: #cbb9a7; }
+
+  .editor-app :is(.panel-topline,.left-tabs,.right-tabs,.right-footer,.workspace-status,.canvas-toolbar,.explorer-footer) { background: #1f1b18; border-color: #ffffff13; color: #c2b3a4; }
+  .editor-app :is(.left-tabs > button,.right-tabs > button,.view-tabs > button,.text-action) { color: #c4b5a7; }
+  .editor-app :is(.left-tabs > button.active,.right-tabs > button.active) { color: #ffe0d3; }
+  .editor-app :is(.left-tabs > button.active,.right-tabs > button.active)::after { background: var(--flare-gradient); }
+  .editor-app :is(.part-select strong,.library-row strong,.selected-title h2,.overview-heading,.build-panel > h2,.step-list strong,.field > input,.field > textarea,.field > select,.full-select) { color: #efe7e0; }
+  .editor-app :is(.part-select small,.part-description,.list-caption,.micro-copy,.field > span,.field-heading,.catalog-note,.body-copy,.build-panel .body-copy,.step-details > p) { color: #c3b4a6; }
+  .editor-app :is(.part-list-row:hover,.wire-list-row:hover,.library-row:hover) { background: #ffffff06; }
+  .editor-app :is(.part-list-row.selected,.wire-list-row.selected) { background: #e6c6a716; border-color: #e6c6a735; }
+  .editor-app :is(.parts-group .group-heading,.section-label,.panel-kicker) { color: #cab8a7; }
+  .editor-app :is(.field > input,.field > textarea,.field > select,.full-select,.vector-inputs > label,.assistant-composer > textarea) { background: #1a1511; border-color: #ffffff1c; color: #f5ebe1; }
+  .editor-app .vector-inputs input { color: #eedccb; background: transparent; }
+  .editor-app :is(.detail-section,.assistant-composer,.pin-table,.spec-grid > div,.project-metrics,.project-metrics > div) { border-color: #ffffff14; }
+  .editor-app :is(.spec-grid dd,.pin-table strong,.pin-table button,.color-row > span) { color: #d2c0ae; }
+  .editor-app .canvas-toolbar { background: #29231d; }
+  .editor-app .view-tabs { background: #1b1713; border-color: #ffffff20; }
+  .editor-app .canvas-options > button:not(.icon-btn) { color: #c2b4a6; }
+  .editor-app .canvas-options > button.on { color: #ecdccc; }
+  .editor-app .canvas-options > .icon-btn { color: #d7c4b1; }
+  .editor-app .view-tabs > button.active { background: #4a3e32; color: #f4e6d8; }
+  .editor-app .canvas-caption h1 { color: #362d25; }
+  .editor-app :is(.canvas-caption > p,.canvas-kicker,.canvas-footnote) { color: #978675; }
+  .editor-app :is(.mode-switch,.explode-control,.canvas-composer,.transform-toolbar,.build-controls) { background: #2d2620f5; border-color: #e6c6a728; color: #dccdbe; }
+  .editor-app .mode-switch > button { color: #cbb9a7; }
+  .editor-app .mode-switch > button.active { background: var(--flare-gradient); color: #292018; }
+  .editor-app .canvas-composer { background: linear-gradient(#2d2620,#2d2620) padding-box,var(--flare-gradient) border-box; border: 1px solid transparent; }
+  .editor-app .canvas-composer > input { color: #f8f0e8; }
+  .editor-app .canvas-composer > input::placeholder { color: #c5b5a5; }
+  .editor-app :is(.canvas-composer .intent-switch,.canvas-composer > svg,.voice-button,.transform-toolbar .icon-btn) { color: #e4d0bc; }
+  .editor-app .assistant-intro h2 { color: #f7eee5; }
+  .editor-app .assistant-intro > p { color: #ccbbaa; }
+  .editor-app .assistant-intro .ai-orb { background: linear-gradient(125deg,#ff713e20,#e6c6a725); color: #f2a7b5; border-color: #e6c6a735; }
+  .editor-app :is(.assistant-intro > button,.step-actions button,.secondary) { background: #ffffff04; border-color: #ffffff1a; color: #dccbba; }
+  .editor-app :is(.message-copy,.message > p) { color: #d5c5b5; }
+  .editor-app .message-copy strong { color: #f6ebe1; }
+  .editor-app .message-copy code { background: #e6c6a714; border-color: #e6c6a729; color: #efdbc7; }
+  .editor-app .message.user { background: #e6c6a712; border-color: #e6c6a71f; }
+  .editor-app .message.user .message-copy { color: #eddccc; }
+  .editor-app :is(.composer-tabs > button.active,.composer-footer,.thinking) { color: #e0c5ab; }
+  .editor-app .modal-backdrop { background: #19120bab; backdrop-filter: blur(10px); }
+  .editor-app .modal { background: radial-gradient(ellipse at 10% 0%,#fa6c8d15,transparent 45%),#241f1a; border-color: #e6c6a738; color: #f3eae2; }
+  .editor-app .modal > h2, .editor-app .code-modal-head h2 { color: #f8efe7; }
+  .editor-app .modal > p { color: #cbbbab; }
+  .editor-app :is(.modal > textarea,.modal input,.modal select,.code-modal > textarea.firmware-source) { background: #18130e; color: #f0dfcf; border-color: #ffffff1c; }
+  .editor-app :is(.example-grid > button,.export-grid > button,.code-libraries > b) { background: #ffffff04; color: #e1cebc; border-color: #ffffff18; }
+  .editor-app :is(.example-grid strong,.export-grid strong) { color: #f2e7dd; }
+  .editor-app :is(.code-footer,.code-libraries,.new-model,.new-import > button) { color: #c7b5a3; }
+  .editor-app .toast { background: #332920; color: #f2e3d5; border-color: #e6c6a740; }
+
+  @media (min-width:1450px) {
+    .device-studio .ds-parts-panel { width: 250px; }
+    .device-studio .ds-inspector { width: 335px; }
+    .device-studio .ds-figure-title h1 { font-size: 32px; }
+  }
+  @media (max-width:1150px) {
+    .device-studio .ds-brand-edition { display: none; }
+    .device-studio .ds-header, .editor-app .app-header { gap: 14px; padding: 0 18px; }
+    .device-studio .ds-figure-title h1 { font-size: 25px; }
+  }
+  @media (max-width:680px) {
+    .editor-app .app-header { height: 62px; padding: 0 12px; gap: 10px; }
+    .editor-app .brand-word { font-size: 23px; }
+    .editor-app .brand b { display: none; }
+    .device-studio .ds-header { height: 62px; padding: 0 14px; gap: 12px; }
+    .device-studio .ds-brand-word { font-size: 23px; }
+    .device-studio .ds-brand > span:first-child { width: 27px; height: 29px; }
+    .device-studio .ds-new-modal { padding: 28px 23px 22px; }
+    .device-studio .ds-modal h2 { font-size: 32px; }
+    .device-studio .ds-new-imports { grid-template-columns: 1fr; }
+    .device-studio .ds-new-imports > button { padding: 12px; }
+    .device-studio .ds-stage { border-radius: 13px 0 0; margin-top: 7px; }
+    .device-studio .ds-figure-title { top: 74px; }
+    .device-studio .ds-figure-title h1 { font-size: 24px; }
+    .device-studio .ds-chat-intro h2 { font-size: 25px; }
+    .device-studio .ds-generation-progress { align-items: flex-start; }
+  }
+  @media (max-width:430px) {
+    .device-studio .ds-project-name { max-width: 110px; }
+    .device-studio .ds-brand-word { font-size: 21px; }
+    .device-studio .ds-brand > span:first-child { margin-right: 7px; }
+    .device-studio .ds-header { gap: 10px; }
+    .device-studio .ds-header-actions > .ds-subtle { padding: 0 5px; }
+    .device-studio .ds-stage-bottom { width: calc(100% - 24px); }
+    .device-studio .ds-new-modal textarea { font-size: 16px; }
+    .device-studio .ds-modal h2 { font-size: 29px; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .device-studio *, .editor-app * { transition: none !important; scroll-behavior: auto !important; }
+  }
+}

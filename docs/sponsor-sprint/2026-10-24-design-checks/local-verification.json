@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-25T05:33:17.189459+00:00",
+  "frozenSourceManifest": "final-run-source-manifest.json",
+  "checkedFiles": 17,
+  "changed": [],
+  "sourceUnchanged": true,
+  "ordinaryTests": {
+    "passed": 315,
+    "skipped": 6,
+    "reason": "Four existing billable provider suites and two opt-in evidence suites. Evidence suites were run separately against downloaded live artifacts."
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "siblingOriginalGitStatus": "clean",
+  "preChangeArchive": "../../../../../work/lumi-preserved/lumi-before-design-checks-2026-10-24.tar.gz",
+  "deployment": "not attempted",
+  "credentials": "No credentials in evidence; existing server configuration reused.",
+  "newDependencyInstall": false,
+  "additionalSourceCaseRegression": "A real sourced module clears the registered Corne region, source triangle/floor checks, board and insert at a known placement; moving it into the floor fails. This is a local geometry regression, not an AI-generated or physical result."
+}

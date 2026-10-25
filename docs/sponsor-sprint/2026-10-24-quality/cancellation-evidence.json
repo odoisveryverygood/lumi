@@ -1,0 +1,6 @@
+{
+  "action": "Review current object; cancel while Argon is inspecting three rendered views",
+  "expected": "No saved object or report mutation",
+  "observed": "Review cancelled notification; original one-round report restored; exported document equals reviewed-fan.part.json exactly",
+  "exactDocumentPreserved": true
+}

@@ -1,0 +1,16 @@
+{
+  "evidenceFile": "docs/sponsor-sprint/2026-10-24-quality/reviewed-fan.part.json",
+  "status": "reviewed",
+  "request": "A small desktop fan with an exposed three-blade rotor, a circular grille, an adjustable tilted stand and a visible speed knob. Include a sourced 608 bearing on the fan axle.",
+  "models": [
+    "gemini-4-argon"
+  ],
+  "reviews": 1,
+  "verifiedImageHashes": 3,
+  "firstAttemptVisualIssues": 0,
+  "retainedVisualIssues": 0,
+  "firstAttemptMeasuredFailures": 0,
+  "retainedMeasuredFailures": 0,
+  "unverifiableRequirements": 0,
+  "scope": "Recorded software evidence and image integrity. This does not authenticate the provider or certify physical hardware."
+}

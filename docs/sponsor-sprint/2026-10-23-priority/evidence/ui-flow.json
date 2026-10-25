@@ -1,0 +1,69 @@
+{
+  "as_of": "2026-10-23",
+  "mode": "live",
+  "origin": "http://127.0.0.1:3001/",
+  "model": "gemini-4-argon",
+  "request": "A unique six-part coral-red and brushed-aluminium articulated desk lamp; one prompt, no template and no repairs.",
+  "performance": {
+    "transport": "interactions",
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "durationMs": 45712,
+    "firstTokenMs": 2966,
+    "inputTokens": 1214,
+    "outputTokens": 4005,
+    "thinkingTokens": 0,
+    "cachedTokens": 0,
+    "estimatedCostUsd": 0.07646
+  },
+  "observations": [
+    {
+      "uiElapsedSeconds": 18,
+      "receivedParts": 2,
+      "result": "Base and upright arm visible, fitted in frame."
+    },
+    {
+      "uiElapsedSeconds": 34,
+      "receivedParts": 5,
+      "result": "Full tall silhouette fitted in frame, no cropping; checked final assembly still pending."
+    },
+    {
+      "uiElapsedSeconds": 46,
+      "result": "Six-part assembly validated, committed and opened in Studio."
+    }
+  ],
+  "quality": {
+    "parts": 6,
+    "solids": 51,
+    "relationships": 5,
+    "steps": 4
+  },
+  "manualEdit": {
+    "part": "weighted-base",
+    "positionXBefore": 0,
+    "positionXAfter": 12,
+    "changedPartIds": [
+      "weighted-base"
+    ]
+  },
+  "undoRestoresWholeDocument": true,
+  "exportDownloads": [
+    "lamp-original.json",
+    "lamp-edited.json",
+    "lamp-undone.json"
+  ],
+  "limits": "UI time observations are sampled elapsed labels, not exact first-part timestamps. Geometry is conceptual. Multimodal Interactions request mapping is mock-tested, not rerun live in this performance scope.",
+  "direct3DSelection": {
+    "clickedGeometry": "Upper Angled Arm",
+    "result": "Correct component card opened from a click on the rendered arm."
+  },
+  "finalLayout": "Long generated title fits below a separate transform toolbar; assembled lamp and selected-part card are visible.",
+  "localProductionPreview": {
+    "server": "next start",
+    "pageStatus": 200,
+    "aiAvailable": true,
+    "model": "gemini-4-argon",
+    "restoredAssemblyParts": 6,
+    "separateLiveGenerationRerun": false
+  }
+}

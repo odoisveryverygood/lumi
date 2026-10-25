@@ -1,0 +1,48 @@
+{
+  "source": "foostan/crkbd",
+  "revision": "63366fb7f51cf2a796462fdd90527e99dd126055",
+  "attribution": "Corne by foostan. CC BY 4.0 / MIT. Geometry tessellated and rigidly registered; PCB outline and unsourced bodies are disclosed reconstructions.",
+  "sourceFiles": [
+    {
+      "file": "cases/3x6/left.step",
+      "url": "https://github.com/foostan/crkbd/blob/63366fb7f51cf2a796462fdd90527e99dd126055/cases/3x6/left.step",
+      "sha256": "307037783d7346c45d46910030f437b917c44c67a6f0c4d34adb5a13220abe90"
+    },
+    {
+      "file": "pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb",
+      "url": "https://github.com/foostan/crkbd/blob/63366fb7f51cf2a796462fdd90527e99dd126055/pcbs/corne-cherry/hotswap/corne-cherry.kicad_pcb",
+      "sha256": "71538a202cb28882b9c9f7b6fe60bf402fb705703a29c59cd6ebb99b9edbb540"
+    },
+    {
+      "file": "plates/3x6/pcb/plate-top-cherrymx.kicad_pcb",
+      "url": "https://github.com/foostan/crkbd/blob/63366fb7f51cf2a796462fdd90527e99dd126055/plates/3x6/pcb/plate-top-cherrymx.kicad_pcb",
+      "sha256": "ab7e907dd42764d2c8e724dc279dcf58a6f77d738102da5ea8b1149560e6c2ba"
+    },
+    {
+      "file": "docs/corne-cherry/v4/buildguide_en.md",
+      "url": "https://github.com/foostan/crkbd/blob/63366fb7f51cf2a796462fdd90527e99dd126055/docs/corne-cherry/v4/buildguide_en.md",
+      "sha256": "d9b7f4443fb9db81a118cb639addfcfc80c64dd1311ef9e852faf0a3f65607df"
+    }
+  ],
+  "conversion": {
+    "tool": "occt-import-js 0.0.23 / OpenCascade",
+    "linearDeflectionMm": 0.08,
+    "angularDeflection": 0.2,
+    "platePatternRmsMm": 0.00719751668285547,
+    "caseSize": [
+      138.34996,
+      11.1,
+      97.62154
+    ],
+    "registration": {
+      "caseCenter": [
+        -85.7250287939741,
+        -79.6480084515866
+      ],
+      "pcbXTranslation": -14.3083917949095,
+      "pcbZTranslation": -24.7016577226442,
+      "method": "Source PCB USB reference registered to case aperture; source plate matched against 21 switch positions. Vertical spacing uses source 7.5 mm spacers and 1.6 mm PCB; physical tolerances unverified."
+    }
+  },
+  "scope": "Original case STEP and source plate geometry. Source footprint placements are retained relative to one another. A registration study is not a physical assembly certification."
+}

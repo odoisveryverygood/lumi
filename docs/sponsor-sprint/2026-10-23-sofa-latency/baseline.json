@@ -1,0 +1,148 @@
+{
+  "mode": "live",
+  "prompt": "Build a smart sofa with an iron base and an ESP32.",
+  "originalGenerator": true,
+  "completed": true,
+  "durationMs": 149782,
+  "firstPartMs": 21464,
+  "performance": {
+    "transport": "interactions",
+    "requestedTier": "priority",
+    "servedTier": "priority",
+    "durationMs": 149741,
+    "firstTokenMs": 3777,
+    "inputTokens": 1126,
+    "outputTokens": 13336,
+    "thinkingTokens": 0,
+    "cachedTokens": 0,
+    "estimatedCostUsd": 0.244102
+  },
+  "quality": {
+    "parts": 14,
+    "solids": 180,
+    "names": [
+      "Tubular Wrought-Iron Base Frame",
+      "Tempered Steel Serpentine Spring Deck",
+      "Quad Strain-Gauge Occupancy Load Cells",
+      "24V Heavy-Duty Linear Actuator",
+      "Pantograph Scissor & Backrest Hinge Linkage",
+      "Articulated Upholstered Footrest Pad",
+      "Left Upholstered Armrest with Storage Pocket",
+      "Right Smart Armrest with Tech Cavity",
+      "Flush Armrest Control Panel & Qi Charger",
+      "Dual Multi-Density Foam Seat Cushions",
+      "Articulated Tufted Backrest Cushions",
+      "ESP32-WROOM-32 Smart Sofa Controller Unit",
+      "24V 180W Switching Power Supply Brick",
+      "WS2812B Addressable RGBW Under-Glow LED Bar"
+    ]
+  },
+  "progress": [
+    {
+      "atMs": 42,
+      "message": "Request received. Connecting to Gemini…"
+    },
+    {
+      "atMs": 42,
+      "message": "Designing the components and assembly…"
+    },
+    {
+      "atMs": 42,
+      "message": "Gemini is designing your object…"
+    },
+    {
+      "atMs": 3815,
+      "message": "Receiving component geometry and the assembly guide…"
+    },
+    {
+      "atMs": 21464,
+      "message": "1 custom component received. Building the rest…",
+      "parts": 1
+    },
+    {
+      "atMs": 31952,
+      "message": "2 custom components received. Building the rest…",
+      "parts": 2
+    },
+    {
+      "atMs": 41514,
+      "message": "3 custom components received. Building the rest…",
+      "parts": 3
+    },
+    {
+      "atMs": 48178,
+      "message": "4 custom components received. Building the rest…",
+      "parts": 4
+    },
+    {
+      "atMs": 57328,
+      "message": "5 custom components received. Building the rest…",
+      "parts": 5
+    },
+    {
+      "atMs": 62088,
+      "message": "6 custom components received. Building the rest…",
+      "parts": 6
+    },
+    {
+      "atMs": 68307,
+      "message": "7 custom components received. Building the rest…",
+      "parts": 7
+    },
+    {
+      "atMs": 75567,
+      "message": "8 custom components received. Building the rest…",
+      "parts": 8
+    },
+    {
+      "atMs": 83973,
+      "message": "9 custom components received. Building the rest…",
+      "parts": 9
+    },
+    {
+      "atMs": 91163,
+      "message": "10 custom components received. Building the rest…",
+      "parts": 10
+    },
+    {
+      "atMs": 98611,
+      "message": "11 custom components received. Building the rest…",
+      "parts": 11
+    },
+    {
+      "atMs": 114662,
+      "message": "12 custom components received. Building the rest…",
+      "parts": 12
+    },
+    {
+      "atMs": 122037,
+      "message": "13 custom components received. Building the rest…",
+      "parts": 13
+    },
+    {
+      "atMs": 128477,
+      "message": "14 custom components received. Building the rest…",
+      "parts": 14
+    },
+    {
+      "atMs": 149781,
+      "message": "Geometry received. Checking the assembly…",
+      "performance": {
+        "transport": "interactions",
+        "requestedTier": "priority",
+        "servedTier": "priority",
+        "durationMs": 149741,
+        "firstTokenMs": 3777,
+        "inputTokens": 1126,
+        "outputTokens": 13336,
+        "thinkingTokens": 0,
+        "cachedTokens": 0,
+        "estimatedCostUsd": 0.244102
+      }
+    },
+    {
+      "atMs": 149781,
+      "message": "Checking component references, geometry and assembly relationships…"
+    }
+  ]
+}

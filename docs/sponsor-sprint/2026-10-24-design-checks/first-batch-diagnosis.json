@@ -1,0 +1,123 @@
+{
+  "sourceFile": "first-batch-with-contract-bug.json",
+  "sha256": "459a6478527dd6c81c827750c88091c4abb35de0dadbe6ca6d4de21b37fa54b7",
+  "summary": {
+    "attempted": 12,
+    "completed": 11,
+    "positiveCompleted": 10,
+    "positivePassed": 3,
+    "expectedBlockedCompleted": 1,
+    "expectedBlockedHandled": 1,
+    "queued": 12,
+    "cancelled": 1,
+    "humanReviewed": 0
+  },
+  "failedOrCancelled": [
+    {
+      "id": "radio-outside-2-run-1",
+      "taskId": "radio-outside-2",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "0ed810dbe68dbdf53a68392c4f7a71804abaeb0da0ad4ea713e19d1eb969478b",
+      "serializedContractBodyHash": "4a9a2ae6599c9fc3e452899d4d7df32cee18834868bf404c4735ee88885f1384",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "radio-floor-1-run-1",
+      "taskId": "radio-floor-1",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "5d6d0587216b0a1cc42f238523c7a97eaee5cf3c3cb16bed3dead664911b2841",
+      "serializedContractBodyHash": "0090d274ff611d91a44afe10a45394a8e854210853bf6c2e7bdfd89c9cac86a8",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "radio-floor-2-run-1",
+      "taskId": "radio-floor-2",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "c54b935a53b32bd07daff1af757d55f66b7b651ff1ccff1ae48a56e92dbcedf3",
+      "serializedContractBodyHash": "2964b588cb2f55d8658017984794e73a8895085d1bb5fc615c9d2921667d52ab",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "battery-gap-3-run-1",
+      "taskId": "battery-gap-3",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "e309d8202bc282af5b4fff37487ab22e67bd607f3e24ffc24fce957a767f41d6",
+      "serializedContractBodyHash": "62b1b99c5bd5105feaae57d24e02c7787e1d18ccad72d5baed81cb99e49e8b83",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "battery-gap-5-run-1",
+      "taskId": "battery-gap-5",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "e14aa94797cca59775cbea0d9ccae065f41d3ac5076a90cb81f55969bbe29835",
+      "serializedContractBodyHash": "b3a906441f0f53e65009f4ce8c055663eb4bd65335165c78072462e43239850e",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "port-access-8-run-1",
+      "taskId": "port-access-8",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "035e0d2e6c9da845e9b8cd721d56ff4b368c487096ab16ecd20f5bd29aaf7cd4",
+      "serializedContractBodyHash": "c4d176e268eba7b0ced392812acf0fc2f746d527f096178105b8bdbfc3936e14",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "port-access-12-run-1",
+      "taskId": "port-access-12",
+      "status": "failed",
+      "message": "Fixed-task acceptance evaluated independently of the model findings.",
+      "error": null,
+      "reviewStatus": "incomplete",
+      "reviewError": "The request could not be completed. Please try again.",
+      "recordedReviewCount": 0,
+      "recordedContractHash": "bc96ff236c241de2ea7ecb28691cf57b37ae38118fc90c0dfc5dcf5a2bc124ea",
+      "serializedContractBodyHash": "b18d418255b7bdb2af2d1880b7af58d498c7829cca39d0fb56d662bf8cc73232",
+      "serializedHashMatches": false
+    },
+    {
+      "id": "unmeasurable-interior-run-1",
+      "taskId": "unmeasurable-interior",
+      "status": "cancelled",
+      "message": "This attempt is retained in the results.",
+      "error": "signal is aborted without reason",
+      "reviewStatus": null,
+      "reviewError": null,
+      "recordedReviewCount": 0
+    }
+  ],
+  "diagnosis": "Auto-added shape-preservation goals were hashed before schema normalization. The JSON boundary changed the normalized body, invalidating the serialized contract before visual review. This was an application serialization defect, not a completed model repair.",
+  "fix": "Normalize the whole contract body before computing and validating its hash. Added a JSON-roundtrip regression for every fixed task and a regression for undefined source fields dropping procedural geometry.",
+  "taskDefinitionsChanged": false,
+  "laterOracleVersion": 2,
+  "oracleChange": "The final version additionally preserves originally-contained components and handles rotated envelopes. Prior exports without oracleVersion retain version 1 interpretation. No historical run is overwritten."
+}

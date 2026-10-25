@@ -1,0 +1,1484 @@
+{
+  "document": {
+    "version": 1,
+    "id": "coral-articulated-desk-lamp",
+    "name": "Coral-Red & Brushed-Aluminium Articulated Desk Lamp",
+    "description": "Slim architectural task lamp ~350 mm tall featuring a weighted coral-red base, twin brushed-aluminium arms, precision friction pivot joint, conical shade with brass trim, and a warm diffused LED emitter module.",
+    "provenance": "AI generated conceptual assembly. Geometry, dimensions and specifications are illustrative; no CAD fit, wiring or hardware operation has been verified.",
+    "parts": [
+      {
+        "id": "weighted-base",
+        "name": "Weighted Base",
+        "category": "housing",
+        "description": "Heavy cast-iron core enclosed in a matte coral-red spun shell with a brushed-aluminium capacitive dimmer button and rear cord strain relief.",
+        "role": "Counterbalances cantilevered arm and houses touch control electronics.",
+        "position": [
+          12,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          150,
+          24,
+          158
+        ],
+        "explode": [
+          0,
+          -55,
+          0
+        ],
+        "color": "#e85d4a",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              2,
+              0
+            ],
+            "size": [
+              146,
+              4,
+              148
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#242629",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              8,
+              0
+            ],
+            "size": [
+              148,
+              8,
+              150
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              13.5,
+              0
+            ],
+            "size": [
+              136,
+              3,
+              148
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              15,
+              0
+            ],
+            "size": [
+              67,
+              1.5,
+              67
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#c8cdd4",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              15.5,
+              38
+            ],
+            "size": [
+              24,
+              2,
+              26
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#9ea5ae",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              16.8,
+              38
+            ],
+            "size": [
+              18,
+              1.5,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d8dde4",
+            "metalness": 0.88,
+            "roughness": 0.2
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              16.8,
+              38
+            ],
+            "size": [
+              7,
+              0.8,
+              7
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ff9b6a",
+            "metalness": 0.1,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              20,
+              -35
+            ],
+            "size": [
+              34,
+              10,
+              40
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              26,
+              -35
+            ],
+            "size": [
+              24,
+              4,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c8cdd4",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              8,
+              -75
+            ],
+            "size": [
+              10,
+              12,
+              10
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#242629",
+            "metalness": 0.2,
+            "roughness": 0.8
+          }
+        ],
+        "specs": {
+          "outerDiameter": "150 mm",
+          "mass": "1.45 kg (cast iron ballast)",
+          "finish": "Matte coral-red powder coat",
+          "control": "Capacitive touch dimmer pad"
+        },
+        "connections": [
+          {
+            "partId": "lower-upright-arm",
+            "label": "Flanged base upright socket"
+          }
+        ],
+        "assemblyId": "support-assembly"
+      },
+      {
+        "id": "lower-upright-arm",
+        "name": "Lower Upright Arm",
+        "category": "structural",
+        "description": "Twin-rail brushed-aluminium vertical stanchion with coral-red structural spacers and integrated wire routing channel.",
+        "role": "Elevates the main articulation pivot 250 mm above the desk surface.",
+        "position": [
+          0,
+          26,
+          -35
+        ],
+        "rotation": [
+          8,
+          0,
+          0
+        ],
+        "size": [
+          28,
+          236,
+          24
+        ],
+        "explode": [
+          0,
+          0,
+          -45
+        ],
+        "color": "#d0d5dc",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              0
+            ],
+            "size": [
+              20,
+              12,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bec6",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -8,
+              118,
+              0
+            ],
+            "size": [
+              8,
+              216,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              8,
+              118,
+              0
+            ],
+            "size": [
+              8,
+              216,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              115,
+              0
+            ],
+            "size": [
+              10,
+              200,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              55,
+              0
+            ],
+            "size": [
+              22,
+              10,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              115,
+              0
+            ],
+            "size": [
+              22,
+              10,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              175,
+              0
+            ],
+            "size": [
+              22,
+              10,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              228,
+              0
+            ],
+            "size": [
+              24,
+              14,
+              24
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              228,
+              0
+            ],
+            "size": [
+              12,
+              26,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.4,
+            "roughness": 0.6
+          }
+        ],
+        "specs": {
+          "length": "236 mm",
+          "material": "6063-T6 brushed aluminium",
+          "profile": "Twin 8 mm cylindrical rails + center spine"
+        },
+        "connections": [
+          {
+            "partId": "weighted-base",
+            "label": "Base socket tenon"
+          },
+          {
+            "partId": "round-pivot-joint",
+            "label": "Upper clevis yoke"
+          }
+        ],
+        "assemblyId": "support-assembly"
+      },
+      {
+        "id": "round-pivot-joint",
+        "name": "Round Pivot Joint",
+        "category": "mechanical",
+        "description": "Machined drum hinge with coral-red anodized side caps, knurled aluminium tension knob, and brass friction washers.",
+        "role": "Connects lower and upper arms with adjustable friction torque.",
+        "position": [
+          0,
+          252,
+          -3
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          46,
+          38,
+          38
+        ],
+        "explode": [
+          -55,
+          20,
+          0
+        ],
+        "color": "#e85d4a",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              36,
+              24,
+              36
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#c8cdd4",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -13,
+              0,
+              0
+            ],
+            "size": [
+              32,
+              3,
+              34
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              13,
+              0,
+              0
+            ],
+            "size": [
+              34,
+              3,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -16.5,
+              0,
+              0
+            ],
+            "size": [
+              22,
+              4,
+              24
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#d8dde4",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              17,
+              0,
+              0
+            ],
+            "size": [
+              24,
+              6,
+              24
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#b0b6be",
+            "metalness": 0.85,
+            "roughness": 0.3
+          },
+          {
+            "kind": "torus",
+            "position": [
+              19,
+              0,
+              0
+            ],
+            "size": [
+              11,
+              1.5,
+              11
+            ],
+            "rotation": [
+              0,
+              90,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              8,
+              44,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              8,
+              14
+            ],
+            "size": [
+              18,
+              16,
+              22
+            ],
+            "rotation": [
+              22,
+              0,
+              0
+            ],
+            "color": "#c8cdd4",
+            "metalness": 0.88,
+            "roughness": 0.22
+          }
+        ],
+        "specs": {
+          "drumDiameter": "36 mm",
+          "bearingType": "PTFE + brass disc friction clutch",
+          "adjustment": "Knurled side tension dial"
+        },
+        "connections": [
+          {
+            "partId": "lower-upright-arm",
+            "label": "Stanchion clevis pin"
+          },
+          {
+            "partId": "upper-angled-arm",
+            "label": "Boom clamp saddle"
+          }
+        ],
+        "assemblyId": "support-assembly"
+      },
+      {
+        "id": "upper-angled-arm",
+        "name": "Upper Angled Arm",
+        "category": "structural",
+        "description": "Slender cantilevered brushed-aluminium boom with coral-red top spline, wiring clips, and spherical shade neck joint.",
+        "role": "Positions the lamp head forward over the work area at ~345 mm total height.",
+        "position": [
+          0,
+          252,
+          -3
+        ],
+        "rotation": [
+          -22,
+          0,
+          0
+        ],
+        "size": [
+          24,
+          26,
+          185
+        ],
+        "explode": [
+          0,
+          55,
+          15
+        ],
+        "color": "#d0d5dc",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              28,
+              14,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              82
+            ],
+            "size": [
+              12,
+              9,
+              145
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              5.5,
+              82
+            ],
+            "size": [
+              7,
+              3,
+              138
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              45
+            ],
+            "size": [
+              16,
+              13,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              115
+            ],
+            "size": [
+              16,
+              13,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              158
+            ],
+            "size": [
+              16,
+              12,
+              16
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c8cdd4",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              -6,
+              158
+            ],
+            "size": [
+              14,
+              14,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -14,
+              158
+            ],
+            "size": [
+              8,
+              14,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c8cdd4",
+            "metalness": 0.88,
+            "roughness": 0.22
+          }
+        ],
+        "specs": {
+          "reach": "165 mm forward projection",
+          "material": "6063-T6 brushed aluminium",
+          "neckJoint": "Swivel ball socket"
+        },
+        "connections": [
+          {
+            "partId": "round-pivot-joint",
+            "label": "Rear boom clamp"
+          },
+          {
+            "partId": "conical-shade",
+            "label": "Shade neck swivel stem"
+          }
+        ],
+        "assemblyId": "head-assembly"
+      },
+      {
+        "id": "conical-shade",
+        "name": "Conical Shade",
+        "category": "housing",
+        "description": "Spun coral-red conical reflector hood with a vented brushed-aluminium heatsink crown and warm brass rim bezel.",
+        "role": "Directs task illumination downward while dissipating LED thermal load.",
+        "position": [
+          0,
+          298,
+          142
+        ],
+        "rotation": [
+          12,
+          0,
+          0
+        ],
+        "size": [
+          116,
+          86,
+          116
+        ],
+        "explode": [
+          0,
+          35,
+          60
+        ],
+        "color": "#e85d4a",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              4,
+              0
+            ],
+            "size": [
+              18,
+              12,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -6,
+              0
+            ],
+            "size": [
+              28,
+              8,
+              38
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bec6",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              -4,
+              0
+            ],
+            "size": [
+              15,
+              1.5,
+              15
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#2a2d32",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -22,
+              0
+            ],
+            "size": [
+              38,
+              26,
+              74
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -48,
+              0
+            ],
+            "size": [
+              74,
+              28,
+              112
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d4a",
+            "metalness": 0.25,
+            "roughness": 0.45
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              -62,
+              0
+            ],
+            "size": [
+              55.5,
+              2.2,
+              55.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -52,
+              0
+            ],
+            "size": [
+              70,
+              20,
+              106
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f5ece2",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -12,
+              -28
+            ],
+            "size": [
+              6,
+              4,
+              22
+            ],
+            "rotation": [
+              -25,
+              0,
+              0
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          }
+        ],
+        "specs": {
+          "mouthDiameter": "114 mm",
+          "height": "82 mm",
+          "exterior": "Matte coral-red powder coat",
+          "interior": "High-reflectance satin white baffle"
+        },
+        "connections": [
+          {
+            "partId": "upper-angled-arm",
+            "label": "Top neck collar"
+          },
+          {
+            "partId": "warm-led-lens",
+            "label": "Internal bezel snap ring"
+          }
+        ],
+        "assemblyId": "head-assembly"
+      },
+      {
+        "id": "warm-led-lens",
+        "name": "Warm LED Lens",
+        "category": "optics",
+        "description": "Frosted polycarbonate optical diffuser ring assembly with an aluminium heat-spreader backing and warm-white COB emitter core.",
+        "role": "Produces glare-free 2700K warm task lighting across the desk surface.",
+        "position": [
+          0,
+          256,
+          151
+        ],
+        "rotation": [
+          12,
+          0,
+          0
+        ],
+        "size": [
+          96,
+          24,
+          96
+        ],
+        "explode": [
+          0,
+          -45,
+          85
+        ],
+        "color": "#ffdfa8",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              8,
+              0
+            ],
+            "size": [
+              64,
+              6,
+              68
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bec6",
+            "metalness": 0.85,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              2,
+              0
+            ],
+            "size": [
+              72,
+              6,
+              84
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#fff1d0",
+            "metalness": 0.08,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -2,
+              0
+            ],
+            "size": [
+              52,
+              4,
+              56
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ffae42",
+            "metalness": 0.05,
+            "roughness": 0.2
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              -3,
+              0
+            ],
+            "size": [
+              28,
+              10,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ffd27d",
+            "metalness": 0.05,
+            "roughness": 0.18
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              -1,
+              0
+            ],
+            "size": [
+              41,
+              3.5,
+              41
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d0d5dc",
+            "metalness": 0.88,
+            "roughness": 0.22
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              -2,
+              0
+            ],
+            "size": [
+              27,
+              1.8,
+              27
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              41,
+              -1,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bec6",
+            "metalness": 0.85,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -41,
+              -1,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bec6",
+            "metalness": 0.85,
+            "roughness": 0.3
+          }
+        ],
+        "specs": {
+          "colorTemperature": "2700K Warm White",
+          "luminousFlux": "520 lm",
+          "cri": "95+ Ra",
+          "optics": "Micro-prismatic frosted polycarbonate"
+        },
+        "connections": [
+          {
+            "partId": "conical-shade",
+            "label": "Shade recess bayonet mount"
+          }
+        ],
+        "assemblyId": "head-assembly"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Anchor the Weighted Base & Lower Upright Arm",
+        "description": "Place the weighted base on the work surface and seat the lower upright arm tenon into the rear socket boss.",
+        "partIds": [
+          "weighted-base",
+          "lower-upright-arm"
+        ]
+      },
+      {
+        "title": "Install the Round Pivot Joint",
+        "description": "Mount the round pivot joint onto the top clevis of the lower upright arm and set clutch friction with the side tension dial.",
+        "partIds": [
+          "lower-upright-arm",
+          "round-pivot-joint"
+        ]
+      },
+      {
+        "title": "Attach the Upper Angled Arm",
+        "description": "Fit the rear yoke of the upper angled arm around the round pivot joint drum to establish the forward cantilever reach.",
+        "partIds": [
+          "round-pivot-joint",
+          "upper-angled-arm"
+        ]
+      },
+      {
+        "title": "Mount the Conical Shade & Warm LED Lens",
+        "description": "Secure the conical shade onto the forward swivel neck of the upper angled arm and snap the warm LED lens diffuser into the shade mouth.",
+        "partIds": [
+          "upper-angled-arm",
+          "conical-shade",
+          "warm-led-lens"
+        ]
+      }
+    ],
+    "source": "gemini",
+    "model": "gemini-4-argon",
+    "assemblies": [
+      {
+        "id": "support-assembly",
+        "name": "Base & Support Arm Assembly",
+        "partIds": [
+          "weighted-base",
+          "lower-upright-arm",
+          "round-pivot-joint"
+        ]
+      },
+      {
+        "id": "head-assembly",
+        "name": "Cantilever Arm & Lamp Head Assembly",
+        "partIds": [
+          "upper-angled-arm",
+          "conical-shade",
+          "warm-led-lens"
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "id": "rel-base-lower-arm",
+        "from": "weighted-base",
+        "to": "lower-upright-arm",
+        "type": "mechanical",
+        "description": "Rear socket on the weighted base anchors the lower upright arm stanchion at an 8-degree rearward rake."
+      },
+      {
+        "id": "rel-lower-arm-pivot",
+        "from": "lower-upright-arm",
+        "to": "round-pivot-joint",
+        "type": "mechanical",
+        "description": "Upper clevis of the lower upright arm clamps the central friction axle of the round pivot joint."
+      },
+      {
+        "id": "rel-pivot-upper-arm",
+        "from": "round-pivot-joint",
+        "to": "upper-angled-arm",
+        "type": "mechanical",
+        "description": "Round pivot joint drum supports the upper angled arm and sets its elevation angle via friction discs."
+      },
+      {
+        "id": "rel-upper-arm-shade",
+        "from": "upper-angled-arm",
+        "to": "conical-shade",
+        "type": "mechanical",
+        "description": "Forward ball-swivel stem on the upper angled arm mates with the top collar of the conical shade."
+      },
+      {
+        "id": "rel-shade-led-lens",
+        "from": "conical-shade",
+        "to": "warm-led-lens",
+        "type": "mechanical",
+        "description": "Internal recess of the conical shade retains the warm LED lens and couples to its thermal backing plate."
+      }
+    ],
+    "capabilities": [
+      "Adjustable friction pivot articulation",
+      "Integrated capacitive touch dimmer in base",
+      "Pass-through low-voltage internal harness",
+      "Convective shade heat dissipation"
+    ]
+  },
+  "conversation": [
+    {
+      "role": "assistant",
+      "text": "Here is a custom 3D assembly of a slim coral-red and brushed-aluminium articulated desk lamp standing approximately 350 mm tall. It consists of six selectable parts—Weighted Base, Lower Upright Arm, Round Pivot Joint, Upper Angled Arm, Conical Shade, and Warm LED Lens—organized into four assembly steps and five mechanical relationships.",
+      "actions": [
+        {
+          "type": "view",
+          "view": "perspective"
+        },
+        {
+          "type": "explode",
+          "amount": 0.35
+        }
+      ],
+      "suggestions": [
+        "Explode the assembly fully to inspect the Warm LED Lens and Round Pivot Joint details",
+        "Focus on the Weighted Base to view the brushed-aluminium touch dimmer pad",
+        "Isolate the Conical Shade and Warm LED Lens to inspect the optical head assembly"
+      ],
+      "checks": [
+        {
+          "level": "pass",
+          "message": "All component, assembly, relationship and mechanism references passed structural validation."
+        },
+        {
+          "level": "warning",
+          "message": "Geometry and specifications are illustrative. Mechanical fit, wiring and physical hardware operation have not been verified."
+        }
+      ]
+    }
+  ]
+}

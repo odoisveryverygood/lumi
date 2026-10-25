@@ -1,0 +1,46 @@
+{
+  "evidenceFile": "docs/sponsor-sprint/2026-10-24-design-checks/smoke-evaluation.json",
+  "startedAt": "2026-10-25T04:52:49.698Z",
+  "configuredTrials": 1,
+  "recordedReviews": 2,
+  "verifiedImageHashes": 6,
+  "seededRepairs": {
+    "planned": 1,
+    "completed": 1,
+    "passed": 1,
+    "failed": 0,
+    "cancelled": 0,
+    "unrun": 0,
+    "firstAttemptOraclePasses": 0,
+    "retainedOraclePasses": 1,
+    "medianElapsedSeconds": 48.3,
+    "maximumElapsedSeconds": 48.3
+  },
+  "freshLiveEdits": {
+    "planned": 0,
+    "completed": 0,
+    "passed": 0,
+    "failed": 0,
+    "cancelled": 0,
+    "unrun": 0,
+    "firstAttemptOraclePasses": 0,
+    "retainedOraclePasses": 0,
+    "medianElapsedSeconds": null,
+    "maximumElapsedSeconds": null
+  },
+  "negativeControls": {
+    "planned": 0,
+    "completed": 0,
+    "passed": 0,
+    "failed": 0,
+    "cancelled": 0,
+    "unrun": 0,
+    "firstAttemptOraclePasses": 0,
+    "retainedOraclePasses": 0,
+    "medianElapsedSeconds": null,
+    "maximumElapsedSeconds": null
+  },
+  "failures": [],
+  "humanReviewed": 0,
+  "scope": "Software evidence on controlled authored assemblies with sourced radio geometry. Seeded faults are not fresh-generation errors. The fixed-task oracle must be recomputed with tests/evaluation-evidence.test.ts. No physical validation, human usefulness result or provider authentication is claimed."
+}

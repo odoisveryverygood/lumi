@@ -1,0 +1,2731 @@
+{
+  "document": {
+    "version": 1,
+    "id": "compact-esp32c3-desk-sensor",
+    "name": "Compact ESP32-C3 Desk Sensor",
+    "description": "A compact desktop environmental and air-quality node featuring a sourced ESP32-C3-MINI-1 radio module on a custom carrier PCB, an isolated sensor daughterboard, an anodized orange tilt bracket, and an M3 × 12 socket cap screw.",
+    "provenance": "AI generated conceptual assembly. Geometry, dimensions and specifications are illustrative; no CAD fit, wiring or hardware operation has been verified.",
+    "parts": [
+      {
+        "id": "desk-base",
+        "name": "Weighted Desk Base",
+        "category": "housing",
+        "description": "Machined aluminum desktop base with non-slip elastomer pads and pivot ears.",
+        "role": "Machined aluminum desktop base with non-slip elastomer pads and pivot ears.",
+        "position": [
+          0,
+          3,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          62,
+          17.9,
+          62
+        ],
+        "explode": [
+          0,
+          -36,
+          0
+        ],
+        "color": "#333840",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              58,
+              6,
+              62
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#333840",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              3.5,
+              0
+            ],
+            "size": [
+              46,
+              2,
+              50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#262a30",
+            "metalness": 0.6,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              -19,
+              7.5,
+              -10
+            ],
+            "size": [
+              5,
+              11,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#333840",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              19,
+              7.5,
+              -10
+            ],
+            "size": [
+              5,
+              11,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#333840",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -19,
+              10.5,
+              -10
+            ],
+            "size": [
+              8,
+              5,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#333840",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              19,
+              10.5,
+              -10
+            ],
+            "size": [
+              8,
+              5,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#333840",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0.5,
+              -10
+            ],
+            "size": [
+              12,
+              6.2,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1e22",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              -2.8,
+              -18
+            ],
+            "size": [
+              10,
+              1.2,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15171a",
+            "metalness": 0.05,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              -2.8,
+              18
+            ],
+            "size": [
+              10,
+              1.2,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15171a",
+            "metalness": 0.05,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              -2.8,
+              -18
+            ],
+            "size": [
+              10,
+              1.2,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15171a",
+            "metalness": 0.05,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              -2.8,
+              18
+            ],
+            "size": [
+              10,
+              1.2,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15171a",
+            "metalness": 0.05,
+            "roughness": 0.9
+          }
+        ],
+        "specs": {},
+        "connections": []
+      },
+      {
+        "id": "orange-bracket",
+        "name": "Custom Orange Tilt Bracket",
+        "category": "mount",
+        "description": "CNC-milled and anodized orange aluminum U-bracket that supports the sensor pod and receives the central M3 × 12 mounting screw.",
+        "role": "CNC-milled and anodized orange aluminum U-bracket that supports the sensor pod and receives the central M3 × 12 mounting screw.",
+        "position": [
+          0,
+          17,
+          -10
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          37,
+          18.6,
+          24
+        ],
+        "explode": [
+          0,
+          -18,
+          -14
+        ],
+        "color": "#ff6b1a",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -6.5,
+              0
+            ],
+            "size": [
+              33,
+              4,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              -14.5,
+              -2.5,
+              0
+            ],
+            "size": [
+              4,
+              10,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              14.5,
+              -2.5,
+              0
+            ],
+            "size": [
+              4,
+              10,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -15.5,
+              -6.5,
+              0
+            ],
+            "size": [
+              3.2,
+              6,
+              3.2
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#d97706",
+            "metalness": 0.7,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              15.5,
+              -6.5,
+              0
+            ],
+            "size": [
+              3.2,
+              6,
+              3.2
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#d97706",
+            "metalness": 0.7,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              1,
+              5
+            ],
+            "size": [
+              16,
+              13,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              -10,
+              5,
+              8
+            ],
+            "size": [
+              10,
+              4,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              10,
+              5,
+              8
+            ],
+            "size": [
+              10,
+              4,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              7,
+              10
+            ],
+            "size": [
+              36,
+              4,
+              16
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.45,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              8.5,
+              10
+            ],
+            "size": [
+              12,
+              3,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e85d0c",
+            "metalness": 0.5,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -13,
+              9.2,
+              10
+            ],
+            "size": [
+              4.5,
+              1.8,
+              4.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.75,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              13,
+              9.2,
+              10
+            ],
+            "size": [
+              4.5,
+              1.8,
+              4.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.75,
+            "roughness": 0.25
+          }
+        ],
+        "specs": {},
+        "connections": []
+      },
+      {
+        "id": "m3-screw",
+        "name": "M3 × 12 Socket Screw",
+        "category": "Fasteners",
+        "description": "Standard M3 × 12 socket head cap screw clamping the orange bracket to the weighted desk base.",
+        "role": "M3 socket cap screw, 12 mm nominal length.",
+        "position": [
+          0,
+          13.5,
+          -10
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "explode": [
+          0,
+          -27,
+          -10
+        ],
+        "color": "#cbd5e1",
+        "specs": {
+          "Catalog source": "NopSCADlib",
+          "Source revision": "00ec2898c0a2cdebd446f0175671b633d5ae7d5f",
+          "License": "GPL-3.0",
+          "CAD envelope": "5.5 × 15 × 5.5 mm",
+          "Source SHA-256": "309a7844826770846919654096c3f450a70301b5a685c194d451fc7792adb79b"
+        },
+        "connections": [],
+        "notes": "Sourced NopSCADlib geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: GPL-3.0.",
+        "catalogRef": {
+          "id": "m3-cap-12"
+        }
+      },
+      {
+        "id": "lower-housing",
+        "name": "Lower Housing Tray",
+        "category": "housing",
+        "description": "Matte dark-gray polymer enclosure tray with PCB mounting bosses, side intake vents, and USB-C cutout.",
+        "role": "Matte dark-gray polymer enclosure tray with PCB mounting bosses, side intake vents, and USB-C cutout.",
+        "position": [
+          0,
+          27,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          50.6,
+          12.5,
+          56
+        ],
+        "explode": [
+          0,
+          -6,
+          0
+        ],
+        "color": "#25282e",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -1,
+              0
+            ],
+            "size": [
+              50,
+              4,
+              56
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#25282e",
+            "metalness": 0.2,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -23,
+              4,
+              0
+            ],
+            "size": [
+              4,
+              10,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#25282e",
+            "metalness": 0.2,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              23,
+              4,
+              0
+            ],
+            "size": [
+              4,
+              10,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#25282e",
+            "metalness": 0.2,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              4,
+              -26
+            ],
+            "size": [
+              46,
+              10,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#25282e",
+            "metalness": 0.2,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              4,
+              26
+            ],
+            "size": [
+              46,
+              10,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#25282e",
+            "metalness": 0.2,
+            "roughness": 0.75
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -13,
+              -2.5,
+              0
+            ],
+            "size": [
+              6,
+              2,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              13,
+              -2.5,
+              0
+            ],
+            "size": [
+              6,
+              2,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              2,
+              -20
+            ],
+            "size": [
+              5,
+              5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c45",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              2,
+              20
+            ],
+            "size": [
+              5,
+              5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c45",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              2,
+              -20
+            ],
+            "size": [
+              5,
+              5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c45",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              2,
+              20
+            ],
+            "size": [
+              5,
+              5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c45",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              4.6,
+              -20
+            ],
+            "size": [
+              2.6,
+              1.2,
+              2.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              4.6,
+              20
+            ],
+            "size": [
+              2.6,
+              1.2,
+              2.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              4.6,
+              -20
+            ],
+            "size": [
+              2.6,
+              1.2,
+              2.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              4.6,
+              20
+            ],
+            "size": [
+              2.6,
+              1.2,
+              2.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d97706",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -24.2,
+              5,
+              -12
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              -24.2,
+              5,
+              -6
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              -24.2,
+              5,
+              0
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              -24.2,
+              5,
+              6
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              -24.2,
+              5,
+              12
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              24.2,
+              5,
+              -12
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              24.2,
+              5,
+              -6
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              24.2,
+              5,
+              0
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              24.2,
+              5,
+              6
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              24.2,
+              5,
+              12
+            ],
+            "size": [
+              2.2,
+              4,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          }
+        ],
+        "specs": {},
+        "connections": []
+      },
+      {
+        "id": "carrier-board",
+        "name": "Carrier PCB Assembly",
+        "category": "electronics",
+        "description": "Custom 4-layer FR4 carrier board providing USB-C power, 3.3 V regulation, status LEDs, and host pads for the ESP32-C3-MINI-1 module and sensor header.",
+        "role": "Custom 4-layer FR4 carrier board providing USB-C power, 3.3 V regulation, status LEDs, and host pads for the ESP32-C3-MINI-1 module and sensor header.",
+        "position": [
+          0,
+          32.3,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          42,
+          4.95,
+          50.6
+        ],
+        "explode": [
+          0,
+          8,
+          0
+        ],
+        "color": "#0f5938",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              42,
+              1.6,
+              48
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#0f5938",
+            "metalness": 0.25,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -0.1,
+              -14
+            ],
+            "size": [
+              15,
+              1.7,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#147047",
+            "metalness": 0.3,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              2.4,
+              -22.5
+            ],
+            "size": [
+              9,
+              3.2,
+              7.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c8d0d8",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              2.4,
+              -25.5
+            ],
+            "size": [
+              7.2,
+              1.8,
+              2.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e232a",
+            "metalness": 0.2,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              -13,
+              1.8,
+              -16
+            ],
+            "size": [
+              5,
+              2,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1a1c20",
+            "metalness": 0.2,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              13,
+              1.8,
+              -16
+            ],
+            "size": [
+              4.5,
+              2.2,
+              4.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#3a3f47",
+            "metalness": 0.4,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              -5.5,
+              1.2,
+              -2
+            ],
+            "size": [
+              1,
+              0.9,
+              1.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -3.3,
+              1.2,
+              -2
+            ],
+            "size": [
+              1,
+              0.9,
+              1.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -1.0999999999999996,
+              1.2,
+              -2
+            ],
+            "size": [
+              1,
+              0.9,
+              1.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              1.1000000000000005,
+              1.2,
+              -2
+            ],
+            "size": [
+              1,
+              0.9,
+              1.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              3.3000000000000007,
+              1.2,
+              -2
+            ],
+            "size": [
+              1,
+              0.9,
+              1.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              5.5,
+              1.2,
+              -2
+            ],
+            "size": [
+              1,
+              0.9,
+              1.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              0,
+              -20
+            ],
+            "size": [
+              4.2,
+              1.8,
+              4.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              0,
+              20
+            ],
+            "size": [
+              4.2,
+              1.8,
+              4.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              0,
+              -20
+            ],
+            "size": [
+              4.2,
+              1.8,
+              4.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              0,
+              20
+            ],
+            "size": [
+              4.2,
+              1.8,
+              4.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -5.25,
+              1.2,
+              21
+            ],
+            "size": [
+              1.6,
+              0.9,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#38bdf8",
+            "metalness": 0.1,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -1.75,
+              1.2,
+              21
+            ],
+            "size": [
+              1.6,
+              0.9,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#38bdf8",
+            "metalness": 0.1,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              1.75,
+              1.2,
+              21
+            ],
+            "size": [
+              1.6,
+              0.9,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#38bdf8",
+            "metalness": 0.1,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              5.25,
+              1.2,
+              21
+            ],
+            "size": [
+              1.6,
+              0.9,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#38bdf8",
+            "metalness": 0.1,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              15,
+              1.3,
+              4
+            ],
+            "size": [
+              4,
+              1.2,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6a15c",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              -15,
+              1.3,
+              4
+            ],
+            "size": [
+              4,
+              1.2,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6a15c",
+            "metalness": 0.3,
+            "roughness": 0.4
+          }
+        ],
+        "specs": {},
+        "connections": []
+      },
+      {
+        "id": "esp32-c3-module",
+        "name": "ESP32-C3-MINI-1 Radio Module",
+        "category": "Electronics",
+        "description": "Sourced Espressif ESP32-C3-MINI-1 Wi-Fi and Bluetooth LE module surface-mounted onto the carrier PCB.",
+        "role": "Official Espressif radio module CAD. Module only; not a complete development board.",
+        "position": [
+          0,
+          33.1,
+          -10
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "explode": [
+          0,
+          22,
+          -10
+        ],
+        "color": "#cbd5e1",
+        "specs": {
+          "Catalog source": "Espressif",
+          "Source revision": "dd76561812ab300351234ba6e0ec1295641796f0",
+          "License": "CC-BY-SA-4.0 + KiCad exception",
+          "CAD envelope": "13.2 × 2.4 × 16.6 mm",
+          "Source SHA-256": "3ca5ac24b6943edf816eb1e75c525a42f13118cd5546b70812c1d21149bcdcab"
+        },
+        "connections": [],
+        "notes": "Sourced Espressif geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: CC-BY-SA-4.0 + KiCad exception.",
+        "catalogRef": {
+          "id": "esp32-c3-mini-1"
+        }
+      },
+      {
+        "id": "sensor-header",
+        "name": "Mezzanine Sensor Header",
+        "category": "connector",
+        "description": "Dual-row 2.54 mm pitch board-to-board socket header isolating the environmental sensor from carrier PCB heat.",
+        "role": "Dual-row 2.54 mm pitch board-to-board socket header isolating the environmental sensor from carrier PCB heat.",
+        "position": [
+          0,
+          36.1,
+          12
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          14.5,
+          8.2,
+          10.5
+        ],
+        "explode": [
+          0,
+          28,
+          12
+        ],
+        "color": "#1c1f24",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -6,
+              0,
+              0
+            ],
+            "size": [
+              2.5,
+              6,
+              10.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1f24",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              6,
+              0,
+              0
+            ],
+            "size": [
+              2.5,
+              6,
+              10.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1f24",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -1.5,
+              0
+            ],
+            "size": [
+              10,
+              2,
+              2.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1f24",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              -6,
+              0,
+              -3.81
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -6,
+              0,
+              -1.27
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -6,
+              0,
+              1.27
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -6,
+              0,
+              3.81
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              6,
+              0,
+              -3.81
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              6,
+              0,
+              -1.27
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              6,
+              0,
+              1.27
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              6,
+              0,
+              3.81
+            ],
+            "size": [
+              0.64,
+              8.2,
+              0.64
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.9,
+            "roughness": 0.2
+          }
+        ],
+        "specs": {},
+        "connections": []
+      },
+      {
+        "id": "sensor-module",
+        "name": "Environmental Sensor Daughterboard",
+        "category": "sensor",
+        "description": "Dedicated sensor PCB carrying a precision temperature/humidity/VOC MEMS package, particulate optical chamber, and thermal isolation slots.",
+        "role": "Dedicated sensor PCB carrying a precision temperature/humidity/VOC MEMS package, particulate optical chamber, and thermal isolation slots.",
+        "position": [
+          0,
+          39.7,
+          12
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          28,
+          3.2,
+          18
+        ],
+        "explode": [
+          0,
+          42,
+          12
+        ],
+        "color": "#1e3a8a",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              28,
+              1.4,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e3a8a",
+            "metalness": 0.25,
+            "roughness": 0.55
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              1.4,
+              0
+            ],
+            "size": [
+              7,
+              1.6,
+              7
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d1d5db",
+            "metalness": 0.8,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              2.25,
+              0
+            ],
+            "size": [
+              2.6,
+              0.3,
+              2.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#111827",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              -8,
+              1.5,
+              -3
+            ],
+            "size": [
+              4,
+              1.8,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1f2937",
+            "metalness": 0.2,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              8,
+              1.3,
+              -3
+            ],
+            "size": [
+              3,
+              1.2,
+              2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6a15c",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -6,
+              0,
+              -3.81
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -6,
+              0,
+              -1.27
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -6,
+              0,
+              1.27
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -6,
+              0,
+              3.81
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              6,
+              0,
+              -3.81
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              6,
+              0,
+              -1.27
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              6,
+              0,
+              1.27
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              6,
+              0,
+              3.81
+            ],
+            "size": [
+              1.5,
+              1.6,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#eab308",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -5,
+              0,
+              0
+            ],
+            "size": [
+              1.2,
+              1.6,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#0f172a",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              5,
+              0,
+              0
+            ],
+            "size": [
+              1.2,
+              1.6,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#0f172a",
+            "metalness": 0.1,
+            "roughness": 0.9
+          }
+        ],
+        "specs": {},
+        "connections": []
+      },
+      {
+        "id": "upper-housing",
+        "name": "Ventilated Upper Housing Shell",
+        "category": "housing",
+        "description": "Snap-fit top cover featuring a raised circular louvered intake dome over the sensor daughterboard and a front status light-pipe window.",
+        "role": "Snap-fit top cover featuring a raised circular louvered intake dome over the sensor daughterboard and a front status light-pipe window.",
+        "position": [
+          0,
+          41.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          50,
+          13.7,
+          56
+        ],
+        "explode": [
+          0,
+          58,
+          0
+        ],
+        "color": "#f1f5f9",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              3.5,
+              0
+            ],
+            "size": [
+              50,
+              3,
+              56
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f1f5f9",
+            "metalness": 0.1,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              -23,
+              -1.5,
+              0
+            ],
+            "size": [
+              4,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f1f5f9",
+            "metalness": 0.1,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              23,
+              -1.5,
+              0
+            ],
+            "size": [
+              4,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f1f5f9",
+            "metalness": 0.1,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -1.5,
+              -26
+            ],
+            "size": [
+              46,
+              8,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f1f5f9",
+            "metalness": 0.1,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -1.5,
+              26
+            ],
+            "size": [
+              46,
+              8,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f1f5f9",
+            "metalness": 0.1,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              12
+            ],
+            "size": [
+              26,
+              3,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e2e8f0",
+            "metalness": 0.15,
+            "roughness": 0.4
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              7,
+              12
+            ],
+            "size": [
+              11,
+              1.2,
+              11
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ff6b1a",
+            "metalness": 0.4,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              7.2,
+              5.6
+            ],
+            "size": [
+              16,
+              1.4,
+              1.4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#334155",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              7.2,
+              8.8
+            ],
+            "size": [
+              16,
+              1.4,
+              1.4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#334155",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              7.2,
+              12
+            ],
+            "size": [
+              16,
+              1.4,
+              1.4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#334155",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              7.2,
+              15.200000000000001
+            ],
+            "size": [
+              16,
+              1.4,
+              1.4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#334155",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              7.2,
+              18.4
+            ],
+            "size": [
+              16,
+              1.4,
+              1.4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#334155",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              5.1,
+              -12
+            ],
+            "size": [
+              18,
+              0.8,
+              16
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#cbd5e1",
+            "metalness": 0.1,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              4.8,
+              21
+            ],
+            "size": [
+              16,
+              1.6,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#38bdf8",
+            "metalness": 0.1,
+            "roughness": 0.2
+          }
+        ],
+        "specs": {},
+        "connections": []
+      }
+    ],
+    "steps": [
+      {
+        "title": "Mount Orange Bracket to Desk Base",
+        "description": "Align the custom orange tilt bracket between the pivot ears of the weighted desk base and secure it through the central bore using the sourced M3 × 12 socket screw.",
+        "partIds": [
+          "desk-base",
+          "orange-bracket",
+          "m3-screw"
+        ]
+      },
+      {
+        "title": "Install Lower Housing Tray",
+        "description": "Fasten the matte lower housing tray onto the top saddle of the orange bracket.",
+        "partIds": [
+          "lower-housing",
+          "orange-bracket"
+        ]
+      },
+      {
+        "title": "Populate Carrier PCB & ESP32-C3-MINI-1",
+        "description": "Mount the custom carrier PCB onto the four housing bosses, with the sourced ESP32-C3-MINI-1 radio module positioned at the RF keep-out zone.",
+        "partIds": [
+          "carrier-board",
+          "esp32-c3-module"
+        ]
+      },
+      {
+        "title": "Stack Isolated Sensor Daughterboard",
+        "description": "Fit the mezzanine sensor header onto the carrier PCB and seat the environmental sensor daughterboard above the thermal isolation gap.",
+        "partIds": [
+          "sensor-header",
+          "sensor-module"
+        ]
+      },
+      {
+        "title": "Close Ventilated Upper Shell",
+        "description": "Snap the ventilated upper housing shell onto the lower tray so the louvered dome sits directly above the environmental sensor.",
+        "partIds": [
+          "upper-housing"
+        ]
+      }
+    ],
+    "source": "gemini",
+    "model": "gemini-4-argon",
+    "relationships": [
+      {
+        "id": "rel-screw-bracket",
+        "from": "m3-screw",
+        "to": "orange-bracket",
+        "type": "mechanical",
+        "description": "M3 × 12 socket cap screw passes through the lower web of the orange tilt bracket."
+      },
+      {
+        "id": "rel-screw-base",
+        "from": "m3-screw",
+        "to": "desk-base",
+        "type": "mechanical",
+        "description": "M3 × 12 screw threads into the central boss of the weighted desk base."
+      },
+      {
+        "id": "rel-bracket-base",
+        "from": "orange-bracket",
+        "to": "desk-base",
+        "type": "mechanical",
+        "description": "Orange bracket pivots between the ears of the weighted desk base."
+      },
+      {
+        "id": "rel-bracket-lower",
+        "from": "orange-bracket",
+        "to": "lower-housing",
+        "type": "mechanical",
+        "description": "Top saddle of the orange bracket supports and fastens to the lower housing tray."
+      },
+      {
+        "id": "rel-lower-carrier",
+        "from": "lower-housing",
+        "to": "carrier-board",
+        "type": "contains",
+        "description": "Lower housing tray supports the carrier PCB on four internal standoffs."
+      },
+      {
+        "id": "rel-carrier-c3",
+        "from": "esp32-c3-module",
+        "to": "carrier-board",
+        "type": "electrical",
+        "description": "ESP32-C3-MINI-1 radio module is surface-mounted to the carrier PCB pads for power and I/O."
+      },
+      {
+        "id": "rel-c3-data",
+        "from": "esp32-c3-module",
+        "to": "sensor-module",
+        "type": "data",
+        "description": "ESP32-C3-MINI-1 polls environmental telemetry from the sensor module over I2C."
+      },
+      {
+        "id": "rel-header-carrier",
+        "from": "sensor-header",
+        "to": "carrier-board",
+        "type": "electrical",
+        "description": "Mezzanine header solders to the carrier board and routes 3.3 V and I2C lines upward."
+      },
+      {
+        "id": "rel-header-sensor",
+        "from": "sensor-module",
+        "to": "sensor-header",
+        "type": "electrical",
+        "description": "Environmental sensor daughterboard plugs into the mezzanine socket header."
+      },
+      {
+        "id": "rel-upper-lower",
+        "from": "upper-housing",
+        "to": "lower-housing",
+        "type": "mechanical",
+        "description": "Ventilated upper housing shell snaps onto the lower housing tray to enclose the electronics."
+      }
+    ]
+  }
+}

@@ -1,0 +1,6125 @@
+{
+  "document": {
+    "version": 1,
+    "id": "smart-sofa-iron-esp32",
+    "name": "Smart Sofa with Wrought Iron Base and ESP32",
+    "description": "A full-scale 2.1-meter smart three-seater sofa built on a welded tubular wrought iron frame, integrated with an ESP32-WROOM-32 controller, capacitive occupancy sensors, underglow ambient lighting, and an armrest control hub.",
+    "provenance": "AI generated conceptual assembly. Geometry, dimensions and specifications are illustrative; no CAD fit, wiring or hardware operation has been verified.",
+    "parts": [
+      {
+        "id": "iron-base-frame",
+        "name": "Wrought Iron Base Frame",
+        "category": "structure",
+        "description": "Welded 45mm square tubular iron perimeter frame with six heavy-duty legs, crossbeams, and protective floor pads.",
+        "role": "Welded 45mm square tubular iron perimeter frame with six heavy-duty legs, crossbeams, and protective floor pads.",
+        "position": [
+          0,
+          170,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2049,
+          197,
+          804
+        ],
+        "explode": [
+          0,
+          -240,
+          0
+        ],
+        "color": "#24272a",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -375
+            ],
+            "size": [
+              2040,
+              45,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              375
+            ],
+            "size": [
+              2040,
+              45,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -997.5,
+              0,
+              0
+            ],
+            "size": [
+              45,
+              45,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -498.75,
+              0,
+              0
+            ],
+            "size": [
+              45,
+              45,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              45,
+              45,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              498.75,
+              0,
+              0
+            ],
+            "size": [
+              45,
+              45,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              997.5,
+              0,
+              0
+            ],
+            "size": [
+              45,
+              45,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -997.5,
+              -95,
+              -375
+            ],
+            "size": [
+              45,
+              145,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -997.5,
+              -95,
+              375
+            ],
+            "size": [
+              45,
+              145,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -95,
+              -375
+            ],
+            "size": [
+              45,
+              145,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -95,
+              375
+            ],
+            "size": [
+              45,
+              145,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              997.5,
+              -95,
+              -375
+            ],
+            "size": [
+              45,
+              145,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              997.5,
+              -95,
+              375
+            ],
+            "size": [
+              45,
+              145,
+              45
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -997.5,
+              -166,
+              -375
+            ],
+            "size": [
+              54,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141517",
+            "metalness": 0.2,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -997.5,
+              -166,
+              375
+            ],
+            "size": [
+              54,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141517",
+            "metalness": 0.2,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -166,
+              -375
+            ],
+            "size": [
+              54,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141517",
+            "metalness": 0.2,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -166,
+              375
+            ],
+            "size": [
+              54,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141517",
+            "metalness": 0.2,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              997.5,
+              -166,
+              -375
+            ],
+            "size": [
+              54,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141517",
+            "metalness": 0.2,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              997.5,
+              -166,
+              375
+            ],
+            "size": [
+              54,
+              8,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141517",
+            "metalness": 0.2,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              -997.5,
+              -110,
+              0
+            ],
+            "size": [
+              30,
+              25,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2c3034",
+            "metalness": 0.75,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              997.5,
+              -110,
+              0
+            ],
+            "size": [
+              30,
+              25,
+              705
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2c3034",
+            "metalness": 0.75,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -748,
+              24,
+              -360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -748,
+              24,
+              360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -249.25,
+              24,
+              -360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -249.25,
+              24,
+              360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              249.5,
+              24,
+              -360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              249.5,
+              24,
+              360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              748.25,
+              24,
+              -360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              748.25,
+              24,
+              360
+            ],
+            "size": [
+              12,
+              6,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7a8086",
+            "metalness": 0.85,
+            "roughness": 0.28
+          }
+        ],
+        "specs": {
+          "Material": "Powder-coated tubular wrought iron",
+          "Dimensions": "2100 x 880 x 215 mm",
+          "Wall Thickness": "3.2 mm"
+        },
+        "connections": []
+      },
+      {
+        "id": "slat-suspension-deck",
+        "name": "Spring Steel Slat Deck",
+        "category": "structure",
+        "description": "Twelve arched spring-steel suspension slats and longitudinal webbing straps bolted to the iron frame.",
+        "role": "Twelve arched spring-steel suspension slats and longitudinal webbing straps bolted to the iron frame.",
+        "position": [
+          0,
+          204,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1860,
+          16,
+          742
+        ],
+        "explode": [
+          0,
+          -110,
+          0
+        ],
+        "color": "#383c42",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -852.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -697.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -542.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -387.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -232.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -77.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              77.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              232.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              387.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              542.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              697.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              852.5,
+              0,
+              0
+            ],
+            "size": [
+              65,
+              8,
+              730
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#383c42",
+            "metalness": 0.7,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -852.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -852.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -697.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -697.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -542.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -542.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -387.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -387.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -232.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -232.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -77.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -77.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              77.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              77.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              232.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              232.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              387.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              387.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              542.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              542.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              697.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              697.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              852.5,
+              -4,
+              -355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              852.5,
+              -4,
+              355
+            ],
+            "size": [
+              75,
+              10,
+              32
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1c",
+            "metalness": 0.25,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              5,
+              -240
+            ],
+            "size": [
+              1860,
+              4,
+              50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#232629",
+            "metalness": 0.15,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              5,
+              0
+            ],
+            "size": [
+              1860,
+              4,
+              50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#232629",
+            "metalness": 0.15,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              5,
+              240
+            ],
+            "size": [
+              1860,
+              4,
+              50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#232629",
+            "metalness": 0.15,
+            "roughness": 0.85
+          }
+        ],
+        "specs": {
+          "Slats": "12 x tempered steel bars",
+          "Support": "3 longitudinal tension straps"
+        },
+        "connections": []
+      },
+      {
+        "id": "iron-back-arm-stanchions",
+        "name": "Iron Arm & Back Upright Frame",
+        "category": "structure",
+        "description": "Rear and side tubular iron upright stanchions bolted to the main base to anchor the backrest and armrests.",
+        "role": "Rear and side tubular iron upright stanchions bolted to the main base to anchor the backrest and armrests.",
+        "position": [
+          0,
+          460,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2031,
+          527,
+          809.01
+        ],
+        "explode": [
+          0,
+          0,
+          -220
+        ],
+        "color": "#24272a",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -870,
+              40,
+              -375
+            ],
+            "size": [
+              36,
+              520,
+              36
+            ],
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -290,
+              40,
+              -375
+            ],
+            "size": [
+              36,
+              520,
+              36
+            ],
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              290,
+              40,
+              -375
+            ],
+            "size": [
+              36,
+              520,
+              36
+            ],
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              870,
+              40,
+              -375
+            ],
+            "size": [
+              36,
+              520,
+              36
+            ],
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              285,
+              -410
+            ],
+            "size": [
+              1800,
+              34,
+              34
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -997.5,
+              -45,
+              0
+            ],
+            "size": [
+              36,
+              360,
+              760
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              997.5,
+              -45,
+              0
+            ],
+            "size": [
+              36,
+              360,
+              760
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.78,
+            "roughness": 0.38
+          }
+        ],
+        "specs": {
+          "Material": "35mm tubular iron",
+          "Mounting": "Flanged bolt plates"
+        },
+        "connections": []
+      },
+      {
+        "id": "under-seat-electronics-tray",
+        "name": "Under-Seat Steel Electronics Tray",
+        "category": "enclosure",
+        "description": "Ventilated sheet-steel equipment tray suspended between the central iron crossbeams with cable glands and standoffs.",
+        "role": "Ventilated sheet-steel equipment tray suspended between the central iron crossbeams with cable glands and standoffs.",
+        "position": [
+          0,
+          152,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          524,
+          46,
+          320
+        ],
+        "explode": [
+          0,
+          -360,
+          0
+        ],
+        "color": "#31363b",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              460,
+              12,
+              320
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#31363b",
+            "metalness": 0.68,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -222,
+              22,
+              0
+            ],
+            "size": [
+              12,
+              36,
+              320
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#31363b",
+            "metalness": 0.68,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              222,
+              22,
+              0
+            ],
+            "size": [
+              12,
+              36,
+              320
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#31363b",
+            "metalness": 0.68,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              22,
+              -154
+            ],
+            "size": [
+              436,
+              36,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#31363b",
+            "metalness": 0.68,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              22,
+              154
+            ],
+            "size": [
+              436,
+              36,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#31363b",
+            "metalness": 0.68,
+            "roughness": 0.42
+          },
+          {
+            "kind": "box",
+            "position": [
+              -245,
+              34,
+              0
+            ],
+            "size": [
+              34,
+              8,
+              280
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.75,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              245,
+              34,
+              0
+            ],
+            "size": [
+              34,
+              8,
+              280
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.75,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -133,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              -95,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              -57,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              -19,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              19,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              57,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              95,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              133,
+              7,
+              0
+            ],
+            "size": [
+              16,
+              16,
+              220
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b1e21",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -80,
+              14,
+              -55
+            ],
+            "size": [
+              8,
+              16,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              30,
+              14,
+              -55
+            ],
+            "size": [
+              8,
+              16,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              140,
+              14,
+              -55
+            ],
+            "size": [
+              8,
+              16,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              250,
+              14,
+              -55
+            ],
+            "size": [
+              8,
+              16,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          }
+        ],
+        "specs": {
+          "Material": "1.5mm powder-coated steel",
+          "Mounting": "4 vibration-damping flanges"
+        },
+        "connections": []
+      },
+      {
+        "id": "esp32-controller-board",
+        "name": "ESP32-WROOM-32 Smart Sofa Controller",
+        "category": "electronics",
+        "description": "Custom carrier PCB hosting an ESP32-WROOM-32 Wi-Fi/BLE module, MOSFET LED drivers, sensor ADC header, and USB-C diagnostic port.",
+        "role": "Custom carrier PCB hosting an ESP32-WROOM-32 Wi-Fi/BLE module, MOSFET LED drivers, sensor ADC header, and USB-C diagnostic port.",
+        "position": [
+          -55,
+          172,
+          -20
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          131,
+          16,
+          90
+        ],
+        "explode": [
+          -140,
+          -460,
+          60
+        ],
+        "color": "#145a32",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              130,
+              4,
+              90
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#145a32",
+            "metalness": 0.35,
+            "roughness": 0.55
+          },
+          {
+            "kind": "box",
+            "position": [
+              -34,
+              5,
+              0
+            ],
+            "size": [
+              32,
+              5,
+              26
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#cfd4d8",
+            "metalness": 0.88,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -54,
+              4,
+              0
+            ],
+            "size": [
+              10,
+              2,
+              24
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              -34,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -30.2,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -26.4,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -22.6,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -18.8,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -15,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -11.200000000000003,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -7.400000000000002,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -3.6000000000000014,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              0.19999999999999574,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              4,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              7.799999999999997,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              11.599999999999994,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              15.399999999999999,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              19.199999999999996,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              23,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              26.799999999999997,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              30.599999999999994,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              34.39999999999999,
+              4,
+              -38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -34,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -30.2,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -26.4,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -22.6,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -18.8,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -15,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -11.200000000000003,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -7.400000000000002,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -3.6000000000000014,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              0.19999999999999574,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              4,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              7.799999999999997,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              11.599999999999994,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              15.399999999999999,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              19.199999999999996,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              23,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              26.799999999999997,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              30.599999999999994,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              34.39999999999999,
+              4,
+              38
+            ],
+            "size": [
+              1.8,
+              3,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              36,
+              7,
+              -22
+            ],
+            "size": [
+              24,
+              10,
+              16
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1f618d",
+            "metalness": 0.4,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              36,
+              7,
+              18
+            ],
+            "size": [
+              28,
+              10,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e8449",
+            "metalness": 0.4,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              -59,
+              5,
+              28
+            ],
+            "size": [
+              14,
+              5,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bfc6",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -4,
+              6,
+              -26
+            ],
+            "size": [
+              10,
+              8,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1e21",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              14,
+              6,
+              -26
+            ],
+            "size": [
+              10,
+              8,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1e21",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              32,
+              6,
+              -26
+            ],
+            "size": [
+              10,
+              8,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1c1e21",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              15,
+              8,
+              24
+            ],
+            "size": [
+              10,
+              12,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.6,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              30,
+              8,
+              24
+            ],
+            "size": [
+              10,
+              12,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.6,
+            "roughness": 0.35
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -12,
+              5,
+              32
+            ],
+            "size": [
+              4,
+              4,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2ecc71",
+            "metalness": 0.1,
+            "roughness": 0.2
+          }
+        ],
+        "specs": {
+          "MCU": "ESP32-WROOM-32 Dual-Core 240MHz",
+          "Connectivity": "Wi-Fi 802.11 b/g/n + Bluetooth LE 4.2",
+          "Outputs": "3x PWM MOSFET channels, I2C, 3x CapSense"
+        },
+        "connections": []
+      },
+      {
+        "id": "power-supply-brick",
+        "name": "24V/5V Dual-Rail Power Supply Unit",
+        "category": "electronics",
+        "description": "Enclosed AC-to-DC switching power module supplying 24V for high-power USB-C PD charging and 5V for the ESP32 and addressable LEDs.",
+        "role": "Enclosed AC-to-DC switching power module supplying 24V for high-power USB-C PD charging and 5V for the ESP32 and addressable LEDs.",
+        "position": [
+          115,
+          178,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          165,
+          41,
+          124
+        ],
+        "explode": [
+          150,
+          -460,
+          -40
+        ],
+        "color": "#212529",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              150,
+              38,
+              96
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#212529",
+            "metalness": 0.45,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              -48,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              -32,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              -16,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              16,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              32,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              48,
+              20,
+              0
+            ],
+            "size": [
+              6,
+              4,
+              76
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              -76,
+              0,
+              0
+            ],
+            "size": [
+              16,
+              24,
+              36
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#111315",
+            "metalness": 0.3,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              74,
+              0,
+              0
+            ],
+            "size": [
+              14,
+              18,
+              54
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2e7d32",
+            "metalness": 0.35,
+            "roughness": 0.55
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -16,
+              -55
+            ],
+            "size": [
+              120,
+              5,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#495057",
+            "metalness": 0.75,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -16,
+              55
+            ],
+            "size": [
+              120,
+              5,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#495057",
+            "metalness": 0.75,
+            "roughness": 0.35
+          }
+        ],
+        "specs": {
+          "Input": "100-240V AC (isolated internal module)",
+          "Output Rails": "24V 4A + 5V 5A",
+          "Protection": "Over-current, thermal cutoff"
+        },
+        "connections": []
+      },
+      {
+        "id": "underframe-led-diffuser",
+        "name": "RGBW Underglow LED Diffuser Bar",
+        "category": "electronics",
+        "description": "Front-facing aluminum channel with frosted silicone diffuser housing an addressable RGBW strip driven by the ESP32.",
+        "role": "Front-facing aluminum channel with frosted silicone diffuser housing an addressable RGBW strip driven by the ESP32.",
+        "position": [
+          0,
+          142,
+          355
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1840,
+          25,
+          26
+        ],
+        "explode": [
+          0,
+          -290,
+          220
+        ],
+        "color": "#f5cba7",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1840,
+              16,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#95a5a6",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -4,
+              5
+            ],
+            "size": [
+              1820,
+              10,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ffd89b",
+            "metalness": 0.05,
+            "roughness": 0.18
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -874,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -798,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -722,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -646,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -570,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -494,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -418,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -342,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -266,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -190,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -114,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -38,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              38,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              114,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              190,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              266,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              342,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              418,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              494,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              570,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              646,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              722,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              798,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              874,
+              -4,
+              7
+            ],
+            "size": [
+              8,
+              6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff9f43",
+            "metalness": 0.05,
+            "roughness": 0.12
+          },
+          {
+            "kind": "box",
+            "position": [
+              -870,
+              10,
+              -4
+            ],
+            "size": [
+              28,
+              12,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.75,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              -290,
+              10,
+              -4
+            ],
+            "size": [
+              28,
+              12,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.75,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              290,
+              10,
+              -4
+            ],
+            "size": [
+              28,
+              12,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.75,
+            "roughness": 0.38
+          },
+          {
+            "kind": "box",
+            "position": [
+              870,
+              10,
+              -4
+            ],
+            "size": [
+              28,
+              12,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#24272a",
+            "metalness": 0.75,
+            "roughness": 0.38
+          }
+        ],
+        "specs": {
+          "LEDs": "120x SK6812 RGBW addressable pixels",
+          "Control": "ESP32 GPIO16 PWM data line",
+          "Channel": "Anodized aluminum + opal polycarbonate"
+        },
+        "connections": []
+      },
+      {
+        "id": "upholstered-seat-deck",
+        "name": "Upholstered Plinth & Cushion Deck",
+        "category": "upholstery",
+        "description": "Tailored charcoal fabric deck wrapping the perimeter above the iron base and routing sensor ribbons to the seat cushions.",
+        "role": "Tailored charcoal fabric deck wrapping the perimeter above the iron base and routing sensor ribbons to the seat cushions.",
+        "position": [
+          0,
+          242,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1880,
+          70,
+          790
+        ],
+        "explode": [
+          0,
+          -40,
+          0
+        ],
+        "color": "#3e434c",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1880,
+              62,
+              790
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#3e434c",
+            "metalness": 0.05,
+            "roughness": 0.88
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              34,
+              0
+            ],
+            "size": [
+              1840,
+              10,
+              750
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2f333a",
+            "metalness": 0.05,
+            "roughness": 0.92
+          }
+        ],
+        "specs": {
+          "Upholstery": "Heavy-weave stain-resistant slate linen",
+          "Core": "High-density perimeter foam over plywood trim"
+        },
+        "connections": []
+      },
+      {
+        "id": "capacitive-sensor-mats",
+        "name": "Triple Capacitive Occupancy & Pressure Mats",
+        "category": "sensor",
+        "description": "Three flexible foil-and-conductive-textile sensing mats embedded beneath the seat cushions to detect seated occupants and posture.",
+        "role": "Three flexible foil-and-conductive-textile sensing mats embedded beneath the seat cushions to detect seated occupants and posture.",
+        "position": [
+          0,
+          278,
+          15
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1740,
+          10,
+          570
+        ],
+        "explode": [
+          0,
+          75,
+          80
+        ],
+        "color": "#d68910",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -610,
+              0,
+              0
+            ],
+            "size": [
+              520,
+              4,
+              560
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d68910",
+            "metalness": 0.35,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              520,
+              4,
+              560
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d68910",
+            "metalness": 0.35,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              610,
+              0,
+              0
+            ],
+            "size": [
+              520,
+              4,
+              560
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d68910",
+            "metalness": 0.35,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              -790,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -700,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -610,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -520,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -430,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -180,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -90,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              90,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              180,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              430,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              520,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              610,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              700,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              790,
+              3,
+              0
+            ],
+            "size": [
+              50,
+              2,
+              480
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b7950b",
+            "metalness": 0.78,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              -610,
+              -4,
+              -220
+            ],
+            "size": [
+              42,
+              4,
+              140
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#283747",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -4,
+              -220
+            ],
+            "size": [
+              42,
+              4,
+              140
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#283747",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              610,
+              -4,
+              -220
+            ],
+            "size": [
+              42,
+              4,
+              140
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#283747",
+            "metalness": 0.3,
+            "roughness": 0.6
+          }
+        ],
+        "specs": {
+          "Zones": "Left, Center, Right independent channels",
+          "Interface": "Shielded ribbon cables to ESP32 touch pins",
+          "Function": "Auto-lighting, smart home presence trigger"
+        },
+        "connections": []
+      },
+      {
+        "id": "left-armrest-module",
+        "name": "Left Upholstered Armrest",
+        "category": "upholstery",
+        "description": "Deeply padded left armrest bolting onto the left tubular iron stanchion.",
+        "role": "Deeply padded left armrest bolting onto the left tubular iron stanchion.",
+        "position": [
+          -975,
+          495,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          155,
+          517.5,
+          920
+        ],
+        "explode": [
+          -260,
+          60,
+          0
+        ],
+        "color": "#4a505b",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              155,
+              440,
+              840
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#4a505b",
+            "metalness": 0.04,
+            "roughness": 0.86
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              220,
+              0
+            ],
+            "size": [
+              155,
+              840,
+              155
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#4a505b",
+            "metalness": 0.04,
+            "roughness": 0.86
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              220,
+              420
+            ],
+            "size": [
+              155,
+              140,
+              80
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#4a505b",
+            "metalness": 0.04,
+            "roughness": 0.86
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              220,
+              -420
+            ],
+            "size": [
+              155,
+              140,
+              80
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#4a505b",
+            "metalness": 0.04,
+            "roughness": 0.86
+          }
+        ],
+        "specs": {
+          "Width": "155 mm",
+          "Padding": "Multi-layer memory foam over birch shell"
+        },
+        "connections": []
+      },
+      {
+        "id": "right-smart-armrest",
+        "name": "Right Smart Armrest with Inlaid Walnut Console",
+        "category": "upholstery",
+        "description": "Right armrest featuring a flush American walnut top inlay housing the wireless charger, capacitive touch controls, and USB-C ports.",
+        "role": "Right armrest featuring a flush American walnut top inlay housing the wireless charger, capacitive touch controls, and USB-C ports.",
+        "position": [
+          975,
+          495,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          155,
+          518,
+          840
+        ],
+        "explode": [
+          260,
+          60,
+          0
+        ],
+        "color": "#4a505b",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              155,
+              440,
+              840
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#4a505b",
+            "metalness": 0.04,
+            "roughness": 0.86
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              220,
+              0
+            ],
+            "size": [
+              155,
+              840,
+              155
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#4a505b",
+            "metalness": 0.04,
+            "roughness": 0.86
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              286,
+              40
+            ],
+            "size": [
+              126,
+              18,
+              620
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#5c3a21",
+            "metalness": 0.15,
+            "roughness": 0.55
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              294,
+              150
+            ],
+            "size": [
+              104,
+              8,
+              290
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2b1b10",
+            "metalness": 0.2,
+            "roughness": 0.5
+          }
+        ],
+        "specs": {
+          "Inlay": "Oiled American walnut",
+          "Features": "Recessed smart control bay"
+        },
+        "connections": []
+      },
+      {
+        "id": "armrest-control-panel",
+        "name": "Qi Wireless Charger & Touch Control Panel",
+        "category": "electronics",
+        "description": "Brushed aluminum smart module set into the right armrest with a 15W Qi charging pad, 4 capacitive scene buttons, status ring, and dual USB-C ports.",
+        "role": "Brushed aluminum smart module set into the right armrest with a 15W Qi charging pad, 4 capacitive scene buttons, status ring, and dual USB-C ports.",
+        "position": [
+          975,
+          794,
+          150
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          98,
+          26.5,
+          280
+        ],
+        "explode": [
+          340,
+          260,
+          120
+        ],
+        "color": "#1f2328",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              98,
+              10,
+              280
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#212529",
+            "metalness": 0.72,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              -55
+            ],
+            "size": [
+              78,
+              4,
+              78
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15181b",
+            "metalness": 0.35,
+            "roughness": 0.45
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              7,
+              -55
+            ],
+            "size": [
+              36,
+              2.5,
+              36
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#00d2d3",
+            "metalness": 0.2,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              30
+            ],
+            "size": [
+              18,
+              4,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.65,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              58
+            ],
+            "size": [
+              18,
+              4,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.65,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              86
+            ],
+            "size": [
+              18,
+              4,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.65,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              114
+            ],
+            "size": [
+              18,
+              4,
+              18
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.65,
+            "roughness": 0.3
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              7.5,
+              30
+            ],
+            "size": [
+              8,
+              1.5,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#54a0ff",
+            "metalness": 0.15,
+            "roughness": 0.2
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              7.5,
+              58
+            ],
+            "size": [
+              8,
+              1.5,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#54a0ff",
+            "metalness": 0.15,
+            "roughness": 0.2
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              7.5,
+              86
+            ],
+            "size": [
+              8,
+              1.5,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#54a0ff",
+            "metalness": 0.15,
+            "roughness": 0.2
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              7.5,
+              114
+            ],
+            "size": [
+              8,
+              1.5,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#54a0ff",
+            "metalness": 0.15,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              -14,
+              6,
+              125
+            ],
+            "size": [
+              14,
+              4,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#cfd4d8",
+            "metalness": 0.85,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              14,
+              6,
+              125
+            ],
+            "size": [
+              14,
+              4,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#cfd4d8",
+            "metalness": 0.85,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -10,
+              0
+            ],
+            "size": [
+              82,
+              14,
+              250
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e272e",
+            "metalness": 0.5,
+            "roughness": 0.45
+          }
+        ],
+        "specs": {
+          "Wireless Charging": "15W Qi inductive coil",
+          "Controls": "4x I2C capacitive touch keys (Read, Cinema, Chill, Off)",
+          "Ports": "2x USB-C PD 30W"
+        },
+        "connections": []
+      },
+      {
+        "id": "seat-cushions",
+        "name": "Three High-Resilience Seat Cushions",
+        "category": "upholstery",
+        "description": "Three removable high-resilience foam seat cushions upholstered in slate performance weave with piped seams.",
+        "role": "Three removable high-resilience foam seat cushions upholstered in slate performance weave with piped seams.",
+        "position": [
+          0,
+          360,
+          25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1820,
+          162.5,
+          757.5
+        ],
+        "explode": [
+          0,
+          210,
+          160
+        ],
+        "color": "#525965",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -612,
+              0,
+              0
+            ],
+            "size": [
+              596,
+              155,
+              680
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              596,
+              155,
+              680
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              612,
+              0,
+              0
+            ],
+            "size": [
+              596,
+              155,
+              680
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -612,
+              0,
+              340
+            ],
+            "size": [
+              155,
+              596,
+              155
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              340
+            ],
+            "size": [
+              155,
+              596,
+              155
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              612,
+              0,
+              340
+            ],
+            "size": [
+              155,
+              596,
+              155
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              -612,
+              79,
+              0
+            ],
+            "size": [
+              570,
+              12,
+              640
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#59616e",
+            "metalness": 0.03,
+            "roughness": 0.87
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              79,
+              0
+            ],
+            "size": [
+              570,
+              12,
+              640
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#59616e",
+            "metalness": 0.03,
+            "roughness": 0.87
+          },
+          {
+            "kind": "box",
+            "position": [
+              612,
+              79,
+              0
+            ],
+            "size": [
+              570,
+              12,
+              640
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#59616e",
+            "metalness": 0.03,
+            "roughness": 0.87
+          }
+        ],
+        "specs": {
+          "Count": "3 cushions",
+          "Foam": "42 kg/m3 HR foam with feather topper",
+          "Each Size": "605 x 165 x 690 mm"
+        },
+        "connections": []
+      },
+      {
+        "id": "backrest-frame-pad",
+        "name": "Upholstered Backrest Shell",
+        "category": "upholstery",
+        "description": "Full-width upholstered outer backrest shell enclosing the rear iron stanchions and acoustic foam core.",
+        "role": "Full-width upholstered outer backrest shell enclosing the rear iron stanchions and acoustic foam core.",
+        "position": [
+          0,
+          645,
+          -365
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1830,
+          587.609,
+          179.835
+        ],
+        "explode": [
+          0,
+          120,
+          -140
+        ],
+        "color": "#454b55",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              1830,
+              520,
+              125
+            ],
+            "rotation": [
+              6,
+              0,
+              0
+            ],
+            "color": "#454b55",
+            "metalness": 0.04,
+            "roughness": 0.86
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              260,
+              -28
+            ],
+            "size": [
+              125,
+              1830,
+              125
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#454b55",
+            "metalness": 0.04,
+            "roughness": 0.86
+          }
+        ],
+        "specs": {
+          "Width": "1830 mm",
+          "Height": "560 mm"
+        },
+        "connections": []
+      },
+      {
+        "id": "back-cushions",
+        "name": "Three Tufted Backrest Cushions",
+        "category": "upholstery",
+        "description": "Three plush angled backrest cushions with subtle button tufting and lumbar support bolsters.",
+        "role": "Three plush angled backrest cushions with subtle button tufting and lumbar support bolsters.",
+        "position": [
+          0,
+          655,
+          -230
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1806,
+          453.856,
+          248.505
+        ],
+        "explode": [
+          0,
+          280,
+          -30
+        ],
+        "color": "#5a6270",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -608,
+              0,
+              0
+            ],
+            "size": [
+              590,
+              430,
+              175
+            ],
+            "rotation": [
+              10,
+              0,
+              0
+            ],
+            "color": "#5a6270",
+            "metalness": 0.03,
+            "roughness": 0.84
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              590,
+              430,
+              175
+            ],
+            "rotation": [
+              10,
+              0,
+              0
+            ],
+            "color": "#5a6270",
+            "metalness": 0.03,
+            "roughness": 0.84
+          },
+          {
+            "kind": "box",
+            "position": [
+              608,
+              0,
+              0
+            ],
+            "size": [
+              590,
+              430,
+              175
+            ],
+            "rotation": [
+              10,
+              0,
+              0
+            ],
+            "color": "#5a6270",
+            "metalness": 0.03,
+            "roughness": 0.84
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -608,
+              -95,
+              55
+            ],
+            "size": [
+              140,
+              575,
+              140
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -95,
+              55
+            ],
+            "size": [
+              140,
+              575,
+              140
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              608,
+              -95,
+              55
+            ],
+            "size": [
+              140,
+              575,
+              140
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#525965",
+            "metalness": 0.03,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -718,
+              45,
+              88
+            ],
+            "size": [
+              26,
+              10,
+              26
+            ],
+            "rotation": [
+              100,
+              0,
+              0
+            ],
+            "color": "#393e46",
+            "metalness": 0.08,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -498,
+              45,
+              88
+            ],
+            "size": [
+              26,
+              10,
+              26
+            ],
+            "rotation": [
+              100,
+              0,
+              0
+            ],
+            "color": "#393e46",
+            "metalness": 0.08,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -110,
+              45,
+              88
+            ],
+            "size": [
+              26,
+              10,
+              26
+            ],
+            "rotation": [
+              100,
+              0,
+              0
+            ],
+            "color": "#393e46",
+            "metalness": 0.08,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              110,
+              45,
+              88
+            ],
+            "size": [
+              26,
+              10,
+              26
+            ],
+            "rotation": [
+              100,
+              0,
+              0
+            ],
+            "color": "#393e46",
+            "metalness": 0.08,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              498,
+              45,
+              88
+            ],
+            "size": [
+              26,
+              10,
+              26
+            ],
+            "rotation": [
+              100,
+              0,
+              0
+            ],
+            "color": "#393e46",
+            "metalness": 0.08,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              718,
+              45,
+              88
+            ],
+            "size": [
+              26,
+              10,
+              26
+            ],
+            "rotation": [
+              100,
+              0,
+              0
+            ],
+            "color": "#393e46",
+            "metalness": 0.08,
+            "roughness": 0.8
+          }
+        ],
+        "specs": {
+          "Count": "3 cushions",
+          "Fill": "Channeled blown microfiber",
+          "Details": "6 recessed fabric tuft buttons"
+        },
+        "connections": []
+      }
+    ],
+    "steps": [
+      {
+        "title": "Weld and Level the Wrought Iron Base",
+        "description": "Assemble the 2.1-meter tubular wrought iron perimeter frame, six legs with floor glides, and bolt on the rear and side upright stanchions.",
+        "partIds": [
+          "iron-base-frame",
+          "iron-back-arm-stanchions"
+        ]
+      },
+      {
+        "title": "Install Slat Suspension and Under-Seat Electronics Tray",
+        "description": "Fasten the twelve spring-steel suspension slats across the iron rails and mount the ventilated steel electronics tray between the center crossbeams.",
+        "partIds": [
+          "slat-suspension-deck",
+          "under-seat-electronics-tray"
+        ]
+      },
+      {
+        "title": "Mount ESP32 Controller, Power Supply, and Underglow Bar",
+        "description": "Secure the ESP32-WROOM-32 carrier board and 24V/5V power supply inside the tray, then clip the addressable RGBW LED diffuser bar under the front iron rail.",
+        "partIds": [
+          "esp32-controller-board",
+          "power-supply-brick",
+          "underframe-led-diffuser"
+        ]
+      },
+      {
+        "title": "Fit Upholstered Deck and Capacitive Occupancy Mats",
+        "description": "Place the upholstered plinth deck over the slats and lay the three capacitive foil occupancy mats across the left, center, and right seating zones, routing their ribbons to the ESP32.",
+        "partIds": [
+          "upholstered-seat-deck",
+          "capacitive-sensor-mats"
+        ]
+      },
+      {
+        "title": "Attach Armrests and Smart Control Console",
+        "description": "Bolt the left armrest and right walnut-inlaid smart armrest onto the side stanchions, then connect the flush Qi charger, USB-C PD ports, and I2C touch panel to the internal harness.",
+        "partIds": [
+          "left-armrest-module",
+          "right-smart-armrest",
+          "armrest-control-panel"
+        ]
+      },
+      {
+        "title": "Install Backrest Shell and Cushions",
+        "description": "Slide the upholstered backrest shell over the rear iron uprights and arrange the three high-resilience seat cushions and three tufted back cushions.",
+        "partIds": [
+          "backrest-frame-pad",
+          "seat-cushions",
+          "back-cushions"
+        ]
+      }
+    ],
+    "source": "gemini",
+    "model": "gemini-4-argon",
+    "assemblies": [
+      {
+        "id": "asm-iron-chassis",
+        "name": "Wrought Iron Chassis & Suspension",
+        "partIds": [
+          "iron-base-frame",
+          "slat-suspension-deck",
+          "iron-back-arm-stanchions"
+        ]
+      },
+      {
+        "id": "asm-smart-electronics",
+        "name": "ESP32 Smart Core & Sensing",
+        "partIds": [
+          "under-seat-electronics-tray",
+          "esp32-controller-board",
+          "power-supply-brick",
+          "underframe-led-diffuser",
+          "capacitive-sensor-mats",
+          "armrest-control-panel"
+        ]
+      },
+      {
+        "id": "asm-upholstery-body",
+        "name": "Upholstery & Cushions",
+        "partIds": [
+          "upholstered-seat-deck",
+          "left-armrest-module",
+          "right-smart-armrest",
+          "seat-cushions",
+          "backrest-frame-pad",
+          "back-cushions"
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "id": "rel-slats-base",
+        "from": "slat-suspension-deck",
+        "to": "iron-base-frame",
+        "type": "mechanical",
+        "description": "Spring steel slats bolt across the front and rear wrought iron rails."
+      },
+      {
+        "id": "rel-stanchions-base",
+        "from": "iron-back-arm-stanchions",
+        "to": "iron-base-frame",
+        "type": "mechanical",
+        "description": "Rear and side tubular iron uprights bolt to the base perimeter."
+      },
+      {
+        "id": "rel-tray-base",
+        "from": "under-seat-electronics-tray",
+        "to": "iron-base-frame",
+        "type": "mechanical",
+        "description": "Steel electronics tray hangs between the central iron crossbeams."
+      },
+      {
+        "id": "rel-tray-contains-esp32",
+        "from": "under-seat-electronics-tray",
+        "to": "esp32-controller-board",
+        "type": "contains",
+        "description": "Electronics tray houses the ESP32-WROOM-32 controller PCB on brass standoffs."
+      },
+      {
+        "id": "rel-tray-contains-psu",
+        "from": "under-seat-electronics-tray",
+        "to": "power-supply-brick",
+        "type": "contains",
+        "description": "Electronics tray houses the dual-rail 24V/5V power supply unit."
+      },
+      {
+        "id": "rel-psu-esp32",
+        "from": "power-supply-brick",
+        "to": "esp32-controller-board",
+        "type": "electrical",
+        "description": "5V regulated DC rail powers the ESP32 controller and sensor bus."
+      },
+      {
+        "id": "rel-psu-armrest",
+        "from": "power-supply-brick",
+        "to": "armrest-control-panel",
+        "type": "electrical",
+        "description": "24V DC rail feeds the armrest Qi wireless charger and USB-C PD ports."
+      },
+      {
+        "id": "rel-esp32-led",
+        "from": "esp32-controller-board",
+        "to": "underframe-led-diffuser",
+        "type": "data",
+        "description": "ESP32 PWM/data output drives the SK6812 RGBW underglow strip."
+      },
+      {
+        "id": "rel-esp32-sensors",
+        "from": "capacitive-sensor-mats",
+        "to": "esp32-controller-board",
+        "type": "data",
+        "description": "Three seat occupancy mats connect to ESP32 capacitive touch ADC channels."
+      },
+      {
+        "id": "rel-esp32-control-panel",
+        "from": "armrest-control-panel",
+        "to": "esp32-controller-board",
+        "type": "data",
+        "description": "I2C bus links armrest touch buttons and status ring to the ESP32."
+      },
+      {
+        "id": "rel-led-base",
+        "from": "underframe-led-diffuser",
+        "to": "iron-base-frame",
+        "type": "mechanical",
+        "description": "Aluminum LED channel clips to the underside of the front iron rail."
+      },
+      {
+        "id": "rel-deck-slats",
+        "from": "upholstered-seat-deck",
+        "to": "slat-suspension-deck",
+        "type": "mechanical",
+        "description": "Upholstered seat deck rests on top of the spring steel slat suspension."
+      },
+      {
+        "id": "rel-mats-deck",
+        "from": "capacitive-sensor-mats",
+        "to": "upholstered-seat-deck",
+        "type": "mechanical",
+        "description": "Occupancy sensor mats lie flat in recessed channels on the seat deck."
+      },
+      {
+        "id": "rel-seat-cushions-mats",
+        "from": "seat-cushions",
+        "to": "capacitive-sensor-mats",
+        "type": "mechanical",
+        "description": "Three HR foam seat cushions rest directly above the occupancy sensor mats."
+      },
+      {
+        "id": "rel-left-arm-frame",
+        "from": "left-armrest-module",
+        "to": "iron-back-arm-stanchions",
+        "type": "mechanical",
+        "description": "Left upholstered armrest slides over and bolts to the left iron stanchion."
+      },
+      {
+        "id": "rel-right-arm-frame",
+        "from": "right-smart-armrest",
+        "to": "iron-back-arm-stanchions",
+        "type": "mechanical",
+        "description": "Right smart armrest bolts to the right iron stanchion and routes internal harness."
+      },
+      {
+        "id": "rel-right-arm-contains-panel",
+        "from": "right-smart-armrest",
+        "to": "armrest-control-panel",
+        "type": "contains",
+        "description": "Walnut console inlay in the right armrest houses the flush Qi & touch panel."
+      },
+      {
+        "id": "rel-back-shell-frame",
+        "from": "backrest-frame-pad",
+        "to": "iron-back-arm-stanchions",
+        "type": "mechanical",
+        "description": "Upholstered backrest shell mounts onto the four angled rear iron uprights."
+      },
+      {
+        "id": "rel-back-cushions-shell",
+        "from": "back-cushions",
+        "to": "backrest-frame-pad",
+        "type": "mechanical",
+        "description": "Tufted backrest cushions rest against the angled backrest shell."
+      }
+    ]
+  },
+  "conversation": [
+    {
+      "role": "assistant",
+      "text": "I have designed a full-scale 2.1-meter Smart Three-Seater Sofa built on a welded tubular wrought iron base and powered by an ESP32-WROOM-32 controller. The iron chassis supports a spring-steel slat deck and a recessed under-seat electronics tray housing the ESP32 carrier board and dual-rail 24V/5V power supply. Three capacitive occupancy sensor mats sit beneath the seat cushions, an addressable RGBW underglow diffuser bar runs along the front iron rail, and the right armrest integrates a walnut console with a 15W Qi wireless charger, USB-C PD ports, and I2C capacitive scene buttons.",
+      "actions": [],
+      "suggestions": [
+        "Explode the assembly to inspect the under-seat ESP32 tray and capacitive occupancy mats",
+        "Highlight the ESP32 controller board and trace its connections to the sensors, LED bar, and armrest console",
+        "Customize the upholstery color or change the iron base finish to brushed bronze"
+      ],
+      "checks": [
+        {
+          "level": "pass",
+          "message": "All component, assembly, relationship and mechanism references passed structural validation."
+        },
+        {
+          "level": "warning",
+          "message": "Geometry and specifications are illustrative. Mechanical fit, wiring and physical hardware operation have not been verified."
+        }
+      ]
+    }
+  ]
+}

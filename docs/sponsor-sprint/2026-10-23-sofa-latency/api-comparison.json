@@ -1,0 +1,17 @@
+{
+  "mode": "live",
+  "prompt": "Build a smart sofa with an iron base and an ESP32.",
+  "model": "gemini-4-argon",
+  "baselineMs": 149782,
+  "updatedGeneratorMs": 78214,
+  "latencyReductionPercent": 47.8,
+  "baselineFirstPartMs": 21464,
+  "updatedFirstPartMs": 9178,
+  "updatedOutputTokens": 6702,
+  "baselineOutputTokens": 13336,
+  "parts": 14,
+  "solids": 247,
+  "relationships": 18,
+  "steps": 5,
+  "limits": "One same-prompt baseline and one successful live API test. An earlier browser test failed decoding; recorded separately. A fresh browser test of the final literal-JSON prompt remains pending. Counts are not a visual-quality guarantee or hardware verification."
+}

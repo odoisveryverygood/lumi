@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-23T07:58:37.921204+00:00",
+  "originalRevision": "510216d9aed26f9c1078740a0dadd9e2d779b85b",
+  "originalGitStatus": "",
+  "copiedRevision": "510216d9aed26f9c1078740a0dadd9e2d779b85b",
+  "copy": "/Users/aradhyamishra/Documents/Codex/2026-10-21/thsi/outputs/flare-grounded",
+  "original": "/Users/aradhyamishra/Documents/Codex/2026-10-21/thsi/outputs/part-explode",
+  "deploymentProjectCopied": false,
+  "remoteCount": 0,
+  "checks": "Original unchanged; new variant has only local uncommitted changes. Source-archive inspection will be added after packaging.",
+  "sourceFingerprint": "d7bb326a21eb0680ee8aab603819d681a11904a655b51e47398ceb34d5af6dca",
+  "archiveExclusionsVerified": true,
+  "actualCredentialBytesExcluded": true,
+  "artifactName": "Flare-grounded-design-source.zip"
+}

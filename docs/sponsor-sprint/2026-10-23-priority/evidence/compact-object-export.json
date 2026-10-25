@@ -1,0 +1,3722 @@
+{
+  "document": {
+    "version": 1,
+    "id": "portable-cassette-player-v1",
+    "name": "Portable Cassette Player",
+    "description": "Compact personal stereo cassette player featuring a burnt-orange split enclosure with dark ruggedized corner bumpers, transparent inspection window, dual reel spindles, belt-driven capstan assembly, permalloy head bridge, and mechanical transport controls. Conceptual educational model.",
+    "provenance": "AI generated conceptual assembly. Geometry, dimensions and specifications are illustrative; no CAD fit, wiring or hardware operation has been verified.",
+    "parts": [
+      {
+        "id": "rear-shell",
+        "name": "Rear Enclosure Shell",
+        "category": "housing",
+        "description": "Burnt-orange rear housing with dark elastomer corner bumpers, internal mounting bosses, and lower battery bay walls.",
+        "role": "Primary structural chassis and rear protective enclosure",
+        "position": [
+          0,
+          0,
+          -10
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          94,
+          126,
+          18
+        ],
+        "explode": [
+          0,
+          0,
+          -75
+        ],
+        "color": "#d35400",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -6
+            ],
+            "size": [
+              88,
+              120,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              -43,
+              0,
+              1
+            ],
+            "size": [
+              3,
+              116,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              43,
+              22,
+              1
+            ],
+            "size": [
+              3,
+              72,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              43,
+              -46,
+              1
+            ],
+            "size": [
+              3,
+              24,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              -20,
+              59,
+              1
+            ],
+            "size": [
+              44,
+              3,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              34,
+              59,
+              1
+            ],
+            "size": [
+              18,
+              3,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -59,
+              1
+            ],
+            "size": [
+              88,
+              3,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -26,
+              1
+            ],
+            "size": [
+              84,
+              2.5,
+              13
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -42,
+              58,
+              0
+            ],
+            "size": [
+              12,
+              17,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              42,
+              58,
+              0
+            ],
+            "size": [
+              12,
+              17,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -42,
+              -58,
+              0
+            ],
+            "size": [
+              12,
+              17,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              42,
+              -58,
+              0
+            ],
+            "size": [
+              12,
+              17,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -36,
+              48,
+              -2
+            ],
+            "size": [
+              5,
+              7,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              36,
+              48,
+              -2
+            ],
+            "size": [
+              5,
+              7,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -36,
+              -20,
+              -2
+            ],
+            "size": [
+              5,
+              7,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              36,
+              -20,
+              -2
+            ],
+            "size": [
+              5,
+              7,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              -38,
+              -43,
+              -1
+            ],
+            "size": [
+              2,
+              26,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c0c5ce",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              38,
+              -43,
+              -1
+            ],
+            "size": [
+              2,
+              26,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c0c5ce",
+            "metalness": 0.85,
+            "roughness": 0.25
+          }
+        ],
+        "specs": {
+          "Material": "ABS with TPE bumpers",
+          "Finish": "Matte burnt orange",
+          "Dimensions": "94 x 126 x 18 mm (approx)"
+        },
+        "connections": [
+          {
+            "partId": "front-bezel",
+            "label": "Snap and screw perimeter joint"
+          },
+          {
+            "partId": "main-pcb",
+            "label": "Internal mounting bosses"
+          },
+          {
+            "partId": "battery-cover",
+            "label": "Lower slide latch"
+          }
+        ],
+        "assemblyId": "asm-enclosure"
+      },
+      {
+        "id": "front-bezel",
+        "name": "Front Split Bezel",
+        "category": "housing",
+        "description": "Burnt-orange front frame with cassette loading opening, dark corner bumper caps, and side control cutouts.",
+        "role": "Front structural frame and cassette bay surround",
+        "position": [
+          0,
+          0,
+          6
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          94,
+          126,
+          14
+        ],
+        "explode": [
+          0,
+          0,
+          48
+        ],
+        "color": "#e05a00",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -40,
+              6,
+              2
+            ],
+            "size": [
+              8,
+              104,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              40,
+              6,
+              2
+            ],
+            "size": [
+              8,
+              104,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              55,
+              2
+            ],
+            "size": [
+              84,
+              10,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -43,
+              2
+            ],
+            "size": [
+              84,
+              34,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              -43,
+              0,
+              -2
+            ],
+            "size": [
+              3,
+              116,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              43,
+              22,
+              -2
+            ],
+            "size": [
+              3,
+              72,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              43,
+              -46,
+              -2
+            ],
+            "size": [
+              3,
+              24,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -42,
+              58,
+              -1
+            ],
+            "size": [
+              12,
+              13,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              42,
+              58,
+              -1
+            ],
+            "size": [
+              12,
+              13,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -42,
+              -58,
+              -1
+            ],
+            "size": [
+              12,
+              13,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              42,
+              -58,
+              -1
+            ],
+            "size": [
+              12,
+              13,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -44,
+              4.2
+            ],
+            "size": [
+              72,
+              22,
+              1.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.15,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -18,
+              -44,
+              5
+            ],
+            "size": [
+              24,
+              3,
+              0.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f39c12",
+            "metalness": 0.2,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              -44,
+              12,
+              1
+            ],
+            "size": [
+              2,
+              28,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.7
+          }
+        ],
+        "specs": {
+          "Material": "Molded ABS + TPE",
+          "Feature": "Recessed cassette bay frame"
+        },
+        "connections": [
+          {
+            "partId": "rear-shell",
+            "label": "Mating housing half"
+          },
+          {
+            "partId": "tape-door",
+            "label": "Side hinge knuckles"
+          }
+        ],
+        "assemblyId": "asm-enclosure"
+      },
+      {
+        "id": "tape-door",
+        "name": "Transparent Tape Window Door",
+        "category": "housing",
+        "description": "Hinged cassette compartment door with burnt-orange outer frame, clear acrylic viewing window, and internal cassette stabilizer spring.",
+        "role": "Protects cassette while keeping reels and tape motion clearly visible",
+        "position": [
+          0,
+          12,
+          12
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          76,
+          82,
+          6
+        ],
+        "explode": [
+          0,
+          10,
+          95
+        ],
+        "color": "#88c9f9",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -33,
+              0,
+              0
+            ],
+            "size": [
+              10,
+              80,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              33,
+              0,
+              0
+            ],
+            "size": [
+              10,
+              80,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              34,
+              0
+            ],
+            "size": [
+              56,
+              12,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -33,
+              0
+            ],
+            "size": [
+              56,
+              14,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              1,
+              0.5
+            ],
+            "size": [
+              58,
+              56,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#a8d8f0",
+            "metalness": 0.1,
+            "roughness": 0.12
+          },
+          {
+            "kind": "box",
+            "position": [
+              -28,
+              1,
+              1.6
+            ],
+            "size": [
+              1.5,
+              50,
+              0.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              28,
+              1,
+              1.6
+            ],
+            "size": [
+              1.5,
+              50,
+              0.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              26,
+              1.6
+            ],
+            "size": [
+              56,
+              1.5,
+              0.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -24,
+              1.6
+            ],
+            "size": [
+              56,
+              1.5,
+              0.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -10,
+              1.6
+            ],
+            "size": [
+              28,
+              2,
+              0.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ffffff",
+            "metalness": 0.1,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -38,
+              20,
+              -2
+            ],
+            "size": [
+              3,
+              10,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              -38,
+              -20,
+              -2
+            ],
+            "size": [
+              3,
+              10,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b84700",
+            "metalness": 0.1,
+            "roughness": 0.7
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              22,
+              -2.2
+            ],
+            "size": [
+              36,
+              8,
+              0.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c0c5ce",
+            "metalness": 0.85,
+            "roughness": 0.25
+          }
+        ],
+        "specs": {
+          "Window": "Clear PMMA acrylic",
+          "Frame": "Burnt-orange ABS",
+          "Viewing Area": "58 x 50 mm"
+        },
+        "connections": [
+          {
+            "partId": "front-bezel",
+            "label": "Left-side hinge pin"
+          },
+          {
+            "partId": "cassette-tape",
+            "label": "Leaf spring pressure pad"
+          }
+        ],
+        "assemblyId": "asm-enclosure"
+      },
+      {
+        "id": "battery-cover",
+        "name": "Battery Compartment & AA Cells",
+        "category": "power",
+        "description": "Removable lower rear door paired with two illustrative 1.5V AA cylindrical cells wired in series.",
+        "role": "Houses 3V DC portable power cells",
+        "position": [
+          0,
+          -43,
+          -9
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          78,
+          30,
+          16
+        ],
+        "explode": [
+          0,
+          -65,
+          -50
+        ],
+        "color": "#d35400",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -7.5
+            ],
+            "size": [
+              78,
+              28,
+              2.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c64d00",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              8,
+              -9
+            ],
+            "size": [
+              22,
+              4,
+              1.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              13.5,
+              -5
+            ],
+            "size": [
+              14,
+              3,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c64d00",
+            "metalness": 0.1,
+            "roughness": 0.65
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              5,
+              1
+            ],
+            "size": [
+              14,
+              50,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#2980b9",
+            "metalness": 0.4,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -21,
+              5,
+              1
+            ],
+            "size": [
+              14.2,
+              8,
+              14.2
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#f1c40f",
+            "metalness": 0.5,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -26,
+              5,
+              1
+            ],
+            "size": [
+              5.5,
+              2,
+              5.5
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#dcdde1",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -9,
+              1
+            ],
+            "size": [
+              14,
+              50,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#2980b9",
+            "metalness": 0.4,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              21,
+              -9,
+              1
+            ],
+            "size": [
+              14.2,
+              8,
+              14.2
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#f1c40f",
+            "metalness": 0.5,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              26,
+              -9,
+              1
+            ],
+            "size": [
+              5.5,
+              2,
+              5.5
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#dcdde1",
+            "metalness": 0.9,
+            "roughness": 0.2
+          }
+        ],
+        "specs": {
+          "Cells": "2x AA 1.5V (illustrative)",
+          "Nominal Voltage": "3.0V DC",
+          "Cover Latch": "Bottom thumb catch"
+        },
+        "connections": [
+          {
+            "partId": "rear-shell",
+            "label": "Snap-fit battery bay cover"
+          },
+          {
+            "partId": "main-pcb",
+            "label": "3V DC spring terminal feed"
+          }
+        ],
+        "assemblyId": "asm-enclosure"
+      },
+      {
+        "id": "main-pcb",
+        "name": "Main Audio & Control PCB",
+        "category": "electronics",
+        "description": "Green fiberglass circuit board holding the low-voltage preamplifier IC, electrolytic filter capacitors, motor governor circuit, and wire headers.",
+        "role": "Amplifies magnetic head signals and regulates drive motor speed",
+        "position": [
+          0,
+          8,
+          -4.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          80,
+          96,
+          6
+        ],
+        "explode": [
+          0,
+          0,
+          -38
+        ],
+        "color": "#1e824c",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              78,
+              94,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e824c",
+            "metalness": 0.15,
+            "roughness": 0.55
+          },
+          {
+            "kind": "box",
+            "position": [
+              -18,
+              -24,
+              2.2
+            ],
+            "size": [
+              16,
+              8,
+              2.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.1,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              12,
+              -26,
+              2.2
+            ],
+            "size": [
+              12,
+              7,
+              2.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.1,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -28,
+              -10,
+              3
+            ],
+            "size": [
+              6,
+              5,
+              6
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -28,
+              0,
+              3
+            ],
+            "size": [
+              6,
+              5,
+              6
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              26,
+              -12,
+              3
+            ],
+            "size": [
+              7,
+              6,
+              7
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              26,
+              0,
+              3
+            ],
+            "size": [
+              5,
+              5,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#8e44ad",
+            "metalness": 0.3,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -34,
+              2.5
+            ],
+            "size": [
+              8,
+              3,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.7,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -18,
+              -6,
+              1.8
+            ],
+            "size": [
+              8,
+              3,
+              2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              18,
+              -6,
+              1.8
+            ],
+            "size": [
+              8,
+              3,
+              2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              16,
+              1.2
+            ],
+            "size": [
+              12,
+              1,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              16,
+              1.2
+            ],
+            "size": [
+              12,
+              1,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.8,
+            "roughness": 0.3
+          }
+        ],
+        "specs": {
+          "Substrate": "Single-sided FR-4 (illustrative)",
+          "Audio Path": "Stereo tape head pre-amp + headphone driver",
+          "Supply": "3V DC regulated"
+        },
+        "connections": [
+          {
+            "partId": "rear-shell",
+            "label": "Screwed to chassis bosses"
+          },
+          {
+            "partId": "dc-motor",
+            "label": "2-wire regulated DC power"
+          },
+          {
+            "partId": "head-pinch-bridge",
+            "label": "Flexible ribbon from stereo head"
+          },
+          {
+            "partId": "volume-wheel",
+            "label": "Dual-gang potentiometer pins"
+          },
+          {
+            "partId": "headphone-jack",
+            "label": "Soldered audio output terminals"
+          }
+        ],
+        "assemblyId": "asm-electronics"
+      },
+      {
+        "id": "dc-motor",
+        "name": "3V DC Micro Drive Motor",
+        "category": "actuator",
+        "description": "Shielded brushed DC pancake motor with brass V-groove drive pulley and vibration-damping rubber mount.",
+        "role": "Provides rotational torque to the belt and capstan flywheel",
+        "position": [
+          -24,
+          -20,
+          -1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          24,
+          24,
+          14
+        ],
+        "explode": [
+          -55,
+          -25,
+          -20
+        ],
+        "color": "#bdc3c7",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              1
+            ],
+            "size": [
+              22,
+              11,
+              22
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#c0c5ce",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              1
+            ],
+            "size": [
+              23.5,
+              4,
+              23.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.1,
+            "roughness": 0.85
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              7
+            ],
+            "size": [
+              7,
+              2,
+              7
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -5.5
+            ],
+            "size": [
+              2,
+              6,
+              2
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#95a5a6",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -7.5
+            ],
+            "size": [
+              7,
+              3,
+              7
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -7.5
+            ],
+            "size": [
+              5,
+              1.2,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#8c6d1f",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              8,
+              8,
+              4
+            ],
+            "size": [
+              4,
+              4,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#c0392b",
+            "metalness": 0.2,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              11,
+              4,
+              4
+            ],
+            "size": [
+              4,
+              4,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.2,
+            "roughness": 0.6
+          }
+        ],
+        "specs": {
+          "Type": "Brushed DC micro motor",
+          "Nominal Voltage": "3.0V DC",
+          "Pulley": "Turned brass V-groove"
+        },
+        "connections": [
+          {
+            "partId": "main-pcb",
+            "label": "Solder terminal tabs"
+          },
+          {
+            "partId": "flywheel-belt",
+            "label": "Rubber belt traction"
+          }
+        ],
+        "assemblyId": "asm-transport"
+      },
+      {
+        "id": "flywheel-belt",
+        "name": "Capstan Flywheel & Drive Belt",
+        "category": "mechanical",
+        "description": "High-inertia zinc-alloy flywheel, precision ground stainless steel capstan shaft, and elastomer drive belt.",
+        "role": "Smooths motor speed variations and pulls tape at constant linear speed",
+        "position": [
+          22,
+          22,
+          -5.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          68,
+          62,
+          18
+        ],
+        "explode": [
+          45,
+          15,
+          -22
+        ],
+        "color": "#95a5a6",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -2
+            ],
+            "size": [
+              32,
+              3.5,
+              32
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#95a5a6",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -2
+            ],
+            "size": [
+              24,
+              4.5,
+              24
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              2
+            ],
+            "size": [
+              8,
+              6,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              6.5
+            ],
+            "size": [
+              2.2,
+              14,
+              2.2
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.95,
+            "roughness": 0.12
+          },
+          {
+            "kind": "box",
+            "position": [
+              -23,
+              -21,
+              -2
+            ],
+            "size": [
+              62,
+              1.6,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              42
+            ],
+            "color": "#1e2226",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "box",
+            "position": [
+              -21,
+              -23,
+              -2
+            ],
+            "size": [
+              62,
+              1.6,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              42
+            ],
+            "color": "#1e2226",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              0,
+              -2
+            ],
+            "size": [
+              15.5,
+              0.9,
+              15.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.1,
+            "roughness": 0.9
+          }
+        ],
+        "specs": {
+          "Flywheel Diameter": "32 mm",
+          "Capstan Shaft": "1.8 mm stainless steel",
+          "Drive": "Square-section elastomer belt"
+        },
+        "connections": [
+          {
+            "partId": "dc-motor",
+            "label": "Driven by motor pulley"
+          },
+          {
+            "partId": "head-pinch-bridge",
+            "label": "Pinches tape against capstan shaft"
+          }
+        ],
+        "assemblyId": "asm-transport"
+      },
+      {
+        "id": "supply-reel",
+        "name": "Left Supply Reel Spindle",
+        "category": "mechanical",
+        "description": "Six-splined white acetal hub spindle with dark backing gear and slip clutch.",
+        "role": "Supports and guides the left cassette supply hub",
+        "position": [
+          -18,
+          6,
+          2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          18,
+          18,
+          12
+        ],
+        "explode": [
+          -35,
+          8,
+          22
+        ],
+        "color": "#ecf0f1",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -3
+            ],
+            "size": [
+              18,
+              2,
+              18
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              12,
+              4,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              8,
+              6,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              11,
+              2,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              11,
+              2,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              60
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              11,
+              2,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              120
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              4.5
+            ],
+            "size": [
+              3,
+              7,
+              3
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.8,
+            "roughness": 0.25
+          }
+        ],
+        "specs": {
+          "Material": "POM Acetal",
+          "Splines": "6-tooth standard cassette drive"
+        },
+        "connections": [
+          {
+            "partId": "main-pcb",
+            "label": "Rotates on chassis spindle post"
+          },
+          {
+            "partId": "cassette-tape",
+            "label": "Engages left cassette hub"
+          }
+        ],
+        "assemblyId": "asm-transport"
+      },
+      {
+        "id": "takeup-reel",
+        "name": "Right Take-Up Reel Spindle",
+        "category": "mechanical",
+        "description": "Driven right-hand six-splined spindle assembly that winds magnetic tape after it passes the capstan.",
+        "role": "Winds played tape onto the right cassette hub",
+        "position": [
+          18,
+          6,
+          2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          18,
+          18,
+          12
+        ],
+        "explode": [
+          35,
+          8,
+          22
+        ],
+        "color": "#ecf0f1",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -3
+            ],
+            "size": [
+              18,
+              2,
+              18
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.2,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              12,
+              4,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              8,
+              6,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              11,
+              2,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              11,
+              2,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              60
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              3.5
+            ],
+            "size": [
+              11,
+              2,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              120
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              4.5
+            ],
+            "size": [
+              3,
+              7,
+              3
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.8,
+            "roughness": 0.25
+          }
+        ],
+        "specs": {
+          "Material": "POM Acetal",
+          "Drive": "Idler friction clutch from flywheel"
+        },
+        "connections": [
+          {
+            "partId": "flywheel-belt",
+            "label": "Driven via intermediate take-up gear"
+          },
+          {
+            "partId": "cassette-tape",
+            "label": "Drives right cassette hub"
+          }
+        ],
+        "assemblyId": "asm-transport"
+      },
+      {
+        "id": "head-pinch-bridge",
+        "name": "Magnetic Head & Pinch Roller Bridge",
+        "category": "mechanical",
+        "description": "Sliding steel carriage holding the stereo permalloy playback head, tape guide forks, and pivoted rubber pinch roller.",
+        "role": "Advances into the cassette shell during Play to read tape and clamp the capstan",
+        "position": [
+          4,
+          36,
+          2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          58,
+          18,
+          12
+        ],
+        "explode": [
+          0,
+          42,
+          30
+        ],
+        "color": "#bdc3c7",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              3,
+              -2
+            ],
+            "size": [
+              54,
+              8,
+              2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -4,
+              -2,
+              0
+            ],
+            "size": [
+              14,
+              10,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d0d3d4",
+            "metalness": 0.9,
+            "roughness": 0.18
+          },
+          {
+            "kind": "box",
+            "position": [
+              -4,
+              -6.5,
+              0
+            ],
+            "size": [
+              8,
+              3,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#8e6f3e",
+            "metalness": 0.7,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -13,
+              -4,
+              0
+            ],
+            "size": [
+              2,
+              8,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              5,
+              -4,
+              0
+            ],
+            "size": [
+              2,
+              8,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              18,
+              0,
+              0
+            ],
+            "size": [
+              14,
+              7,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#95a5a6",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              -4,
+              0
+            ],
+            "size": [
+              9,
+              7,
+              9
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.05,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              -4,
+              0
+            ],
+            "size": [
+              3.5,
+              8,
+              3.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.9,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -22,
+              3,
+              0
+            ],
+            "size": [
+              5,
+              6,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.8,
+            "roughness": 0.3
+          }
+        ],
+        "specs": {
+          "Head Type": "Stereo permalloy playback head",
+          "Pinch Roller": "Vulcanized black neoprene rubber",
+          "Actuation": "Mechanical link from Play button"
+        },
+        "connections": [
+          {
+            "partId": "transport-buttons",
+            "label": "Actuated by Play latch linkage"
+          },
+          {
+            "partId": "flywheel-belt",
+            "label": "Pinch roller presses tape to capstan"
+          },
+          {
+            "partId": "main-pcb",
+            "label": "Shielded 4-wire audio pickup cable"
+          }
+        ],
+        "assemblyId": "asm-transport"
+      },
+      {
+        "id": "cassette-tape",
+        "name": "Compact Cassette Tape",
+        "category": "media",
+        "description": "Clear-shell compact audio cassette with dark magnetic tape packs, dual toothed reels, and orange/cream retro label.",
+        "role": "Removable magnetic audio storage medium",
+        "position": [
+          0,
+          12,
+          4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          68,
+          46,
+          9
+        ],
+        "explode": [
+          0,
+          12,
+          68
+        ],
+        "color": "#34495e",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              66,
+              42,
+              7
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2c3e50",
+            "metalness": 0.2,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -2,
+              3.7
+            ],
+            "size": [
+              58,
+              28,
+              0.8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#f5e6d3",
+            "metalness": 0.1,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -10,
+              4.1
+            ],
+            "size": [
+              58,
+              8,
+              0.4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d35400",
+            "metalness": 0.1,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -4,
+              4.2
+            ],
+            "size": [
+              36,
+              12,
+              0.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.2,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              -6,
+              0
+            ],
+            "size": [
+              24,
+              5.5,
+              24
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#3b2314",
+            "metalness": 0.15,
+            "roughness": 0.55
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              -6,
+              0
+            ],
+            "size": [
+              17,
+              5.5,
+              17
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#3b2314",
+            "metalness": 0.15,
+            "roughness": 0.55
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -18,
+              -6,
+              0
+            ],
+            "size": [
+              11,
+              7.4,
+              11
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              18,
+              -6,
+              0
+            ],
+            "size": [
+              11,
+              7.4,
+              11
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ecf0f1",
+            "metalness": 0.1,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              18,
+              0
+            ],
+            "size": [
+              50,
+              7,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.2,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              20.5,
+              0
+            ],
+            "size": [
+              46,
+              1.2,
+              4
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#3b2314",
+            "metalness": 0.2,
+            "roughness": 0.4
+          }
+        ],
+        "specs": {
+          "Format": "Compact Cassette (illustrative scale)",
+          "Tape Width": "3.81 mm ferric oxide",
+          "Label": "Retro burnt-orange stripe"
+        },
+        "connections": [
+          {
+            "partId": "supply-reel",
+            "label": "Left hub engagement"
+          },
+          {
+            "partId": "takeup-reel",
+            "label": "Right hub engagement"
+          },
+          {
+            "partId": "head-pinch-bridge",
+            "label": "Top edge head and roller openings"
+          }
+        ],
+        "assemblyId": "asm-transport"
+      },
+      {
+        "id": "transport-buttons",
+        "name": "Play / Stop / FF Mechanical Controls",
+        "category": "controls",
+        "description": "Top-mounted mechanical pushbuttons with latching Play actuator, raised orange tactile cue, and internal slide plate.",
+        "role": "Mechanically engages the head bridge and switches motor power",
+        "position": [
+          -18,
+          62,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          44,
+          16,
+          12
+        ],
+        "explode": [
+          -18,
+          65,
+          20
+        ],
+        "color": "#222629",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -5,
+              -1
+            ],
+            "size": [
+              42,
+              6,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -14,
+              2,
+              0
+            ],
+            "size": [
+              12,
+              10,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.15,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -14,
+              7.2,
+              0
+            ],
+            "size": [
+              8,
+              1,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e67e22",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              1,
+              0
+            ],
+            "size": [
+              12,
+              8,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.15,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              14,
+              1,
+              0
+            ],
+            "size": [
+              12,
+              8,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343a40",
+            "metalness": 0.15,
+            "roughness": 0.75
+          },
+          {
+            "kind": "box",
+            "position": [
+              -14,
+              -10,
+              0
+            ],
+            "size": [
+              4,
+              8,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -10,
+              0
+            ],
+            "size": [
+              4,
+              8,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.8,
+            "roughness": 0.3
+          }
+        ],
+        "specs": {
+          "Buttons": "Play (latching), Stop/Eject, Fast Forward",
+          "Play Cue": "Raised tactile dot + orange accent"
+        },
+        "connections": [
+          {
+            "partId": "head-pinch-bridge",
+            "label": "Direct mechanical push rod"
+          },
+          {
+            "partId": "main-pcb",
+            "label": "Leaf switch closes motor circuit"
+          }
+        ],
+        "assemblyId": "asm-electronics"
+      },
+      {
+        "id": "volume-wheel",
+        "name": "Side Rotary Volume Thumbwheel",
+        "category": "controls",
+        "description": "Knurled dark thumbwheel potentiometer mounted along the right housing edge with printed numeric scale.",
+        "role": "Adjusts stereo headphone output level",
+        "position": [
+          44,
+          -4,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          12,
+          26,
+          10
+        ],
+        "explode": [
+          58,
+          -4,
+          0
+        ],
+        "color": "#222629",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              -4,
+              0,
+              -1
+            ],
+            "size": [
+              6,
+              22,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.7,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -1,
+              0,
+              0
+            ],
+            "size": [
+              18,
+              4,
+              18
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#222629",
+            "metalness": 0.15,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -1,
+              0,
+              0
+            ],
+            "size": [
+              19,
+              1.8,
+              19
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#e67e22",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -1,
+              0,
+              0
+            ],
+            "size": [
+              6,
+              6,
+              6
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#7f8c8d",
+            "metalness": 0.8,
+            "roughness": 0.3
+          }
+        ],
+        "specs": {
+          "Control": "Dual-gang 10k-ohm rotary thumbwheel",
+          "Grip": "Peripheral knurled edge"
+        },
+        "connections": [
+          {
+            "partId": "main-pcb",
+            "label": "Right-angle solder pins"
+          }
+        ],
+        "assemblyId": "asm-electronics"
+      },
+      {
+        "id": "headphone-jack",
+        "name": "3.5mm Stereo Headphone Socket",
+        "category": "connector",
+        "description": "Top-mounted 3.5mm TRS stereo jack with metallic collar and burnt-orange ring accent.",
+        "role": "Delivers analog stereo audio to external headphones",
+        "position": [
+          22,
+          60,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          14,
+          16,
+          12
+        ],
+        "explode": [
+          28,
+          62,
+          15
+        ],
+        "color": "#222629",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -2,
+              0
+            ],
+            "size": [
+              12,
+              12,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1e2226",
+            "metalness": 0.15,
+            "roughness": 0.75
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              0
+            ],
+            "size": [
+              8,
+              5,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              8.2,
+              0
+            ],
+            "size": [
+              6,
+              1.2,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#111315",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              4.5,
+              0
+            ],
+            "size": [
+              9.5,
+              1.5,
+              9.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#e05a00",
+            "metalness": 0.2,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              -4,
+              -9,
+              0
+            ],
+            "size": [
+              1.5,
+              4,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.85,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -9,
+              0
+            ],
+            "size": [
+              1.5,
+              4,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.85,
+            "roughness": 0.2
+          },
+          {
+            "kind": "box",
+            "position": [
+              4,
+              -9,
+              0
+            ],
+            "size": [
+              1.5,
+              4,
+              1.5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#bdc3c7",
+            "metalness": 0.85,
+            "roughness": 0.2
+          }
+        ],
+        "specs": {
+          "Interface": "3.5mm TRS stereo mini-jack",
+          "Mounting": "Top panel through-hole"
+        },
+        "connections": [
+          {
+            "partId": "main-pcb",
+            "label": "L/R/GND audio output pins"
+          }
+        ],
+        "assemblyId": "asm-electronics"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Rugged Split Enclosure & Window Door",
+        "description": "The player is housed in a burnt-orange split ABS shell reinforced by four dark rounded corner bumpers. A hinged front door with a clear acrylic window frames the cassette bay.",
+        "partIds": [
+          "rear-shell",
+          "front-bezel",
+          "tape-door"
+        ]
+      },
+      {
+        "title": "3V Battery Compartment",
+        "description": "At the base of the rear shell, a removable latch cover holds two AA cells wired in series to provide 3V DC portable power.",
+        "partIds": [
+          "battery-cover",
+          "rear-shell"
+        ]
+      },
+      {
+        "title": "Audio & Speed-Governor Electronics",
+        "description": "The internal circuit board carries the stereo preamplifier, headphone driver, rotary volume thumbwheel, and 3.5mm stereo headphone socket.",
+        "partIds": [
+          "main-pcb",
+          "volume-wheel",
+          "headphone-jack"
+        ]
+      },
+      {
+        "title": "Belt-Driven Capstan Transport",
+        "description": "A 3V DC micro motor drives a rubber belt connected to a weighted zinc flywheel and precision capstan shaft, stabilizing tape speed while driving the right take-up spindle.",
+        "partIds": [
+          "dc-motor",
+          "flywheel-belt",
+          "supply-reel",
+          "takeup-reel"
+        ]
+      },
+      {
+        "title": "Play Linkage & Head Engagement",
+        "description": "Pressing the top Play button mechanically advances the head and pinch roller bridge into the cassette tape, clamping the oxide ribbon against the spinning capstan for playback.",
+        "partIds": [
+          "transport-buttons",
+          "head-pinch-bridge",
+          "cassette-tape"
+        ]
+      }
+    ],
+    "source": "gemini",
+    "model": "gemini-4-argon",
+    "assemblies": [
+      {
+        "id": "asm-enclosure",
+        "name": "Enclosure & Door Assembly",
+        "partIds": [
+          "rear-shell",
+          "front-bezel",
+          "tape-door",
+          "battery-cover"
+        ]
+      },
+      {
+        "id": "asm-transport",
+        "name": "Tape Transport & Drive",
+        "partIds": [
+          "dc-motor",
+          "flywheel-belt",
+          "supply-reel",
+          "takeup-reel",
+          "head-pinch-bridge",
+          "cassette-tape"
+        ]
+      },
+      {
+        "id": "asm-electronics",
+        "name": "Controls & Audio Electronics",
+        "partIds": [
+          "main-pcb",
+          "transport-buttons",
+          "volume-wheel",
+          "headphone-jack"
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "id": "rel-battery-pcb",
+        "from": "battery-cover",
+        "to": "main-pcb",
+        "type": "electrical",
+        "description": "Two AA cells supply 3V DC power to the main audio and motor regulation board."
+      },
+      {
+        "id": "rel-buttons-bridge",
+        "from": "transport-buttons",
+        "to": "head-pinch-bridge",
+        "type": "mechanical",
+        "description": "Pressing Play pushes the magnetic head and pinch roller carriage down into the cassette openings."
+      },
+      {
+        "id": "rel-pcb-motor",
+        "from": "main-pcb",
+        "to": "dc-motor",
+        "type": "electrical",
+        "description": "Leaf switch closure routes regulated 3V DC current to spin the micro drive motor."
+      },
+      {
+        "id": "rel-motor-flywheel",
+        "from": "dc-motor",
+        "to": "flywheel-belt",
+        "type": "mechanical",
+        "description": "Brass motor pulley drives the elastomer belt wrapped around the high-inertia capstan flywheel."
+      },
+      {
+        "id": "rel-flywheel-takeup",
+        "from": "flywheel-belt",
+        "to": "takeup-reel",
+        "type": "mechanical",
+        "description": "Capstan and intermediate gear train rotate the right take-up reel spindle to wind the tape."
+      },
+      {
+        "id": "rel-head-pcb",
+        "from": "head-pinch-bridge",
+        "to": "main-pcb",
+        "type": "data",
+        "description": "Stereo permalloy head sends microvolt magnetic flux signals to the preamplifier IC."
+      },
+      {
+        "id": "rel-pcb-jack",
+        "from": "main-pcb",
+        "to": "headphone-jack",
+        "type": "data",
+        "description": "Amplified stereo audio attenuated by the side volume wheel feeds the 3.5mm headphone socket."
+      }
+    ],
+    "mechanisms": [
+      {
+        "id": "tape-play-transport",
+        "name": "Play Engagement & Tape Transport",
+        "description": "Demonstrates depressing the Play control to advance the magnetic head and pinch roller into the cassette while the DC motor, flywheel, and dual tape reels spin.",
+        "duration": 4,
+        "motion": "linear",
+        "tracks": [
+          {
+            "partId": "transport-buttons",
+            "translation": [
+              0,
+              -3.5,
+              0
+            ]
+          },
+          {
+            "partId": "head-pinch-bridge",
+            "translation": [
+              0,
+              -5.5,
+              0
+            ]
+          },
+          {
+            "partId": "dc-motor",
+            "rotation": [
+              0,
+              0,
+              -1440
+            ]
+          },
+          {
+            "partId": "flywheel-belt",
+            "rotation": [
+              0,
+              0,
+              -360
+            ]
+          },
+          {
+            "partId": "takeup-reel",
+            "rotation": [
+              0,
+              0,
+              -240
+            ]
+          },
+          {
+            "partId": "supply-reel",
+            "rotation": [
+              0,
+              0,
+              -180
+            ]
+          },
+          {
+            "partId": "volume-wheel",
+            "rotation": [
+              0,
+              0,
+              35
+            ]
+          }
+        ],
+        "stages": [
+          {
+            "at": 0,
+            "title": "Stop / Standby State",
+            "description": "Transport controls are at rest and the magnetic head bridge sits retracted above the cassette shell.",
+            "partIds": [
+              "transport-buttons",
+              "head-pinch-bridge"
+            ]
+          },
+          {
+            "at": 0.25,
+            "title": "Play Button Latched",
+            "description": "The Play button depresses and pushes the permalloy playback head and rubber pinch roller into contact with the tape and capstan.",
+            "partIds": [
+              "transport-buttons",
+              "head-pinch-bridge",
+              "cassette-tape"
+            ]
+          },
+          {
+            "at": 0.65,
+            "title": "Belt Drive & Capstan Rotation",
+            "description": "The 3V DC motor spins the flywheel belt, pulling tape past the stereo head while the supply and take-up reels rotate.",
+            "partIds": [
+              "dc-motor",
+              "flywheel-belt",
+              "supply-reel",
+              "takeup-reel"
+            ]
+          },
+          {
+            "at": 1,
+            "title": "Steady Stereo Playback",
+            "description": "Tape winds smoothly onto the take-up hub while the side volume thumbwheel trims headphone output level.",
+            "partIds": [
+              "takeup-reel",
+              "volume-wheel",
+              "headphone-jack"
+            ]
+          }
+        ]
+      }
+    ],
+    "capabilities": [
+      "Analog magnetic tape playback",
+      "Belt-driven dual-flywheel transport",
+      "Mechanical head-bridge engagement",
+      "3V DC battery power"
+    ]
+  },
+  "conversation": [
+    {
+      "role": "assistant",
+      "text": "Here is a custom 3D assembly of a portable cassette player featuring a burnt-orange split enclosure with dark rounded corner bumpers, a hinged transparent tape window door, visible supply and take-up reels, a belt-driven capstan flywheel, a sliding magnetic head and pinch roller bridge, top Play/Stop controls, a side rotary volume thumbwheel, a 3.5mm headphone socket, a 3V DC drive motor, and a lower AA battery compartment.",
+      "actions": [
+        {
+          "type": "view",
+          "view": "perspective"
+        },
+        {
+          "type": "explode",
+          "amount": 0.35
+        }
+      ],
+      "suggestions": [
+        "Animate the Play Engagement & Tape Transport mechanism",
+        "Explode the assembly to inspect the Capstan Flywheel & Drive Belt and 3V DC Micro Drive Motor",
+        "Isolate the Magnetic Head & Pinch Roller Bridge and Compact Cassette Tape",
+        "Highlight the Main Audio & Control PCB, Side Rotary Volume Thumbwheel, and 3.5mm Stereo Headphone Socket"
+      ],
+      "checks": [
+        {
+          "level": "pass",
+          "message": "All component, assembly, relationship and mechanism references passed structural validation."
+        },
+        {
+          "level": "info",
+          "message": "Motion is an educational illustration with bounded transforms; collisions, forces, tolerances and electrical behavior are not simulated."
+        },
+        {
+          "level": "warning",
+          "message": "Geometry and specifications are illustrative. Mechanical fit, wiring and physical hardware operation have not been verified."
+        }
+      ]
+    }
+  ]
+}

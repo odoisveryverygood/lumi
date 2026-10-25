@@ -1,0 +1,32 @@
+{
+  "prompt": "Design a compact desk sensor with an ESP32-C3-MINI-1 radio module, a custom orange bracket and an M3 x 12 socket screw. Use these two exact standard components from readyParts, at their source dimensions. Add a separate sensor, carrier board and housing. Keep it a distinctive compact object, with clear selectable components and a relationship graph.",
+  "model": "gemini-4-argon",
+  "elapsedSeconds": 62.953471834000005,
+  "parts": 9,
+  "sourced": [
+    {
+      "name": "M3 × 12 Socket Screw",
+      "catalogRef": {
+        "id": "m3-cap-12"
+      },
+      "vertices": 108
+    },
+    {
+      "name": "ESP32-C3-MINI-1 Radio Module",
+      "catalogRef": {
+        "id": "esp32-c3-mini-1"
+      },
+      "vertices": 18960
+    }
+  ],
+  "customSolids": 110,
+  "museum": {
+    "id": "e6efcc80071aebfc9612",
+    "name": "Side Chair",
+    "bytes": 1506420,
+    "license": "CC0-1.0",
+    "sha256": "e6efcc80071aebfc9612fd2db8e9baec8433a557b53931a645b38545a9cfbb25",
+    "meshes": 1
+  },
+  "physicalEngineeringVerified": false
+}

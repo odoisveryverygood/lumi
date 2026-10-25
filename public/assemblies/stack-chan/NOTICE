@@ -1,0 +1,50 @@
+Stack Chan real KiCad board — asset provenance
+
+BOARD SOURCE
+Stack Chan, Copyright 2021 Shinya Ishikawa.
+Repository: https://github.com/stack-chan/stack-chan
+Pinned revision: ad876ea36e7ef13f08de2982fe8d15a6ffda5cc7
+Board: schematics/m5-pantilt/m5-pantilt.kicad_pcb
+https://github.com/stack-chan/stack-chan/blob/ad876ea36e7ef13f08de2982fe8d15a6ffda5cc7/schematics/m5-pantilt/m5-pantilt.kicad_pcb
+Board repository license: Apache License 2.0. The complete upstream LICENSE,
+including its copyright attribution, is included alongside this notice.
+https://raw.githubusercontent.com/stack-chan/stack-chan/ad876ea36e7ef13f08de2982fe8d15a6ffda5cc7/LICENSE
+
+RENDERED ASSET SOURCE
+Etch by PranavAchar01, pinned revision:
+c548129ec5ed13f59f76b0a852a5dd03b728825b
+https://github.com/PranavAchar01/etch/tree/c548129ec5ed13f59f76b0a852a5dd03b728825b/deploy/etch-app/world/boards/stack-chan__stack-chan
+Original asset filename in that directory: Stack Chan.glb
+Original metadata files: meta.json and parts.json
+The source metadata records rendering on 2026-10-17T18:02:33Z using KiCad 10.0.7.
+The GLB asset identifies its generator as Etch.
+
+PRESERVATION AND DISPLAY CHANGES
+original.glb is the untouched Etch binary, renamed locally only. meta.json and
+parts.json are unchanged source copies. The model is decoded locally using
+Three.js's bundled meshopt decoder; no remote decoder or texture is loaded.
+PartExplode centers and uniformly scales the display to a 220 mm overall extent,
+bakes static node transforms into actual vertex geometry, recomputes normals,
+and groups material regions belonging to the same logical component. Original
+mesh shapes, triangle indices and materials are retained. PartExplode adds
+component labels, metadata, inspection steps and a reversible exploded view.
+Those presentation annotations are not part of the upstream KiCad design.
+
+The source board is 50 x 50 mm with a 1.6 mm thickness, as recorded by Etch.
+The 220 mm display extent is not the board's manufactured dimension. The model
+has 32 resolved component models plus 8 PCB material layers. The source includes
+38 footprints, including holes/artwork and SW1; SW1 has no available source 3D
+model and is deliberately omitted rather than replaced by invented geometry.
+No electrical netlist, manufacturing verification or physical hardware test is
+represented by this visual inspection model.
+
+This notice records the board and rendered asset provenance. The Apache-2.0
+license above applies to the cited board repository; it does not purport to
+relicense third-party component models or Etch code. Embedded library models
+retain any applicable upstream attribution and license terms.
+
+SHA-256 OF BUNDLED SOURCE FILES
+3833f2020a4b76299f3248b5a2602678f874e8ed49c0972e2e33125b0401eeff  original.glb
+63c2b9107cad861d5633ae2ac39b09cd9c33d99c79d8df96da4a8410daa6bf3b  meta.json
+27ca62e6074d0cf4e616db080bc6762a79190b2c4aa4e175730eb072932ca268  parts.json
+5123845c54a384c407e364dcc45f7680ed12afe01cbc7a851a164d3370a35a04  LICENSE

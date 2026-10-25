@@ -1,0 +1,104 @@
+Browser tab: 4, Title: "Flare — See what makes it work.", URL: "http://127.0.0.1:3001/".
+0 AXWebArea Flare — See what makes it work., URL: 127.0.0.1:3001/
+	1 button Import device file
+	2 container
+		3 button Flare home
+			4 text Flare
+			83 text A CLOSER LOOK
+		5 button Corne / Left
+		6 container Workspace
+			7 button Explore
+			8 button Studio
+			9 button Design Lab
+				10 text Design
+				84 text  Lab
+		11 button New device
+		12 button Share assembly
+		13 button Export
+	14 container Interactive device assembly
+		15 text FLARE / OBJECT STUDY
+		16 text A DIFFERENT PERSPECTIVE CHANGES EVERYTHING
+		17 container
+			18 button (disabled) Undo edit
+			19 button (disabled) Redo edit
+			20 checkbox 3D, Value: 1
+			21 checkbox Top, Value: 0
+			22 checkbox Front, Value: 0
+			23 checkbox Description: Toggle component labels, Value: 0
+			24 checkbox Description: Device information, Value: 0
+		25 container Interactive three-dimensional Corne / Left. Select a component, orbit the device, and use the Move or Rotate tools to edit it.
+			26 container
+				27 image
+					28 text WebGL is unavailable. Component properties and build instructions remain available.
+				29 container Component callouts
+		30 container
+			31 text OBJECT  / INTERACTIVE STUDY 75  PARTS
+			32 heading Corne / Left/ 01, Value: 1
+				33 text Corne / Left
+				34 text / 01
+			35 text Review cutaway · upper layers hidden · changes not yet applied.
+		36 container
+			37 checkbox Description: Browse components, Value: 0
+				38 text Parts
+				39 text 75
+			40 button Reset camera
+			41 button Fit assembly
+			42 button Zoom in
+			43 button Zoom out
+		44 container
+			45 checkbox Assembled, Value: 1
+			46 checkbox Exploded, Value: 0
+			47 button See it work
+			48 slider (settable, integer) Description: Explode assembly, Value: 0
+			49 container
+				50 text 0 %
+		51 container
+			52 text Source CAD + labeled illustrations · millimetres Drag to orbit · scroll to zoom
+			53 button About this workspace
+		54 container Object conversation result
+			55 button CORNE · SOURCE CAD
+			56 button Close object conversation
+			57 text THE TRADEOFF
+			58 heading The fit is only half the story., Value: 2
+				59 text The fit is only half the story.
+			60 text The proposed charging current exceeds the cell’s documented limit. Open the source, or ask for a different charging rate.
+			82 button Show the obstruction
+			61 button (collapsed) Design notebook 6 sources · 70k characters, Secondary Actions: Expand
+				62 text Design notebook
+				63 container
+					64 text 6  sources ·  70 k characters
+			65 button Inspect this view with Gemini
+			66 button (collapsed) Show evidence, Secondary Actions: Expand
+		67 container Conversation with the object
+			68 container Active design constraints
+				69 text Same case + PCB USB charging ≥  500  mA Battery ≤  4  mm
+			85 text No catalog battery meets all constraints: the 3.8 mm Adafruit 150 mAh LiPo fits the 4 mm height limit and Corne socket gap, but 500 mA nice!nano charging exceeds its 150 mA limit, while the 500 mAh LiPo is 4.75 mm tall.
+			86 button Adafruit 150 mAh · product description §1
+				87 text Adafruit 150 mAh · product description
+				88 container
+					89 text § 1
+			90 button Adafruit 500 mAh · product description §1
+				91 text Adafruit 500 mAh · product description
+				92 container
+					93 text § 1
+			94 button nice!nano · manufacturer specifications §1
+				95 text nice!nano · manufacturer specifications
+				96 container
+					97 text § 1
+			98 container Compare design
+				99 checkbox Before, Value: 0
+				100 checkbox Proposed, Value: 1
+			101 container Design revisions
+				102 checkbox Description: Inspect revision 1, Value: 0
+				103 checkbox Description: Inspect revision 2, Value: 0
+				104 checkbox Description: Inspect revision 3, Value: 1
+			105 text 1 unresolved
+			106 button (disabled) Apply proposal
+			72 container
+				73 text entry area (settable) Ask or change this object
+				74 button (disabled) Send to object
+			107 button Explain the conflict using the documents
+			108 button Use normal 100 mA charging. Keep the other constraints
+			78 button (collapsed) Description: Conversation history, Secondary Actions: Expand
+
+The focused UI element is 0 AXWebArea Flare — See what makes it work., URL: 127.0.0.1:3001/

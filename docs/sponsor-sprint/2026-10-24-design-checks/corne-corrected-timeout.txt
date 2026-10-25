@@ -1,0 +1,113 @@
+LUMI / DESIGN REVIEW
+Review incomplete
+
+Candidate preview · your saved object is unchanged.
+
+THE DESIGN BRIEF
+Assembled
+Top
+Exploded
+First checked
+Retained candidate
+
+Actual geometry and source materials · locked comparison cameras
+
+Compare at full size
+MEASURED DESIGN CHECKS
+5/6 supported
+
+Argon interprets your request. Geometry checks compute the results below. The requirements stay fixed across revisions.
+
+ESP32-C3 module · fit study: enclosure clearance
+Needs correction
+Original
+-36.6 mm
+First attempt
+-36.6 mm
+Retained
+-36.6 mm
+Why this result?
+ESP32-C3 module · fit study: envelope separation
+Passed
+Original
+10.99 mm
+First attempt
+10.99 mm
+Retained
+10.99 mm
+Why this result?
+ESP32-C3 module · fit study: envelope separation
+Passed
+Original
+33.407 mm
+First attempt
+33.407 mm
+Retained
+33.407 mm
+Why this result?
+Original geometry preserved
+Passed
+Original
+0 changed
+First attempt
+0 changed
+Retained
+0 changed
+Why this result?
+Original geometry preserved
+Passed
+Original
+0 changed
+First attempt
+0 changed
+Retained
+0 changed
+Why this result?
+Existing interior placements retained
+Passed
+Original
+0 placements lost
+First attempt
+0 placements lost
+Retained
+0 placements lost
+Why this result?
+3 supported
+2 issues
+0 unverified
+NEEDS ATTENTION
+Move the ESP32-C3 module inside the Corne enclosure
+
+In the assembled and top views, the ESP32-C3 module is positioned outside the right side of the Corne enclosure rather than inside the case interior.
+
+NEEDS ATTENTION
+0.2 mm clearance
+
+The enclosure clearance check fails with a minimum envelope-to-interior margin of -36.6 mm against the required 0.2 mm because the ESP32-C3 module lies outside the Corne enclosure.
+
+SUPPORTED BY THE VIEWS
+Leave 0.2 mm separation from the Corne PCB
+
+The ESP32-C3 module currently has a 10.99 mm conservative envelope gap from the Corne PCB, exceeding the 0.2 mm minimum separation.
+
+SUPPORTED BY THE VIEWS
+acoustic insert
+
+The acoustic insert is present inside the Corne enclosure floor area and currently has a 33.407 mm conservative envelope gap from the ESP32-C3 module.
+
+SUPPORTED BY THE VIEWS
+Keep every existing keyboard component unchanged
+
+All 69 existing keyboard components retain their original geometry and placement.
+
+1 recorded review
+
+Gemini took too long to respond. Please try again.
+
+Measured checks and limits
+
+Visual findings are Argon’s judgments about these images. Mechanical tolerances, forces, wiring, firmware and physical operation require separate verification.
+
+Use this draft
+Review again
+Return to saved object

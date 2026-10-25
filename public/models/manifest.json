@@ -1,0 +1,100 @@
+[
+  {
+    "id": "esp32-wroom-32",
+    "file": "RF_Module.3dshapes/ESP32-WROOM-32.wrl",
+    "mapsTo": [
+      "esp32-devkit"
+    ],
+    "note": "Exact WROOM-32 module CAD on an illustrative DevKit carrier. Carrier PCB and header anchors are procedural, not manufacturing CAD.",
+    "url": "/models/esp32-wroom-32.glb",
+    "source": "https://github.com/KiCad/kicad-packages3D/blob/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/RF_Module.3dshapes/ESP32-WROOM-32.wrl",
+    "rawSource": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/RF_Module.3dshapes/ESP32-WROOM-32.wrl",
+    "commit": "b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a",
+    "sourceSha256": "0a8a7fef1cc34722f4f30bada70c9a928febc4c90804dea15dde18d7aa6e3d65",
+    "glbSha256": "0c08a8aa6d975693f7546d36eb625196eba6937d69f2fc9d37ad0e6973be96a0",
+    "bytes": 553976,
+    "meshes": 4,
+    "dimensionsMm": [
+      17.999963760375977,
+      3.0999937057495117,
+      25.499948501586914
+    ],
+    "license": "CC-BY-SA-4.0 with KiCad library exception",
+    "attribution": "KiCad library contributors",
+    "modifications": "Converted VRML to GLB; units converted from 0.1 inch to mm; rotated z-up to y-up; origin centered at base; material shaders converted to standard PBR; identical-material geometries merged without decimation."
+  },
+  {
+    "id": "led-5mm",
+    "file": "LED_THT.3dshapes/LED_D5.0mm.wrl",
+    "mapsTo": [
+      "led-red"
+    ],
+    "note": "Generic 5 mm two-lead through-hole LED package, not a supplier-specific LED.",
+    "url": "/models/led-5mm.glb",
+    "source": "https://github.com/KiCad/kicad-packages3D/blob/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/LED_THT.3dshapes/LED_D5.0mm.wrl",
+    "rawSource": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/LED_THT.3dshapes/LED_D5.0mm.wrl",
+    "commit": "b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a",
+    "sourceSha256": "1d7aec1ec3d417cbaef9ac7db81d4fd6949590347cbedf4cdaf09d101ae02f9e",
+    "glbSha256": "9cd84d2ab444213f3d45426136a0b08efea2cabc96fa5afc5f0ea71535209955",
+    "bytes": 69452,
+    "meshes": 2,
+    "dimensionsMm": [
+      5.399991512298584,
+      14.099971771240234,
+      5.799937725067139
+    ],
+    "license": "CC-BY-SA-4.0 with KiCad library exception",
+    "attribution": "KiCad library contributors",
+    "modifications": "Converted VRML to GLB; units converted from 0.1 inch to mm; rotated z-up to y-up; origin centered at base; material shaders converted to standard PBR; identical-material geometries merged without decimation."
+  },
+  {
+    "id": "led-rgb-5mm",
+    "file": "LED_THT.3dshapes/LED_D5.0mm-4_RGB.wrl",
+    "mapsTo": [
+      "rgb-led"
+    ],
+    "note": "Generic 5 mm four-lead RGB LED package. Common-cathode electrical pin assignments remain defined by the project library.",
+    "url": "/models/led-rgb-5mm.glb",
+    "source": "https://github.com/KiCad/kicad-packages3D/blob/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/LED_THT.3dshapes/LED_D5.0mm-4_RGB.wrl",
+    "rawSource": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/LED_THT.3dshapes/LED_D5.0mm-4_RGB.wrl",
+    "commit": "b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a",
+    "sourceSha256": "2d4f9012b98a291393114acd1af33fb67fd12c2f393d15577a7320809fc68f3c",
+    "glbSha256": "cf242bf2df647dee7912e45b51fa6b754026522455e06cb4c27862e98ea4714a",
+    "bytes": 71924,
+    "meshes": 2,
+    "dimensionsMm": [
+      5.399994373321533,
+      14.099971771240234,
+      5.799937725067139
+    ],
+    "license": "CC-BY-SA-4.0 with KiCad library exception",
+    "attribution": "KiCad library contributors",
+    "modifications": "Converted VRML to GLB; units converted from 0.1 inch to mm; rotated z-up to y-up; origin centered at base; material shaders converted to standard PBR; identical-material geometries merged without decimation."
+  },
+  {
+    "id": "resistor-din0207",
+    "file": "Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal.wrl",
+    "mapsTo": [
+      "resistor-220",
+      "resistor-1k",
+      "resistor-10k"
+    ],
+    "note": "Generic DIN0207 axial resistor package. Geometry and illustrative painted bands do not certify resistance or real lead spacing.",
+    "url": "/models/resistor-din0207.glb",
+    "source": "https://github.com/KiCad/kicad-packages3D/blob/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal.wrl",
+    "rawSource": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal.wrl",
+    "commit": "b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a",
+    "sourceSha256": "1c2bf3f4c3159d558a91f2b539eec05de80d28c5350b74b08284e7b15e18f82a",
+    "glbSha256": "b35c590ede7633de7470a853d4f3d859a97124ff3da7a45bbc9e3d7bb79d248f",
+    "bytes": 254952,
+    "meshes": 2,
+    "dimensionsMm": [
+      8.214360237121582,
+      5.499100208282471,
+      2.4993600845336914
+    ],
+    "license": "CC-BY-SA-4.0 with KiCad library exception",
+    "attribution": "KiCad library contributors",
+    "modifications": "Converted VRML to GLB; units converted from 0.1 inch to mm; rotated z-up to y-up; origin centered at base; material shaders converted to standard PBR; identical-material geometries merged without decimation."
+  }
+]

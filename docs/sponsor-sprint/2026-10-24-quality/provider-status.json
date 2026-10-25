@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-24T21:03:52.217886-07:00",
+  "origin": "http://127.0.0.1:3001",
+  "status": {
+    "configured": true,
+    "available": true,
+    "provider": "gemini",
+    "model": "gemini-4-argon"
+  }
+}

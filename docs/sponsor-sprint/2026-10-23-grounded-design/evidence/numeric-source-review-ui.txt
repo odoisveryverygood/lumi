@@ -1,0 +1,110 @@
+Browser tab: 4, Title: "Flare — See what makes it work.", URL: "http://127.0.0.1:3001/".
+1 AXWebArea Flare — See what makes it work., URL: 127.0.0.1:3001/
+	2 text WebGL is unavailable. Component properties and build instructions remain available.
+	3 container Every answer has a starting point.
+		4 container
+			5 text THE DESIGN NOTEBOOK
+			6 heading Every answer has a starting point., Value: 2, ID: notebook-title
+				7 text Every answer has a starting point.
+			8 button Close design notebook
+		9 text 7  files together 69,686  characters 0  visual attachments
+		10 text Full included documents are sent with each design request.
+		11 container Design source files
+			12 text REFERENCE + YOUR FILES
+			13 checkbox Adafruit 150 mAh · product description PRIMARY SOURCE · 1 sections, Value: 0
+				14 text Adafruit 150 mAh · product description
+				15 container
+					16 text PRIMARY SOURCE  ·  1 sections
+			17 checkbox Adafruit 500 mAh · product description PRIMARY SOURCE · 1 sections, Value: 0
+				18 text Adafruit 500 mAh · product description
+				19 container
+					20 text PRIMARY SOURCE  ·  1 sections
+			21 checkbox nice!nano · manufacturer specifications PRIMARY SOURCE · 1 sections, Value: 0
+				22 text nice!nano · manufacturer specifications
+				23 container
+					24 text PRIMARY SOURCE  ·  1 sections
+			25 checkbox nice!nano · battery and integration guide PRIMARY SOURCE · 1 sections, Value: 0
+				26 text nice!nano · battery and integration guide
+				27 container
+					28 text PRIMARY SOURCE  ·  1 sections
+			29 checkbox Seeed XIAO · hardware documentation PRIMARY SOURCE · 1 sections, Value: 0
+				30 text Seeed XIAO · hardware documentation
+				31 container
+					32 text PRIMARY SOURCE  ·  1 sections
+			33 checkbox Corne · pinned original build guide PRIMARY SOURCE · 1 sections, Value: 0
+				34 text Corne · pinned original build guide
+				35 container
+					36 text PRIMARY SOURCE  ·  1 sections
+			67 checkbox Adafruit-150mAh-product-description.txt TEXT · 1 sections, Value: 1
+				68 text Adafruit-150mAh-product-description.txt
+				69 container
+					70 text TEXT  ·  1 sections
+			37 text Associate a new file with
+			38 pop up button (collapsed, settable) Associate a new file with, Value: Adafruit 150 mAh LiPo, ID: source-association, Secondary Actions: Expand
+				39 menu
+					40 General design / BOM / schematic
+					41 (selected) Adafruit 150 mAh LiPo
+					42 Adafruit 500 mAh LiPo
+					43 Feather nRF52840 Express
+					44 XIAO nRF52840 Sense
+					45 nice!nano BLE controller
+			46 button Add a design file
+			47 text PDF, image, text, CSV or KiCad source · 2 MB per file · PDFs up to 40 pages
+		49 container
+			50 text YOUR DESIGN FILE
+			51 heading Adafruit-150mAh-product-description.txt, Value: 3
+				52 text Adafruit-150mAh-product-description.txt
+			71 button Remove this document
+			54 button Export source record
+			55 container 9c2a3168b51e2a87996a95216ac6758fd4dd7fa3f3b200a25b3ca29fdaa8016b
+				56 text SHA-256  9c2a3168b51e
+			57 heading Extracted numbers · compare with the original, Value: 4
+				58 text Extracted numbers · compare with the original
+			59 text 150  mA maximum battery charge current
+			72 checkbox Reviewed · used in checks, Value: 1
+			73 text at a rate of 150mA or less. TEXT SECTION 1
+			60 button (disabled) Previous source page
+			61 text 1  /  1
+			62 button (disabled) Next source page
+			63 text Source: https://www.adafruit.com/product/1317
+Product: Adafruit 150 mAh 3.7 V LiPo
+
+Lithium-ion polymer (also known as 'lipo' or 'lipoly') batteries are thin, light, and powerful. The output ranges from 4.2V when completely charged to 3.7V. This battery has a capacity of 150mAh for a total of about 0.6 Wh. If you need a larger battery, [we have a full range of bigger cells](http://www.adafruit.com/category/44_138)  
+  
+The batteries come pre-attached with a genuine 2-pin JST-PH connector as shown and include the necessary protection circuitry. Because they have a genuine JST connector, not a knock-off, the cable won't snag or get stuck in a matching JST jack, they click in and out smoothly.  
+  
+The included protection circuitry keeps the battery voltage from going too high (over-charging) or low (over-use) which means that the battery will cut out when completely dead at 3.0V. It will also protect against output shorts. However, even with this protection, **it is very important that you only use [a LiIon/LiPoly constant-voltage/constant-current charger to recharge them](http://www.adafruit.com/category/44_138) and at a rate of 150mA or less.** [We suggest our Micro Lipo charger, which has a 100mA default rate.](http://www.adafruit.com/products/1304)
+
+Like most lipos, the batteries we sell do not have thermistors built-in. This is why we suggest charging at 1 C or even less - 100mA is a good rate, and available from any USB port if using a USB-powered charger  
+  
+**Additional safety notes:** Do not use a NiMH/NiCad/lead-acid charger! Also, do not abuse these batteries, do not short, bend, crush, or puncture. **Never charge or use unattended. Always inspect batteries and surrounding circuitry constantly for any damage, loose wiring, or the possibility of short circuits.** Polarity matches all Adafruit LiPoly/LiIon chargers and boards, other brands may have reverse polarity and can destroy your battery. As with all Lithium-ion polymer batteries and with any power source - they should be used by experts who are comfortable working with power supplies.
+
+## Technical Details
+
+**Revision History:**
+
+*   **As of Jan 12, 2024 -** The battery now has the JST cable taped down on top to prevent ripping.
+
+  
+**Details:**
+
+*   Weight: 4.65g
+*   Size: 19.75mm x 26.02mm x 3.8mm / 0.77" x 1.02" x 0.14"
+*   Power Lead Length: 127.5mm / 5"
+*   Output: 150mAh at 3.7V nominal
+
+*   [MSDS Report](https://cdn-shop.adafruit.com/product-files/1317/1317+msds.pdf)
+*   [UN38.3 Report](https://cdn-shop.adafruit.com/product-files/1317/1317_LP402025+UN38.3.pdf)
+*   [Datasheet](https://cdn-shop.adafruit.com/product-files/1317/C1515_-_Li-Polymer_402025_150mAh_3.7V_with_PCM.pdf)
+
+![RoHS 2 2011 65 EU Compliant](/includes/templates/shop2019/images/RoHS2_2011_65_EU.svg)
+
+![RoHS 2 2015 863 EU Compliant](/includes/templates/shop2019/images/RoHS2_2015_863_EU.svg)
+
+ Your file is stored in this browser’s notebook and sent to Gemini when you ask a design question. Excerpts are matched against extracted text. Review numerical extractions before enabling them for checks.
+		74 text Imported Adafruit-150mAh-product-description.txt. 1 numerical facts need your review.
+		64 container
+			65 text An assembly, its documents, and your question. In one conversation.
+			66 button Export notebook
+
+The focused UI element is 72 checkbox Reviewed · used in checks, Value: 1

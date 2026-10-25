@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-10-24T21:03:52.217886-07:00",
+  "url": "https://ai.google.dev/gemini-api/docs/image-understanding",
+  "method": "Bright Data scrape; inspected inline-image examples",
+  "observed": "Official Interactions image input uses type image, data base64 and mime_type image/jpeg. Lumi sends all three recorded renders in this format.",
+  "liveUse": "See sensor-evaluation.json and fan-evaluation.json; provider model pinned to gemini-4-argon"
+}

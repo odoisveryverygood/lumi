@@ -1,0 +1,2847 @@
+{
+  "document": {
+    "version": 1,
+    "id": "desktop-fan-608",
+    "name": "Adjustable Desktop Fan with 608 Axle Bearing",
+    "description": "Compact personal desktop fan featuring an exposed three-blade rotor, open-front circular safety cage, tilted yoke stand, rotary speed knob, and a sourced 608 ball bearing supporting the 8 mm main drive axle.",
+    "provenance": "AI generated conceptual assembly. Geometry, dimensions and specifications are illustrative; no CAD fit, wiring or hardware operation has been verified.",
+    "parts": [
+      {
+        "id": "base-stand",
+        "name": "Weighted Base Stand",
+        "category": "structure",
+        "description": "Heavy cast-metal and polymer desktop base housing the speed control PCB and anti-slip feet.",
+        "role": "Heavy cast-metal and polymer desktop base housing the speed control PCB and anti-slip feet.",
+        "position": [
+          0,
+          12,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          136,
+          25,
+          151
+        ],
+        "explode": [
+          0,
+          -45,
+          0
+        ],
+        "color": "#2a3038",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -2,
+              0
+            ],
+            "size": [
+              130,
+              14,
+              136
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a3038",
+            "metalness": 0.4,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              0
+            ],
+            "size": [
+              116,
+              6,
+              130
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.35,
+            "roughness": 0.55
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              11,
+              0
+            ],
+            "size": [
+              66,
+              6,
+              78
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#232830",
+            "metalness": 0.4,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              5,
+              44
+            ],
+            "size": [
+              36,
+              10,
+              28
+            ],
+            "rotation": [
+              12,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.35,
+            "roughness": 0.55
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -22,
+              -9,
+              -34
+            ],
+            "size": [
+              20,
+              4,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              22,
+              -9,
+              -34
+            ],
+            "size": [
+              20,
+              4,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -22,
+              -9,
+              34
+            ],
+            "size": [
+              20,
+              4,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              22,
+              -9,
+              34
+            ],
+            "size": [
+              20,
+              4,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -2,
+              -63
+            ],
+            "size": [
+              10,
+              8,
+              10
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#181a1f",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -2,
+              -74
+            ],
+            "size": [
+              5,
+              18,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#181a1f",
+            "metalness": 0.2,
+            "roughness": 0.8
+          }
+        ],
+        "specs": {
+          "Dimensions": "130 × 24 × 130 mm",
+          "Material": "Die-cast zinc + ABS top shell"
+        },
+        "connections": []
+      },
+      {
+        "id": "control-pcb",
+        "name": "PWM Speed Controller PCB",
+        "category": "electronics",
+        "description": "Internal low-voltage DC motor controller board with rotary potentiometer, inductor, and USB-C power input.",
+        "role": "Internal low-voltage DC motor controller board with rotary potentiometer, inductor, and USB-C power input.",
+        "position": [
+          0,
+          14,
+          16
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          48,
+          21,
+          63
+        ],
+        "explode": [
+          0,
+          -24,
+          35
+        ],
+        "color": "#1b5e3a",
+        "solids": [
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              48,
+              2,
+              56
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b5e3a",
+            "metalness": 0.2,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              6,
+              28
+            ],
+            "size": [
+              14,
+              10,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#8c9298",
+            "metalness": 0.8,
+            "roughness": 0.3
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              15,
+              28
+            ],
+            "size": [
+              6,
+              10,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d4af37",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              3,
+              -22
+            ],
+            "size": [
+              9,
+              3.5,
+              11
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#b8bfc6",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "box",
+            "position": [
+              -12,
+              3,
+              -4
+            ],
+            "size": [
+              10,
+              4,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1f",
+            "metalness": 0.2,
+            "roughness": 0.7
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              12,
+              5,
+              -6
+            ],
+            "size": [
+              10,
+              8,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#22262c",
+            "metalness": 0.6,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              -9,
+              2,
+              8
+            ],
+            "size": [
+              3,
+              1.5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d2b48c",
+            "metalness": 0.3,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              -3,
+              2,
+              8
+            ],
+            "size": [
+              3,
+              1.5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d2b48c",
+            "metalness": 0.3,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              3,
+              2,
+              8
+            ],
+            "size": [
+              3,
+              1.5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d2b48c",
+            "metalness": 0.3,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              9,
+              2,
+              8
+            ],
+            "size": [
+              3,
+              1.5,
+              5
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d2b48c",
+            "metalness": 0.3,
+            "roughness": 0.5
+          }
+        ],
+        "specs": {
+          "Input": "5V–12V DC USB-C",
+          "Control": "25 kHz PWM stepless dimmer"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "base-stand",
+          "anchor": [
+            0.5,
+            0.52,
+            0.6556291390728477
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "speed-knob",
+        "name": "Knurled Speed Knob",
+        "category": "control",
+        "description": "Machined aluminum rotary dial on the front of the base for stepless fan speed control.",
+        "role": "Machined aluminum rotary dial on the front of the base for stepless fan speed control.",
+        "position": [
+          0,
+          28,
+          44
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          30,
+          16.35,
+          30
+        ],
+        "explode": [
+          0,
+          22,
+          55
+        ],
+        "color": "#d6dce2",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              28,
+              14,
+              30
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              7.5,
+              0
+            ],
+            "size": [
+              24,
+              2,
+              26
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#22262c",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              8.6,
+              7
+            ],
+            "size": [
+              2.4,
+              1.5,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.2,
+            "roughness": 0.4
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              14.2
+            ],
+            "size": [
+              1.6,
+              12,
+              1.6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#aeb6bf",
+            "metalness": 0.8,
+            "roughness": 0.35
+          }
+        ],
+        "specs": {
+          "Diameter": "28 mm",
+          "Finish": "Brushed anodized aluminum"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "base-stand",
+          "anchor": [
+            0.5,
+            1.08,
+            0.8410596026490066
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "tilt-yoke",
+        "name": "U-Shaped Tilt Yoke",
+        "category": "structure",
+        "description": "Rigid curved support arm bolted to the base that cradles the fan head between dual pivot trunnions.",
+        "role": "Rigid curved support arm bolted to the base that cradles the fan head between dual pivot trunnions.",
+        "position": [
+          0,
+          88,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          174,
+          134,
+          52
+        ],
+        "explode": [
+          0,
+          -15,
+          -40
+        ],
+        "color": "#343c46",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -64,
+              0
+            ],
+            "size": [
+              46,
+              8,
+              52
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -42,
+              0
+            ],
+            "size": [
+              24,
+              38,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -23,
+              0
+            ],
+            "size": [
+              174,
+              10,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              -83,
+              16,
+              0
+            ],
+            "size": [
+              8,
+              78,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "box",
+            "position": [
+              83,
+              16,
+              0
+            ],
+            "size": [
+              8,
+              78,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -83,
+              55,
+              0
+            ],
+            "size": [
+              22,
+              8,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              83,
+              55,
+              0
+            ],
+            "size": [
+              22,
+              8,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#343c46",
+            "metalness": 0.5,
+            "roughness": 0.45
+          }
+        ],
+        "specs": {
+          "Span": "166 mm inner clearance",
+          "Material": "Powder-coated steel"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "base-stand",
+          "anchor": [
+            0.5,
+            3.48,
+            0.5496688741721855
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "tilt-knobs",
+        "name": "Tilt Locking Thumb Knobs",
+        "category": "hardware",
+        "description": "Left and right threaded clamping knobs that lock the fan head at the desired upward tilt angle.",
+        "role": "Left and right threaded clamping knobs that lock the fan head at the desired upward tilt angle.",
+        "position": [
+          0,
+          143,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          194,
+          26,
+          26
+        ],
+        "explode": [
+          0,
+          18,
+          0
+        ],
+        "color": "#1e2229",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              -92,
+              0,
+              0
+            ],
+            "size": [
+              26,
+              10,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#1e2229",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -78,
+              0,
+              0
+            ],
+            "size": [
+              6,
+              22,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#c4cbd2",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -74,
+              0,
+              0
+            ],
+            "size": [
+              20,
+              3,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              92,
+              0,
+              0
+            ],
+            "size": [
+              26,
+              10,
+              22
+            ],
+            "rotation": [
+              0,
+              0,
+              -90
+            ],
+            "color": "#1e2229",
+            "metalness": 0.3,
+            "roughness": 0.6
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              78,
+              0,
+              0
+            ],
+            "size": [
+              6,
+              22,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#c4cbd2",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              74,
+              0,
+              0
+            ],
+            "size": [
+              20,
+              3,
+              20
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#141619",
+            "metalness": 0.1,
+            "roughness": 0.9
+          }
+        ],
+        "specs": {
+          "Thread": "M6 × 16 mm",
+          "Function": "Friction tilt lock"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "tilt-yoke",
+          "anchor": [
+            0.5,
+            0.917910447761194,
+            0.5
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "motor-housing",
+        "name": "Tilted Motor Pod & Bearing Boss",
+        "category": "housing",
+        "description": "Vented rear nacelle tilted upward by 12 degrees, featuring a precision 22 mm front pocket for the 608 axle bearing.",
+        "role": "Vented rear nacelle tilted upward by 12 degrees, featuring a precision 22 mm front pocket for the 608 axle bearing.",
+        "position": [
+          0,
+          141.7,
+          -5.88
+        ],
+        "rotation": [
+          -12,
+          0,
+          0
+        ],
+        "size": [
+          118,
+          64,
+          68
+        ],
+        "explode": [
+          0,
+          25,
+          -85
+        ],
+        "color": "#2a3038",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              58,
+              46,
+              54
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#2a3038",
+            "metalness": 0.4,
+            "roughness": 0.55
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              0,
+              -23
+            ],
+            "size": [
+              54,
+              54,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#2a3038",
+            "metalness": 0.4,
+            "roughness": 0.55
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              24
+            ],
+            "size": [
+              34,
+              12,
+              42
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.45,
+            "roughness": 0.5
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              29
+            ],
+            "size": [
+              26,
+              4,
+              26
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.75,
+            "roughness": 0.3
+          },
+          {
+            "kind": "box",
+            "position": [
+              -12,
+              0,
+              -34
+            ],
+            "size": [
+              2.5,
+              28,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15181c",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              -6,
+              0,
+              -34
+            ],
+            "size": [
+              2.5,
+              28,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15181c",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -34
+            ],
+            "size": [
+              2.5,
+              28,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15181c",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              6,
+              0,
+              -34
+            ],
+            "size": [
+              2.5,
+              28,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15181c",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              12,
+              0,
+              -34
+            ],
+            "size": [
+              2.5,
+              28,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#15181c",
+            "metalness": 0.2,
+            "roughness": 0.8
+          },
+          {
+            "kind": "box",
+            "position": [
+              -42,
+              0,
+              6
+            ],
+            "size": [
+              34,
+              14,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.45,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              42,
+              0,
+              6
+            ],
+            "size": [
+              34,
+              14,
+              14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.45,
+            "roughness": 0.5
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -28,
+              -8
+            ],
+            "size": [
+              10,
+              14,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#181a1f",
+            "metalness": 0.2,
+            "roughness": 0.8
+          }
+        ],
+        "specs": {
+          "Tilt Angle": "12° upward",
+          "Bearing Seat": "22 mm OD × 7 mm deep bore"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "tilt-yoke",
+          "anchor": [
+            0.5,
+            0.9082089552238806,
+            0.3869230769230769
+          ],
+          "rotation": [
+            -11.999999999999998,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "dc-motor",
+        "name": "Brushless DC Drive Motor",
+        "category": "electronics",
+        "description": "High-efficiency internal brushless DC motor core with copper stator windings and rear flux ring.",
+        "role": "High-efficiency internal brushless DC motor core with copper stator windings and rear flux ring.",
+        "position": [
+          0,
+          141.18,
+          -8.32
+        ],
+        "rotation": [
+          -12,
+          0,
+          0
+        ],
+        "size": [
+          44,
+          44,
+          41
+        ],
+        "explode": [
+          0,
+          35,
+          -55
+        ],
+        "color": "#b8bfc6",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              44,
+              32,
+              44
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b8bfc6",
+            "metalness": 0.85,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              2
+            ],
+            "size": [
+              36,
+              36,
+              36
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b87333",
+            "metalness": 0.75,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -18
+            ],
+            "size": [
+              22,
+              6,
+              22
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#22262c",
+            "metalness": 0.5,
+            "roughness": 0.5
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              -16,
+              -16
+            ],
+            "size": [
+              14,
+              6,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#1b5e3a",
+            "metalness": 0.2,
+            "roughness": 0.6
+          }
+        ],
+        "specs": {
+          "Nominal Voltage": "12V DC",
+          "Speed Range": "800–2600 RPM"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "motor-housing",
+          "anchor": [
+            0.5,
+            0.5468541839564653,
+            0.5074294966909453
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "fan-axle",
+        "name": "8 mm Stainless Drive Axle",
+        "category": "mechanical",
+        "description": "Precision ground 8 mm stainless steel shaft coupling the motor rotor through the 608 bearing to the three-blade hub.",
+        "role": "Precision ground 8 mm stainless steel shaft coupling the motor rotor through the 608 bearing to the three-blade hub.",
+        "position": [
+          0,
+          145.65,
+          12.73
+        ],
+        "rotation": [
+          -12,
+          0,
+          0
+        ],
+        "size": [
+          12,
+          12,
+          56
+        ],
+        "explode": [
+          0,
+          12,
+          20
+        ],
+        "color": "#e2e6ea",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              8,
+              54,
+              8
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#e2e6ea",
+            "metalness": 0.92,
+            "roughness": 0.15
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              7
+            ],
+            "size": [
+              12,
+              3,
+              12
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#c4cbd2",
+            "metalness": 0.85,
+            "roughness": 0.25
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              27.5
+            ],
+            "size": [
+              5,
+              3,
+              5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#b87333",
+            "metalness": 0.8,
+            "roughness": 0.3
+          }
+        ],
+        "specs": {
+          "Diameter": "8.0 mm (fits 608 bore)",
+          "Length": "54 mm",
+          "Material": "303 Stainless Steel"
+        },
+        "connections": []
+      },
+      {
+        "id": "axle-bearing",
+        "name": "608 Axle Ball Bearing",
+        "category": "Motion",
+        "description": "Sourced 608 deep-groove ball bearing (8 mm bore, 22 mm OD, 7 mm width) seated in the front motor boss to support axial and radial rotor loads.",
+        "role": "608 bearing: 8 mm bore, 22 mm outer diameter, 7 mm width.",
+        "position": [
+          0,
+          146.9,
+          18.6
+        ],
+        "rotation": [
+          78,
+          0,
+          0
+        ],
+        "explode": [
+          0,
+          18,
+          48
+        ],
+        "color": "#c8d0d8",
+        "specs": {
+          "Catalog source": "NopSCADlib",
+          "Source revision": "00ec2898c0a2cdebd446f0175671b633d5ae7d5f",
+          "License": "GPL-3.0-or-later",
+          "CAD envelope": "22 × 7 × 22 mm",
+          "Source SHA-256": "642617b64c9ce3cea4b88c68131c19abff167634f759a7d0ce61228a877582b7"
+        },
+        "connections": [],
+        "notes": "Sourced NopSCADlib geometry, tessellated and centered in millimetres (Y up). Placement, finish and annotations are editable. Standard dimensions are preserved. Source CAD does not verify fit, wiring, load capacity or operation of this assembly. License: GPL-3.0-or-later.",
+        "catalogRef": {
+          "id": "bearing-608"
+        },
+        "attachment": {
+          "parentId": "motor-housing",
+          "anchor": [
+            0.5,
+            0.5468232708218292,
+            0.9121499126208221
+          ],
+          "rotation": [
+            89.99999999999999,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "circular-grille",
+        "name": "Circular Rear & Perimeter Safety Grille",
+        "category": "structure",
+        "description": "Open-front wire and ring safety cage with radial struts and concentric rings framing the exposed rotor.",
+        "role": "Open-front wire and ring safety cage with radial struts and concentric rings framing the exposed rotor.",
+        "position": [
+          0,
+          146.48,
+          16.65
+        ],
+        "rotation": [
+          -12,
+          0,
+          0
+        ],
+        "size": [
+          166,
+          165,
+          41
+        ],
+        "explode": [
+          0,
+          30,
+          -25
+        ],
+        "color": "#d6dce2",
+        "solids": [
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              78,
+              3,
+              78
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.45,
+            "roughness": 0.45
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              0,
+              4
+            ],
+            "size": [
+              80,
+              2.5,
+              80
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              0,
+              20
+            ],
+            "size": [
+              78,
+              3,
+              78
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.45,
+            "roughness": 0.45
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              56,
+              1.6,
+              56
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "torus",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              34,
+              1.6,
+              34
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              62,
+              4,
+              62
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#343c46",
+            "metalness": 0.45,
+            "roughness": 0.5
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              78,
+              4
+            ],
+            "size": [
+              3.5,
+              34,
+              3.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              -78,
+              4
+            ],
+            "size": [
+              3.5,
+              34,
+              3.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -78,
+              0,
+              4
+            ],
+            "size": [
+              3.5,
+              34,
+              3.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              78,
+              0,
+              4
+            ],
+            "size": [
+              3.5,
+              34,
+              3.5
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -55.2,
+              55.2,
+              4
+            ],
+            "size": [
+              3,
+              34,
+              3
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              55.2,
+              55.2,
+              4
+            ],
+            "size": [
+              3,
+              34,
+              3
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -55.2,
+              -55.2,
+              4
+            ],
+            "size": [
+              3,
+              34,
+              3
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              55.2,
+              -55.2,
+              4
+            ],
+            "size": [
+              3,
+              34,
+              3
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              4,
+              156,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              4,
+              156,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              60
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "box",
+            "position": [
+              0,
+              0,
+              -12
+            ],
+            "size": [
+              4,
+              156,
+              3
+            ],
+            "rotation": [
+              0,
+              0,
+              -60
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.8,
+            "roughness": 0.28
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -79,
+              0,
+              -12
+            ],
+            "size": [
+              12,
+              8,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#2a3038",
+            "metalness": 0.4,
+            "roughness": 0.5
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              79,
+              0,
+              -12
+            ],
+            "size": [
+              12,
+              8,
+              12
+            ],
+            "rotation": [
+              0,
+              0,
+              90
+            ],
+            "color": "#2a3038",
+            "metalness": 0.4,
+            "roughness": 0.5
+          }
+        ],
+        "specs": {
+          "Outer Diameter": "160 mm",
+          "Depth": "34 mm",
+          "Configuration": "Open-front perimeter + rear finger guard"
+        },
+        "connections": [],
+        "attachment": {
+          "parentId": "motor-housing",
+          "anchor": [
+            0.5,
+            0.5467389865216168,
+            0.88281593127414
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "id": "three-blade-rotor",
+        "name": "Exposed Three-Blade Rotor",
+        "category": "mechanical",
+        "description": "High-visibility orange three-blade aerodynamic impeller with a machined aluminum nose cone mounted directly ahead of the 608 bearing.",
+        "role": "High-visibility orange three-blade aerodynamic impeller with a machined aluminum nose cone mounted directly ahead of the 608 bearing.",
+        "position": [
+          0,
+          149.4,
+          30.34
+        ],
+        "rotation": [
+          -12,
+          0,
+          0
+        ],
+        "size": [
+          129.607,
+          112.978,
+          25
+        ],
+        "explode": [
+          0,
+          25,
+          95
+        ],
+        "color": "#ff5a1f",
+        "solids": [
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              30,
+              16,
+              34
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              0,
+              8
+            ],
+            "size": [
+              30,
+              30,
+              16
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#d6dce2",
+            "metalness": 0.85,
+            "roughness": 0.2
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              0,
+              -5
+            ],
+            "size": [
+              20,
+              8,
+              20
+            ],
+            "rotation": [
+              90,
+              0,
+              0
+            ],
+            "color": "#2a3038",
+            "metalness": 0.5,
+            "roughness": 0.4
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              0,
+              39,
+              0
+            ],
+            "size": [
+              28,
+              56,
+              4.5
+            ],
+            "rotation": [
+              0,
+              24,
+              0
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              -33.77,
+              -19.5,
+              0
+            ],
+            "size": [
+              28,
+              56,
+              4.5
+            ],
+            "rotation": [
+              -20.78,
+              -12,
+              -60
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          },
+          {
+            "kind": "sphere",
+            "position": [
+              33.77,
+              -19.5,
+              0
+            ],
+            "size": [
+              28,
+              56,
+              4.5
+            ],
+            "rotation": [
+              20.78,
+              -12,
+              60
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              0,
+              16,
+              0
+            ],
+            "size": [
+              7,
+              10,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              -13.86,
+              -8,
+              0
+            ],
+            "size": [
+              7,
+              10,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              -60
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          },
+          {
+            "kind": "cylinder",
+            "position": [
+              13.86,
+              -8,
+              0
+            ],
+            "size": [
+              7,
+              10,
+              9
+            ],
+            "rotation": [
+              0,
+              0,
+              60
+            ],
+            "color": "#ff5a1f",
+            "metalness": 0.25,
+            "roughness": 0.35
+          }
+        ],
+        "specs": {
+          "Rotor Diameter": "136 mm",
+          "Blade Count": "3 pitched airfoils (120° spacing)",
+          "Hub Bore": "8 mm press-fit + set screw"
+        },
+        "connections": []
+      }
+    ],
+    "steps": [
+      {
+        "title": "Base & PWM Speed Control",
+        "description": "Place the PWM speed controller PCB inside the weighted desktop base and press the knurled aluminum speed knob onto the vertical potentiometer shaft.",
+        "partIds": [
+          "base-stand",
+          "control-pcb",
+          "speed-knob"
+        ]
+      },
+      {
+        "title": "Tilt Yoke & Motor Pod",
+        "description": "Mount the U-shaped tilt yoke to the base pedestal, position the vented motor housing at its 12-degree upward tilt, and secure both side trunnions with the locking thumb knobs.",
+        "partIds": [
+          "tilt-yoke",
+          "tilt-knobs",
+          "motor-housing"
+        ]
+      },
+      {
+        "title": "Motor, Axle & Sourced 608 Bearing",
+        "description": "Install the brushless DC motor inside the housing, slide the 8 mm stainless drive axle through the motor, and press the sourced 608 ball bearing (8 mm bore, 22 mm OD) into the front nose boss.",
+        "partIds": [
+          "dc-motor",
+          "fan-axle",
+          "axle-bearing"
+        ]
+      },
+      {
+        "title": "Circular Grille & Exposed Three-Blade Rotor",
+        "description": "Fasten the open-front circular safety grille around the motor pod and press the high-visibility three-blade rotor hub onto the protruding 8 mm axle in front of the 608 bearing.",
+        "partIds": [
+          "circular-grille",
+          "three-blade-rotor"
+        ]
+      }
+    ],
+    "source": "gemini",
+    "model": "gemini-4-argon",
+    "assemblies": [
+      {
+        "id": "stand-control-asm",
+        "name": "Base & Speed Control Assembly",
+        "partIds": [
+          "base-stand",
+          "control-pcb",
+          "speed-knob",
+          "tilt-yoke",
+          "tilt-knobs"
+        ]
+      },
+      {
+        "id": "fan-head-asm",
+        "name": "Tilted Fan Head & Rotor Assembly",
+        "partIds": [
+          "motor-housing",
+          "dc-motor",
+          "fan-axle",
+          "axle-bearing",
+          "circular-grille",
+          "three-blade-rotor"
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "id": "rel-base-pcb",
+        "from": "base-stand",
+        "to": "control-pcb",
+        "type": "contains",
+        "description": "Weighted base encloses the PWM motor speed controller PCB."
+      },
+      {
+        "id": "rel-knob-pcb",
+        "from": "speed-knob",
+        "to": "control-pcb",
+        "type": "mechanical",
+        "description": "Knurled aluminum speed knob couples to the potentiometer shaft on the control PCB."
+      },
+      {
+        "id": "rel-pcb-motor",
+        "from": "control-pcb",
+        "to": "dc-motor",
+        "type": "electrical",
+        "description": "PWM controller delivers variable-duty DC power through the yoke cable to the brushless motor."
+      },
+      {
+        "id": "rel-base-yoke",
+        "from": "base-stand",
+        "to": "tilt-yoke",
+        "type": "mechanical",
+        "description": "U-shaped tilt yoke bolts rigidly to the top pedestal of the weighted base."
+      },
+      {
+        "id": "rel-yoke-housing",
+        "from": "tilt-yoke",
+        "to": "motor-housing",
+        "type": "mechanical",
+        "description": "Tilt yoke cradles the motor housing side trunnions at a 12-degree upward angle."
+      },
+      {
+        "id": "rel-knobs-yoke",
+        "from": "tilt-knobs",
+        "to": "motor-housing",
+        "type": "mechanical",
+        "description": "Threaded thumb knobs clamp the yoke arms against the motor housing trunnions to lock the tilt angle."
+      },
+      {
+        "id": "rel-housing-motor",
+        "from": "motor-housing",
+        "to": "dc-motor",
+        "type": "contains",
+        "description": "Vented rear motor pod houses the brushless DC stator and rotor."
+      },
+      {
+        "id": "rel-housing-bearing",
+        "from": "motor-housing",
+        "to": "axle-bearing",
+        "type": "contains",
+        "description": "Front 22 mm nose pocket of the motor housing seats the outer race of the sourced 608 ball bearing."
+      },
+      {
+        "id": "rel-motor-axle",
+        "from": "dc-motor",
+        "to": "fan-axle",
+        "type": "mechanical",
+        "description": "Brushless DC motor drives the 8 mm stainless steel fan axle."
+      },
+      {
+        "id": "rel-bearing-axle",
+        "from": "axle-bearing",
+        "to": "fan-axle",
+        "type": "mechanical",
+        "description": "Sourced 608 bearing supports the 8 mm fan axle with low-friction rolling contact."
+      },
+      {
+        "id": "rel-axle-rotor",
+        "from": "fan-axle",
+        "to": "three-blade-rotor",
+        "type": "mechanical",
+        "description": "Front end of the 8 mm axle press-fits into the exposed three-blade rotor hub."
+      },
+      {
+        "id": "rel-housing-grille",
+        "from": "motor-housing",
+        "to": "circular-grille",
+        "type": "mechanical",
+        "description": "Circular safety grille mounts to the motor housing perimeter and pivot bosses."
+      }
+    ],
+    "mechanisms": [
+      {
+        "id": "rotor-spin",
+        "name": "Fan Speed & Rotor Spin",
+        "description": "Rotates the front speed knob and drives the 8 mm fan axle and exposed three-blade rotor on the 608 bearing.",
+        "duration": 2.5,
+        "motion": "linear",
+        "tracks": [
+          {
+            "partId": "speed-knob",
+            "rotation": [
+              0,
+              120,
+              0
+            ]
+          },
+          {
+            "partId": "fan-axle",
+            "rotation": [
+              0,
+              0,
+              1080
+            ]
+          },
+          {
+            "partId": "three-blade-rotor",
+            "rotation": [
+              0,
+              0,
+              1080
+            ]
+          }
+        ],
+        "stages": [
+          {
+            "at": 0,
+            "title": "Minimum Speed",
+            "description": "The knurled speed knob is at its low-speed stop while the rotor begins turning.",
+            "partIds": [
+              "speed-knob",
+              "control-pcb"
+            ]
+          },
+          {
+            "at": 0.4,
+            "title": "PWM Ramp-Up",
+            "description": "Turning the speed knob increases PWM duty cycle to the brushless DC motor, accelerating the 8 mm axle through the 608 bearing.",
+            "partIds": [
+              "speed-knob",
+              "dc-motor",
+              "fan-axle",
+              "axle-bearing"
+            ]
+          },
+          {
+            "at": 1,
+            "title": "Full Airflow",
+            "description": "The exposed three-blade rotor spins smoothly inside the circular perimeter grille at full speed.",
+            "partIds": [
+              "three-blade-rotor",
+              "fan-axle",
+              "circular-grille"
+            ]
+          }
+        ]
+      }
+    ],
+    "designBrief": "A small desktop fan with an exposed three-blade rotor, a circular grille, an adjustable tilted stand and a visible speed knob. Include a sourced 608 bearing on the fan axle.",
+    "review": {
+      "version": 1,
+      "request": "A small desktop fan with an exposed three-blade rotor, a circular grille, an adjustable tilted stand and a visible speed knob. Include a sourced 608 bearing on the fan axle.",
+      "requirements": [
+        {
+          "id": "requirement-1",
+          "text": "A small desktop fan"
+        },
+        {
+          "id": "requirement-2",
+          "text": "an exposed three-blade rotor, a circular grille, an adjustable tilted stand"
+        },
+        {
+          "id": "requirement-3",
+          "text": "a visible speed knob"
+        },
+        {
+          "id": "requirement-4",
+          "text": "Include a sourced 608 bearing on the fan axle"
+        }
+      ],
+      "status": "reviewed",
+      "initialHash": "043dd0bb9d8e81bbe8d6c2449b483931de08173f425ba465ce551f081c4da891",
+      "finalHash": "043dd0bb9d8e81bbe8d6c2449b483931de08173f425ba465ce551f081c4da891",
+      "rounds": [
+        {
+          "number": 0,
+          "documentHash": "043dd0bb9d8e81bbe8d6c2449b483931de08173f425ba465ce551f081c4da891",
+          "model": "gemini-4-argon",
+          "summary": "The desktop fan design satisfies all visual and structural requirements across the assembled, top, and exploded views. It features a compact desktop base with a clearly visible knurled speed knob, a U-shaped tilt yoke with side thumb locking knobs supporting a 12-degree upward-tilted motor pod, a circular open-front safety grille framing an exposed orange three-blade rotor, and a sourced 608 ball bearing mounted coaxially on the 8 mm drive axle.",
+          "observations": [
+            {
+              "requirementId": "requirement-1",
+              "status": "met",
+              "partIds": [
+                "base-stand",
+                "tilt-yoke",
+                "motor-housing",
+                "circular-grille",
+                "three-blade-rotor"
+              ],
+              "view": "assembled",
+              "detail": "The assembled view shows a complete, compact desktop fan assembly (~174 mm width by ~225 mm height) with a weighted circular base stand, U-shaped support yoke, motor housing, circular cage, and rotor."
+            },
+            {
+              "requirementId": "requirement-2",
+              "status": "met",
+              "partIds": [
+                "three-blade-rotor",
+                "circular-grille",
+                "tilt-yoke",
+                "tilt-knobs",
+                "motor-housing"
+              ],
+              "view": "assembled",
+              "detail": "The assembled and top views show the exposed orange three-blade rotor at the open front of the circular rear and perimeter safety grille, cradled by the U-shaped tilt yoke and side tilt locking thumb knobs at a 12-degree upward tilt angle."
+            },
+            {
+              "requirementId": "requirement-3",
+              "status": "met",
+              "partIds": [
+                "speed-knob",
+                "base-stand",
+                "control-pcb"
+              ],
+              "view": "assembled",
+              "detail": "The knurled speed knob with an orange position indicator is clearly visible on the front of the weighted base stand in both assembled and top views, and aligns over the internal PWM speed controller PCB potentiometer in the exploded view."
+            },
+            {
+              "requirementId": "requirement-4",
+              "status": "met",
+              "partIds": [
+                "axle-bearing",
+                "fan-axle",
+                "motor-housing",
+                "three-blade-rotor"
+              ],
+              "view": "exploded",
+              "detail": "The exploded view clearly reveals the sourced 608 Axle Ball Bearing (22 mm outer diameter, 8 mm bore, 7 mm width) aligned coaxially on the 8 mm Stainless Drive Axle between the tilted motor pod front boss and the three-blade rotor hub."
+            }
+          ],
+          "checks": [
+            {
+              "id": "references",
+              "status": "pass",
+              "detail": "Component IDs, graph references, motion bounds and source geometry passed deterministic validation.",
+              "partIds": []
+            },
+            {
+              "id": "envelopes",
+              "status": "pass",
+              "detail": "Procedural envelope metadata agrees with the actual solid bounds within 2% or 0.5 mm; source CAD dimensions are preserved.",
+              "partIds": []
+            },
+            {
+              "id": "mounts",
+              "status": "pass",
+              "detail": "8 explicit mounting anchors agree with world-space placements. This checks transform consistency, not mechanical fastening or load capacity.",
+              "partIds": [
+                "control-pcb",
+                "speed-knob",
+                "tilt-yoke",
+                "tilt-knobs",
+                "motor-housing",
+                "dc-motor",
+                "axle-bearing",
+                "circular-grille"
+              ]
+            },
+            {
+              "id": "physical",
+              "status": "info",
+              "detail": "Fit tolerances, forces, electrical compatibility, wiring, firmware and physical operation remain unverified.",
+              "partIds": []
+            }
+          ],
+          "frames": [
+            {
+              "view": "assembled",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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",
+              "documentHash": "043dd0bb9d8e81bbe8d6c2449b483931de08173f425ba465ce551f081c4da891",
+              "visiblePartIds": [
+                "circular-grille",
+                "three-blade-rotor",
+                "tilt-knobs",
+                "tilt-yoke",
+                "motor-housing",
+                "base-stand",
+                "speed-knob"
+              ],
+              "width": 640,
+              "height": 440,
+              "imageHash": "76f63c8fca76d3b49d4a9bc910a7ef174a8c86733b167f536ab7480bb45fb1eb"
+            },
+            {
+              "view": "top",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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",
+              "documentHash": "043dd0bb9d8e81bbe8d6c2449b483931de08173f425ba465ce551f081c4da891",
+              "visiblePartIds": [
+                "base-stand",
+                "motor-housing",
+                "circular-grille",
+                "tilt-knobs",
+                "tilt-yoke",
+                "three-blade-rotor",
+                "speed-knob"
+              ],
+              "width": 640,
+              "height": 440,
+              "imageHash": "7df412b245b6ed08f274bcd7edf05d69f9955fd9494b190a263a382d15151561"
+            },
+            {
+              "view": "exploded",
+              "renderer": "webgl",
+              "mimeType": "image/jpeg",
+              "data": "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",
+              "documentHash": "043dd0bb9d8e81bbe8d6c2449b483931de08173f425ba465ce551f081c4da891",
+              "visiblePartIds": [
+                "circular-grille",
+                "motor-housing",
+                "dc-motor",
+                "three-blade-rotor",
+                "tilt-knobs",
+                "tilt-yoke",
+                "axle-bearing",
+                "fan-axle",
+                "speed-knob",
+                "base-stand",
+                "control-pcb"
+              ],
+              "width": 640,
+              "height": 440,
+              "imageHash": "4d304cfbce37a34394701a150789f2a36e8c1532f24f7deef13619909b328213"
+            }
+          ],
+          "changedPartIds": []
+        }
+      ],
+      "createdAt": "2026-10-25T03:54:37.837Z",
+      "limitations": [
+        "Visual findings are model judgments about these rendered views; they are not physical certification.",
+        "Fixed studio cameras show static geometry; software fallback renders omit texture maps, transparency and reflective finishes.",
+        "Tolerances, mechanical fastening, loads, wiring, firmware and electrical operation remain unverified."
+      ]
+    }
+  },
+  "conversation": [
+    {
+      "role": "assistant",
+      "text": "The desktop fan design satisfies all visual and structural requirements across the assembled, top, and exploded views. It features a compact desktop base with a clearly visible knurled speed knob, a U-shaped tilt yoke with side thumb locking knobs supporting a 12-degree upward-tilted motor pod, a circular open-front safety grille framing an exposed orange three-blade rotor, and a sourced 608 ball bearing mounted coaxially on the 8 mm drive axle.",
+      "actions": [],
+      "suggestions": [
+        "Explode the assembly to inspect the 608 bearing seat and 8 mm drive axle",
+        "Run the Fan Speed & Rotor Spin animation",
+        "Change the three-blade rotor color to anodized teal or matte black"
+      ],
+      "checks": [
+        {
+          "level": "pass",
+          "message": "All component, assembly, relationship and mechanism references passed structural validation."
+        },
+        {
+          "level": "info",
+          "message": "Motion is an educational illustration with bounded transforms; collisions, forces, tolerances and electrical behavior are not simulated."
+        },
+        {
+          "level": "warning",
+          "message": "Geometry and specifications are illustrative. Mechanical fit, wiring and physical hardware operation have not been verified."
+        }
+      ]
+    }
+  ]
+}

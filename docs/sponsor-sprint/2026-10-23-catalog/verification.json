@@ -1,0 +1,53 @@
+{
+  "verifiedAt": "2026-10-24T05:37:46.847136+00:00",
+  "localOnly": true,
+  "deployed": false,
+  "readyParts": 14,
+  "cc0MuseumReferences": 2407,
+  "defaultTests": {
+    "passed": 254,
+    "skippedOptInSuites": 4
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed (final source)",
+  "liveGeneration": {
+    "model": "gemini-4-argon",
+    "elapsedSeconds": 57.762864875,
+    "parts": 9,
+    "sourced": [
+      {
+        "id": "m3-cap-12"
+      },
+      {
+        "id": "esp32-c3-mini-1"
+      }
+    ],
+    "customSolids": 110
+  },
+  "museumModel": {
+    "id": "e6efcc80071aebfc9612",
+    "name": "Side Chair",
+    "bytes": 1506420,
+    "license": "CC0-1.0",
+    "sha256": "e6efcc80071aebfc9612fd2db8e9baec8433a557b53931a645b38545a9cfbb25",
+    "meshes": 1
+  },
+  "browser": {
+    "catalogSearch": true,
+    "cadInsert": true,
+    "transform": true,
+    "undoRedo": true,
+    "liveQuestionRecognizedSourceCad": true,
+    "compactExportReimport": true,
+    "museumDownloadDecode": true,
+    "museumSavedRestore": true,
+    "webglAvailable": false,
+    "rendered3dOrbitVerified": false,
+    "productionSofaRestore": true
+  },
+  "earlierFailures": [
+    "One fresh generation returned unreadable JSON; a subsequent fresh live generation succeeded.",
+    "The first museum preflight rejected Draco; self-hosted bounded Draco decoding was then added and verified."
+  ],
+  "physicalEngineeringVerified": false
+}

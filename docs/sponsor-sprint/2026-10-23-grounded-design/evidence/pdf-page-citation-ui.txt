@@ -1,0 +1,128 @@
+Browser tab: 4, Title: "Flare — See what makes it work.", URL: "http://127.0.0.1:3001/".
+1 AXWebArea Flare — See what makes it work., URL: 127.0.0.1:3001/
+	2 text WebGL is unavailable. Component properties and build instructions remain available.
+	3 container Every answer has a starting point.
+		4 container
+			5 text THE DESIGN NOTEBOOK
+			6 heading Every answer has a starting point., Value: 2, ID: notebook-title
+				7 text Every answer has a starting point.
+			8 button Close design notebook
+		9 text 8  files together 77,253  characters 1  visual attachments
+		10 text Full included documents are sent with each design request.
+		11 container Design source files
+			12 text REFERENCE + YOUR FILES
+			13 checkbox Adafruit 150 mAh · product description PRIMARY SOURCE · 1 sections, Value: 0
+				14 text Adafruit 150 mAh · product description
+				15 container
+					16 text PRIMARY SOURCE  ·  1 sections
+			17 checkbox Adafruit 500 mAh · product description PRIMARY SOURCE · 1 sections, Value: 0
+				18 text Adafruit 500 mAh · product description
+				19 container
+					20 text PRIMARY SOURCE  ·  1 sections
+			21 checkbox nice!nano · manufacturer specifications PRIMARY SOURCE · 1 sections, Value: 0
+				22 text nice!nano · manufacturer specifications
+				23 container
+					24 text PRIMARY SOURCE  ·  1 sections
+			25 checkbox nice!nano · battery and integration guide PRIMARY SOURCE · 1 sections, Value: 0
+				26 text nice!nano · battery and integration guide
+				27 container
+					28 text PRIMARY SOURCE  ·  1 sections
+			29 checkbox Seeed XIAO · hardware documentation PRIMARY SOURCE · 1 sections, Value: 0
+				30 text Seeed XIAO · hardware documentation
+				31 container
+					32 text PRIMARY SOURCE  ·  1 sections
+			33 checkbox Corne · pinned original build guide PRIMARY SOURCE · 1 sections, Value: 0
+				34 text Corne · pinned original build guide
+				35 container
+					36 text PRIMARY SOURCE  ·  1 sections
+			37 checkbox Adafruit-150mAh-product-description.txt TEXT · 1 sections, Value: 0
+				38 text Adafruit-150mAh-product-description.txt
+				39 container
+					40 text TEXT  ·  1 sections
+			41 checkbox Adafruit-150mAh-datasheet.pdf PDF · 5 pages, Value: 1
+				42 text Adafruit-150mAh-datasheet.pdf
+				43 container
+					44 text PDF  ·  5 pages
+			45 text Associate a new file with
+			46 pop up button (collapsed, settable) Associate a new file with, Value: General design / BOM / schematic, ID: source-association, Secondary Actions: Expand
+				47 menu
+					48 (selected) General design / BOM / schematic
+					49 Adafruit 150 mAh LiPo
+					50 Adafruit 500 mAh LiPo
+					51 Feather nRF52840 Express
+					52 XIAO nRF52840 Sense
+					53 nice!nano BLE controller
+			54 button Add a design file
+			55 text PDF, image, text, CSV or KiCad source · 2 MB per file · PDFs up to 40 pages
+		56 container
+			57 text YOUR DESIGN FILE
+			58 heading Adafruit-150mAh-datasheet.pdf, Value: 3
+				59 text Adafruit-150mAh-datasheet.pdf
+			60 button Remove this document
+			61 button Download original
+			62 button Export source record
+			63 container 20a5584d0c17a153565f6b0f9b40e875ba6aa184d1bc3cbc13ebcb332819489d
+				64 text SHA-256  20a5584d0c17
+			65 text REFERENCED EXCERPT ·  PAGE 2 4 Charging voltage 4.2V PAGE 2
+			66 button Previous source page
+			67 text 2  /  5
+			68 button Next source page
+			69 text SHENZHEN PKCELL BATTERY CO., LTD
+Edition A
+Valid Date 2014-07-28Document
+Technical Specification
+Li-Polymer 402025
+150mAh 3.7V with PCM Drafted by Xiao li
+PKCELL
+BATTERY
+Number QA.S.0228 Signed by Zhijiang li
+Page 2 of 5
+1 Scope
+This document describes the performance characteristics and testing methods for Li-polymer battery
+produced by SHENZHEN PKCELL BATTERY CO., LTD.
+2 Product type and model number
+2.1 Product type
+Lithium-polymer battery
+2.2 Model number
+LP-402025 3.7V 150mAh with PCM
+3 Rated performance
+Form 1:Battery rated performance
+No Item Rated performance Remark
+1 Capacity Nominal 150mAh
+Minimum 142mAh Standard discharge after standard charge
+2 Nominal voltage 3.7V Mean operation voltage during standard
+discharge after standard charge
+3 Voltage at end of discharge 3.0V Discharge cut-off voltage
+
+			70 text 4 Charging voltage 4.2V
+			71 text 
+5 Standard charge
+Constant current 0.2C5A
+Constant voltage 4.2V
+Cut-off current 0.01C5A
+6 Quick charge
+Constant current 1C5A
+Constant voltage 4.2V
+Cut-off current 0.01C5A
+7 Standard discharge Constant current 0.2 C5A
+End voltage 3.0V
+8 Maximum continuous
+discharge current 1 C5A
+Charge: 0~45℃
+9 Operation
+temperature range Discharge:-20~60℃ 60±25%R.H
+10 Cycle life >300cycles
+Charging/discharging in the below condition:
+Charge: standard charge
+Discharge:0.2C5A to 3.0V
+Rest time between charge/discharge:30min
+Until the discharge capacity <60% of NC
+During 1 month: -5 ~ 35℃
+11 Storage
+temperature During 6 months: -20 ~ 45℃ 60±25%R.H
+4 Electrical performances Your file is stored in this browser’s notebook and sent to Gemini when you ask a design question. Excerpts are matched against extracted text. Review numerical extractions before enabling them for checks.
+		72 container
+			73 text An assembly, its documents, and your question. In one conversation.
+			74 button Export notebook
+
+The focused UI element is 6 heading Every answer has a starting point., Value: 2, ID: notebook-title

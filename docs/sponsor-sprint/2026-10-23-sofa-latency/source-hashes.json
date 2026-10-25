@@ -1,0 +1,11 @@
+{
+  "lib/studio/device-generation.ts": "ccbc271bb9e133464041aff243c209dc989693ccc8f84525f9bd00ac11879c91",
+  "lib/studio/generated-part.ts": "3c588e8d8bf9ed7d6e291bd8515344541bed5eb5a835f2b7992c64d644e68762",
+  "lib/studio/generation-repair.ts": "8f11f347dc91a2e495fe0661f7e9d072f71948e6236bbd8d8ef0a8722b6f1b87",
+  "lib/studio/geometry-codec.ts": "d49b156911683d18a7a7f881a2c83cd48806cba993788b42c402657bf3b0ae81",
+  "lib/studio/generation-progress.ts": "af8cdf718df222a470a23ea4d967397a3c8bef3abd7417e87f56159588017fa3",
+  "lib/studio/relationships.ts": "74c1cfb9eebc025dfb9327ec1e8fdaf34a3016796a02c3430110f186e4e779bf",
+  "components/studio/DeviceStudio.tsx": "a61262f41a6a0398a4e4090bf58c205dd6c4389b67341009d6bf3aec5725c088",
+  "components/studio/ComponentSpotlight.tsx": "5f2738c7dd362083ae1910c64272f2bb1334679cb0e4925f0b6195e4990739a5",
+  "app/api/device/route.ts": "f8798b66e978e6ac9d025a3028c585ca1fd39b2e80fa975b19d331af5f8182f3"
+}
